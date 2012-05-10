@@ -251,6 +251,7 @@ $(document).ready(function(){
         if (match) {
             alert(wormMsg);
             keyHistory = match = '';
+            window.location = "http://browser.openworm.org/";
         }
         else 
             if (keyHistory.length > 30) {

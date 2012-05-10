@@ -87,7 +87,7 @@ a:HOVER {
 
 }
 
-#logo{
+#logo {
 	position:absolute;
 	left:0px;
 	top:0px;
@@ -101,20 +101,20 @@ a:HOVER {
 	cursor:pointer;
 }
 
-.contributeSubPanel{
+.contributeSubPanel {
 	margin-left:20px;
 	width:550px;
 	float:left;
 }
 
-.worm{
+.worm {
 	margin:0 auto;
 	height: 154px;
 	width:600px;
 	background: url("../imgs/worm.png") no-repeat;
 }
 
-.wormpoint{
+.wormpoint {
 	margin-top:17px;
 	float:left;
 	height: 100px;
@@ -122,7 +122,7 @@ a:HOVER {
 	background: url("../imgs/hphilantropists.png") no-repeat;
 }
 
-#hphilantropists{
+#hphilantropists {
 	margin-top:17px;
 	float:left;
 	height: 100px;
@@ -130,7 +130,7 @@ a:HOVER {
 	background: url("../imgs/hphilantropists.png") no-repeat;
 }
 
-#henthusiasts{
+#henthusiasts {
 	margin-top:17px;
 	float:left;
 	height: 100px;
@@ -138,14 +138,15 @@ a:HOVER {
 	background: url("../imgs/henthusiasts.png") no-repeat;
 }
 
-#hhackers{
+#hhackers {
 	margin-top:17px;
 	float:left;
 	height: 100px;
 	width: 98px;
 	background: url("../imgs/hhackers.png") no-repeat;
 }
-#donate{
+
+#donate {
 	position:absolute;
 	cursor:pointer;
 	height: 64px;
@@ -156,8 +157,17 @@ a:HOVER {
 	
 }
 
-#donate:HOVER{
+#donate:HOVER {
 	background: url("../imgs/donateHover.png") no-repeat;
+}
+
+
+#wormbrowser-btn {
+	background: url("../imgs/wormbrowserbtn.png") no-repeat;
+}
+	
+#wormbrowser-btn:HOVER {
+	background: url("../imgs/wormbrowserbtnHover.png") no-repeat;
 }
 
 #appHeaderTabs {

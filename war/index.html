@@ -35,10 +35,11 @@
 <div id="preloaded-images">
    <img src="/imgs/feynmanBanner.png" width="1" height="1" alt="" />
    <img src="/imgs/aboutBanner.png" width="1" height="1" alt="" />
-      <img src="/imgs/nietzscheBanner.png" width="1" height="1" alt="" />
+   <img src="/imgs/nietzscheBanner.png" width="1" height="1" alt="" />
    <img src="/imgs/sulstonBanner.png" width="1" height="1" alt="" />
    <img src="/imgs/montaigneBanner.png" width="1" height="1" alt="" />
    <img src="/imgs/donateHover.png" width="1" height="1" alt="" />
+   <img src="/imgs/wormbrowserbtnHover.png" width="1" height="1" alt="" />
 </div>
 <div id="appHeader">
 	<div id="logo" onclick="location.href='/index.html'"></div>
@@ -64,7 +65,7 @@
 		<p>If we ever hope to <b>understand how the brain works</b> and what happens when it suffers from disease, the most important thing we can do is to unleash our most powerful tools to organize the millions of facts that we know about the biology of the brain.</p>
         <p>With the best scientists and engineers we can assemble the <b>greatest puzzle of our time</b> - what are all the events that happen inside a living brain?</p>
         <p>Here at OpenWorm, we are starting this important journey with a practical step - by doing a <b>full simulation of a very "simple" biological system, the nematode <a href="http://en.wikipedia.org/wiki/Caenorhabditis_elegans" target="_blank">Caenorhabditis elegans</a></b>.</p>
-     <p>We can’t do it alone.  <a href="/index.html#/getstarted" target="_blank">Please join us!</a></p>
+        <p>We can’t do it alone.  <a href="/index.html#/getstarted" target="_blank">Please join us!</a></p>
 	</span>
 	</div>
 	</div>
@@ -81,7 +82,7 @@
 				<li class="showcase-trigger" target="connectome-sc">Connectome</li>
 				<li class="showcase-trigger" target="sim-engine-sc">Simulation Engine</li>
 				<li class="showcase-trigger" target="physics-sc">Physics</li>
-				<li class="showcase-trigger" target="ga-sc">Genetic Algorithms</li>
+				<li class="showcase-trigger" target="ga-sc">Optimization</li>
 				<li class="showcase-trigger" target="cyber-elegans-sc">Cyber Elegans</li>
 			</ul>
 		</div>
@@ -125,8 +126,13 @@
 					<p>The <a href="http://browser.openworm.org" target=_blank">OpenWorm Browser</a> enables ready access to a cell-by-cell 3D representation of the nematode C. elegans in a <a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation" target=_blank">WebGL enabled browser</a>.</p>
 					<p>The C. elegans 3D model is provided by Christian Grove at the <a href="http://caltech.wormbase.org/virtualworm/" target=_blank">VirtualWorm</a> project (WormBase, CalTech).</p> 
 					<p>Our browser is based on WebGL technology and built on top of the <a href="http://code.google.com/p/open-3d-viewer/" target=_blank">open-3d-viewer</a> (ex-"Google Body Browser").</p>
-					<p>As any other software developed as part of the OpenWorm project, the OpenWorm browser is <a href="https://github.com/openworm/wormbrowser" target=_blank">completely open sourced</a>.</p>  
-					<div style="width:360px; height:250px; margin:0 auto;">
+					<p>As any other software developed as part of the OpenWorm project, the OpenWorm browser is <a href="https://github.com/openworm/wormbrowser" target=_blank">completely open sourced</a>.</p>
+					<br/>
+					<br/>  
+					<div style="width:295px; margin:0 auto;">
+						<a href="http://browser.openworm.org" target="_blank">
+							<div id="wormbrowser-btn" style="width:295px; height: 71px;"></div>
+						</a>
 					</div>
 				</div>
 		</div>
@@ -198,14 +204,16 @@
 				<div class="person"><div class="cropPanel"><img src="imgs/profiles/matteo.png" class="profilePic"/></div>
 				   <a  href="http://it.linkedin.com/in/matteocantarelli" target="_blank" style="margin-left: 5px;">Matteo Cantarelli</a><br/><small class="country">Italy</small>
 				</div>
-
+				<div class="person"><div class="cropPanel"><img src="imgs/profiles/mike.png" class="profilePic"/></div>
+				   <a  href="http://www.neuroscience.cam.ac.uk/directory/profile.php?vellamike" target="_blank" style="margin-left: 5px;">Mike Vella</a><br/><small class="country">UK</small>
+				</div>
 				<div class="person"><div class="cropPanel"><img src="imgs/profiles/padraig.png" class="profilePic" /></div>
-			   <a  href="http://www.incf.org/community/people/pgleeson/person_view" target="_blank" style="margin-left: 5px;">Padraig Gleeson</a><br/><small class="country">Ireland</small>
-			</div>
+			   	   <a  href="http://www.incf.org/community/people/pgleeson/person_view" target="_blank" style="margin-left: 5px;">Padraig Gleeson</a><br/><small class="country">Ireland</small>
+			    </div>
+			    <div class="clearer"></div>
 				<div class="person"><div class="cropPanel"><img src="imgs/profiles/sergey.png" class="profilePic" /></div>
 				   <a href="http://www.linkedin.com/pub/sergey-khayrulin/31/2a7/452" target="_blank" style="margin-left: 5px;">Sergey Khayrulin </a><br/><small class="country">Russia</small>
 				</div>
-								<div class="clearer"></div>
 				<div class="person"><div class="cropPanel"><img src="imgs/profiles/Stephen.png" class="profilePic"/></div>
 				   <a href="http://www.linkedin.com/in/stephendavidlarson" target="_blank" style="margin-left: 5px;">Stephen Larson</a><br/><small class="country">U.S.A.</small><br/><small class="role">Coordinator</small>
 				</div>
