@@ -88,22 +88,25 @@
 		</div>
 		<div id="showcaseContent">
 				<div id="cyber-elegans-sc" class="showcase-section">
-					<p>A talented team of researchers at the <a href="http://db.iis.nsk.su/structure/structure.asp?StructName=70&lang=eng" target="_blank">A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation</a>, consisting of <a href="http://www.linkedin.com/pub/andrey-palyanov/20/201/611" target="_blank">Andrey Palyanov</a>, <a href="http://www.linkedin.com/in/skhayrulin" target="_blank">Sergey Khayrulin</a>, and <a href="http://web.ceu.hu/math/People/MS_Students/Alexander_DIBERT.html" target="_blank">Alexander Dibert</a> developed an initial neuromechanical model of the c. elegans in 3D.  Source code for this <a href="https://github.com/openworm/CyberElegans" target="_blank">is available</a></p>
-					<p>The original Cyber Elegans team joined the Open Worm project to incorporate greater biological realism into their model, simulating the soft body of the c. elegans rather than a rigid body, and to break their monolithic code base into a <a href="http://code.google.com/p/openworm/wiki/GettingStartedWithSimulationFramework" target="_blank">simulation engine</a> that can be distributed across multiple machines.</p>
+					<p>A talented team of researchers at the <a href="http://db.iis.nsk.su/structure/structure.asp?StructName=70&lang=eng" target="_blank">A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation</a>, consisting of <a href="http://www.linkedin.com/pub/andrey-palyanov/20/201/611" target="_blank">Andrey Palyanov</a>, <a href="http://www.linkedin.com/in/skhayrulin" target="_blank">Sergey Khayrulin</a>, and <a href="http://web.ceu.hu/math/People/MS_Students/Alexander_DIBERT.html" target="_blank">Alexander Dibert</a> developed an initial neuromechanical model of the c. elegans in 3D.  Source code for this <a href="https://github.com/openworm/CyberElegans" target="_blank">is available</a>.</p>
+					<p>The original Cyber Elegans team joined the Open Worm project to incorporate greater biological realism into their model, simulating the soft body of the C. elegans rather than using a rigid body model, and to break-down their code base into a modular and generic <a href="http://code.google.com/p/openworm/wiki/GettingStartedWithSimulationFramework" target="_blank">simulation engine</a>.</p>
 					<div style="width:360px; height:250px; margin:0 auto;">
 					<iframe width="360" height="250" src="http://www.youtube.com/embed/3uV3yTmUlgo" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div id="sim-engine-sc" class="showcase-section">
-					<p>This video shows the current trivial front-end for the simulation framework which served the purpose of a simple test. In the video one of the 302 neurons (simulated in parallel on GPU native kernel via OpenCL) is displayed and by changing the external current applied the spike shape and firing rate is updated.</p> 
-					<p>This rather basic setup is just meant to be a proof of concept of the rather complex technology cocktail involved behind the scene (see <a href="http://code.google.com/p/openworm/wiki/SimulationFrameworkConcepts" target="_blank">SimulationFrameworkConcepts</a> for more details).</p>
+					<p>This video shows a neuronal simulation demo built on the current version of the OpenWorm simulation engine. In the video one of the 302 Hodgkin-Huxley neurons (simulated in parallel on GPU native kernel via OpenCL) is displayed and by changing the external current applied the spike shape and firing rate are updated.</p> 
+					<p>This rather basic setup is just meant to be a proof of concept of the rather complex architectural stack involved behind the scenes (see <a href="http://code.google.com/p/openworm/wiki/SimulationFrameworkConcepts" target="_blank">SimulationFrameworkConcepts</a> for more details).</p>
 					<div style="width:360px; height:250px; margin:0 auto;">
-					<iframe width="360" height="250" src="http://www.youtube.com/embed/94Q_HKK0OCA" frameborder="0" allowfullscreen></iframe>
+					<iframe width="360" height="250" src="http://www.youtube.com/embed/KZ_qzKMZLnY" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div id="physics-sc" class="showcase-section">
-					<p>We are currently working on implementing an algorithm called Predictive-corrective incompressible Smoothed Particle Hydrodynamics (PCISPH) (see <a href="http://www.mendeley.com/research/predictivecorrective-incompressible-sph-1/" target="_blank">reference</a> for more).</p>
-					<p>We have not yet incorporated the <a href="http://code.google.com/p/openworm/wiki/VirtualWormBlenderFiles" target="_blank">worm anatomy</a> into this solver, although this will be the next step. If you are running Windows, you can download a current version of our alpha implementation of PCISPH as a binary <a href="http://code.google.com/p/openworm/downloads/list?q=label:SoftBodySolver" target="_blank">here</a>. The source code for this demo is available online <a href="http://code.google.com/p/openworm/source/checkout?repo=pcisph" target="_blank">here</a>.</p>
+					<p>We have implemented an algorithm called Smoothed Particle Hydrodynamics (SPH) (see <a href="http://www.mendeley.com/research/predictivecorrective-incompressible-sph-1/" target="_blank">reference</a> for more) to simulate the body of the worm and its environment.</p>
+					<p>We have not yet incorporated the <a href="http://code.google.com/p/openworm/wiki/VirtualWormBlenderFiles" target="_blank">worm anatomy</a> into this solver, although this will be the next step. 
+					   If you are running Windows, you can download a current version of our alpha implementation of PCISPH as a binary <a href="http://code.google.com/p/openworm/downloads/list?q=label:SoftBodySolver" target="_blank">here</a>. 
+					   The source code for this demo is available online <a href="https://github.com/openworm/Smoothed-Particle-Hydrodynamics" target="_blank">here</a>. 
+					   The SPH algorithm has also been implemented as a <a href="https://github.com/openworm/org.openworm.simulationengine.solver.sph" target="_blank">solver</a> for the OpenWorm simulation engine.</p>
 					<div style="width:360px; height:250px; margin:0 auto;">
 					<iframe width="360" height="250" src="http://www.youtube.com/embed/jHksm0QKWPE" frameborder="0" allowfullscreen></iframe>
 					</div>
