@@ -260,6 +260,3 @@ $(document).ready(function(){
     });
 });
 
-//sharethis code
-var switchTo5x=true;
-stLight.options({publisher:'78af7988-037a-4c1b-8b09-7bc453bcd5c5'});
