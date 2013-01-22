@@ -16,6 +16,7 @@
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -44,22 +45,104 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Downloads</a></li>
-              <li><a href="#contact">Publications</a></li>
-              <li><a href="#contact">Donate</a></li>
+              <li><a href="#getstarted">Get Started</a></li>
+              <li><a href="#getinvolved">Get Involved</a></li>
+              <li><a href="#downloads">Downloads</a></li>
+              <li><a href="#donate">Donate</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-    <div class="container">
-
-      <h1>Help us build an artificial worm!</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+    <div class="jumbotron masthead">
+		<h1>OpenWorm</h1>
+      <p>We are building a digital worm. Help us!</p>
+      <p>
+      <a class="btn btn-primary btn-large" onclick="">Get Started</a>
+    </p>
+    <ul class="masthead-links">
+      <li>
+        <a href="http://github.com/twitter/openworm" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub project</a>
+      </li>
+      <li>
+        <a href="./getting-started.html#examples" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);">Areas</a>
+      </li>
+    </ul>
+  </div>
 
     </div> <!-- /container -->
+<div class="bs-docs-social">
+  <div class="container">
+    <ul class="bs-docs-social-buttons">
+      <li>
+        <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=openworm&repo=openworm&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+      </li>
+      <li class="follow-btn">
+        <a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @openworm</a>
+      </li>
+      <li class="tweet-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitter.github.com/openworm/" data-count="horizontal" data-via="openworm" >Tweet</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div>
+	
+	<div class="container">
+
+  <div class="marketing">
+
+    <h1>Enter the worm.</h1>
+    <p class="marketing-byline">OpenWorm is an open source project dedicated to creating the world’s first virtual organism in a computer, starting with a C.elegans nematode.</p>
+
+    <div class="row-fluid">
+      <div class="span6">
+        <h2>Latest news</h2>
+				<ul id="news-feed">
+					
+				</ul>
+      </div>
+      <div class="span6">
+      	<h2>Social stream</h2>
+        <a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+      </div>
+    </div>
+
+    <hr class="soften">
+
+    <h1>Built with Bootstrap.</h1>
+    <p class="marketing-byline">For even more sites built with Bootstrap, <a href="http://builtwithbootstrap.tumblr.com/" target="_blank">visit the unofficial Tumblr</a> or <a href="./getting-started.html#examples">browse the examples</a>.</p>
+    <div class="row-fluid">
+      <ul class="thumbnails example-sites">
+        <li class="span3">
+          <a class="thumbnail" href="http://soundready.fm/" target="_blank">
+            <img src="assets/img/example-sites/soundready.png" alt="SoundReady.fm">
+          </a>
+        </li>
+        <li class="span3">
+          <a class="thumbnail" href="http://kippt.com/" target="_blank">
+            <img src="assets/img/example-sites/kippt.png" alt="Kippt">
+          </a>
+        </li>
+        <li class="span3">
+          <a class="thumbnail" href="http://www.gathercontent.com/" target="_blank">
+            <img src="assets/img/example-sites/gathercontent.png" alt="Gather Content">
+          </a>
+        </li>
+        <li class="span3">
+          <a class="thumbnail" href="http://www.jshint.com/" target="_blank">
+            <img src="assets/img/example-sites/jshint.png" alt="JS Hint">
+          </a>
+        </li>
+      </ul>
+     </div>
+
+  </div>
+
+</div>
 
    <!-- Footer
     ================================================== -->
@@ -72,24 +155,25 @@
         <ul class="footer-links">
           <li><a href="http://blog.openworm.org">Blog</a></li>
           <li class="muted">&middot;</li>
+          <li><a href="http://blog.openworm.org">About</a></li>
+          <li class="muted">&middot;</li>
           <li><a href="http://blog.getbootstrap.com">People</a></li>
           <li class="muted">&middot;</li>
-		  <li><a href="http://blog.openworm.org">Events</a></li>
-          <li class="muted">&middot;</li>
-	      <li><a href="http://blog.getbootstrap.com">Roadmap</a></li>
+		  <li><a href="http://blog.openworm.org">Projects</a></li>
 		  <li class="muted">&middot;</li>
-          <li><a href="http://blog.getbootstrap.com">Media</a></li>
-		  <li class="muted">&middot;</li>
-          <li><a href="http://blog.getbootstrap.com">Contact</a></li>
+          <li><a href="http://blog.getbootstrap.com">Contacts</a></li>
         </ul>
       </div>
     </footer>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/bootstrap.js"></script>
-
+    <script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+    <script src="js/main.js"></script>
+	
 
   </body>
 </html>

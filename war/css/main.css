@@ -21,3 +21,40 @@
 .footer-links li:first-child {
   padding-left: 0;
 }
+
+
+/* style news feed items */
+.parss-title a {
+	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.parss-title a:hover {
+	text-decoration: none;
+}
+
+.parss-date {
+
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+
+.parss-title, .parss-date, .parss-description {
+	display: block;
+	clear: both;
+	text-align:left;
+}
+
+.parss-image {
+	display: none;
+}
+#news-feed {
+    list-style-type: none;
+}
+#news-feed li {
+    margin-top:20px;
+    margin-bottom:15px;
+    
+}
