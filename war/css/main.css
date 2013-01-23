@@ -1,3 +1,22 @@
+#geppetto_logo
+{
+	position:absolute;
+	left:700px;
+	top:25px;
+	background-image:url("../img/geppetto.png");
+	width:500px;
+	height:165px;
+}
+
+#openworm_logo
+{
+	margin:0 auto;
+	background-image:url("../img/OpenWormLogo.png");
+	width:150px;
+	height:150px;
+	margin-top:60px;
+}
+
 /* Footer
 -------------------------------------------------- */
 
