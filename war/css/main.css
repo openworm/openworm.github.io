@@ -87,55 +87,74 @@
     
 }
 /*CAROUSEL*/
- /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
 
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 0;
-    }
+/* CUSTOMIZE THE NAVBAR 
+-------------------------------------------------- */
 
-    .carousel .container {
-      position: relative;
-      z-index: 9;
-    }
+/* Carousel base class */
+.carousel {
+  margin-bottom: 0;
+}
 
-    .carousel-control {
-      height: 80px;
-      margin-top: 0;
-      font-size: 120px;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      background-color: transparent;
-      border: 0;
-    }
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
 
-    .carousel .item {
-      height: 480px;
-    }
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 480px;
-    }
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+}
 
-    .carousel-caption {
-      background-color: transparent;
-      position: static;
-      max-width: 550px;
-      padding: 0 20px;
-      margin-top: 200px;
-    }
-    .carousel-caption h1,
-    .carousel-caption .lead {
-      margin: 0;
-      line-height: 1.25;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-    }
-    .carousel-caption .btn {
-      margin-top: 10px;
-      margin-right: 10px;
-    }
+.carousel .item {
+  height: 480px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 480px;
+}
 
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* spacers and clearer divs 
+-------------------------------------------------- */
+
+.short-spacer {
+	height: 3px;
+}
+
+.mid-spacer {
+	height: 5px;
+}
+
+.large-spacer {
+	height: 20px;
+}
+
+.clearer {
+	clear: both;
+}
