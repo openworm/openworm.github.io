@@ -1,7 +1,7 @@
 #geppetto_logo
 {
 	position:absolute;
-	left:700px;
+	right:-20px;
 	top:25px;
 	background-image:url("../img/geppetto.png");
 	width:500px;
@@ -14,7 +14,7 @@
 	background-image:url("../img/OpenWormLogo.png");
 	width:150px;
 	height:150px;
-	margin-top:60px;
+	margin-bottom:50px;
 }
 
 .openworm_logo_header
@@ -139,3 +139,21 @@
       margin-right: 10px;
     }
 
+/* spacers and clearer divs 
+-------------------------------------------------- */
+
+.short-spacer {
+	height: 3px;
+}
+
+.mid-spacer {
+	height: 5px;
+}
+
+.large-spacer {
+	height: 20px;
+}
+
+.clearer {
+	clear: both;
+}
