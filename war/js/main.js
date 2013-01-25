@@ -35,4 +35,6 @@ $(function()
 		}
 		
 	});
+	
+	$('.minilogo').tooltip();
 });

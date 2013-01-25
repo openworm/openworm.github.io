@@ -1,78 +1,81 @@
-#geppetto_logo
-{
-	position:absolute;
-	right:-20px;
-	top:25px;
-	background-image:url("../img/geppetto.png");
-	width:500px;
-	height:165px;
+#geppetto_logo {
+	position: absolute;
+	right: -20px;
+	top: 25px;
+	background-image: url("../img/geppetto.png");
+	width: 500px;
+	height: 165px;
 }
 
-#openworm_logo
-{
-	margin:0 auto;
-	background-image:url("../img/OpenWormLogo.png");
-	width:150px;
-	height:150px;
-	margin-bottom:50px;
+#openworm_logo {
+	margin: 0 auto;
+	background-image: url("../img/OpenWormLogo.png");
+	width: 150px;
+	height: 150px;
+	margin-bottom: 50px;
 }
 
-#octocat
-{
-	margin:0 auto;
-	background-image:url("../img/octocat.png");
-	width:256px;
-	height:256px;
-
+#octocat {
+	margin: 0 auto;
+	background-image: url("../img/octocat.png");
+	width: 256px;
+	height: 256px;
 }
-.openworm_logo_header
-{
-	float:left;
-	background-image:url("../img/OpenWormLogoM.png");
-	width:120px;
-	height:120px;
-	margin-right:50px;
+.openworm_logo_header {
+	float: left;
+	background-image: url("../img/OpenWormLogoM.png");
+	width: 120px;
+	height: 120px;
+	margin-right: 50px;
 }
-.icon-l{
-	font-size:40pt;
-	
+.icon-l {
+	font-size: 40pt;
 }
-.icon-xl{
-	font-size:100pt;
-	
+.icon-xl {
+	font-size: 100pt;
 }
-.icon-xxl{
-	font-size:150pt;
-	
+.icon-xxl {
+	font-size: 150pt;
 }
-.centered{
-	text-align:center;
+.centered {
+	text-align: center;
 }
 
+.minilogo {
+	background-image: url("../img/miniworm.png");
+	width: 80px;
+	height: 27px;
+	display: block;
+	float: right;
+	margin-top:5px;
+	margin-right: 5px;
+}
+.minilogo:hover {
+	background-image: url("../img/miniworm_hover.png");
+}
 /* Footer
--------------------------------------------------- */
+ -------------------------------------------------- */
 
 .footer {
-  padding: 70px 0;
-  margin-top: 70px;
-  border-top: 1px solid #e5e5e5;
-  background-color: #f5f5f5;
+	padding: 70px 0;
+	margin-top: 70px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
 }
 .footer p {
-  margin-bottom: 0;
-  color: #777;
+	margin-bottom: 0;
+	color: #777;
 }
 .footer-links {
-  margin: 10px 0;
+	margin: 10px 0;
 }
 .footer-links li {
-  display: inline;
-  padding: 0 2px;
+	display: inline;
+	padding: 0 2px;
 }
 .footer-links li:first-child {
-  padding-left: 0;
+	padding-left: 0;
 }
-
 
 /* style news feed items */
 .parss-title a {
@@ -95,78 +98,74 @@
 .parss-title, .parss-date, .parss-description {
 	display: block;
 	clear: both;
-	text-align:left;
+	text-align: left;
 }
 
 .parss-image {
 	display: none;
 }
 #news-feed {
-    list-style-type: none;
+	list-style-type: none;
 }
 #news-feed li {
-    margin-top:20px;
-    margin-bottom:15px;
-    
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 /*CAROUSEL*/
 
-/* CUSTOMIZE THE NAVBAR 
--------------------------------------------------- */
+/* CUSTOMIZE THE NAVBAR
+ -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .carousel .container {
-  position: relative;
-  z-index: 9;
+	position: relative;
+	z-index: 9;
 }
 
 .carousel-control {
-  height: 80px;
-  margin-top: 0;
-  font-size: 120px;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-  background-color: transparent;
-  border: 0;
+	height: 80px;
+	margin-top: 0;
+	font-size: 120px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	background-color: transparent;
+	border: 0;
 }
 
 .carousel .item {
-  height: 480px;
+	height: 480px;
 }
 .carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 480px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 480px;
 }
-
 
 .carousel-caption {
-  background-color: transparent;
-  position: static;
-  max-width: 550px;
-  padding: 0 20px;
-  margin-top: 200px;
+	background-color: transparent;
+	position: static;
+	max-width: 550px;
+	padding: 0 20px;
+	margin-top: 200px;
 }
-.carousel-caption h1,
-.carousel-caption .lead {
-  margin: 0;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+.carousel-caption h1, .carousel-caption .lead {
+	margin: 0;
+	line-height: 1.25;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 .carousel-caption .btn {
-  margin-top: 10px;
-  margin-right: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
-
-/* spacers and clearer divs 
--------------------------------------------------- */
+/* spacers and clearer divs
+ -------------------------------------------------- */
 
 .short-spacer {
 	height: 3px;
