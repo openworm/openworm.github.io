@@ -17,6 +17,14 @@
 	margin-bottom:50px;
 }
 
+#octocat
+{
+	margin:0 auto;
+	background-image:url("../img/octocat.png");
+	width:256px;
+	height:256px;
+
+}
 .openworm_logo_header
 {
 	float:left;
@@ -24,6 +32,10 @@
 	width:120px;
 	height:120px;
 	margin-right:50px;
+}
+.icon-xxl{
+	font-size:220pt;
+	
 }
 
 /* Footer
