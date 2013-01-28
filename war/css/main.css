@@ -59,6 +59,15 @@
 .minilogo:hover {
 	background-image: url("../img/miniworm_hover.png");
 }
+
+.btn-xlarge {
+padding: 21px 39px;
+font-size: 30.5px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+
 /* Footer
  -------------------------------------------------- */
 
