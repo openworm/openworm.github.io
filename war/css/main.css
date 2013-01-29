@@ -44,7 +44,10 @@
 	text-align: center;
 }
 .donatecolor{
-	color:#DD1144;
+	color:#DD1144!important;
+}
+.donatecolor:hover{
+	color:white!important;
 }
 
 .minilogo {
