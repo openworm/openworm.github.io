@@ -55,19 +55,26 @@
 	color: white !important;
 }
 
+#iphone{
+	font-size:18px;
+}
 .minilogo {
 	background-image: url("../img/miniworm.png");
 	width: 80px;
 	height: 27px;
 	display: block;
-	float: right;
-	margin-top: 5px;
-	margin-right: 5px;
+	padding:0px!important;
+	margin-top: 5px!important;
 }
 .minilogo:hover {
 	background-image: url("../img/miniworm_hover.png");
 }
-
+.tooltip-inner
+{
+	max-width:400px;	
+	margin-top:100px;
+	margin-left:-100px;
+}
 .btn-xlarge {
 	padding: 21px 39px;
 	font-size: 30.5px;
@@ -100,6 +107,7 @@ dd {
 .authors {
 	font-size: 10px !important;
 }
+
 /* Footer
  -------------------------------------------------- */
 
