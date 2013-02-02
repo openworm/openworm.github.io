@@ -58,6 +58,10 @@
 #iphone{
 	font-size:18px;
 }
+
+#mainphone{
+	line-height:14px!important;
+}
 .minilogo {
 	background-image: url("../img/miniworm.png");
 	width: 80px;
