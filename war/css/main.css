@@ -15,6 +15,26 @@
 	margin-bottom: 50px;
 }
 
+#osblogo{
+	background-image: url("../img/osblogo.png");
+	display: inline-block;
+	margin-top:25px;
+	width: 50px;
+	height: 50px;
+	vertical-align: bottom;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
+#osblogo{
+	background-image: url("../img/osblogo@2x.png") ;
+	display: inline-block;
+	margin-top:25px;
+	width: 50px;
+	height: 50px;
+	vertical-align: bottom;
+}
+}
+
 #octocat {
 	margin: 0 auto;
 	background-image: url("../img/octocat.png");
@@ -27,6 +47,10 @@
 	width: 120px;
 	height: 120px;
 	margin-right: 50px;
+}
+
+.icon-15x{
+	font-size:1.5em;
 }
 .icon-m {
 	font-size: 30pt;
