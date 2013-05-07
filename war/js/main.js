@@ -24,6 +24,11 @@ $(function()
 	})
 
 
+	$(".carousel-control").click(function(e)
+	{
+		$("#tip").hide();
+	});
+
 	$('.nav li').click(function(e)
 	{
 		$('.nav li').removeClass('active');
