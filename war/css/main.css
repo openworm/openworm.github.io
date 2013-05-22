@@ -149,7 +149,9 @@
 	float:left;
 	}
 }
-
+.clear{
+	clear:both;
+}
 #boingboing{
 	background-image: url("../img/boingboing.png");
 	width: 190px;
