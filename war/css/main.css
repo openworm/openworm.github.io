@@ -32,6 +32,149 @@
 	}
 }
 
+#biorad{
+	background-image: url("../img/bio-rad.png");
+	width: 150px;
+	height: 40px;
+	margin: 0 auto;
+	cursor:pointer;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#biorad {
+	background-image: url("../img/bio-rad2x.png") ;
+	background-size: 150px 40px;
+	margin: 0 auto;
+	cursor:pointer;
+	}
+}
+
+#meetup{
+	background-image: url("../img/meetup.png");
+	width: 560px;
+	height: 184px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:50px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#meetup {
+	background-image: url("../img/meetup2x.png") ;
+	background-size: 560px 184px;
+	margin: 0 auto;
+	margin-top:50px;
+	cursor:pointer;
+	}
+}
+
+#bbc{
+	background-image: url("../img/bbc.png");
+	width: 221px;
+	height: 163px;
+	margin: 0 auto;
+	margin-right:20px;
+	cursor:pointer;
+	float:left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#bbc {
+	background-image: url("../img/bbc2x.png") ;
+	background-size: 221px 163px;
+	margin: 0 auto;
+	margin-right:20px;
+	cursor:pointer;
+	float:left;
+	}
+}
+
+#atlantic{
+	background-image: url("../img/theatlantic.png");
+	width: 236px;
+	height: 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	float:left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#atlantic {
+	background-image: url("../img/theatlantic2x.png") ;
+	background-size: 236px 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	float:left;
+	}
+}
+
+#nbc{
+	background-image: url("../img/nbc.png");
+	width: 170px;
+	height: 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	float:left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#nbc {
+	background-image: url("../img/nbc2x.png") ;
+	background-size: 170px 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	float:left;
+	}
+}
+
+#wired{
+	background-image: url("../img/wired.png");
+	width: 289px;
+	height: 163px;
+	margin: 0 auto;
+	margin-left:22px;
+	margin-right:20px;
+	cursor:pointer;
+	float:left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#wired {
+	background-image: url("../img/wired2x.png") ;
+	background-size: 289px 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-left:22px;
+	margin-right:20px;
+	float:left;
+	}
+}
+
+#boingboing{
+	background-image: url("../img/boingboing.png");
+	width: 190px;
+	height: 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	float:left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#boingboing {
+	background-image: url("../img/boingboing2x.png") ;
+	background-size: 190px 163px;
+	margin: 0 auto;
+	cursor:pointer;
+	float:left;
+	}
+}
+
+#geeks{
+	color:white;
+}
+#geeks strong{
+	font-size:22px;
+}
 #tip{
 	background-image: url("../img/tip.png");
 	position:absolute;
