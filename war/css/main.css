@@ -15,7 +15,7 @@
 	margin-bottom: 50px;
 }
 
-#osblogo{
+#osblogo {
 	background-image: url("../img/osblogo.png");
 	display: inline-block;
 	width: 50px;
@@ -25,186 +25,200 @@
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#osblogo {
-	background-image: url("../img/osblogo2x.png") ;
-	display: inline-block;
-	background-size: 50px 50px;
-	vertical-align: bottom;
+		background-image: url("../img/osblogo2x.png");
+		display: inline-block;
+		background-size: 50px 50px;
+		vertical-align: bottom;
 	}
 }
 
-#biorad{
+#biorad {
 	background-image: url("../img/bio-rad.png");
 	width: 150px;
 	height: 40px;
 	margin: 0 auto;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#biorad {
-	background-image: url("../img/bio-rad2x.png") ;
-	background-size: 150px 40px;
-	margin: 0 auto;
-	cursor:pointer;
+		background-image: url("../img/bio-rad2x.png");
+		background-size: 150px 40px;
+		margin: 0 auto;
+		cursor: pointer;
 	}
 }
 
-#meetup{
+#meetup {
 	background-image: url("../img/meetup.png");
 	width: 560px;
 	height: 184px;
 	margin: 0 auto;
-	cursor:pointer;
-	margin-top:50px;
+	cursor: pointer;
+	margin-top: 50px;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#meetup {
-	background-image: url("../img/meetup2x.png") ;
-	background-size: 560px 184px;
-	margin: 0 auto;
-	margin-top:50px;
-	cursor:pointer;
+		background-image: url("../img/meetup2x.png");
+		background-size: 560px 184px;
+		margin: 0 auto;
+		margin-top: 50px;
+		cursor: pointer;
 	}
 }
 
-#bbc{
+
+
+#bbc {
 	background-image: url("../img/bbc.png");
 	width: 221px;
 	height: 163px;
 	margin: 0 auto;
-	margin-right:20px;
-	cursor:pointer;
-	float:left;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#bbc {
-	background-image: url("../img/bbc2x.png") ;
-	background-size: 221px 163px;
-	margin: 0 auto;
-	margin-right:20px;
-	cursor:pointer;
-	float:left;
+		background-image: url("../img/bbc2x.png");
+		background-size: 221px 163px;
+		margin: 0 auto;
+		margin-right: 20px;
+		cursor: pointer;
+		float: left;
 	}
 }
 
-#atlantic{
+#atlantic {
 	background-image: url("../img/theatlantic.png");
 	width: 236px;
 	height: 163px;
 	margin: 0 auto;
-	cursor:pointer;
-	float:left;
+	cursor: pointer;
+	float: left;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#atlantic {
-	background-image: url("../img/theatlantic2x.png") ;
-	background-size: 236px 163px;
-	margin: 0 auto;
-	cursor:pointer;
-	float:left;
+		background-image: url("../img/theatlantic2x.png");
+		background-size: 236px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		float: left;
 	}
 }
 
-#nbc{
+#nbc {
 	background-image: url("../img/nbc.png");
 	width: 170px;
 	height: 163px;
 	margin: 0 auto;
-	cursor:pointer;
-	float:left;
+	cursor: pointer;
+	float: left;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#nbc {
-	background-image: url("../img/nbc2x.png") ;
-	background-size: 170px 163px;
-	margin: 0 auto;
-	cursor:pointer;
-	float:left;
+		background-image: url("../img/nbc2x.png");
+		background-size: 170px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		float: left;
 	}
 }
 
-#wired{
+#wired {
 	background-image: url("../img/wired.png");
 	width: 289px;
 	height: 163px;
 	margin: 0 auto;
-	margin-left:22px;
-	margin-right:20px;
-	cursor:pointer;
-	float:left;
+	margin-left: 22px;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#wired {
-	background-image: url("../img/wired2x.png") ;
-	background-size: 289px 163px;
-	margin: 0 auto;
-	cursor:pointer;
-	margin-left:22px;
-	margin-right:20px;
-	float:left;
+		background-image: url("../img/wired2x.png");
+		background-size: 289px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		margin-left: 22px;
+		margin-right: 20px;
+		float: left;
 	}
 }
-.clear{
-	clear:both;
+.clear {
+	clear: both;
 }
-#boingboing{
+#boingboing {
 	background-image: url("../img/boingboing.png");
 	width: 190px;
 	height: 163px;
 	margin: 0 auto;
-	cursor:pointer;
-	float:left;
+	cursor: pointer;
+	float: left;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#boingboing {
-	background-image: url("../img/boingboing2x.png") ;
-	background-size: 190px 163px;
-	margin: 0 auto;
-	cursor:pointer;
-	float:left;
+		background-image: url("../img/boingboing2x.png");
+		background-size: 190px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		float: left;
 	}
 }
 
-#geeks{
-	color:white;
+#geeks {
+	color: white;
 }
-#geeks strong{
-	font-size:22px;
+#geeks strong {
+	font-size: 22px;
 }
-#tip{
+
+
+
+#tip {
 	background-image: url("../img/tip.png");
-	position:absolute;
-	right:50px;
-	left:auto;
-	top:115px;
-	width:61px;
-	height:195px;
-	z-index:0;
+	position: absolute;
+	right: 50px;
+	left: auto;
+	top: 115px;
+	width: 61px;
+	height: 195px;
+	z-index: 0;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#tip {
-	background-image: url("../img/tip2x.png") ;
-	display: inline-block;
-	background-size: 61px 195px;
-	position:absolute;
-	right:50px;
-	left:auto;
-	top:115px;
-	z-index:0;
+		background-image: url("../img/tip2x.png");
+		display: inline-block;
+		background-size: 61px 195px;
+		position: absolute;
+		right: 50px;
+		left: auto;
+		top: 115px;
+		z-index: 0;
 	}
 }
 
-.carousel-control:hover {
-	z-index:10;
+@media (max-width: 767px) {
+	#tip {
+		display: none;
+	}
+	#meetup {
+		display: none;
+	}
+
 }
 
+.carousel-control:hover {
+	z-index: 10;
+}
 
 #octocat {
 	margin: 0 auto;
@@ -220,8 +234,8 @@
 	margin-right: 50px;
 }
 
-.icon-15x{
-	font-size:1.5em;
+.icon-15x {
+	font-size: 1.5em;
 }
 .icon-m {
 	font-size: 30pt;
@@ -239,7 +253,7 @@
 	text-align: center;
 }
 
-.donate{
+.donate {
 	color: #DD1144;
 }
 
@@ -250,29 +264,28 @@
 	color: white !important;
 }
 
-#iphone{
-	font-size:18px;
+#iphone {
+	font-size: 18px;
 }
 
-#mainphone{
-	line-height:14px!important;
+#mainphone {
+	line-height: 14px !important;
 }
 .minilogo {
 	background-image: url("../img/miniworm.png");
 	width: 80px;
 	height: 27px;
 	display: block;
-	padding:0px!important;
-	margin-top: 5px!important;
+	padding: 0px !important;
+	margin-top: 5px !important;
 }
 .minilogo:hover {
 	background-image: url("../img/miniworm_hover.png");
 }
-.tooltip-inner
-{
-	max-width:400px;	
-	margin-top:100px;
-	margin-left:-100px;
+.tooltip-inner {
+	max-width: 400px;
+	margin-top: 100px;
+	margin-left: -100px;
 }
 .btn-xlarge {
 	padding: 21px 39px;
