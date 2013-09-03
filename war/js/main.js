@@ -29,6 +29,10 @@ $(function()
 		$("#tip").hide();
 	});
 
+	$('.carousel').carousel({
+      interval: 5000
+    });
+
 	$('.nav li').click(function(e)
 	{
 		$('.nav li').removeClass('active');
