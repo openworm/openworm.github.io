@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>OpenWorm Projects</title>
+		<title>Supporters</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -56,7 +56,7 @@
 							<li>
 								<a href="./downloads.html">Downloads</a>
 							</li>
-							<li>
+							<li class="active">
 								<a href="./supporters.html">Supporters</a>
 							</li>
 							<li>
@@ -65,7 +65,7 @@
 						</ul>
 						<ul class="nav pull-right">
 							<li><a class="icon-github icon-15x" href="https://github.com/openworm" target="_blank"></a>
-							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"Man cannot make a worm, yet he will make gods by the dozen" - M. de Montaigne' ></a><li>
+							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"You have made your way from worm to man, and much in you is still worm" - F.Nietzsche' ></a><li>
         					<li><a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="itunes_store"><i id="iphone" class="icon-mobile-phone"></i> Get the App</a></li>
       					</ul>
 					</div><!--/.nav-collapse -->
@@ -75,53 +75,98 @@
 
 		<header class="jumbotron subhead" id="overview">
 			<div class="container">
-				<h1>Projects</h1>
+				<h1>Supporters</h1>
 				<p class="lead">
-					Overview of each project, technologies used, and where to learn more.
+					This is where we send a big THANK YOU to the organizations and individuals who are contributing to our cause.
 				</p>
 			</div>
 		</header>
 
 		<div class="container">
-		  <div class="marketing">
 		  	
-			<h1>Find out more about our projects</h1>
-			<i class="icon-sitemap icon-xxl"></i>
-			<p class="marketing-byline">
-				The challenge of simulating even a tiny worm is immense. It requires a lot of parallel activities.
-			</p>
-		  </div>
-		  <div class="row-fluid marketing" style="text-align: left;">
-	        <div class="span6">
-	          <h4>NeuroML Connectome</h4>
-	          <p>We have converted all 302 neurons described in the WormBase Virtual Worm Blender files into multi-compartmental neuronal models described in NeuroML format.
-				 We are currently building descriptions of the synaptic junctions and the ion channels for each cell.
-				 You can explore the <a href="https://github.com/openworm/CElegansNeuroML" target="_blank">github repository</a>.</p>
-			  <div class="mid-spacer"></div>
-	          <h4>Geppetto Simulation Engine</h4>
-	          <p>We are engineering <a href="https://github.com/openworm/OpenWorm/wiki/Geppetto--Overview" target="_blank">Geppetto</a>, a Java OSGi open-source modular platform to enable multi-scale and multi-algorithm interactive simulation of biological systems.
-	             Geppetto features a built-in WebGL visualizer that offers out-of-the-box visualization of simulated models right in the browser. You can read about <a href="https://github.com/openworm/OpenWorm/wiki/Geppetto---Concepts" target="_blank">architectural concepts</a> and <a href="https://github.com/openworm/OpenWorm/wiki/Geppetto---Repositories" target="_blank">learn more</a> about the different plug-in bundles we are working on.</p>
-			  <div class="mid-spacer"></div>
-	          <h4>OpenWorm browser</h4>
-	          <p>The OpenWorm Browser enables ready access to a cell-by-cell 3D representation of the nematode C. elegans in a WebGL enabled browser.  
-	          	 Checkout the source code and find out more on the <a href="https://github.com/openworm/wormbrowser" target="_blank">github repository</a>.
-	          	 We also ported this project to an <a href="https://itunes.apple.com/us/app/openworm-browser/id595581306" target="_blank">iOS app</a> to support the project.
-	          </p>
-	        </div>
-	
-	        <div class="span6">
-	          <h4>Fluid Mechanics Simulator</h4>
-	          <p>We have implemented an algorithm called Smoothed Particle Hydrodynamics (SPH) to simulate the body of the worm and its environment using GPUs.
-	             This algorithm has been initially <a href="https://github.com/openworm/Smoothed-Particle-Hydrodynamics/tree/master" target="_blank">worked out in C++</a> (with OpenGL visualization), then ported to Java as <a href="https://github.com/openworm/org.geppetto.simulator.sph" target="_blank">a bundle for Geppetto</a>, our simulation engine.</p>
-			  <div class="mid-spacer"></div>
-	          <h4>Optimization Engine</h4>
-	          <p>The Optimization Engine uses optimization techniques like genetic algorithms to help fill gaps in our knowledge of the electrophysiology of C. elegans muscle cells and neurons. Check out the code on the <a href="https://github.com/openworm/muscle_model" target="_blank">github repository</a>.
-	        </div>
-	       </div>
+			<div class="marketing">
+				
+				<h1>Supporters</h1>
+				<i class="icon-group icon-xl"></i>
+				<p class="marketing-byline">
+					Fueling our ambitious goals.
+				</p>
+				<div class="row-fluid">
+					<div class="span4 logo">
+						<div id="metacelllogo" onclick="window.open('http://metacell.us/');"></div>
+					</div>
+					<div class="span4 logo">
+						<div id="orionlogo" onclick="window.open('http://orionbionetworks.org/');"></div>
+					</div>
+					<div class="span4 logo">
+						<div id="neurolinxlogo" onclick="window.open('http://neurolinx.org/');"></div>
+					</div>
+				</div>
+
+				<hr class="soften">
+
+				<h1>Academic Support</h1>
+				<i class="icon-book icon-xl"></i>
+				<p class="marketing-byline">
+					We would like to thank the following organizations that directly support OpenWorm core contributors, which enables them to donate their time.
+				</p>
+				<div class="row-fluid">
+					<div>
+						<p><b><a href="http://www.wellcome.ac.uk/" target="_blank">Wellcome Trust</a></b> via Padraig Gleeson / Matteo Cantarelli (Silver Lab, University College London)</p>
+					</div>
+					<div>
+						<p><b><a href="http://www.mrc.ac.uk/" target="_blank">Medical Research Council</a></b> Century Award via Mike Vella (Department of Physiology, Development and Neuroscience, University of Cambridge)</p>
+					</div>
+					<div>
+						<p><b><a href="http://www.iis.nsk.su/en/" target="_blank">A.P. Ershov Institute of Informatic Systems</a></b> SB RAS via Andrey Palyanov / Sergey Khayrulin (Lab. of Complex Systems Simulations)</p>
+					</div>
+				</div>
+				
+				<hr class="soften">
+
+				<h1>Donors</h1>
+				<i class="icon-money icon-xl"></i>
+				<p class="marketing-byline">
+					Accelerating our progress with generous donations.
+				</p>
+				<div class="row-fluid">
+					<div>
+						<p><b>Paul de Groot</b></p>
+					</div>
+					<div>
+						<p><b>Yates Buckley</b></p>
+					</div>
+					<div>
+						<p>Michael Currie</p>
+					</div>
+					<div>
+						<p>Patrick Dennis</p>
+					</div>
+					<div>
+						<p>Seyyedshayan Elhami</p>
+					</div>
+					<div>
+						<p>Vedran Ilić-Dreven</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 		<footer class="footer">
 			<div class="container">
+				<p class="pull-right">
+					<a href="#">Back to top</a>
+				</p>
+				<p>
+					© 2011-2013 OpenWorm - All rights reserved.
+				</p>
+				<p>
+					Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+				</p>
+				<p>
+					<a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
+				</p>
 				<ul class="footer-links">
 					<li>
 						<a href="http://blog.openworm.org">Blog</a>
@@ -189,18 +234,6 @@
 						<a href="./contacts.html">Contacts</a>
 					</li>
 				</ul>
-                <p class="pull-right">
-                    <a href="#">Back to top</a>
-                </p>
-                <p>
-                    © 2011-2013 OpenWorm - All rights reserved.
-                </p>
-                <p>
-                    Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/"  target="_blank">CC BY 3.0</a>.
-                </p>
-                <p>
-                    <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
-                </p>
 			</div>
 		</footer>
 		<!-- Le javascript

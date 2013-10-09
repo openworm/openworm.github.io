@@ -15,6 +15,60 @@
 	margin-bottom: 50px;
 }
 
+#orionlogo{
+	background-image: url("../img/OrionLogo.png");
+	width: 200px;
+	height: 51px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:25px; 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#orionlogo {
+	background-image: url("../img/OrionLogo@2x.png");
+	background-size: 200px 51px;
+
+}
+}
+
+#metacelllogo{
+	background-image: url("../img/MetaCellLogo.png");
+	width: 156px;
+	height: 100px;
+	margin: 0 auto;
+	cursor:pointer; 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#metacelllogo {
+	background-image: url("../img/MetaCellLogo@2x.png");
+	background-size: 156px 100px;
+}
+}
+
+#neurolinxlogo{
+	background-image: url("../img/NeuroLinxLogo.png");
+	width: 212px;
+	height: 65px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:20px; 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#neurolinxlogo {
+	background-image: url("../img/NeuroLinxLogo@2x.png");
+	background-size: 212px 65px;
+}
+}
+
 #osblogo {
 	background-image: url("../img/osblogo.png");
 	display: inline-block;
