@@ -138,7 +138,6 @@
 }
 
 
-
 #bbc {
 	background-image: url("../img/bbc.png");
 	width: 221px;
@@ -194,6 +193,52 @@
 		background-size: 170px 163px;
 		margin: 0 auto;
 		cursor: pointer;
+		float: left;
+	}
+}
+
+#telegraph {
+	background-image: url("../img/telegraph.png");
+	width: 163px;
+	height: 163px;
+	margin: 0 auto;
+	margin-left: 22px;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#telegraph {
+		background-image: url("../img/telegraph2x.png");
+		background-size: 163px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		margin-left: 22px;
+		margin-right: 20px;
+		float: left;
+	}
+}
+
+#engadget {
+	background-image: url("../img/engadget.png");
+	width: 269px;
+	height: 163px;
+	margin: 0 auto;
+	margin-left: 22px;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#engadget {
+		background-image: url("../img/engadget2x.png");
+		background-size: 269px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		margin-left: 22px;
+		margin-right: 20px;
 		float: left;
 	}
 }
