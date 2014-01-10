@@ -30,7 +30,7 @@ $(function()
 	});
 
 	$('.carousel').carousel({
-      interval: 9000
+      interval: 13000
     });
 
 	$('.nav li').click(function(e)
