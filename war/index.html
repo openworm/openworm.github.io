@@ -32,6 +32,16 @@
 		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 	</head>
 	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
+	
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
@@ -195,6 +205,9 @@
 				<ul class="bs-docs-social-buttons">
 					<li>
 						<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=openworm&repo=openworm&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+					</li>
+					<li>
+						<div class="fb-like" data-href="http://www.facebook.com/OpenWorm" data-send="false" data-layout="button_count" data-width="75" data-show-faces="false"></div>
 					</li>
 					<li class="follow-btn">
 						<a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @openworm</a>
