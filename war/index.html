@@ -426,9 +426,11 @@
 			
 			<div style="display:none">
 				<div id="inline_content" style="padding:10px; background:#fff;">
-					<h1>THERE'S A KICKSTARTER GOING ON!</h1>
-					<p><strong>This content comes from a hidden element on this page.</strong></p>
-					<p>Put stuff here!</p>
+					<div style="text-align:center;">
+						<h1>THERE'S A KICKSTARTER GOING ON!</h1>
+						<p><strong>The Kickstarter will start in:</strong></p>
+						<h2 id="countdown"></h2>
+					</div>
 				</div>
 			</div>
 			<!-- Le javascript
@@ -442,6 +444,9 @@
 			<script src="js/main.js"></script>
 			<script>
 			$(document).ready(function(){
+				// start countdown script
+				showRemainingDays(new Date('02/15/2014 12:00 PM'));
+				
 				// dialog for kickstarter
 				$.colorbox({href:"#inline_content", inline: true, width: "70%", height: "50%", transition: "none"});
 			});
