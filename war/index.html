@@ -425,11 +425,9 @@
 			</footer>
 			
 			<div style="display:none">
-				<div id="inline_content" style="padding:10px; background:#fff;">
-					<div style="text-align:center;">
-						<h1>THERE'S A KICKSTARTER GOING ON!</h1>
-						<p><strong>The Kickstarter will start in:</strong></p>
-						<h2 id="countdown"></h2>
+				<div id="inline_content" style="padding:10px;">
+					<div style="text-align:center; margin-top:330px;">
+						<p class="lead" style="font-weight:100; font-size:45px;">The Kickstarter will start in <strong id="countdown"></strong></p>
 					</div>
 				</div>
 			</div>
@@ -445,10 +443,11 @@
 			<script>
 			$(document).ready(function(){
 				// start countdown script
-				showRemainingDays(new Date('02/15/2014 12:00 PM'));
+				showRemainingDays(new Date('08/12/2014 12:00 PM'));
 				
 				// dialog for kickstarter
-				$.colorbox({href:"#inline_content", inline: true, width: "70%", height: "50%", transition: "none"});
+				$.colorbox({href:"#inline_content", inline: true, width: "850px", height: "453px", transition: "none"});
+				$("#cboxLoadedContent").height("411px");
 			});
 			</script>
 			<script type="text/javascript">

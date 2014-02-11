@@ -22,6 +22,21 @@
   line-height: 1.3em;
 }
 
+#cboxLoadedContent{
+	background-image: url("../img/kickstarter.png");
+	width: 800px;
+	height: 411px;
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#cboxLoadedContent {
+	background-image: url("../img/kickstarter@2x.png");
+	background-size: 800px 411px;
+
+}
+
 #openworm_logo {
 	margin: 0 auto;
 	background-image: url("../img/OpenWormLogo.png");
@@ -48,6 +63,7 @@
 
 }
 }
+
 
 #metacelllogo{
 	background-image: url("../img/MetaCellLogo.png");
