@@ -457,6 +457,17 @@ dd {
 	font-size: 10px !important;
 }
 
+.science
+{
+	background: #258dc8!important; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #258dc8 0%, #258dc8 100%)!important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#258dc8), color-stop(100%,#258dc8))!important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* IE10+ */
+	background: linear-gradient(135deg,  #258dc8 0%,#258dc8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=1 )!important; /* IE6-9 fallback on horizontal gradient */
+}
 /* Footer
  -------------------------------------------------- */
 
