@@ -73,7 +73,7 @@
 								<a href="./media.html">Media</a>
 							</li>
 							<li>
-								<a class="donatecolor" href="./index.html">Kickstarter</a>
+								<a class="donatecolor" href="http://bit.ly/1mVGD8b">Kickstarter</a>
 							</li>
 						</ul>
 						<ul class="nav pull-right">
@@ -446,15 +446,14 @@
 			<script>
 			$(document).ready(function(){
 				// start countdown script
-				showRemainingDays(new Date('04/19/2014 12:00 PM'));
+				
 				
 				// dialog for kickstarter
-				$.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
-				$("#cboxLoadedContent").height("627px");
-				if (detectmob())
+				if (!detectmob())
 				{
-					$("#colorbox").css("visibility", "hidden");
-					$("#cboxOverlay").css("visibility", "hidden");
+					showRemainingDays(new Date('04/19/2014 12:00 PM'));
+					$.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
+					$("#cboxLoadedContent").height("627px");
 				}
 			});
 			</script>
