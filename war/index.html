@@ -1,289 +1,452 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta name="description" content="The official home page of the OpenWorm project">
-	
-	<script type="text/javascript" src="js/jQuery/jquery-1.6.4.js"></script>
-	<script type="text/javascript" src="js/jQuery-plugins/ninja-ui-3c2fe60/ninja.js"></script>
-	<script type="text/javascript" src="js/jQuery-plugins/seaofclouds-tweet-05a3ac8/tweet/jquery.tweet.js"></script>
-	<script type="text/javascript" src="js/jQuery-plugins/jquery-parss/jquery.parss.js"></script>
-	<script type="text/javascript" src="js/jQuery-plugins/jquery-address/jquery.address.js"></script>
-	<script type="text/javascript" src="js/jQuery-plugins/jquery-routes/jquery.routes.js"></script>
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="js/jQuery-plugins/ninja-ui-3c2fe60/ninja.css" />
-	<link rel="stylesheet" type="text/css" href="js/jQuery-plugins/ninja-ui-3c2fe60/themes/milk.css" />
-	<link rel="stylesheet" type="text/css" href="js/jQuery-plugins/seaofclouds-tweet-05a3ac8/tweet/jquery.tweet.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-	
-	<TITLE>OpenWorm</TITLE>
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-29668455-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-</head>
-<body class="ninjaThemeMilk">
-<div id="preloaded-images">
-   <img src="/imgs/feynmanBanner.png" width="1" height="1" alt="" />
-   <img src="/imgs/aboutBanner.png" width="1" height="1" alt="" />
-   <img src="/imgs/nietzscheBanner.png" width="1" height="1" alt="" />
-   <img src="/imgs/sulstonBanner.png" width="1" height="1" alt="" />
-   <img src="/imgs/montaigneBanner.png" width="1" height="1" alt="" />
-   <img src="/imgs/donateHover.png" width="1" height="1" alt="" />
-   <img src="/imgs/wormbrowserbtnHover.png" width="1" height="1" alt="" />
-</div>
-<div id="appHeader">
-	<div id="logo" onclick="location.href='/index.html'"></div>
-	<div id="donate" onclick="window.open(DONATE_URL,'_blank');"></div>
-	<div id="appHeaderTabs"></div>
-	<span  class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_facebook_hcount' displayText='Facebook'></span><span  class='st_plusone_hcount' ></span>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>OpenWorm</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.">
+		<meta name="author" content="">
 
-<div class="splashPanel" id="splashPanel">
-</div>
+		<!-- Le styles -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+		</style>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/docs.css" rel="stylesheet">
 
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-<div id="wrapper">
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
+	
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active">
+								<a href="./index.html">Home</a>
+							</li>
+							<li>
+								<a href="./getting_started.html">Get Started</a>
+							</li>
+							<li>
+								<a href="./get_involved.html">Get Involved</a>
+							</li>
+							<li>
+								<a href="./downloads.html">Downloads</a>
+							</li>
+							<li>
+								<a href="./supporters.html">Supporters</a>
+							</li>
+							<li>
+								<a href="./about.html">About</a>
+							</li>
+							<li>
+								<a class="donatecolor" href="./donate.html">Donate</a>
+							</li>
 
-<!-- dynamically hide/show the many versions of this for each content tab -->
-<div class="contentPanel lightPanel roundedPanel" id="contentPanel">
-	<!-- HERE GOES THE CONTENT - START -->
-	<div id="about-content" class="content" style="display: none;">
-	<h2 id="aboutTitle">Why?</h2>
-	<br/>
-	<div id="worm">
-	<span>
-		<p>If we ever hope to <b>understand how the brain works</b> and what happens when it suffers from disease, the most important thing we can do is to unleash our most powerful tools to organize the millions of facts that we know about the biology of the brain.</p>
-        <p>With the best scientists and engineers we can assemble the <b>greatest puzzle of our time</b> - what are all the events that happen inside a living brain?</p>
-        <p>Here at OpenWorm, we are starting this important journey with a practical step - by doing a <b>full simulation of a very "simple" biological system, the nematode <a href="http://en.wikipedia.org/wiki/Caenorhabditis_elegans" target="_blank">Caenorhabditis elegans</a></b>.</p>
-        <p>We can’t do it alone.  <a href="/index.html#/getstarted" target="_blank">Please join us!</a></p>
-	</span>
-	</div>
-	</div>
-	<div id="news-content" class="content" style="display: none;">
-		<h1>News from our blog</h1>
-		<ul id="news-feed">
-			<!-- dont put stuff here - this is dynamically populated -->
-		</ul>
-	</div>
-	<div id="showcase-content" class="content" style="display: none;">
-		<div id="showcaseLinks">
-			<ul id="showcaseList">
-				<li class="showcase-trigger selected" target="browser-sc">OpenWorm Browser</li>
-				<li class="showcase-trigger" target="connectome-sc">Connectome</li>
-				<li class="showcase-trigger" target="sim-engine-sc">Simulation Engine</li>
-				<li class="showcase-trigger" target="physics-sc">Physics</li>
-				<li class="showcase-trigger" target="ga-sc">Optimization</li>
-				<li class="showcase-trigger" target="cyber-elegans-sc">Cyber Elegans</li>
-			</ul>
+						</ul>
+						<ul class="nav pull-right">
+							<li><a class="icon-github icon-15x" href="http://docs.openworm.org/en/0.5/Community/github.html" target="_blank"></a>
+							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"What I cannot create, I do not understand" - R. Feynman' ></a><li>
+        					<li><a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="itunes_store"><i id="iphone" class="icon-mobile-phone"></i> Get the App</a></li>
+      					</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
 		</div>
-		<div id="showcaseContent">
-				<div id="cyber-elegans-sc" class="showcase-section">
-					<p>A talented team of researchers at the <a href="http://db.iis.nsk.su/structure/structure.asp?StructName=70&lang=eng" target="_blank">A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation</a>, consisting of <a href="http://www.linkedin.com/pub/andrey-palyanov/20/201/611" target="_blank">Andrey Palyanov</a>, <a href="http://www.linkedin.com/in/skhayrulin" target="_blank">Sergey Khayrulin</a>, and <a href="http://web.ceu.hu/math/People/MS_Students/Alexander_DIBERT.html" target="_blank">Alexander Dibert</a> developed an initial neuromechanical model of the c. elegans in 3D.  Source code for this <a href="https://github.com/openworm/CyberElegans" target="_blank">is available</a>.</p>
-					<p>The original Cyber Elegans team joined the Open Worm project to incorporate greater biological realism into their model, simulating the soft body of the C. elegans rather than using a rigid body model, and to break-down their code base into a modular and generic <a href="http://code.google.com/p/openworm/wiki/GettingStartedWithSimulationFramework" target="_blank">simulation engine</a>.</p>
-					<div style="width:360px; height:250px; margin:0 auto;">
-					<iframe width="360" height="250" src="http://www.youtube.com/embed/3uV3yTmUlgo" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div id="sim-engine-sc" class="showcase-section">
-					<p>This video shows a neuronal simulation demo built on the current version of the OpenWorm simulation engine. In the video one of the 302 Hodgkin-Huxley neurons (simulated in parallel on GPU native kernel via OpenCL) is displayed and by changing the external current applied the spike shape and firing rate are updated.</p> 
-					<p>This rather basic setup is just meant to be a proof of concept of the rather complex architectural stack involved behind the scenes (see <a href="http://code.google.com/p/openworm/wiki/SimulationFrameworkConcepts" target="_blank">SimulationFrameworkConcepts</a> for more details).</p>
-					<div style="width:360px; height:250px; margin:0 auto;">
-					<iframe width="360" height="250" src="http://www.youtube.com/embed/KZ_qzKMZLnY" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div id="physics-sc" class="showcase-section">
-					<p>We have implemented an algorithm called Smoothed Particle Hydrodynamics (SPH) (see <a href="http://www.mendeley.com/research/predictivecorrective-incompressible-sph-1/" target="_blank">reference</a> for more) to simulate the body of the worm and its environment.</p>
-					<p>We have not yet incorporated the <a href="http://code.google.com/p/openworm/wiki/VirtualWormBlenderFiles" target="_blank">worm anatomy</a> into this solver, although this will be the next step. 
-					   If you are running Windows, you can download a current version of our alpha implementation of PCISPH as a binary <a href="http://code.google.com/p/openworm/downloads/list?q=label:SoftBodySolver" target="_blank">here</a>. 
-					   The source code for this demo is available online <a href="https://github.com/openworm/Smoothed-Particle-Hydrodynamics" target="_blank">here</a>. 
-					   The SPH algorithm has also been implemented as a <a href="https://github.com/openworm/org.openworm.simulationengine.solver.sph" target="_blank">solver</a> for the OpenWorm simulation engine.</p>
-					<div style="width:360px; height:250px; margin:0 auto;">
-					<iframe width="360" height="250" src="http://www.youtube.com/embed/jHksm0QKWPE" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div id="connectome-sc" class="showcase-section">
-              		<p>We have converted all 302 neurons described in the <a href="http://www.wormbase.org/" target="_blank">WormBase</a> <a href="http://caltech.wormbase.org/virtualworm/" target="_blank">Virtual Worm</a> Blender files into <a href="http://en.wikipedia.org/wiki/Biological_neuron_models#Expanded_neuron_models" target="_blank">multi-compartmental neuronal models</a>.  To make the models open and accessible, we have built the neurons in a <a href="http://code.google.com/p/openworm/wiki/neuroConstructCElegans" target="_blank">neuroConstruct</a> project, which outputs NeuroML.  The latest version of this project is freely <a href="https://github.com/openworm/CElegansNeuroML" target="_blank">available online</a>.</p>
-					<p>This captures the positions of the cells in context with each other and gives us a place to start building descriptions of the <a href="http://en.wikipedia.org/wiki/Synapse" target="_blank">synaptic junctions</a> and the <a href="http://en.wikipedia.org/wiki/Ion_channel" target="_blank">ion channels</a> for each cell.</p>
-					<div style="width:360px; height:250px; margin:0 auto;">
-					<iframe width="360" height="250" src="http://www.youtube.com/embed/t7GohXlo2bo" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-				<div id="ga-sc" class="showcase-section">
-					<p>A major component of our strategy with this project is to use optimization techniques like genetic algorithms to help fill gaps in our knowledge. During <a href="http://code.google.com/p/openworm/wiki/Roadmap" target="_blank">release 2</a>, our goal is to nail down the details for body wall muscle cell MDL08.</p> 
-					<p>We are building on the work of <a href="http://www.comp.leeds.ac.uk/jboyle/JordanBoyle_files/extended.pdf" target="_blank">Boyle & Cohen 2007</a>, who built a model of a C. elegans body wall muscle cell. As part of their work, they used a genetic algorithm to tune the exact values of key parameters used. 
-					   Using a generous donation of the code used in this publication, and extending it, we have reproduced the results of Boyle and Cohen. <a href="https://docs.google.com/open?id=0B_t3mQaA-HaMZTE1ODA1MjgtNjQxYi00YWU0LWE5MjUtNTQyZDYyOTMxNzYy" target="_blank">This document</a> summarizes out initial effort.</p>
-					<div style="width:360px; height:250px; margin:0 auto;">
-					</div>
-				</div>
-				<div id="browser-sc" class="showcase-section showcase-default">
-					<p>The <a href="http://browser.openworm.org" target=_blank">OpenWorm Browser</a> enables ready access to a cell-by-cell 3D representation of the nematode C. elegans in a <a href="http://www.khronos.org/webgl/wiki/Getting_a_WebGL_Implementation" target=_blank">WebGL enabled browser</a>.</p>
-					<p>The C. elegans 3D model is provided by Christian Grove at the <a href="http://caltech.wormbase.org/virtualworm/" target=_blank">VirtualWorm</a> project (WormBase, CalTech).</p> 
-					<p>Our browser is based on WebGL technology and built on top of the <a href="http://code.google.com/p/open-3d-viewer/" target=_blank">open-3d-viewer</a> (ex-"Google Body Browser").</p>
-					<p>As any other software developed as part of the OpenWorm project, the OpenWorm browser is <a href="https://github.com/openworm/wormbrowser" target=_blank">completely open sourced</a>.</p>
-					<br/>
-					<br/>  
-					<div style="width:295px; margin:0 auto;">
-						<a href="http://browser.openworm.org" target="_blank">
-							<div id="wormbrowser-btn" style="width:295px; height: 71px;"></div>
-						</a>
-					</div>
-				</div>
-		</div>
-	</div>
-	<div id="getting-started-content" class="content" style="display: none;">
-		<h1>Want to contribute? Here’s how</h1>
-		<br/>
-		<span>
-		<div id="hphilantropists"></div>
-	  <div class="contributeSubPanel">
-      <p><b>Want to support the project?</b></p>
-      <ul>
-        <!--<li><p>Kickstarter placeholder</p></li>-->
-        <li><p>We are a volunteer group of motivated scientists and engineers.  Please support us by donating to us via <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AG2392TAHLFHQ" target="_blank">PayPal</a></p></li>
-      </ul>
-	  </div>
-	  <div id="henthusiasts"></div>
-	  <div class="contributeSubPanel">
-		 <p><b>Are you a curious citizen?</b></p>
-		 <ul>
-         <li><p>An overview of our current activities are available on our <a href="http://code.google.com/p/openworm/wiki/Roadmap" target="_blank">roadmap</a></p></li>
-		  <li><p>We are also placing our working documents, presentation and tutorials publicly available on our <a href="https://docs.google.com/open?id=0B_t3mQaA-HaMOGMwOTc0NTEtMzdhZi00ZGE2LTk5OGEtZjM3Njc4NTIzZDM4" target="_blank">google docs public repository</a>.</p></li>
-		</ul>
-		</div>
-		<div id="hhackers"></div>
-		<div class="contributeSubPanel">
-      <p><b>Do you have programming skills?</b></p>
-      <ul>
-       <li><p>To get started in general with the project check out the <a href="http://code.google.com/p/openworm/wiki/TableOfContents?tm=6" target="_blank">table of contents</a> on our Wiki.</p></li>
-		   <li><p>To get started with the source code check out our <a href="http://code.google.com/p/openworm/wiki/SourceCodeIntro" target="_blank">source code intro</a> article.</p></li>
-      </ul>
-	  </div>
-		</span>
 		
-	</div>
-	<div id="tech-content" class="content" style="display: none;">
-		<h1>OpenWorm technologies</h1>
-		</br>
-		<span>
-		<p><img class="tech-image" src="imgs/tech-icons/java-logo.jpg" /><div class="tech-desc"><a href="http://www.java.com/" target="_blank"><b>Java</b></a> is the core of our flexible simulation engine platform.</div></p>
-		<div class="clearer"></div>
-		<p><img class="tech-image" src="imgs/tech-icons/opencl-logo.png" /><div class="tech-desc">We are using <a href="http://www.khronos.org/opencl/" target="_blank"><b>OpenCL</b></a> via <a href="http://code.google.com/p/javacl/" target="_blank"><b>JavaCL</b></a> bindings to leverage GPUs in our simulations.</div></p>
-		<div class="clearer"></div>
-		<p><img class="tech-image" src="imgs/tech-icons/python-logo.jpg" /><div class="tech-desc"><a href="http://python.org/" target="_blank"><b>Python</b></a> enables us to quickly hack together powerful scripts for many different purposes.</div></p>
-		<div class="clearer"></div>
-		<p><img class="tech-image" src="imgs/tech-icons/aws-logo.jpg" /><div class="tech-desc">We distribute our systems in the “cloud” of <a href="http://aws.amazon.com/" target="_blank"><b>Amazon Web Services</b></a> to enable our international contributors access to computational resources wherever they are.</div></p>
-		<div class="clearer"></div>
-		<p><img class="tech-image" src="imgs/tech-icons/neuroml-logo.jpeg" /><div class="tech-desc">We use <a href="http://www.neuroml.org/" target="_blank"><b>NeuroML</b></a> to build the electrical / chemical models of neurons in our simulations.</div></p>
-		<div class="clearer"></div>
-		<p><img class="tech-image" src="imgs/tech-icons/neuroconstruct-logo.png" /><div class="tech-desc">We use <a href="http://code.google.com/p/openworm/wiki/neuroConstructCElegans" target="_blank"><b>neuroConstruct</b></a> paired up with NeuroML in our simulations.</div></p>
-		<div class="clearer"></div>
-		<p><img class="tech-image" src="imgs/tech-icons/gae-logo.jpg" /><div class="tech-desc">Our website is developed and hosted on the <a href="http://code.google.com/appengine/" target="_blank"><b>Google AppEngine</b></a> platform.</div></p>
-		<div class="clearer"></div>
-		</span>
-	</div>
-	<div id="people-content" class="content">
-		<div class="peopletitlte">Researchers and engineers</div>
-		<div class="portraitsrow">
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/alex.png" class="profilePic" /></div>
-				   <a href="http://ceu.academia.edu/AlexanderDibert/About" target="_blank" style="margin-left: 5px;">Alexander Dibert</a><br/><small class="country">Russia</small>
+		
+		<div id="myCarousel" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="item active">
+					<div class="jumbotron masthead">
+						<div class="container">
+							<h1>OpenWorm</h1>
+							<p>
+								Building the first digital life form.  Open source.
+							</p>
+							<p>
+								<a href="./getting_started.html" class="btn btn-primary btn-large">Get Started</a>
+								<a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" class="btn btn-primary btn-large btn-inverse" target="itunes_store"><i class="icon-mobile-phone" id="mainphone" ></i> Get the App</a>
+							</p>
+							<ul class="masthead-links">
+								<li>
+									<a href="http://blog.openworm.org" target="_blank">Blog</a>
+								</li>
+								<li>
+									<a href="http://docs.openworm.org/en/0.5/projects.html" target="_blank">Projects</a>
+								</li>
+								<li>
+									<a id="geeks" href="http://www.redbubble.com/people/openworm/shop" target="_blank">For <strong>real</strong> worm-geeks</a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/andrey.png" class="profilePic" /></div>
-				   <a  href="http://ru.linkedin.com/pub/andrey-palyanov/20/201/611" target="_blank" style="margin-left: 5px;">Andrey Palyanov</a><br/><small class="country">Russia</small>
+				<div class="item">
+					<img src="./img/sc_sibernetic.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Sibernetic Worm body simulator</h1>
+							<p class="lead">
+								Worms are soft and squishy.  So our model has to be too. 
+								<br/>
+								We are building in the physics of muscles, soft tissues and fluids.  Because it matters.
+								<br/>
+								<br/>
+							</p>
+							<a class="btn btn-large btn-primary" href="https://www.youtube.com/watch?v=r2OBznK6HkI" target="_blank">Watch a video</a>
+						</div>
+					</div>
 				</div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/giovanni.png" class="profilePic"/></div>
-				   <a href="http://ie.linkedin.com/in/giovanniidili" target="_blank" style="margin-left: 5px;">Giovanni Idili</a><br/><small class="country">Italy</small>
-				   <div class="clearer"></div>
+				<div class="item">
+					<img src="./img/sc_wormbrowser.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>OpenWorm Browser</h1>
+							<p class="lead">
+								We created a 3D Browser to let everybody take the worm apart.
+								Zoom, rotate and peel back layers of a 3D worm without getting your hands dirty.
+								<br/>
+								<br/>
+							</p>
+							<a class="btn btn-large btn-primary" target="_blank" href="http://browser.openworm.org">Launch</a>
+							<a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" class="btn btn-primary btn-large btn-inverse" target="_blank"><i class="icon-mobile-phone"></i> Get the App</a>
+						</div>
+					</div>
 				</div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/gleb.png" class="profilePic" /></div>
-			   	   <a  href="http://www.glebkuznetsov.com/" target="_blank" style="margin-left: 5px;">Gleb Kuznetsov</a><br/><small class="country">U.S.A.</small>
-			    </div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/matteo.png" class="profilePic"/></div>
-				   <a  href="http://it.linkedin.com/in/matteocantarelli" target="_blank" style="margin-left: 5px;">Matteo Cantarelli</a><br/><small class="country">Italy</small>
+				<div class="item">
+					<img src="./img/sc_connectome.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>NeuroML Connectome</h1>
+							<p class="lead">
+								Every neuron the worm has, and how they connect.  Everything in its right place.  Now we are bringing it to life.
+								<br/>
+								<br/>
+							</p>
+								<a href="http://goo.gl/XGQPX" target="_blank" class="btn btn-primary btn-large" onclick="">Explore the connectome</a>
+								<a href="http://opensourcebrain.org" target="_blank"><span id="osblogo"></span></a>
+						</div>
+					</div>
 				</div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/mike.png" class="profilePic"/></div>
-				   <a  href="http://www.neuroscience.cam.ac.uk/directory/profile.php?vellamike" target="_blank" style="margin-left: 5px;">Mike Vella</a><br/><small class="country">UK</small>
+				<div class="item">
+					<img src="./img/sc_geppetto.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<div id="geppetto_logo"></div>
+							<h1>A modular simulation engine.</h1>
+							<p class="lead">
+								We are engineering Geppetto, a plug-and-play platform to power simulations of biological systems... from your web browser.
+								<br/>
+								<br/>
+							</p>
+							<a class="btn btn-large btn-warning" href="http://geppetto.org" target="_blank">Learn more</a>
+							<a class="btn btn-large btn-primary" href="https://github.com/openworm/org.geppetto/releases" target="_blank">Download</a>
+							<a class="btn btn-large btn-primary" href="https://github.com/openworm/OpenWorm/wiki/Geppetto---Repositories" target="_blank">Sources</a>
+						</div>
+					</div>
 				</div>
-			    <div class="clearer"></div>
-			    <div class="person"><div class="cropPanel"><img src="imgs/profiles/padraig.png" class="profilePic" /></div>
-			   	   <a  href="http://www.incf.org/community/people/pgleeson/person_view" target="_blank" style="margin-left: 5px;">Padraig Gleeson</a><br/><small class="country">Ireland</small>
-			    </div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/sergey.png" class="profilePic" /></div>
-				   <a href="http://www.linkedin.com/pub/sergey-khayrulin/31/2a7/452" target="_blank" style="margin-left: 5px;">Sergey Khayrulin </a><br/><small class="country">Russia</small>
+				<div class="item">
+					<img src="./img/sc_optimal.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Aiming for the best.</h1>
+							<p class="lead">
+								We are using optimization techniques such as genetic algorithms to fine-tune our models to fit experimental data from real cellular recordings.
+								<br/>
+								It's evolution, baby.
+								<br/>
+								<br/>
+							</p>
+							<a class="btn btn-large btn-primary" href="http://optimal-neuron.readthedocs.org/en/0.5/installation.html" target="_blank">Documentation</a>
+							<a class="btn btn-large btn-primary" href="https://github.com/openworm/muscle_model" target="_blank">Sources</a>
+						</div>
+					</div>
 				</div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/Stephen.png" class="profilePic"/></div>
-				   <a href="http://www.linkedin.com/in/stephendavidlarson" target="_blank" style="margin-left: 5px;">Stephen Larson</a><br/><small class="country">U.S.A.</small><br/><small class="role">Coordinator</small>
-				</div>
-				<div class="person"><div class="cropPanel"><img src="imgs/profiles/timothy-busbice.png" class="profilePic" /></div>
-				   <a href="http://www.linkedin.com/in/timothybusbice" target="_blank" style="margin-left: 5px;">Timothy Busbice</a><br/><small class="country">U.S.A.</small>
-				</div>
-		</div>
-		<div class="clearer"></div>
-		<div class="peopletitlte">Contributors</div>
-		<div class="portraitsrow">
-			<div class="person"><div class="cropPanel"><img src="imgs/profiles/spok.png" class="profilePic" /></div>
-			   <a href="http://www.inf.ed.ac.uk/people/students/Balazs_Szigeti.html" target="_blank" style="margin-left: 5px;">Balazs Szigeti</a><br/><small class="country">Hungary</small>
 			</div>
-			<div class="person"><div class="cropPanel"><img src="imgs/profiles/christian.png" class="profilePic" /></div>
-			   <a href="http://www.linkedin.com/pub/christian-grove/a/396/562" target="_blank" style="margin-left: 5px;">Christian Grove</a><br/><small class="country">U.S.A.</small>
-			</div>
-			<div class="person"><div class="cropPanel"><img src="imgs/profiles/davidad.png" class="profilePic"/></div>
-			   <a href="http://www.linkedin.com/pub/david-dalrymple/1a/205/b9b" target="_blank" style="margin-left: 5px;">David Darlymple</a><br/><small class="country">U.S.A.</small>
-			</div>
-			<div class="person"><div class="cropPanel"><img src="imgs/profiles/spok.png" class="profilePic" /></div>
-			   <a href="http://www.dimitar-shterionov.com" target="_blank" style="margin-left: 5px;">Dmitar Shterionov</a><br/><small class="country">Russia</small>
-			</div>
-			<div class="person"><div class="cropPanel"><img src="imgs/profiles/jay.png" class="profilePic" /></div>
-			   <a href="http://www.linkedin.com/pub/jay-s-coggan/27/215/741" target="_blank" style="margin-left: 5px;">Jay Coggan</a><br/><small class="country">U.S.A.</small>
-			</div>
-			<div class="person"><div class="cropPanel"><img src="imgs/profiles/spok.png" class="profilePic" /></div>
-			   <a  href="http://www.linkedin.com/pub/marius-buibas/6/981/a51" target="_blank" style="margin-left: 5px;">Marius Buibas</a><br/><small class="country">U.S.A.</small>
-			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			<!--div id="tip"></div>-->
+		</div><!-- /.carousel -->
 
 		</div>
-	</div>
-	<div id="contacts-content" class="content" style="display: none;">
-		<div class="contactstitle">Follow us!</div>
-		<span>
-		<p>For ongoing information about OpenWorm, please read our <a href="http://blog.openworm.org/" target="_blank">blog</a>.</p> 
-		<p>You can also follow us on <a href="http://twitter.com/openworm" target="_blank">twitter</a> or <a href="https://plus.google.com/117948341754627144949/posts" target="_blank">Google+</a> for more frequent updates.</p>
-		</span>
-		<div class="contactstitle">Want more info? Drop us a line!</div>
-		<span>
-		<p>You can contact the members of the OpenWorm project on our <a href="http://groups.google.com/group/openworm" target="_blank">Google Groups mailing list.</a></p> 
-		<p>Also, feel free to contact us with questions, partnership proposals, or other inquiries at <a href="mailto:info@openworm.org">info<b>at</b>openworm.org</a>.</p>
-		</span>
-		<div class="worm"></div>
-	</div>
-	<!-- HERE GOES THE CONTENT - END -->
-</div>
-<div id ="sidePanelsContainer" class="sidePanelsContainer">
-	<div class="sidePanel lightPanel roundedPanel" id="sidePanel">
-		<a href="https://twitter.com/openworm" class="twitter-follow-button" data-show-count="false">Follow @openworm</a>
-		<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
-		<div id="twitterStreamPanel" class="tweet">
+		<!-- /container -->
+		<div class="bs-docs-social">
+			<div class="container">
+				<ul class="bs-docs-social-buttons">
+					<li>
+						<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=openworm&repo=openworm&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+					</li>
+					<li>
+						<div class="fb-like" data-href="http://www.facebook.com/OpenWorm" data-send="false" data-layout="button_count" data-width="75" data-show-faces="false"></div>
+					</li>
+					<li class="follow-btn">
+						<a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @openworm</a>
+					</li>
+					<li class="tweet-btn">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.openworm.org/" data-text="Check out @OpenWorm: building the first digital life form... open source!">Tweet</a>
+					</li>
+					<!-- Place this tag where you want the +1 button to render. -->
+					<li>
+						<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/117948341754627144949"></div>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div class="clearer"></div>
-</div>
-</div>
-<div class="clearer"></div>
-<div class="verticalSpacer"></div>
-<div class="verticalSpacer"></div>
-<div id="footerPanel">
-	<span>
-		<a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>
-	</span>
-</div>
-<div class="clearer"></div>
-</body>
+		<div>
+
+			<div class="container">
+
+				<div class="marketing">
+					<h1>Enter the worm.</h1>
+					<p class="marketing-byline">
+						OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.
+					</p>
+					<div id="openworm_logo"></div>
+					<div class="row-fluid">
+						<div class="span6">
+							<h2>Latest news</h2>
+							<ul id="news-feed">
+
+							</ul>
+						</div>
+						<div class="span6">
+							<h2>Social stream</h2>
+							<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>
+							<script>
+								! function(d, s, id) {
+									var js, fjs = d.getElementsByTagName(s)[0];
+									if (!d.getElementById(id)) {
+										js = d.createElement(s);
+										js.id = id;
+										js.src = "//platform.twitter.com/widgets.js";
+										fjs.parentNode.insertBefore(js, fjs);
+									}
+								}(document, "script", "twitter-wjs");
+							</script>
+
+						</div>
+					</div>
+					<div class = "row-fluid pagination-centered span12">
+						<div class="span3">
+							<div id="atlantic" onclick=Javascript:window.open("http://www.theatlantic.com/technology/archive/2013/05/is-this-virtual-worm-the-first-sign-of-the-singularity/275715/")></div>
+						</div>
+						<div class="span3">
+							<div id="bbc"  onclick=Javascript:window.open("http://www.bbc.co.uk/news/technology-22397252")></div>
+						</div>
+						<div class="span3">
+							<div id="nbc" onclick=Javascript:window.open("http://www.nbcnews.com/technology/futureoftech/open-source-virtual-worm-worms-its-way-life-6C9770499")></div>
+						</div>
+						<div class="span3">
+							<div id="telegraph" onclick=Javascript:window.open("http://www.telegraph.co.uk/technology/news/10535160/Wriggling-worm-is-breakthrough-for-artificial-life.html")></div>
+						</div>
+					</div>
+					<div class = "row-fluid pagination-centered span12">
+						<div class="span4">
+							<div id="wired" onclick=Javascript:window.open("http://www.wired.co.uk/magazine/archive/2013/03/start/meet-wiki-worm")></div>
+						</div>
+						<div class="span4">
+							<div id="engadget" onclick=Javascript:window.open("http://www.engadget.com/2013/12/26/openworm-project/")></div>
+						</div>
+						<div class="span4">
+							<div id="boingboing" onclick=Javascript:window.open("http://boingboing.net/2013/05/02/openworm-an-artificial-life-s.html")></div>
+						</div>
+					</div>
+					<br/><br/>
+					<p class="marketing-byline clear">
+						See more coverage of OpenWorm in the news <a href="./media.html">here</a>.
+					</p>
+					<hr class="soften">
+					
+					<h1>Open Science at its best.</h1>
+					<div class="row">
+						<div class="span12 pagination-centered">
+							<i class="icon-beaker icon-xxl"></i>
+						</div>
+					</div>
+					<p class="marketing-byline">
+						All the code, data and models produced as part of the OpenWorm project are open-source under the MIT licence.
+					</p>
+					<div class="row-fluid">
+						<div class="span4">
+							<i class="icon-github icon-xl"></i>
+							<h2>Source code</h2>
+							<p>
+								All the code produced as part of the OpenWorm project is on <a href="http://docs.openworm.org/en/0.5/Community/github.html#github" target="_blank">GitHub</a> under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a> licence. Different <a href="http://docs.openworm.org/en/0.5/projects.html" target="_blank">sub-projects</a> are hosted in different repositories.
+							</p>
+						</div>
+						<div class="span4">
+							<i class="icon-tasks icon-xl"></i>
+							<h2>Current progress</h2>
+							<p>
+								The tasks we are currently working on are tracked on GitHub under different <a href="https://github.com/openworm/OpenWorm/issues/milestones" target="_blank">Milestones</a>. 
+							</p>
+						</div>
+						<div class="span4">
+							<i class="icon-calendar icon-xl"></i>
+							<h2>Calendar</h2>
+							<p>
+								When is the next OpenWorm hangout or event? Checkout our <a href="https://www.google.com/calendar/embed?src=bqvlrm642m3irjehbethokkcdg%40group.calendar.google.com" target="_blank">public calendar</a> to find out!
+							</p>
+						</div>
+					</div>
+
+					<hr class="soften">
+
+					<h1>Meet with us.</h1>
+					<div class="row">
+						<div class="span12 pagination-centered">
+							<i class="icon-group icon-xxl"></i>
+						</div>
+					</div>
+					<div class="large-spacer"></div>
+					<p class="marketing-byline">
+						
+						<a href="./people.html">Our core team</a> meets every two weeks in public Google Hangouts <a href="https://www.youtube.com/OpenWorm" target="_blank">streamed via YouTube</a>. You are welcome to <a href="https://plus.google.com/117948341754627144949/posts" target="_blank">join us</a>!
+					</p>
+				</div>
+
+			</div>
+
+			<!-- Footer
+			================================================== -->
+			<footer class="footer">
+				<div class="container">
+					<ul class="footer-links">
+						<li>
+							<a href="http://blog.openworm.org">Blog</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./about.html">About</a>
+						</li>
+						<li class="muted">
+						&middot;
+					    </li>
+					    <li>
+						<a href="http://docs.openworm.org/en/0.5/faq.html" target="_blank">FAQ</a>
+					    </li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./people.html">People</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li><li>
+							<a href="./events.html">Events</a>
+						</li>
+	
+						<li class="muted">
+							&middot;
+						</li><li>
+							<a href="./media.html">Media</a>
+						</li>
+					
+						<li class="muted">
+							&middot;
+						</li>
+						
+						<li>
+							<a href="http://docs.openworm.org/en/0.5/projects.html" target="_blank">Projects</a>
+						</li>
+
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./publications.html">Publications</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="https://github.com/openworm/OpenWorm/issues/milestones" target="_blank">Milestones & Issues</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="http://docs.openworm.org/en/0.5/modeling.html" target="_blank">Roadmap</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./contacts.html">Contacts</a>
+						</li>
+					</ul>
+                    <p class="pull-right">
+                        <a href="#">Back to top</a>
+                    </p>
+                    <p>
+                        © 2011-2013 OpenWorm - All rights reserved.
+                    </p>
+                    <p>
+                        Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+                    </p>
+                    <p>
+                        <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
+                    </p>
+				</div>
+			</footer>
+			<!-- Le javascript
+			================================================== -->
+			<!-- Placed at the end of the document so the pages load faster -->
+			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			<script src="js/jquery-1.8.3.min.js"></script>
+			<script src="js/bootstrap.js"></script>
+			<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+			<script src="js/main.js"></script>
+<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29668455-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+	
 </html>

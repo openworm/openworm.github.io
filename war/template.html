@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>OpenWorm</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- Le styles -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+		</style>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/docs.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
+			
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li>
+								<a href="./index.html">Home</a>
+							</li>
+							<li>
+								<a href="./getting_started.html">Get Started</a>
+							</li>
+							<li>
+								<a href="https://github.com/openworm/OpenWorm/wiki">Wiki</a>
+							</li>
+
+							<li>
+								<a href="./get_involved.html">Get Involved</a>
+							</li>
+							<li>
+								<a href="./downloads.html">Downloads</a>
+							</li>
+							<li>
+								<a href="./supporters.html">Supporters</a>
+							</li>
+							<li>
+								<a href="./about.html">About</a>
+							</li>
+							<li>
+								<a class="donatecolor" href="./donate.html">Donate</a>
+							</li>
+						</ul>
+						<ul class="nav pull-right">
+							<li><a class="icon-github icon-15x" href="http://docs.openworm.org/en/0.5/Community/github.html" target="_blank"></a>
+							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"What I cannot create, I do not understand" - R. Feynman' ></a><li>
+        					<li><a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="itunes_store"><i id="iphone" class="icon-mobile-phone"></i> Get the App</a></li>
+      					</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+
+		<header class="jumbotron subhead" id="overview">
+			<div class="container">
+				<h1>Getting started</h1>
+				<p class="lead">
+					Overview of the project, its contents, and how to get started with a simple template.
+				</p>
+			</div>
+		</header>
+
+		<div class="container">
+
+			<div class="marketing">
+
+				<h1>Enter the worm.</h1>
+				<p class="marketing-byline">
+					OpenWorm is an open source project dedicated to creating the world’s first virtual organism in a computer, starting with a C.elegans nematode.
+				</p>
+						<div class="row-fluid padding-top-large">
+							<div class="span8 pagination-centered">
+
+								<div class="well">
+									<div class="centered">
+										<iframe width="420" height="315" src="http://www.youtube.com/embed/TawB6JE3SV0" frameborder="0" allowfullscreen></iframe>
+									</div>
+									<div class="padding-top">
+										<h4>Sample of embedding a video</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+				<div class="row-fluid">
+					<div class="span6">
+						<h2>Latest news</h2>
+						<ul id="news-feed">
+
+						</ul>
+					</div>
+					<div class="span6">
+						<h2>Social stream</h2>
+						<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>
+						<script>
+							! function(d, s, id) {
+								var js, fjs = d.getElementsByTagName(s)[0];
+								if (!d.getElementById(id)) {
+									js = d.createElement(s);
+									js.id = id;
+									js.src = "//platform.twitter.com/widgets.js";
+									fjs.parentNode.insertBefore(js, fjs);
+								}
+							}(document, "script", "twitter-wjs");
+						</script>
+
+					</div>
+				</div>
+
+				<hr class="soften">
+
+				<h1>It's Open Source.</h1>
+				<p class="marketing-byline">
+					For even more sites built with Bootstrap, <a href="http://builtwithbootstrap.tumblr.com/" target="_blank">visit the unofficial Tumblr</a> or <a href="./getting-started.html#examples">browse the examples</a>.
+				</p>
+				<div class="row-fluid">
+					<ul class="thumbnails example-sites">
+						<li class="span3">
+							<a class="thumbnail" href="http://soundready.fm/" target="_blank"> <img src="assets/img/example-sites/soundready.png" alt="SoundReady.fm"> </a>
+						</li>
+						<li class="span3">
+							<a class="thumbnail" href="http://kippt.com/" target="_blank"> <img src="assets/img/example-sites/kippt.png" alt="Kippt"> </a>
+						</li>
+						<li class="span3">
+							<a class="thumbnail" href="http://www.gathercontent.com/" target="_blank"> <img src="assets/img/example-sites/gathercontent.png" alt="Gather Content"> </a>
+						</li>
+						<li class="span3">
+							<a class="thumbnail" href="http://www.jshint.com/" target="_blank"> <img src="assets/img/example-sites/jshint.png" alt="JS Hint"> </a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</div>
+
+<!-- Footer
+			================================================== -->
+			<footer class="footer">
+				<div class="container">
+					<ul class="footer-links">
+						<li>
+							<a href="http://blog.openworm.org">Blog</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./about.html">About</a>
+						</li>
+						<li class="muted">
+						&middot;
+					    </li>
+					    <li>
+						<a href="http://docs.openworm.org/en/0.5/faq.html" target="_blank">FAQ</a>
+					    </li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./people.html">People</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li><li>
+							<a href="./events.html">Events</a>
+						</li>
+	
+						<li class="muted">
+							&middot;
+						</li><li>
+							<a href="./media.html">Media</a>
+						</li>
+					
+						<li class="muted">
+							&middot;
+						</li>
+						
+						<li>
+							<a href="http://docs.openworm.org/en/0.5/projects.html" target="_blank">Projects</a>
+						</li>
+
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./publications.html">Publications</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="https://github.com/openworm/OpenWorm/issues/milestones" target="_blank">Milestones & Issues</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="http://docs.openworm.org/en/0.5/modeling.html" target="_blank">Roadmap</a>
+						</li>
+						<li class="muted">
+							&middot;
+						</li>
+						<li>
+							<a href="./contacts.html">Contacts</a>
+						</li>
+					</ul>
+                    <p class="pull-right">
+                        <a href="#">Back to top</a>
+                    </p>
+                    <p>
+                        © 2011-2013 OpenWorm - All rights reserved.
+                    </p>
+                    <p>
+                        Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+                    </p>
+                    <p>
+                        <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
+                    </p>
+				</div>
+			</footer>
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+		<script src="js/main.js"></script>
+<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29668455-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>

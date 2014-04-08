@@ -1,419 +1,583 @@
-div#preloaded-images {
-    position: absolute;
-    overflow: hidden;
-    left: -9999px;
-    top: -9999px;
-    height: 1px;
-    width: 1px;
+#geppetto_logo {
+	position: absolute;
+	left: 10px;
+	top: 100px;
+	background-image: url("../img/glogo.png");
+	width: 300px;
+	height: 76px;
 }
 
-body {
-    font: 14px / 1.231 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
-    margin: 1em auto;
-    padding: 0 1em;
-    max-width: 850px;
-    min-width: 850px;
-    background-color: #92be23;
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+
+#geppetto_logo {
+	background-image: url("../img/glogo@2x.png");
+	background-size: 300px 76px;
+}
+}
+#hero .lead {
+  color: white;
+  font-size: 2.5em;
+  line-height: 1.3em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Myriad Pro', Verdana, Arial, Helvetica, sans-serif;
-    margin: 1em 0 0 0;
+#openworm_logo {
+	margin: 0 auto;
+	background-image: url("../img/OpenWormLogo.png");
+	width: 150px;
+	height: 150px;
+	margin-bottom: 50px;
 }
 
-.tweet_list li a {
-    color: #333333;
+#orionlogo{
+	background-image: url("../img/OrionLogo.png");
+	width: 200px;
+	height: 51px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:25px; 
 }
 
-.tweet, .query {
-    font-size: 90%;
-    color: #5B8300;
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#orionlogo {
+	background-image: url("../img/OrionLogo@2x.png");
+	background-size: 200px 51px;
+
+}
 }
 
-#news-feed
+#metacelllogo{
+	background-image: url("../img/MetaCellLogo.png");
+	width: 156px;
+	height: 100px;
+	margin: 0 auto;
+	cursor:pointer; 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#metacelllogo {
+	background-image: url("../img/MetaCellLogo@2x.png");
+	background-size: 156px 100px;
+}
+}
+
+#neurolinxlogo{
+	background-image: url("../img/NeuroLinxLogo.png");
+	width: 212px;
+	height: 65px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:20px; 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#neurolinxlogo {
+	background-image: url("../img/NeuroLinxLogo@2x.png");
+	background-size: 212px 65px;
+}
+}
+
+#osblogo {
+	background-image: url("../img/osblogo.png");
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	vertical-align: bottom;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#osblogo {
+		background-image: url("../img/osblogo2x.png");
+		display: inline-block;
+		background-size: 50px 50px;
+		vertical-align: bottom;
+	}
+}
+
+#biorad {
+	background-image: url("../img/bio-rad.png");
+	width: 150px;
+	height: 40px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#biorad {
+		background-image: url("../img/bio-rad2x.png");
+		background-size: 150px 40px;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+}
+
+#meetup {
+	background-image: url("../img/meetup.png");
+	width: 560px;
+	height: 184px;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#meetup {
+		background-image: url("../img/meetup2x.png");
+		background-size: 560px 184px;
+		margin: 0 auto;
+		margin-top: 50px;
+		cursor: pointer;
+	}
+}
+
+
+#bbc {
+	background-image: url("../img/bbc.png");
+	width: 221px;
+	height: 163px;
+	margin: 0 auto;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#bbc {
+		background-image: url("../img/bbc2x.png");
+		background-size: 221px 163px;
+		margin: 0 auto;
+		margin-right: 20px;
+		cursor: pointer;
+		float: left;
+	}
+}
+
+#atlantic {
+	background-image: url("../img/theatlantic.png");
+	width: 236px;
+	height: 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#atlantic {
+		background-image: url("../img/theatlantic2x.png");
+		background-size: 236px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		float: left;
+	}
+}
+
+#nbc {
+	background-image: url("../img/nbc.png");
+	width: 170px;
+	height: 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#nbc {
+		background-image: url("../img/nbc2x.png");
+		background-size: 170px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		float: left;
+	}
+}
+
+#telegraph {
+	background-image: url("../img/telegraph.png");
+	width: 163px;
+	height: 163px;
+	margin: 0 auto;
+	margin-left: 22px;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#telegraph {
+		background-image: url("../img/telegraph2x.png");
+		background-size: 163px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		margin-left: 22px;
+		margin-right: 20px;
+		float: left;
+	}
+}
+
+#engadget {
+	background-image: url("../img/engadget.png");
+	width: 269px;
+	height: 163px;
+	margin: 0 auto;
+	margin-left: 22px;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#engadget {
+		background-image: url("../img/engadget2x.png");
+		background-size: 269px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		margin-left: 22px;
+		margin-right: 20px;
+		float: left;
+	}
+}
+
+#wired {
+	background-image: url("../img/wired.png");
+	width: 289px;
+	height: 163px;
+	margin: 0 auto;
+	margin-left: 22px;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#wired {
+		background-image: url("../img/wired2x.png");
+		background-size: 289px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		margin-left: 22px;
+		margin-right: 20px;
+		float: left;
+	}
+}
+.clear {
+	clear: both;
+}
+#boingboing {
+	background-image: url("../img/boingboing.png");
+	width: 190px;
+	height: 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#boingboing {
+		background-image: url("../img/boingboing2x.png");
+		background-size: 190px 163px;
+		margin: 0 auto;
+		cursor: pointer;
+		float: left;
+	}
+}
+
+#geeks {
+	color: white;
+}
+#geeks strong {
+	font-size: 22px;
+}
+
+
+
+#tip {
+	background-image: url("../img/tip.png");
+	position: absolute;
+	right: 50px;
+	left: auto;
+	top: 115px;
+	width: 61px;
+	height: 195px;
+	z-index: 0;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#tip {
+		background-image: url("../img/tip2x.png");
+		display: inline-block;
+		background-size: 61px 195px;
+		position: absolute;
+		right: 50px;
+		left: auto;
+		top: 115px;
+		z-index: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	#tip {
+		display: none;
+	}
+	#meetup {
+		display: none;
+	}
+	#geeks{
+		display: none;
+	}
+
+}
+
+.carousel-control:hover {
+	z-index: 10;
+}
+
+#octocat {
+	margin: 0 auto;
+	background-image: url("../img/octocat.png");
+	width: 256px;
+	height: 256px;
+}
+.openworm_logo_header {
+	float: left;
+	background-image: url("../img/OpenWormLogoM.png");
+	width: 120px;
+	height: 120px;
+	margin-right: 50px;
+}
+
+.fb-like {
+	margin-right: 20px;
+}
+
+.icon-15x {
+	font-size: 1.5em;
+}
+.icon-m {
+	font-size: 30pt;
+}
+.icon-l {
+	font-size: 40pt;
+}
+.icon-xl {
+	font-size: 100pt;
+}
+.icon-xxl {
+	font-size: 150pt;
+}
+.centered {
+	text-align: center;
+}
+
+.donate {
+	color: #DD1144;
+}
+
+.donatecolor {
+	color: #DD1144 !important;
+}
+.donatecolor:hover {
+	color: white !important;
+}
+
+#iphone {
+	font-size: 18px;
+}
+
+#mainphone {
+	line-height: 14px !important;
+}
+.minilogo {
+	background-image: url("../img/miniworm.png");
+	width: 80px;
+	height: 27px;
+	display: block;
+	padding: 0px !important;
+	margin-top: 5px !important;
+}
+.minilogo:hover {
+	background-image: url("../img/miniworm_hover.png");
+}
+.tooltip-inner {
+	max-width: 400px;
+	margin-top: 100px;
+	margin-left: -100px;
+}
+.btn-xlarge {
+	padding: 21px 39px;
+	font-size: 30.5px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+dt {
+	margin: 20px 0 10px;
+	font-size: 26px;
+	font-weight: 200;
+	line-height: 1;
+	letter-spacing: -1px;
+	color: #5a5a5a;
+}
+dd {
+	margin-left: 0px;
+	margin: 0px 0 10px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
+	letter-spacing: -1px;
+	color: #5a5a5a;
+}
+
+.hero {style="margin-left: 10px;"
+}
+
+.authors {
+	font-size: 10px !important;
+}
+
+.science
 {
-	margin-left:5px;
-	list-style-image: url("../imgs/wormpoint.png");
+	background: #258dc8!important; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #258dc8 0%, #258dc8 100%)!important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#258dc8), color-stop(100%,#258dc8))!important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* IE10+ */
+	background: linear-gradient(135deg,  #258dc8 0%,#258dc8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=1 )!important; /* IE6-9 fallback on horizontal gradient */
+}
+/* Footer
+ -------------------------------------------------- */
+
+.footer {
+	padding: 70px 0;
+	margin-top: 70px;
+	border-top: 1px solid #e5e5e5;
+	background-color: #f5f5f5;
+}
+.footer p {
+	margin-bottom: 0;
+	color: #777;
+}
+.footer-links {
+	margin: 10px 0;
+}
+.footer-links li {
+	display: inline;
+	padding: 0 2px;
+}
+.footer-links li:first-child {
+	padding-left: 0;
 }
 
 /* style news feed items */
-.parss-title {
+.parss-title a {
 	font-weight: bold;
+	margin-bottom: 5px;
+	margin-top: 30px;
+	text-decoration: none;
+}
 
-	margin-bottom:5px;
-	margin-top:30px;
+.parss-title a:hover {
+	text-decoration: none;
 }
 
 .parss-date {
-	color: #4d7804;
-	font-size:15px;
-	margin-bottom:5px;
+
+	font-size: 15px;
+	margin-bottom: 5px;
 }
 
 .parss-title, .parss-date, .parss-description {
 	display: block;
 	clear: both;
+	text-align: left;
 }
-
 
 .parss-image {
 	display: none;
 }
+#news-feed {
+	list-style-type: none;
+}
+#news-feed li {
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+/*CAROUSEL*/
 
-a {
-    color: #4d7804;
-	text-decoration: none;
+/* CUSTOMIZE THE NAVBAR
+ -------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+	margin-bottom: 0;
 }
 
-a:VISITED {
-    color: #4d7804;
+.carousel .container {
+	position: relative;
+	z-index: 9;
 }
 
-a:HOVER {
-    color: white;
+.carousel-control {
+	height: 80px;
+	margin-top: 0;
+	font-size: 120px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	background-color: transparent;
+	border: 0;
 }
 
-.lightPanel {
-	
-	
-    background: #eaeaea;
-    background: -moz-linear-gradient(45deg,  #eaeaea 0%, #b7b7b7 100%);
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#eaeaea), color-stop(100%,#b7b7b7));
-	background: -webkit-linear-gradient(45deg,  #eaeaea 0%,#b7b7b7 100%);
-	background: -o-linear-gradient(45deg,  #eaeaea 0%,#b7b7b7 100%);
-	background: -ms-linear-gradient(45deg,  #eaeaea 0%,#b7b7b7 100%);
-	background: linear-gradient(45deg,  #eaeaea 0%,#b7b7b7 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#b7b7b7',GradientType=1 );
-
+.carousel .item {
+	height: 480px;
+}
+.carousel img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	height: 480px;
 }
 
-#logo {
-	position:absolute;
-	left:0px;
-	top:0px;
-	margin-left:3px;
-	margin-right:15px;
-	padding-bottom:10px;
-	height: 100px;
-	width: 98px;
-	background: url("../imgs/OpenWormLogo.png") no-repeat;
-	vertical-align: bottom;
-	cursor:pointer;
+.carousel-caption {
+	background-color: transparent;
+	position: static;
+	max-width: 550px;
+	padding: 0 20px;
+	margin-top: 200px;
+}
+.carousel-caption h1, .carousel-caption .lead {
+	margin: 0;
+	line-height: 1.25;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+	margin-top: 10px;
+	margin-right: 10px;
 }
 
-.contributeSubPanel {
-	margin-left:20px;
-	width:550px;
-	float:left;
+/* spacers and clearer divs
+ -------------------------------------------------- */
+
+.short-spacer {
+	height: 3px;
 }
 
-.worm {
-	margin:0 auto;
-	height: 154px;
-	width:600px;
-	background: url("../imgs/worm.png") no-repeat;
+.mid-spacer {
+	height: 5px;
 }
 
-.wormpoint {
-	margin-top:17px;
-	float:left;
-	height: 100px;
-	width: 98px;
-	background: url("../imgs/hphilantropists.png") no-repeat;
-}
-
-#hphilantropists {
-	margin-top:17px;
-	float:left;
-	height: 100px;
-	width: 98px;
-	background: url("../imgs/hphilantropists.png") no-repeat;
-}
-
-#henthusiasts {
-	margin-top:17px;
-	float:left;
-	height: 100px;
-	width: 98px;
-	background: url("../imgs/henthusiasts.png") no-repeat;
-}
-
-#hhackers {
-	margin-top:17px;
-	float:left;
-	height: 100px;
-	width: 98px;
-	background: url("../imgs/hhackers.png") no-repeat;
-}
-
-#donate {
-	position:absolute;
-	cursor:pointer;
-	height: 64px;
-	left:690px;
-	top:-10px;
-	width: 65px;
-	background: url("../imgs/donate.png") no-repeat;
-	
-}
-
-#donate:HOVER {
-	background: url("../imgs/donateHover.png") no-repeat;
-}
-
-
-#wormbrowser-btn {
-	background: url("../imgs/wormbrowserbtn.png") no-repeat;
-}
-	
-#wormbrowser-btn:HOVER {
-	background: url("../imgs/wormbrowserbtnHover.png") no-repeat;
-}
-
-#appHeaderTabs {
-	position:absolute;
-	left:117px;
-	top:62px;
-	height:30px;
-	width:654px;
-	
-}
-
-#appHeader {
-	position:relative;
-	width:771px;
-	height:100px;
-	margin:0 auto;
-	margin-top:30px;
-	text-align:center;
-}
-
-#appHeader .ninjaTab {
-	height:30px;
-	line-height:2em;
-	min-width:68px;
-}
-
-#aboutTitle{
-font-size:100px;
-}
-
-#contentTitle {
-	color:#fff;
-	display:block;
-	font-size:2em;
-	text-shadow:0 .125em .25em #000;
-	vertical-align:middle;
-}
-
-.splashPanel h1 {
-	margin:0;
-	text-align:center;
-}
-
-.splashPanel {
-	
-		margin: 0 auto;
-	margin-top:5px;
-	background: url("../imgs/aboutBanner.png");
-	width:764px;
-	height:170px;
-}
-
-.contentPanel h1, h2, h3 {
-	margin:0 auto;
-	text-align:center;
-}
-
-
-
-#wrapper{
-	margin: 0 auto;
-	width:761px;
-	margin-top:10px;
-}
-
-.contentPanel {
-	
-	position:relative;
-	float:left;
-	margin:0 auto;
-	width:725px;
-	height: 600px;
-	padding-left:1em;
-	padding-right:1em;
-	font-size:18px;
-}
-
-#showcaseLinks
-{
-	float:left;
-	
-	width:150px;
-	height: 550px;
-}
-
-#showcaseList
-{
-	list-style: none;
-	padding-right: 5px;
-	padding-left: 5px;
-}
-
-#showcaseList li {
-	font-weight:bold;
-	padding-bottom: 5px;
-	padding-top: 5px;
-	margin-bottom:20px;
-}
-
-#showcaseList li:hover {
-	color: #4d7804;
-	cursor: pointer;
-}
-
-#showcaseList li.selected {
-	color: #4d7804;
-	cursor: pointer;
-}
-
-#showcaseContent
-{
-	padding-left:15px;
-	
-	float:left;
-	width:500px;
-	height: 500px;
-	font-size:17px;
-	text-align:justify;
-}
-
-#showcaseContent iframe {
-	margin:10px auto 0 auto;
-	text-align:center;
-}
-
-.sidePanelsContainer {
-	display:none;	
-	float:left; 
-	margin:0 auto;
-	margin-left: 18px;
-}
-
-.sidePanel {
-	
-	width: 149px;
-	height: 570px;
-	padding: 1em 0.5em 1em 0.5em;
-	overflow: hidden; 
-}
-
-.donatePanel {
-	margin: 0px auto 2.5px auto;
-	width:149px;
-	height: 37.5px;
-	text-align: center;	
-}
-
-.roundedPanel {
-	border-top-left-radius: 0.5em 0.5em; 
-	border-top-right-radius: 0.5em 0.5em; 
-	border-bottom-right-radius: 0.5em 0.5em; 
-	border-bottom-left-radius: 0.5em 0.5em;
-	-moz-border-radius: 0.5em 0.5em 0.5em 0.5em; 
-}
-
-.content{
-	padding-top:1em;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-}
-
-#footerPanel {
-	margin:0;
-	text-align:center;
-}
-
-.verticalSpacer {
-	height: 10px;	
+.large-spacer {
+	height: 20px;
 }
 
 .clearer {
 	clear: both;
-}
-.portraitsrow
-{
-	height:150px;
-	margin-bottom:20px;
-	margin-top:20px;
-}
-
-.peopletitlte
-{
-	font-size:28px;
-	font-weight:600;
-}
-
-.contactstitle
-{
-	margin-top:35px;
-	font-size:28px;
-	font-weight:600;
-}
-
-.cropPanel {
-	width: 80px;
-	height: 80px;
-	overflow: hidden;
-	display: inline-block;
-}
-
-.role
-{
-	color:black;
-}
-
-.country
-{
-	color:#3c5a00;
-}
-
-.person
-{
-	font-size: 15px;
-	width: 80px;
-	text-align: center;
-	
-	float:left;
-	margin-right:31px;
-	margin-bottom:10px;
-}
-
-.person a{text-decoration: none;}
-
-.profilePic {
-	width: 80px;	
-}
-
-/* suppress some stuff in the twitter stream js API */
-span.jta-tweet-retweeter {
-	display: none;
-}
-
-iframe.twitter-follow-button{
-	margin-left:10px;
-}
-
-
-
-/* technology images */
-.tech-image {
-	float: left;
-	width: 80px;
-	margin-right: 25px;
-}
-
-.tech-desc{
-	float: left;
-	width: 540px;
 }
