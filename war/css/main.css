@@ -32,8 +32,9 @@
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
 #cboxLoadedContent {
-	background-image: url("../img/kickstarter@2x.png");
-	background-size: 800px 411px;
+	background-image: url("../img/kickstarterWebsite.png");
+	background-size: 800px 415px;
+	background-repeat:repeat;
 
 }
 
