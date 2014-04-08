@@ -25,15 +25,15 @@
 #cboxLoadedContent{
 	background-image: url("../img/kickstarter.png");
 	width: 800px;
-	height: 411px;
+	height: 586px;
 }
 
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
 #cboxLoadedContent {
-	background-image: url("../img/kickstarterWebsite.png");
-	background-size: 800px 415px;
+	background-image: url("../img/kickstarter@2x.png");
+	background-size: 800px 586px;
 	background-repeat:repeat;
 
 }

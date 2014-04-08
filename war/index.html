@@ -428,7 +428,7 @@
 			
 			<div style="display:none">
 				<div id="inline_content" style="padding:10px;">
-					<div style="text-align:center; margin-top:330px;">
+					<div style="text-align:center; margin-top:460px;">
 						<p class="lead" style="font-weight:100; font-size:45px;">The Kickstarter will start in <strong id="countdown"></strong></p>
 						<p class="lead" style="font-weight:100; font-size:30px;"><a href="http://bit.ly/1mVGD8b" target="_blank">Sign up for the launch event</a></p>
 					</div>
@@ -449,8 +449,13 @@
 				showRemainingDays(new Date('04/19/2014 12:00 PM'));
 				
 				// dialog for kickstarter
-				$.colorbox({href:"#inline_content", inline: true, width: "850px", height: "470px", transition: "none"});
-				$("#cboxLoadedContent").height("450px");
+				$.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
+				$("#cboxLoadedContent").height("627px");
+				if (window.mobilecheck())
+				{
+					$("#colorbox").css("visibility", "hidden");
+					$("#cboxOverlay").css("visibility", "hidden");
+				}
 			});
 			</script>
 			<script type="text/javascript">
