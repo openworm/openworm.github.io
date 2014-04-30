@@ -73,7 +73,7 @@
 								<a href="./media.html">Media</a>
 							</li>
 							<li>
-								<a class="donatecolor" href="http://bit.ly/1mVGD8b">Kickstarter</a>
+								<a class="donatecolor" href="http://bit.ly/KickstartWorm">Kickstarter</a>
 							</li>
 						</ul>
 						<ul class="nav pull-right">
@@ -127,6 +127,7 @@
 								<br/>
 							</p>
 							<a class="btn btn-large btn-primary" href="https://www.youtube.com/watch?v=r2OBznK6HkI" target="_blank">Watch a video</a>
+							<a class="btn btn-large btn-primary" href="https://openworm.github.io/Smoothed-Particle-Hydrodynamics/" target="_blank">Get the code</a>
 						</div>
 					</div>
 				</div>
@@ -216,7 +217,7 @@
 						<a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @openworm</a>
 					</li>
 					<li class="tweet-btn">
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bit.ly/1mVGD8b" data-text="Checkout @OpenWorm: kickstarting the first digital life form... open source! #KickstartWorm">Tweet</a>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bit.ly/KickstartWorm" data-text="Checkout @OpenWorm: kickstarting the first digital life form... open source! #KickstartWorm">Tweet</a>
 					</li>
 					<!-- Place this tag where you want the +1 button to render. -->
 					<li>
@@ -428,9 +429,11 @@
 			
 			<div style="display:none">
 				<div id="inline_content" style="padding:10px;">
-					<div style="text-align:center; margin-top:460px;">
-						<p class="lead" style="font-weight:100; font-size:45px;">The Kickstarter will start in <strong id="countdown"></strong></p>
-						<p class="lead" style="font-weight:100; font-size:30px;"><a href="http://bit.ly/1mVGD8b" target="_blank">Sign up for the launch event</a></p>
+					<div style="text-align:center; margin-top:350px;">
+						<!-- <p class="lead" style="font-weight:100; font-size:45px;">The Kickstarter will start in <strong id="countdown"></strong></p> -->
+						<p class="lead" style="font-weight:200; font-size:45px; line-height:60px;">The OpenWorm Kickstarter has arrived.</p>
+						<p class="lead" style="font-weight:200; font-size:45px; line-height:60px;"><a href="http://bit.ly/KickstartWorm">Pledge and claim your rewards</a>!</p>
+						<!-- <p class="lead" style="font-weight:100; font-size:40px; margin-top:50px;"><a href="http://bit.ly/1hZPJJf" target="_blank">Watch our launch event!</a></p>  -->
 					</div>
 				</div>
 			</div>
@@ -451,7 +454,7 @@
 				// dialog for kickstarter
 				if (!detectmob())
 				{
-					showRemainingDays(new Date('04/19/2014 12:00 PM'));
+					//showRemainingDays(new Date('04/19/2014 12:00 PM'));
 					$.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
 					$("#cboxLoadedContent").height("627px");
 				}
