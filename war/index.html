@@ -18,6 +18,7 @@
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/docs.css" rel="stylesheet">
+		<link href="css/colorbox.css" rel="stylesheet">
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -69,12 +70,14 @@
 								<a href="./supporters.html">Supporters</a>
 							</li>
 							<li>
-								<a href="./about.html">About</a>
+								<a href="./media.html">Media</a>
 							</li>
 							<li>
-								<a class="donatecolor" href="./donate.html">Donate</a>
+								<a href="./science.html">Science</a>
 							</li>
-
+							<li>
+								<a class="donatecolor" href="http://bit.ly/KickstartWorm">Kickstarter</a>
+							</li>
 						</ul>
 						<ul class="nav pull-right">
 							<li><a class="icon-github icon-15x" href="http://docs.openworm.org/en/0.5/Community/github.html" target="_blank"></a>
@@ -217,7 +220,7 @@
 						<a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @openworm</a>
 					</li>
 					<li class="tweet-btn">
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.openworm.org/" data-text="Check out @OpenWorm: building the first digital life form... open source!">Tweet</a>
+						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bit.ly/KickstartWorm" data-text="Checkout @OpenWorm: kickstarting the first digital life form... open source! #KickstartWorm">Tweet</a>
 					</li>
 					<!-- Place this tag where you want the +1 button to render. -->
 					<li>
@@ -416,7 +419,7 @@
                         <a href="#">Back to top</a>
                     </p>
                     <p>
-                        © 2011-2013 OpenWorm - All rights reserved.
+                        © 2011-2014 OpenWorm - All rights reserved.
                     </p>
                     <p>
                         Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
@@ -426,6 +429,17 @@
                     </p>
 				</div>
 			</footer>
+			
+			<div style="display:none">
+				<div id="inline_content" style="padding:10px;">
+					<div style="text-align:center; margin-top:350px;">
+						<!-- <p class="lead" style="font-weight:100; font-size:45px;">The Kickstarter will start in <strong id="countdown"></strong></p> -->
+						<p class="lead" style="font-weight:200; font-size:45px; line-height:60px;">The OpenWorm Kickstarter has arrived.</p>
+						<p class="lead" style="font-weight:200; font-size:45px; line-height:60px;"><a href="http://bit.ly/KickstartWorm">Pledge and claim your rewards</a>!</p>
+						<!-- <p class="lead" style="font-weight:100; font-size:40px; margin-top:50px;"><a href="http://bit.ly/1hZPJJf" target="_blank">Watch our launch event!</a></p>  -->
+					</div>
+				</div>
+			</div>
 			<!-- Le javascript
 			================================================== -->
 			<!-- Placed at the end of the document so the pages load faster -->
@@ -433,21 +447,36 @@
 			<script src="js/jquery-1.8.3.min.js"></script>
 			<script src="js/bootstrap.js"></script>
 			<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+			<script src="js/jquery.colorbox-min.js"></script>
 			<script src="js/main.js"></script>
-<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-29668455-1']);
-			_gaq.push(['_trackPageview']);
-
-			(function() {
-				var ga = document.createElement('script');
-				ga.type = 'text/javascript';
-				ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
+			<script>
+			$(document).ready(function(){
+				// start countdown script
+				
+				
+				// dialog for kickstarter
+				if (!detectmob())
+				{
+					//showRemainingDays(new Date('04/19/2014 12:00 PM'));
+					$.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
+					$("#cboxLoadedContent").height("627px");
+				}
+			});
+			</script>
+			<script type="text/javascript">
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-29668455-1']);
+				_gaq.push(['_trackPageview']);
+	
+				(function() {
+					var ga = document.createElement('script');
+					ga.type = 'text/javascript';
+					ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
 	</body>
 	
 </html>
