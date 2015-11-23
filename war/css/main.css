@@ -103,8 +103,25 @@
 }
 }
 
+#awslogo{
+	background-image: url("../img/awslogo.jpg");
+	width: 200px;
+	height: 81px;
+	margin: 0 auto;
+	cursor:pointer; 
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+#awslogo {
+	background-image: url("../img/awslogo@2x.jpg");
+	background-size: 200px 81px;
+}
+}
+
 #osblogo {
-	background-image: url("../img/osblogo.png");
+	background-image: url("../img/osblogo.jpg");
 	display: inline-block;
 	width: 50px;
 	height: 50px;
