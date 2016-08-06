@@ -195,6 +195,27 @@
 	}
 }
 
+#economist {
+	background-image: url("../img/economist.png");
+	width: 157px;
+	height: 80px;
+	margin-top: 60px;
+    margin-left: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#economist {
+		background-image: url("../img/economist@2x.png");
+		background-size: 157px 80px;
+		margin-top: 60px;
+	    margin-left: 20px;
+		cursor: pointer;
+		float: left;
+	}
+}
+
 #atlantic {
 	background-image: url("../img/theatlantic.png");
 	width: 236px;
