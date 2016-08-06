@@ -195,6 +195,30 @@
 	}
 }
 
+#tedx {
+	background-image: url("../img/tedx.jpg");
+	width: 213px;
+	height: 70px;
+	cursor: pointer;
+	margin: 0 auto;
+	filter: grayscale(100%);
+}
+#tedx:hover {
+	filter: grayscale(0%);
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#tedx {
+		background-image: url("../img/tedx@2x.jpg");
+		background-size: 213px 70px;
+		margin: 0 auto;
+		filter: grayscale(100%);
+	}
+	#tedx:hover {
+		filter: grayscale(0%);
+	}
+}
+
 #economist {
 	background-image: url("../img/economist.png");
 	width: 157px;
@@ -305,7 +329,7 @@
 	width: 289px;
 	height: 163px;
 	margin: 0 auto;
-	margin-left: 22px;
+	margin-left: -22px;
 	margin-right: 20px;
 	cursor: pointer;
 	float: left;
@@ -317,7 +341,7 @@
 		background-size: 289px 163px;
 		margin: 0 auto;
 		cursor: pointer;
-		margin-left: 22px;
+		margin-left: -22px;
 		margin-right: 20px;
 		float: left;
 	}
