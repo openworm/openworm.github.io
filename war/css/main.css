@@ -7,9 +7,9 @@
 	height: 76px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 
 #geppetto_logo {
 	background-image: url("../img/glogo@2x.png");
@@ -29,9 +29,9 @@
 	cursor:pointer;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #cboxLoadedContent {
 	background-image: url("../img/kickstarter@2x.png");
 	background-size: 800px 586px;
@@ -54,12 +54,12 @@
 	height: 51px;
 	margin: 0 auto;
 	cursor:pointer;
-	margin-top:25px; 
+	margin-top:25px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #orionlogo {
 	background-image: url("../img/OrionLogo@2x.png");
 	background-size: 200px 51px;
@@ -73,12 +73,12 @@
 	width: 156px;
 	height: 100px;
 	margin: 0 auto;
-	cursor:pointer; 
+	cursor:pointer;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #metacelllogo {
 	background-image: url("../img/MetaCellLogo@2x.png");
 	background-size: 156px 100px;
@@ -91,12 +91,12 @@
 	height: 65px;
 	margin: 0 auto;
 	cursor:pointer;
-	margin-top:20px; 
+	margin-top:20px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #neurolinxlogo {
 	background-image: url("../img/NeuroLinxLogo@2x.png");
 	background-size: 212px 65px;
@@ -108,12 +108,12 @@
 	width: 200px;
 	height: 81px;
 	margin: 0 auto;
-	cursor:pointer; 
+	cursor:pointer;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #awslogo {
 	background-image: url("../img/awslogo@2x.jpg");
 	background-size: 200px 81px;
@@ -121,7 +121,7 @@
 }
 
 #osblogo {
-	background-image: url("../img/osblogo.jpg");
+	background-image: url("../img/osblogo.png");
 	display: inline-block;
 	width: 50px;
 	height: 50px;
