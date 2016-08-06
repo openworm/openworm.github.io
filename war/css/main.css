@@ -28,6 +28,9 @@
 	height: 586px;
 	cursor:pointer;
 }
+.role{
+	font-size:20px;	
+}
 
 @media
 (-webkit-min-device-pixel-ratio: 2),
@@ -436,19 +439,19 @@
 	margin-right: 20px;
 }
 
-.icon-15x {
+.fa-15x {
 	font-size: 1.5em;
 }
-.icon-m {
+.fa-m {
 	font-size: 30pt;
 }
-.icon-l {
+.fa-l {
 	font-size: 40pt;
 }
-.icon-xl {
+.fa-xl {
 	font-size: 100pt;
 }
-.icon-xxl {
+.fa-xxl {
 	font-size: 150pt;
 }
 .centered {
