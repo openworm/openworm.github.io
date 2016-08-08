@@ -1,3 +1,41 @@
+#wormsim_logo {
+	position: absolute;
+	left: 10px;
+	top: 80px;
+	background-image: url("../img/wormsim-logo.png");
+	width: 241px;
+	height: 80px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+#wormsim_logo {
+	background-image: url("../img/wormsim-logo@2x.png");
+	background-size: 241px 80px;
+}
+}
+
+#sibernetic_logo {
+	position: absolute;
+	left: 10px;
+	top: 80px;
+	background-image: url("../img/sibernetic.png");
+	width: 320px;
+	height: 50px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+#sibernetic_logo {
+	background-image: url("../img/sibernetic@2x.png");
+	background-size: 320px 50px;
+}
+}
+
 #geppetto_logo {
 	position: absolute;
 	left: 10px;
