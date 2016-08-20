@@ -17,6 +17,17 @@ var fetch = function(container, urls, index) {
 
             container.append('<p><b>Repo:</b> ' + nativeObject.repo + '</p>');
             container.append('<p><b>Short Description:</b> ' + nativeObject.shortDescription + '</p>');
+	    if (nativeObject.documentation != undefined) {
+		container.append('<p><b>Documentation:</b> <a href=\"' + 
+				 nativeObject.documentation +
+				 '\" target=\"blank\">' +
+				 nativeObject.documentation +
+				 '</a></p>');
+	    } else {
+		container.append('<p><b>Documentation:</b> None</p>');
+	    }
+
+
             container.append('<p><b>Coordinator:</b> ' + nativeObject.coordinator + '</p>');
 
             if (nativeObject.parent != undefined) {
