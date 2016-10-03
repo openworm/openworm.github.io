@@ -1,16 +1,30 @@
 // list of repo metadata
+//   - **CWL** buggy ones are commented away.
+//   - **CWL** **TODO** How do we elegantly ignore the buggy ones?
 var urls = [
+    "https://cdn.rawgit.com/openworm/OpenWorm/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/hodgkin_huxley_tutorial/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/openworm_docs/master/.openworm.yml",
+    //    "https://cdn.rawgit.com/openworm/simple-C-elegans/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/wormbrowser/master/.openworm.yml",
+    //    "https://cdn.rawgit.com/openworm/sibernetic/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/openwormbrowser-ios/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/CElegansNeuroML/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/org.openworm.website/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/ChannelWorm/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/muscle_model/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/neuronal-analysis/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/org.geppetto/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/PyOpenWorm/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/tracker-commons/master/.openworm.yml",
-    "https://cdn.rawgit.com/openworm/open-worm-analysis-toolbox/master/.openworm.yml",
-    "https://cdn.rawgit.com/openworm/org.geppetto/master/.openworm.yml"
+    "https://cdn.rawgit.com/openworm/open-worm-analysis-toolbox/master/.openworm.yml"
 ];
 
 // *CWL* Hardcoded github root url
 var repo_url = "https://github.com/"
 
-var repoNavList = [];
 var navLookup = {};
+var navElementLookup = {};
 
 var fetch = function(container, urls, index) {
 
@@ -21,6 +35,7 @@ var fetch = function(container, urls, index) {
         success: function(responseData, textStatus, jqXHR) {
             var nativeObject = YAML.parse(responseData);
 
+	    var hasParent = false;
 	    // *CWL* Prior to this, I had a *profound* lack of understanding
 	    //   for how hierarchy was handled.
 	    //
@@ -35,7 +50,7 @@ var fetch = function(container, urls, index) {
 	    }
 	    
 	    // **CWL** Kind of a hack for now. Establish a string->meta lookuptable.
-	    navLookup[nativeObject.repo] = "meta" + index;
+	    navElementLookup[nativeObject.repo] = "meta" + index;
 
 	    // **CWL** and this is the solution for hiding everything at first.
 	    //   Initially I had tried to hide the container before going into this
@@ -46,7 +61,6 @@ var fetch = function(container, urls, index) {
 	    //	    inner.hide();
 	    container.append(inner);
 
-	    repoNavList.push(nativeObject.repo);
             inner.append('<p><b>Repo:</b> ' + nativeObject.repo + '</p>');
             inner.append('<p><b>Short Description:</b> ' + nativeObject.shortDescription + '</p>');
 	    if (nativeObject.documentation != undefined) {
@@ -59,11 +73,12 @@ var fetch = function(container, urls, index) {
 		inner.append('<p><b>Documentation:</b> None</p>');
 	    }
 
-
             inner.append('<p><b>Coordinator:</b> ' + nativeObject.coordinator + '</p>');
 
             if (nativeObject.parent != undefined) {
             	inner.append('<p><b>Parent:</b> <a class="btn btn-link" href="' + repo_url + nativeObject.parent[0] + '">Visit Repo</a> <a class="btn btn-primary btn-xs navBtn" href="#">' + nativeObject.parent[0] + '</a></p>');
+		add_to_hierarchy(nativeObject.repo,nativeObject.parent);
+		hasParent = true;
             }
 
             if (nativeObject.inputs != undefined) {
@@ -84,9 +99,13 @@ var fetch = function(container, urls, index) {
             	inner.append('<p><b>Children:</b></p>');
                 for (var i = 0; i < nativeObject.children.length; i++) {
 		    inner.append('<p><a class="btn btn-link" href="' + repo_url + nativeObject.children[i] + '">Visit Repo</a> <a class="btn btn-primary btn-xs navBtn" href="#">' + nativeObject.children[i] + '</a></p>');
+		    add_to_hierarchy(nativeObject.children[i],nativeObject.repo);
                 }
             }
 
+	    if (!hasParent) {
+		add_to_root(nativeObject.repo);
+	    }
 
             if(index < urls.length - 1){
             	inner.append('<hr style="height: 1px; border-color: black;">');
@@ -96,14 +115,10 @@ var fetch = function(container, urls, index) {
             if (urls.length - 1 > index) {
                 fetch(container, urls, index + 1);
             } else {
-		// **CWL** Insert post-processing function here:
-		//    1. build tree
-		//    2. establish navigation links
-		//
-
+		build_hierarchy(container);
 		// **CWL** Generate tabs from newly acquired data
 		// handle asynchrony issues by making sure all elements are populated.
-		cwlpager_init(container,repoNavList);
+		cwlpager_init(container);
 	    }
         },
         error: function(responseData, textStatus, errorThrown) {
