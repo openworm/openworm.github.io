@@ -5,7 +5,7 @@ var urls = [
     "https://cdn.rawgit.com/openworm/OpenWorm/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/hodgkin_huxley_tutorial/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/openworm_docs/master/.openworm.yml",
-    //    "https://cdn.rawgit.com/openworm/simple-C-elegans/master/.openworm.yml",
+    //"https://cdn.rawgit.com/openworm/simple-C-elegans/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/wormbrowser/master/.openworm.yml",
     //    "https://cdn.rawgit.com/openworm/sibernetic/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/openwormbrowser-ios/master/.openworm.yml",
@@ -21,10 +21,17 @@ var urls = [
 ];
 
 // *CWL* Hardcoded github root url
-var repo_url = "https://github.com/"
+var repo_url = "https://github.com/";
 
-var navLookup = {};
-var navElementLookup = {};
+// *CWL* Global names for DOM ids used
+var domElement = "domElement";
+var domGroup = "domGroup";
+var tabGroup = "tabGroup";
+
+// *CWL* establishes relationship between repo keys and indices.
+//   Indices are used as part of DOM ids.
+var groupLookup = {};
+var elementLookup = {};
 
 var fetch = function(container, urls, index) {
 
@@ -43,14 +50,10 @@ var fetch = function(container, urls, index) {
 	    //   issues with basic tabs. The question now is how we can
 	    //   use buttons to work as if a tab had been clicked.
 	    var inner;
-	    if (index == 0) {
-		inner = $('<div class="tab-pane fade in active" id="meta' + index + '" ></div>');
-	    } else {
-		inner = $('<div class="tab-pane fade" id="meta' + index + '" ></div>');
-	    }
+	    inner = $('<div id="' + domElement + index + '" ></div>');
 	    
 	    // **CWL** Kind of a hack for now. Establish a string->meta lookuptable.
-	    navElementLookup[nativeObject.repo] = "meta" + index;
+	    elementLookup[nativeObject.repo] = index;
 
 	    // **CWL** and this is the solution for hiding everything at first.
 	    //   Initially I had tried to hide the container before going into this
@@ -107,15 +110,14 @@ var fetch = function(container, urls, index) {
 		add_to_root(nativeObject.repo);
 	    }
 
-            if(index < urls.length - 1){
-            	inner.append('<hr style="height: 1px; border-color: black;">');
-            }
+	    inner.append('<hr style="height: 1px; border-color: black;">');
 
             // fetch next
             if (urls.length - 1 > index) {
                 fetch(container, urls, index + 1);
             } else {
-		build_hierarchy(container);
+		build_hierarchy();
+		disable_untracked_nav_buttons();
 		// **CWL** Generate tabs from newly acquired data
 		// handle asynchrony issues by making sure all elements are populated.
 		cwlpager_init(container);
