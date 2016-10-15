@@ -1,16 +1,60 @@
-var cwlpager_init = function(container,repoNavList) {
+var cwlpager_init = function(container) {
 
-  var numItems = container.find(".tab-pane").size();
-  var curr = 0;
-  var currMeta;
+  var currElement;
+  var currHighlightedDom;
+  var currGroup;
+  
+  var isBtnTransition = false;
 
-  while (numItems > curr) {
-    if (curr == 0) {
-	$('#tabber').append('<li class="active"><a href="#meta' + curr + '" class="page_link" data-toggle="tab">'+repoNavList[curr]+'</a></li>');
-	//	$(".metaElement").filter("#meta" + curr).show();
-    } else {
-	$('#tabber').append('<li><a href="#meta' + curr + '" class="page_link" data-toggle="tab">'+repoNavList[curr]+'</a></li>');
-    }
-    curr++;
-  }
-}
+  var highlight_element = function(key) {
+      // remove previous highlight if applicable
+      if (currHighlightedDom != undefined) {
+	  currHighlightedDom.css({"border-style": "none"});
+      }
+
+      currElement = elementLookup[key];
+      currHighlightedDom = $('#' + domElement + currElement);
+      currHighlightedDom.css({"border-color":"red", 
+		  "border-width":"1px", 
+		  "border-style":"solid"});
+  };
+  
+
+  Object.keys(currRoots).forEach(function(rootkey,index) {
+      if (index == 0) {
+	  $('#tabber').append('<li class="active"><a href="#' + domGroup + groupLookup[rootkey] + '" class="page_link" data-toggle="tab" id="' + tabGroup + groupLookup[rootkey] + '">' + rootkey + '</a></li>');
+	  currGroup = groupLookup[rootkey];
+	  highlight_element(rootkey);
+      } else {
+	  $('#tabber').append('<li><a href="#' + domGroup + groupLookup[rootkey] + '" class="page_link" data-toggle="tab" id="' + tabGroup + groupLookup[rootkey] + '">' + rootkey + '</a></li>');
+      }
+  });
+
+
+  $('.navBtn').on("click", function() {
+	  if ($(this).is(":disabled")) {
+	      return;
+	  }
+	  var btn_name = this.innerHTML;
+
+	  var desiredGroup = groupLookup[btn_name];
+	  highlight_element(btn_name);
+	  if (desiredGroup != currGroup) {
+	      isBtnTransition = true;
+	      $('#' + tabGroup + desiredGroup).trigger('click');
+	  }
+      });
+
+
+  $('a[data-toggle="tab"]').on('click', function (e) {
+      var targetkey = $(e.target).text(); // activated tab
+      currGroup = groupLookup[targetkey];
+      if (!isBtnTransition) {
+	  // highlight the root element if user clicked on tab explicitly
+	  highlight_element(targetkey);
+      } else {
+	  // reset flag if transition was the result of a button click
+	  isBtnTransition = false;
+      }
+      });
+};
