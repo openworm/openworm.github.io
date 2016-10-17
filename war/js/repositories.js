@@ -114,6 +114,11 @@ var fetch = function(container, urls, index) {
                 // handle asynchrony issues by making sure all elements
                 // are populated.
                 cwlpager_init(container);
+                
+                // hide spinner
+                $('#spinner').hide();
+                // show content
+                $('#content').show();
             }
         },
         error: function(responseData, textStatus, errorThrown) {
@@ -124,5 +129,7 @@ var fetch = function(container, urls, index) {
 
 $(function() {
     var container = $('#content');
+    $('#content').hide();
+    
     fetch(container, urls, 0);
 });
