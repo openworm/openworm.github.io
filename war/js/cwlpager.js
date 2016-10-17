@@ -14,9 +14,7 @@ var cwlpager_init = function(container) {
 
       currElement = elementLookup[key];
       currHighlightedDom = $('#' + domElement + currElement);
-      currHighlightedDom.css({"border-color":"red", 
-		  "border-width":"1px", 
-		  "border-style":"solid"});
+      currHighlightedDom.css({});
   };
   
 

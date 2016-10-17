@@ -42,32 +42,21 @@ var fetch = function(container, urls, index) {
             var nativeObject = YAML.parse(responseData);
 
             var hasParent = false;
-            // *CWL* Prior to this, I had a *profound* lack of
-            // understanding
-            // for how hierarchy was handled.
-            //
+            // *CWL* Prior to this, I had a *profound* lack of understanding for how hierarchy was handled.
             // Also there is no longer any need to worry about
-            // navigation
-            // issues with basic tabs. The question now is how we can
+            // navigation issues with basic tabs. The question now is how we can
             // use buttons to work as if a tab had been clicked.
             var inner;
             inner = $('<div id="' + domElement + index + '" ></div>');
 
-            // **CWL** Kind of a hack for now. Establish a string->meta
-            // lookuptable.
+            // **CWL** Kind of a hack for now. Establish a string->meta lookuptable.
             elementLookup[nativeObject.repo] = index;
 
-            // **CWL** and this is the solution for hiding everything at
-            // first.
+            // **CWL** and this is the solution for hiding everything at first.
             // Initially I had tried to hide the container before going
-            // into this
-            // loop but that didn't work out very well.
-            //
+            // into this loop but that didn't work out very well.
             // On discovering how native Bootstrap tab navigation works,
-            // all the
-            // shaneniggans with manually messing with hidden properties
-            // go away!
-            // inner.hide();
+            // all the shaneniggans with manually messing with hidden properties go away!
             container.append(inner);
 
             inner.append('<p><b>Repo:</b> ' + nativeObject.repo + '</p>');
@@ -97,12 +86,7 @@ var fetch = function(container, urls, index) {
             if (nativeObject.outputs != undefined) {
                 inner.append('<p><b>Outputs:</b></p>');
                 for (var i = 0; i < nativeObject.outputs.length; i++) {
-                    inner.append('<p><a class="btn btn-link" href="' +
-                        repo_url +
-                        nativeObject.outputs[i] +
-                        '">Visit Repo</a> <a class="btn btn-primary btn-xs navBtn" href="#">' +
-                        nativeObject.outputs[i] +
-                        '</a></p>');
+                    inner.append('<p><a class="btn btn-link" href="' + repo_url + nativeObject.outputs[i] + '">Visit Repo</a> <a class="btn btn-primary btn-xs navBtn" href="#">' + nativeObject.outputs[i] + '</a></p>');
                 }
             }
 
