@@ -116,7 +116,7 @@ var fetch = function(container, urls, index) {
                 cwlpager_init(container);
                 
                 // hide spinner
-                $('#spinner').hide();
+                $('#spinner-container').hide();
                 // show content
                 $('#content').show();
             }
