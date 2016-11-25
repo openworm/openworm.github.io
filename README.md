@@ -7,7 +7,7 @@ org.openworm.website
 
 Runs as a google app engine application, but can serve up simple content via a Python simple server:
 
-cd war
-python -s SimpleHTTPServer
+    cd war
+    python -m SimpleHTTPServer
 
-Point browser at: http://127.0.0.1:8000/
+Point your browser at: http://127.0.0.1:8000/
