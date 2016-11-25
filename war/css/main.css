@@ -1,15 +1,53 @@
+#wormsim_logo {
+	position: absolute;
+	left: 10px;
+	top: 80px;
+	background-image: url("../img/wormsim-logo.png");
+	width: 241px;
+	height: 80px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+#wormsim_logo {
+	background-image: url("../img/wormsim-logo@2x.png");
+	background-size: 241px 80px;
+}
+}
+
+#sibernetic_logo {
+	position: absolute;
+	left: 10px;
+	top: 80px;
+	background-image: url("../img/sibernetic.png");
+	width: 320px;
+	height: 50px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+#sibernetic_logo {
+	background-image: url("../img/sibernetic@2x.png");
+	background-size: 320px 50px;
+}
+}
+
 #geppetto_logo {
 	position: absolute;
 	left: 10px;
-	top: 100px;
+	top: 80px;
 	background-image: url("../img/glogo.png");
 	width: 300px;
 	height: 76px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 
 #geppetto_logo {
 	background-image: url("../img/glogo@2x.png");
@@ -26,16 +64,20 @@
 	background-image: url("../img/kickstarter.png");
 	width: 800px;
 	height: 586px;
+	cursor:pointer;
+}
+.role{
+	font-size:20px;	
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #cboxLoadedContent {
 	background-image: url("../img/kickstarter@2x.png");
 	background-size: 800px 586px;
 	background-repeat:repeat;
-
+	cursor:pointer;
 }
 }
 
@@ -53,12 +95,12 @@
 	height: 51px;
 	margin: 0 auto;
 	cursor:pointer;
-	margin-top:25px; 
+	margin-top:25px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #orionlogo {
 	background-image: url("../img/OrionLogo@2x.png");
 	background-size: 200px 51px;
@@ -72,12 +114,12 @@
 	width: 156px;
 	height: 100px;
 	margin: 0 auto;
-	cursor:pointer; 
+	cursor:pointer;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #metacelllogo {
 	background-image: url("../img/MetaCellLogo@2x.png");
 	background-size: 156px 100px;
@@ -90,15 +132,32 @@
 	height: 65px;
 	margin: 0 auto;
 	cursor:pointer;
-	margin-top:20px; 
+	margin-top:20px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #neurolinxlogo {
 	background-image: url("../img/NeuroLinxLogo@2x.png");
 	background-size: 212px 65px;
+}
+}
+
+#awslogo{
+	background-image: url("../img/awslogo.jpg");
+	width: 200px;
+	height: 81px;
+	margin: 0 auto;
+	cursor:pointer;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+#awslogo {
+	background-image: url("../img/awslogo@2x.jpg");
+	background-size: 200px 81px;
 }
 }
 
@@ -172,6 +231,51 @@
 		background-size: 221px 163px;
 		margin: 0 auto;
 		margin-right: 20px;
+		cursor: pointer;
+		float: left;
+	}
+}
+
+#tedx {
+	background-image: url("../img/tedx.jpg");
+	width: 213px;
+	height: 70px;
+	cursor: pointer;
+	margin: 0 auto;
+	filter: grayscale(100%);
+}
+#tedx:hover {
+	filter: grayscale(0%);
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#tedx {
+		background-image: url("../img/tedx@2x.jpg");
+		background-size: 213px 70px;
+		margin: 0 auto;
+		filter: grayscale(100%);
+	}
+	#tedx:hover {
+		filter: grayscale(0%);
+	}
+}
+
+#economist {
+	background-image: url("../img/economist.png");
+	width: 157px;
+	height: 80px;
+	margin-top: 60px;
+    margin-left: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#economist {
+		background-image: url("../img/economist@2x.png");
+		background-size: 157px 80px;
+		margin-top: 60px;
+	    margin-left: 20px;
 		cursor: pointer;
 		float: left;
 	}
@@ -266,7 +370,7 @@
 	width: 289px;
 	height: 163px;
 	margin: 0 auto;
-	margin-left: 22px;
+	margin-left: -22px;
 	margin-right: 20px;
 	cursor: pointer;
 	float: left;
@@ -278,7 +382,7 @@
 		background-size: 289px 163px;
 		margin: 0 auto;
 		cursor: pointer;
-		margin-left: 22px;
+		margin-left: -22px;
 		margin-right: 20px;
 		float: left;
 	}
@@ -373,19 +477,19 @@
 	margin-right: 20px;
 }
 
-.icon-15x {
+.fa-15x {
 	font-size: 1.5em;
 }
-.icon-m {
+.fa-m {
 	font-size: 30pt;
 }
-.icon-l {
+.fa-l {
 	font-size: 40pt;
 }
-.icon-xl {
+.fa-xl {
 	font-size: 100pt;
 }
-.icon-xxl {
+.fa-xxl {
 	font-size: 150pt;
 }
 .centered {
