@@ -169,6 +169,23 @@
 	vertical-align: bottom;
 }
 
+#incflogo {
+	background-image: url("../img/incf.svg");
+	display: inline-block;
+	width: 113px;
+	height: 52px;
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+#gsoclogo {
+	background-image: url("../img/GSoC-logo.png");
+	display: inline-block;
+	width: 540px;
+	height: 57px;
+	vertical-align: bottom;
+}
+
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
 	#osblogo {
 		background-image: url("../img/osblogo2x.png");
