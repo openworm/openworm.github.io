@@ -85,6 +85,7 @@ $(function() {
 	else{
 		$(".other").click();
 		$("#otherAmount").val(amount);
+		$("#amountSent").attr("value",amount);
 	}
 
 });
