@@ -574,33 +574,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7b891e', end
 }
 
 
-#snowflakeContainer {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-}
-.snowflake {
-	padding-left: 15px;
-	font-size: 14px;
-	line-height: 24px;
-	position: fixed;
-	color: #FFFFFF;
-	user-select: none;
-	z-index: 1000;
-}
-.snowflake:hover {
-	cursor: default;
-}
-
 
 #otherAmount.active{
-	background-color:#75890c;
+	background-color:#bd362f;
 	color:white;
 	text-shadow:none;
 }
 
 .btn.active{
-	background-color:#75890c;
+	background-color:#bd362f;
 	color:white;
 	text-shadow:none;
 }
