@@ -23,6 +23,9 @@ var urls = [
 // *CWL* Hardcoded github root url
 var repo_url = "https://github.com/";
 
+// *CWL* Construction of javascript array for jsGrid data
+var metadata_info = [];
+
 // *CWL* Global names for DOM ids used
 var domElement = "domElement";
 var domGroup = "domGroup";
@@ -49,6 +52,8 @@ var fetch = function(container, urls, index) {
             var inner;
             inner = $('<div id="' + domElement + index + '" ></div>');
 
+	    var jsGridRow = {};
+
             // **CWL** Kind of a hack for now. Establish a string->meta lookuptable.
             elementLookup[nativeObject.repo] = index;
 
@@ -60,15 +65,22 @@ var fetch = function(container, urls, index) {
             container.append(inner);
 
             inner.append('<p><b>Repo:</b> ' + nativeObject.repo + '</p>');
+	    jsGridRow["Repo"] = nativeObject.repo;
+
             inner.append('<p><b>Short Description:</b> ' + nativeObject.shortDescription + '</p>');
+	    jsGridRow["Description"] = nativeObject.shortDescription;
+
             if (nativeObject.documentation != undefined) {
                 inner.append('<p><b>Documentation:</b> <a href=\"' + nativeObject.documentation + '\" target=\"blank\">' + nativeObject.documentation + '</a></p>');
+		jsGridRow["Documentation"] = nativeObject.documentation;
             } else {
                 inner.append('<p><b>Documentation:</b> None</p>');
+		jsGridRow["Documentation"] = "None";
             }
 
             inner.append('<p><b>Coordinator:</b> ' +
                 nativeObject.coordinator + '</p>');
+	    jsGridRow["Coordinator"] = nativeObject.coordinator;
 
             if (nativeObject.parent != undefined) {
                 inner.append('<p><b>Parent:</b> <a class="btn btn-link" href="' + repo_url + nativeObject.parent[0] + '">Visit Repo</a> <a class="btn btn-primary btn-xs navBtn" href="#">' + nativeObject.parent[0] + '</a></p>');
@@ -103,6 +115,7 @@ var fetch = function(container, urls, index) {
             }
 
             inner.append('<hr style="height: 1px; border-color: black;">');
+	    metadata_info[index] = jsGridRow;
 
             // fetch next
             if (urls.length - 1 > index) {
@@ -114,6 +127,8 @@ var fetch = function(container, urls, index) {
                 // handle asynchrony issues by making sure all elements
                 // are populated.
                 cwlpager_init(container);
+
+		constructJsGrid();
                 
                 // hide spinner
                 $('#spinner-container').hide();
@@ -125,11 +140,46 @@ var fetch = function(container, urls, index) {
             alert('GET failed.');
         }
     });
-}
+};
+
+var activateGrid = function() {
+    $("#grid-view-master").show();
+    $("#tab-view-master").hide();
+};
+
+var activateTab = function() {
+    $("#grid-view-master").hide();
+    $("#tab-view-master").show();
+};
+
+var constructJsGrid = function() {
+    $("#jsGrid").jsGrid({
+	    width: "100%",
+		height: "auto",
+		
+		inserting: false,
+		editing: false,
+		sorting: true,
+		paging: true,
+		pageSize: 10,
+		
+		data: metadata_info,
+		
+		fields: [
+			 { name: "Repo", type: "text", width: "auto", validate: "required" },
+			 { name: "Documentation", type: "text", width: "auto" },
+			 { name: "Description", type: "text", width: "auto" },
+			 { name: "Coordinator", type: "text", width: "auto" }
+			 //			 { type: "control" }
+			 ]
+		});
+};
 
 $(function() {
-    var container = $('#content');
-    $('#content').hide();
-    
-    fetch(container, urls, 0);
-});
+	var container = $('#content');
+	$('#content').hide();
+	
+	$("#tab-view-master").hide();
+	
+	fetch(container, urls, 0);
+    });
