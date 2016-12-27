@@ -7,7 +7,7 @@ var urls = [
     "https://cdn.rawgit.com/openworm/openworm_docs/master/.openworm.yml",
     // "https://cdn.rawgit.com/openworm/simple-C-elegans/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/wormbrowser/master/.openworm.yml",
-    // "https://cdn.rawgit.com/openworm/sibernetic/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/sibernetic/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/openwormbrowser-ios/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/CElegansNeuroML/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/org.openworm.website/master/.openworm.yml",
@@ -17,7 +17,13 @@ var urls = [
     "https://cdn.rawgit.com/openworm/org.geppetto/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/PyOpenWorm/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/tracker-commons/master/.openworm.yml",
-    "https://cdn.rawgit.com/openworm/open-worm-analysis-toolbox/master/.openworm.yml"
+    "https://cdn.rawgit.com/openworm/open-worm-analysis-toolbox/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/sibernetic_config_gen/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/sibernetic_NEURON/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/skeletonExtraction/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/WormWorx/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/Blender2NeuroML/master/.openworm.yml",
+    "https://cdn.rawgit.com/openworm/CyberElegans/master/.openworm.yml"
 ];
 
 // *CWL* Hardcoded github root url
@@ -176,10 +182,10 @@ var constructJsGrid = function() {
 };
 
 $(function() {
-	var container = $('#content');
-	$('#content').hide();
-	
-	$("#tab-view-master").hide();
-	
-	fetch(container, urls, 0);
-    });
+    var container = $('#content');
+    $('#content').hide();
+    $("#tab-view-master").hide();
+     
+    fetch(container, urls, 0);
+});
+
