@@ -98,6 +98,15 @@
 	margin-top:25px;
 }
 
+#sflclogo{
+	background-image: url("https://softwarefreedom.org/img/badge-lawyered-up.png");
+	width: 110px;
+	height: 32px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:25px;
+}
+
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
