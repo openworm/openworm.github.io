@@ -99,9 +99,9 @@
 }
 
 #sflclogo{
-	background-image: url("https://www.softwarefreedom.org/img/frdm-logo.png");
-	width: 365px;
-	height: 65px;
+	background-image: url("../img/sflc.png");
+	width: 260px;
+	height: 46px;
 	margin: 0 auto;
 	cursor:pointer;
 	margin-top:25px;
