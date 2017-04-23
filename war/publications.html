@@ -15,9 +15,10 @@
 			}
 		</style>
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/docs.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome.css">
+
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -38,9 +39,9 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
 					</button>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
@@ -70,9 +71,9 @@
 							</li>
 						</ul>
 						<ul class="nav pull-right">
-							<li><a class="icon-github icon-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
+							<li><a class="fa fa-github fa-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
 							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"Man cannot make a worm, yet he will make gods by the dozen" - M. de Montaigne' ></a><li>
-        					<li><a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="itunes_store"><i id="iphone" class="icon-mobile-phone"></i> Get the App</a></li>
+        					<li><a href="http://browser.openworm.org" target="wormbrowser"> Explore the Worm</a></li>
       					</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -92,8 +93,44 @@
 		<div class="container">
 			<div class="marketing">
 				<br/>
+				<i class="fa fa-book fa-xl"></i>
+				<div class="large-spacer"></div><div class="large-spacer"></div>
+				<div>
+						<h2>Application of smoothed particle hydrodynamics to modeling mechanisms of biological tissue</h2>
+					<div class="clearer"></div>
+					<p>
+						March 08 2016, Adv. Eng. Software, DOI: 10.1016/j.advengsoft.2016.03.002
+					</p>
+					<p class="authors">
+						 Andrey Palyanov, Sergey Khayrulin, and Stephen Larson
+					</p>
+					<p>
+						A prerequisite for simulating the biophysics of complex biological tissues and whole organisms are
 
-				<i class="icon-book icon-xl"></i>
+computational descriptions of biological matter that are flexible and can interface with materials of
+
+different viscosities, such as liquid. The landscape of software that is easily available to do such work is
+
+limited and lacks essential features necessary for combining elastic matter with simulations of liquids.
+
+Here we present an open source software package called Sibernetic, designed for the physical simulation
+
+of biomechanical matter (membranes, elastic matter, contractile matter) and environments (liquids,
+
+solids and elastic matter with variable physical properties). At its core, Sibernetic is built as an extension
+
+to Predictive–Corrective Incompressible Smoothed Particle Hydrodynamics (PCISPH). Sibernetic is built
+
+on top of OpenCL, making it possible to run simulations on CPUs or GPUs, and has 3D visualization
+
+support built on top of OpenGL. Several test examples of the software running and reproducing physical
+
+experiments, as well as performance benchmarks, are presented and future directions are discussed.
+						<br/>
+						<a href="https://drive.google.com/file/d/0B_t3mQaA-HaMWEJ4aG5fVm9QUWc/view" target="_blank">Read more</a>.
+					</p>
+				</div>
+				<i class="fa fa-book fa-xl"></i>
 				<div class="large-spacer"></div><div class="large-spacer"></div>
 				<div>
 				    <h2>OpenWorm: an open-science approach to modeling Caenorhabditis elegans</h2>
@@ -280,9 +317,12 @@
 		                    <p class="pull-right">
 		                        <a href="#">Back to top</a>
 		                    </p>
-		                    <p>
-		                        © 2011-2016 OpenWorm - All rights reserved.
-		                    </p>
+                        <p>
+                            © 2011-2017 OpenWorm - All rights reserved.
+                        </p>
+                        <p>
+                            OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank" href="/assets/OpenWormFoundationIncorporationCertificate.pdf">#5787527</a>, incorporated in July 2015.
+                        </p>
 		                    <p>
 		                        Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
 		                    </p>

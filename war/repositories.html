@@ -15,13 +15,13 @@
 			}
 		</style>
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/docs.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome.css">
-		
-		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-		<script type="text/javascript" src="js/yaml.js"></script>
-		<script type="text/javascript" src="js/repositories.js"></script>
+
+		<!-- CDN jsGrid styles -->
+		<link type="text/css" rel="stylesheet" href="http://js-grid.com/css/jsgrid.min.css" />
+		<link type="text/css" rel="stylesheet" href="http://js-grid.com/css/jsgrid-theme.min.css" />
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -42,9 +42,9 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
 					</button>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
@@ -74,9 +74,9 @@
 							</li>
 						</ul>
 						<ul class="nav pull-right">
-							<li><a class="icon-github icon-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
+							<li><a class="fa fa-github fa-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
 							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"You have made your way from worm to man, and much in you is still worm" - F.Nietzsche' ></a><li>
-        					<li><a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="itunes_store"><i id="iphone" class="icon-mobile-phone"></i> Get the App</a></li>
+        					<li><a href="http://browser.openworm.org" target="wormbrowser"> Explore the Worm</a></li>
       					</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -92,11 +92,51 @@
 			</div>
 		</header>
 
+		<!-- Automatic Bootstrap Tabbing 
+		     (Doesn't work - clicking on tab pills doesn't change the tab pane)  
 		<div class="container">
-			<div id="content" style="margin-top: 25px;">
-			</div>
+		  <ul class="nav nav-pills" id="view-choice">
+		    <li class="active"><a data-toggle="pill" href="#view1">View 1</a></li>
+		    <li><a data-toggle="pill" href="#view2">View 2</a></li>
+		  </ul>
+		  <div class="tab-content">
+		    <div class="tab-pane fade in active" id="view1">
+		      <p>Grid Test 1</p>
+		    </div>
+		    <div class="tab-pane fade" id="view2">
+		      <p>Grid Test 2</p>
+		    </div>
+		  </div>
 		</div>
+		  -->
 
+		<!-- Manual Tabbing -->
+		<div class="container">
+		  <ul class="nav nav-pills" id="view-choice">
+		    <li class="active"><a onclick="activateGrid()" href="#">Grid View</a></li>
+		    <li><a onclick="activateTab()" href="#">Tabbed View</a></li>
+		  </ul>
+
+		  <div id="grid-view-master">
+		    <div id="jsGrid"></div>
+		  </div>
+
+		  <div id="tab-view-master">
+		    <div class="row-fluid">
+		      <div class="span12">
+			<ul id="tabber" class="nav nav-tabs">
+			</ul>
+			<div id="content" class="tab-content" style="margin-top: 25px;">
+			</div>
+			<div id='spinner-container' style="text-align: center; margin: 100px 0px 100px 0px;">
+			  <i id='spinner' class="fa fa-gear fa-spin" style="font-size: 60px"></i>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	
 		<!-- Footer ================================================== -->
 		<footer class="footer" style="margin-top: 25px;">
 			<div class="container">
@@ -167,24 +207,37 @@
 						<a href="./contacts.html">Contacts</a>
 					</li>
 				</ul>
-		            	<p class="pull-right">
-		                	<a href="#">Back to top</a>
-		            	</p>
-		            	<p> © 2011-2015 OpenWorm - All rights reserved.</p>
-		            	<p>
-		                Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
-		        	 </p>
-		            	<p>
-		                	<a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
-		            	</p>
+        <p class="pull-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>
+            © 2011-2017 OpenWorm - All rights reserved.
+        </p>
+        <p>
+            OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank" href="/assets/OpenWormFoundationIncorporationCertificate.pdf">#5787527</a>, incorporated in July 2015.
+        </p>
+        <p>
+          Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+        </p>
+        <p>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
+        </p>
 			</div>
 		</footer>
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 		<script src="js/jquery-1.8.3.min.js"></script>
-		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/yaml.js"></script>
+		<script type="text/javascript" src="js/repositories.js"></script>
+		<script type="text/javascript" src="js/cwl-hierarchy.js"></script>
+		<script type="text/javascript" src="js/cwlpager.js"></script>
+
+		<!-- CDN jsGrid scripts --> 
+		<script type="text/javascript" src="http://js-grid.com/js/jsgrid.min.js"></script>
+
 		<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-29668455-1']);

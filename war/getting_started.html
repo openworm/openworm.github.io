@@ -15,9 +15,10 @@
 			}
 		</style>
 		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
 		<link href="css/main.css" rel="stylesheet">
 		<link href="css/docs.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome.css">
+
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -38,9 +39,9 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
 					</button>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
@@ -70,15 +71,35 @@
 							</li>
 						</ul>
 						<ul class="nav pull-right">
-							<li><a class="icon-github icon-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
+							<li><a class="fa fa-github fa-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
 							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"What I cannot create, I do not understand" - R. Feynman' ></a><li>
-        					<li><a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="itunes_store"><i id="iphone" class="icon-mobile-phone"></i> Get the App</a></li>
+        					<li><a href="http://browser.openworm.org" target="wormbrowser"> Explore the Worm</a></li>
       					</ul>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
 		</div>
-
+		<!--
+		<div class="marketing-byline pagination-centered">
+			<br/>
+			<i class="fa fa-heart-o fa-l donate"></i>
+			
+			<h3>
+				Contribute today to OpenWorm. <strong class="donate">Thank you!</strong>	
+			</h3>
+			<div class="btn-group" role="group" aria-label="...">
+			  <button id="d100" type="button" class="btn btn-default btn-large donation">$100</button>
+			  <button id="d150" type="button" class="btn btn-default active btn-large donation">$50</button>
+			  <button id="d25" type="button" class="btn btn-default btn-large donation">$25</button>
+			  <button id="d5" type="button" class="btn btn-default btn-large donation">$5</button>
+			  <button  type="button" class="btn btn-default btn-large donation other">$</button>
+			  <input id="otherAmount" type="text" class="form-control" placeholder="Other" aria-describedby="basic-addon1"/>
+		  
+			</div>
+			<button  type="button" onclick="donate();"class="btn btn-danger btn-large donation other">Next</button>
+	
+		</div>
+		-->
 		<header class="jumbotron subhead" id="overview">
 			<div class="container">
 				<!--<div class="openworm_logo_header"></div>-->
@@ -95,22 +116,22 @@
 				<div class="span3 bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav">
 						<li>
-							<a href="#goal"><i class="icon-chevron-right"></i>Our goal</a>
+							<a href="#goal"><i class="fa fa-chevron-right"></i>Our goal</a>
 						</li>
 						<li>
-							<a href="#codeanddoc"><i class="icon-chevron-right"></i>Code and documentation</a>
+							<a href="#codeanddoc"><i class="fa fa-chevron-right"></i>Code and documentation</a>
 						</li>
 						<li>
-							<a href="#meetingarchive"><i class="icon-chevron-right"></i>Meeting archive</a>
+							<a href="#meetingarchive"><i class="fa fa-chevron-right"></i>Meeting archive</a>
 						</li>
 						<li>
-							<a href="#askaquestion"><i class="icon-chevron-right"></i>Ask a question</a>
+							<a href="#askaquestion"><i class="fa fa-chevron-right"></i>Ask a question</a>
 						</li>
 						<li>
-							<a href="#stayconnected"><i class="icon-chevron-right"></i>Stay connected</a>
+							<a href="#stayconnected"><i class="fa fa-chevron-right"></i>Stay connected</a>
 						</li>
 						<li>
-							<a href="#contribute"><i class="icon-chevron-right"></i>Contribute</a>
+							<a href="#contribute"><i class="fa fa-chevron-right"></i>Contribute</a>
 						</li>
 					</ul>
 				</div>
@@ -175,7 +196,7 @@
 
 						</p>
 						<div class="span9 pagination-centered">
-							<i class="icon-github icon-xxl"></i>
+							<i class="fa fa-github fa-xxl"></i>
 						</div>
 						<p class="lead">
 							Detailed documentation for each sub-project is available from the <a href="http://docs.openworm.org/en/0.9/projects/" target="_blank">Projects</a> page.
@@ -187,10 +208,10 @@
 							<h1>Meetings Archive</h1>
 						</div>
 						<div class="span9 pagination-centered">
-							<i class="icon-facetime-video icon-xxl"></i>
+							<i class="fa fa-facetime-video fa-xxl"></i>
 						</div>
 						<p class="lead">
-							The OpenWorm Core team meets every two weeks on public Google hangouts. The best way to get started is to sit down and have a look!
+							The OpenWorm senior contributors meets every two weeks on public Google hangouts. The best way to get started is to sit down and have a look!
 							<br/>
 						</p>
 						<div class="span9 pagination-centered">
@@ -209,7 +230,7 @@
 							<h1>Ask a question</h1>
 						</div>
 						<div class="span9 pagination-centered">
-							<i class="icon-question-sign icon-xxl"></i>
+							<i class="fa fa-question-sign fa-xxl"></i>
 						</div>
 
 						<p class="lead">
@@ -224,7 +245,7 @@
 							<h1>Stay connected</h1>
 						</div>
 						<div class="span9 pagination-centered">
-							<i class="icon-group icon-xxl"></i>
+							<i class="fa fa-group fa-xxl"></i>
 						</div>
 						<div class="clearer large-spacer"></div>
 						<p class="lead">
@@ -242,7 +263,7 @@
 							<h1>Contribute</h1>
 						</div>
 						<div class="span9 pagination-centered">
-							<i class="icon-tint icon-xxl"></i>
+							<i class="fa fa-tint fa-xxl"></i>
 						</div>
 
 						<p class="lead">
@@ -333,9 +354,12 @@
 		                    <p class="pull-right">
 		                        <a href="#">Back to top</a>
 		                    </p>
-		                    <p>
-		                        © 2011-2016 OpenWorm - All rights reserved.
-		                    </p>
+                        <p>
+                            © 2011-2017 OpenWorm - All rights reserved.
+                        </p>
+                        <p>
+                            OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank" href="/assets/OpenWormFoundationIncorporationCertificate.pdf">#5787527</a>, incorporated in July 2015.
+                        </p>
 		                    <p>
 		                        Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
 		                    </p>

@@ -1,15 +1,53 @@
+#wormsim_logo {
+	position: absolute;
+	left: 10px;
+	top: 80px;
+	background-image: url("../img/wormsim-logo.png");
+	width: 241px;
+	height: 80px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+#wormsim_logo {
+	background-image: url("../img/wormsim-logo@2x.png");
+	background-size: 241px 80px;
+}
+}
+
+#sibernetic_logo {
+	position: absolute;
+	left: 10px;
+	top: 80px;
+	background-image: url("../img/sibernetic.png");
+	width: 320px;
+	height: 50px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+#sibernetic_logo {
+	background-image: url("../img/sibernetic@2x.png");
+	background-size: 320px 50px;
+}
+}
+
 #geppetto_logo {
 	position: absolute;
 	left: 10px;
-	top: 100px;
+	top: 80px;
 	background-image: url("../img/glogo.png");
 	width: 300px;
 	height: 76px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 
 #geppetto_logo {
 	background-image: url("../img/glogo@2x.png");
@@ -28,10 +66,13 @@
 	height: 586px;
 	cursor:pointer;
 }
+.role{
+	font-size:20px;	
+}
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #cboxLoadedContent {
 	background-image: url("../img/kickstarter@2x.png");
 	background-size: 800px 586px;
@@ -54,12 +95,21 @@
 	height: 51px;
 	margin: 0 auto;
 	cursor:pointer;
-	margin-top:25px; 
+	margin-top:25px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+#sflclogo{
+	background-image: url("../img/sflc.png");
+	width: 260px;
+	height: 46px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:25px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #orionlogo {
 	background-image: url("../img/OrionLogo@2x.png");
 	background-size: 200px 51px;
@@ -73,12 +123,12 @@
 	width: 156px;
 	height: 100px;
 	margin: 0 auto;
-	cursor:pointer; 
+	cursor:pointer;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #metacelllogo {
 	background-image: url("../img/MetaCellLogo@2x.png");
 	background-size: 156px 100px;
@@ -91,12 +141,12 @@
 	height: 65px;
 	margin: 0 auto;
 	cursor:pointer;
-	margin-top:20px; 
+	margin-top:20px;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #neurolinxlogo {
 	background-image: url("../img/NeuroLinxLogo@2x.png");
 	background-size: 212px 65px;
@@ -108,12 +158,12 @@
 	width: 200px;
 	height: 81px;
 	margin: 0 auto;
-	cursor:pointer; 
+	cursor:pointer;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 #awslogo {
 	background-image: url("../img/awslogo@2x.jpg");
 	background-size: 200px 81px;
@@ -121,10 +171,27 @@
 }
 
 #osblogo {
-	background-image: url("../img/osblogo.jpg");
+	background-image: url("../img/osblogo.png");
 	display: inline-block;
 	width: 50px;
 	height: 50px;
+	vertical-align: bottom;
+}
+
+#incflogo {
+	background-image: url("../img/incf.svg");
+	display: inline-block;
+	width: 113px;
+	height: 52px;
+	vertical-align: bottom;
+	horizontal-align: right;
+}
+
+#gsoclogo {
+	background-image: url("../img/GSoC-logo.png");
+	display: inline-block;
+	width: 540px;
+	height: 57px;
 	vertical-align: bottom;
 }
 
@@ -190,6 +257,51 @@
 		background-size: 221px 163px;
 		margin: 0 auto;
 		margin-right: 20px;
+		cursor: pointer;
+		float: left;
+	}
+}
+
+#tedx {
+	background-image: url("../img/tedx.jpg");
+	width: 213px;
+	height: 70px;
+	cursor: pointer;
+	margin: 0 auto;
+	filter: grayscale(100%);
+}
+#tedx:hover {
+	filter: grayscale(0%);
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#tedx {
+		background-image: url("../img/tedx@2x.jpg");
+		background-size: 213px 70px;
+		margin: 0 auto;
+		filter: grayscale(100%);
+	}
+	#tedx:hover {
+		filter: grayscale(0%);
+	}
+}
+
+#economist {
+	background-image: url("../img/economist.png");
+	width: 157px;
+	height: 80px;
+	margin-top: 60px;
+    margin-left: 20px;
+	cursor: pointer;
+	float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#economist {
+		background-image: url("../img/economist@2x.png");
+		background-size: 157px 80px;
+		margin-top: 60px;
+	    margin-left: 20px;
 		cursor: pointer;
 		float: left;
 	}
@@ -284,7 +396,7 @@
 	width: 289px;
 	height: 163px;
 	margin: 0 auto;
-	margin-left: 22px;
+	margin-left: -22px;
 	margin-right: 20px;
 	cursor: pointer;
 	float: left;
@@ -296,7 +408,7 @@
 		background-size: 289px 163px;
 		margin: 0 auto;
 		cursor: pointer;
-		margin-left: 22px;
+		margin-left: -22px;
 		margin-right: 20px;
 		float: left;
 	}
@@ -391,19 +503,19 @@
 	margin-right: 20px;
 }
 
-.icon-15x {
+.fa-15x {
 	font-size: 1.5em;
 }
-.icon-m {
+.fa-m {
 	font-size: 30pt;
 }
-.icon-l {
+.fa-l {
 	font-size: 40pt;
 }
-.icon-xl {
+.fa-xl {
 	font-size: 100pt;
 }
-.icon-xxl {
+.fa-xxl {
 	font-size: 150pt;
 }
 .centered {
@@ -443,6 +555,45 @@
 	max-width: 400px;
 	margin-top: 100px;
 	margin-left: -100px;
+}
+
+.btn.btn-success{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#556015+0,75890c+100 */
+background: #556015; /* Old browsers */
+background: -moz-linear-gradient(top,  #556015 0%, #75890c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #556015 0%,#75890c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #556015 0%,#75890c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#556015', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
+}
+
+.btn.btn-success:hover{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7b891e+0,a0ba10+100 */
+background: #7b891e; /* Old browsers */
+background: -moz-linear-gradient(top,  #7b891e 0%, #a0ba10 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7b891e 0%,#a0ba10 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7b891e 0%,#a0ba10 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7b891e', endColorstr='#a0ba10',GradientType=0 ); /* IE6-9 */
+
+}
+
+#otherAmount{
+	border-radius: 0px;
+    height: 34px;
+    margin-top: 10px;
+}
+
+
+
+#otherAmount.active{
+	background-color:#bd362f;
+	color:white;
+	text-shadow:none;
+}
+
+.btn.active{
+	background-color:#bd362f;
+	color:white;
+	text-shadow:none;
 }
 .btn-xlarge {
 	padding: 21px 39px;
