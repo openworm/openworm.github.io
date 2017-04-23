@@ -98,6 +98,15 @@
 	margin-top:25px;
 }
 
+#sflclogo{
+	background-image: url("../img/sflc.png");
+	width: 260px;
+	height: 46px;
+	margin: 0 auto;
+	cursor:pointer;
+	margin-top:25px;
+}
+
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
