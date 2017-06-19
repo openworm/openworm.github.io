@@ -279,10 +279,10 @@
 		background-image: url("../img/tedx@2x.jpg");
 		background-size: 213px 70px;
 		margin: 0 auto;
-		filter: grayscale(100%);
+		/*filter: grayscale(100%);*/
 	}
 	#tedx:hover {
-		filter: grayscale(0%);
+		/*filter: grayscale(0%);*/
 	}
 }
 
