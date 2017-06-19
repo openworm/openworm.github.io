@@ -268,10 +268,10 @@
 	height: 70px;
 	cursor: pointer;
 	margin: 0 auto;
-	filter: grayscale(100%);
+	/*filter: grayscale(100%);*/
 }
 #tedx:hover {
-	filter: grayscale(0%);
+	/*filter: grayscale(0%);*/
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
@@ -316,18 +316,28 @@
 	float: left;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 1.5) {
-	#atlantic {
-		background-image: url("../img/theatlantic2x.png");
-		background-size: 236px 163px;
-		margin: 0 auto;
-		cursor: pointer;
-		float: left;
-	}
-}
+
 
 #nbc {
 	background-image: url("../img/nbc.png");
+	width: 170px;
+	height: 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+}
+
+#tedxb {
+	background-image: url("../img/tedxb.png");
+	width: 170px;
+	height: 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+}
+
+#tedxv {
+	background-image: url("../img/tedxv.png");
 	width: 170px;
 	height: 163px;
 	margin: 0 auto;
@@ -621,7 +631,8 @@ dd {
 	color: #5a5a5a;
 }
 
-.hero {style="margin-left: 10px;"
+.hero {
+	margin-left: 10px;
 }
 
 .authors {
@@ -767,4 +778,12 @@ dd {
 
 .clearer {
 	clear: both;
+}
+
+.ted {
+	font-family: Helvetica, Arial, sans-serif;
+	color: rgb(230, 43, 30);
+	letter-spacing: 0;
+	/*font-kerning: auto;*/
+	font-weight: 800;
 }
