@@ -26,45 +26,111 @@
 
 	<header class="jumbotron subhead" id="overview">
 	    <div class="container">
-		<h1>Who are you?</h1>
+		<h1>Want to get involved?</h1>
 		<p class="lead">
-		    You'll find some of the most talented and friendliest folks in here, which means it's a great place to learn and a great place to give back, no matter your level of expertise.
+		    You'll find some of the most talented and friendliest folks in here. It's a great place to learn and a great way to give back, no matter your level of expertise.
 		</p>
 	    </div>
 	</header>
 
+	
 	<div class="container">
 
 	    <div class="row">
 		<div class="span3 bs-docs-sidebar">
 		    <ul class="nav nav-list bs-docs-sidenav">
 			<li>
-			    <a href="#coder"><i class="fa fa-chevron-right"></i>Coder</a>
+			    <a href="#goal"><i class="fa fa-chevron-right"></i> <strong>Our Goal</strong></a>
 			</li>
 			<li>
-			    <a href="#scientist"><i class="fa fa-chevron-right"></i>Scientist</a>
+			    <a href="#progress"><i class="fa fa-chevron-right"></i> How Close are We?</a>
 			</li>
 			<li>
-			    <a href="#writer"><i class="fa fa-chevron-right"></i>Writer</a>
+			    <a href="#coder"><i class="fa fa-chevron-right"></i> For Coders</a>
 			</li>
 			<li>
-			    <a href="#artist"><i class="fa fa-chevron-right"></i>Artist</a>
+			    <a href="#scientist"><i class="fa fa-chevron-right"></i> For Scientists</a>
 			</li>
 			<li>
-			    <a href="#webmaster"><i class="fa fa-chevron-right"></i>WebMaster</a>
+			    <a href="#writer"><i class="fa fa-chevron-right"></i> For Writers</a>
 			</li>
 			<li>
-			    <a href="#philantropist"><i class="fa fa-chevron-right"></i>Philanthropist</a>
+			    <a href="#artist"><i class="fa fa-chevron-right"></i> For Artists</a>
 			</li>
 			<li>
-			    <a href="#citizen"><i class="fa fa-chevron-right"></i>Curious citizen</a>
+			    <a href="#webmaster"><i class="fa fa-chevron-right"></i> For WebMasters</a>
+			</li>
+			<li>
+			    <a href="#philantropist"><i class="fa fa-chevron-right"></i> For Philanthropists</a>
+			</li>
+			<li>
+			    <a href="#citizen"><i class="fa fa-chevron-right"></i> For Curious Citizens</a>
+			</li>
+			<li>
+			    <a href="#whattodo"><i class="fa fa-chevron-right"></i> <strong>Get started!</strong></a>
 			</li>
 		    </ul>
 		</div>
 		<div class="span9">
+		    
+		    <!-- Goal ================================================== -->
+		    <section id="goal">
+			<div class="page-header">
+			    <h1>Our goal</h1>
+			</div>
+			<p class="lead">
+			    OpenWorm aims to build the first comprehensive computational model of the <em>Caenorhabditis elegans</em> (<em>C. elegans</em>), a microscopic roundworm.
+			    With only a <strong>thousand cells</strong>, it solves basic problems such as feeding, mate-finding and predator avoidance.
+			    Despite being extremely well studied in biology, this organism still eludes a deep, principled understanding of its biology.
+			    <br/>
+			</p>
+			<div class="row-fluid padding-top-large">
+			    <div class="span12 pagination-centered">
+				<div class="well">
+				    <div class="centered">
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/zjqLwPgLnV0" frameborder="0" allowfullscreen></iframe>
+				    </div>
+				    <div class="padding-top">
+					<h4>A brief introduction to <em>C. elegans</em></h4>
+				    </div>
+				</div>
+			    </div>
+			</div>
+			<p class="lead">
+			    We are using a <strong>bottom-up</strong> approach, aimed at observing the worm behaviour <strong>emerge</strong> from a simulation of data derived from scientific experiments carried out over the past decade.
+			    To do so, we are incorporating the data available in the scientific community into software models.
+			    We are engineering <strong>Geppetto</strong> and <strong>Sibernetic</strong>, open-source simulation platforms, 
+			    to be able to run these different models in concert.
+			    We are also forging new collaborations with universities and research institutes to collect data that fill in the gaps.
+			</p>
+		    </section>
+
+		    <!-- How close ================================================== -->
+		    <section id="progress">
+			<div class="page-header">
+			    <h1>How close are we?</h1>
+			<p class="lead">
+			    We're making progress, but there's still a lot to do! We have built many of the tools we will need to model the worm's nervous system an movement - now we are starting to connect them. You can look at more detailed progress reports on our <a href="https://github.com/openworm/OpenWorm/milestones">milestones page</a> or by viewing our <a href="https://github.com/openworm/" target="_blank">code on GitHub</a>.
+			</p>
+			<div class="row-fluid padding-top-large">
+			    <div class="span12 pagination-centered">
+				<div class="well">
+				    <div class="centered">
+					<iframe width="420" height="315" src="http://www.youtube.com/embed/5767l3MveFY" frameborder="0" allowfullscreen="1"></iframe>
+				    </div>
+				    <div class="padding-top">
+					<h4>This video shows progress on the simulated body of the worm as of May, 2017.</h4>
+				    </div>
+				</div>
+			    </div>
+			</div>
+		    </section>
+
+		    
 		    <!-- Coder ================================================== -->
 		    <section id="coder">
 			<div class="page-header">
+			    <h3>If you are a...</h3>
 			    <h1>Coder</h1>
 			</div>
 			<div class="span9 pagination-centered">
@@ -74,18 +140,24 @@
 			    We need your skills! No matter what programming language you are used to we will find a place for you!
 			    We are building different software components which require different kinds of expertise.
 			    <br/><br/>
-
 			    We have provided an extensive guide to getting started with the project in
 			    <a href="http://docs.openworm.org/en/0.9/#contributing-to-openworm" target="_blank">our documentation</a>.
 			    Please start there and if you have any questions do not hesitate to <a href="./contacts.html">contact us</a>.
-
 			</p>
-
+			<p class="lead">
+			    All the code we produce in the OpenWorm project is Open Source and available
+			    on <a href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank">GitHub</a>.
+			    This makes it easy for everyone to look at and play with.
+			</p>
 		    </section>
+
 		    <!-- Scientist ================================================== -->
 		    <section id="scientist">
 			<div class="page-header">
 			    <h1>Scientist</h1>
+			</div>
+			<div class="span9 pagination-centered">
+			    <i class="fa fa-flask fa-xl"></i>
 			</div>
 			<div class="span9 pagination-centered">
 			    <i class="fa fa-beaker fa-xl"></i>
@@ -96,8 +168,8 @@
 			    Do you have experience with numerical methods for solving cable equations? Do you think that you are working on something that we could be interested in?
 			    <br/><br/> If the answer to any of the above questions is yes and you would like to help us please <a href="./contacts.html">contact us</a>!
 			</p>
-
 		    </section>
+
 		    <!-- Writer ================================================== -->
 		    <section id="writer">
 			<div class="page-header">
@@ -114,8 +186,8 @@
 			    Also if you are <strong>writing a blog post</strong> or an article about the project feel free to ask us for any material like our logo or some sexy worm graphics.  We would
 			    be more than happy to help you!
 			</p>
-
 		    </section>
+
 		    <!-- Artist ================================================== -->
 		    <section id="artist">
 			<div class="page-header">
@@ -129,8 +201,8 @@
 			    Do you draw or do you make <strong>awesome videos</strong>? We need you. We love to inspire people and we believe art is the best way to do it.<br/><br/>
 			    If you would like to help out please send us some examples from your portfolio and tell us how you would like to use your talent. If you can't think of anything still <a href="./contacts.html">get in touch</a> with us, we'll figure something out together!
 			</p>
-
 		    </section>
+
 		    <!-- WebMaster ================================================== -->
 		    <section id="webmaster">
 			<div class="page-header">
@@ -146,8 +218,8 @@
 			    If you would like to help us, <a href="./contacts.html">contact us</a> and link to some of the websites you have worked on.
 			    Also feel free to give us any feedback on usability of this website; we like to constantly raise the bar!
 			</p>
-
 		    </section>
+
 		    <!-- Philantropist ================================================== -->
 		    <section id="philantropist">
 			<div class="page-header">
@@ -164,8 +236,8 @@
 			    <br/><br/>
 			    If you are interested in helping to fund OpenWorm or partner with us please <a href="./contacts.html">contact us</a>.  We need your help.
 			</p>
-
 		    </section>
+
 		    <!-- Citizen ================================================== -->
 		    <section id="citizen">
 			<div class="page-header">
@@ -177,15 +249,28 @@
 			<p class="lead">
 			    One thing we need more than anything is for people to know about us. Getting visibility for the project will help us attract attention, <strong>raise awareness</strong> and ultimately reach our <a href="./getting_started.html#goal">goal</a> faster.
 			    <br/><br/>
-			    We've assembled information about the project <a href="http://docs.openworm.org/en/0.9/#navigating-openworm" target="_blank">in our documentation</a> to help you better understand the project and find places to help out.
+			    We've assembled information about the project  to help you better understand the project and find places to help out.
 			    <br/><br/>
 			    If you would like to help us you can <strong>spread the word</strong> with your family and friends and explain to them how a biologically accurate simulation of a tiny worm could help a lot to accelerate the cure of diseases.
 			    You can also tell your geek friends how it would be totally cool to have a virtual worm living inside your computer.
 			    <br/><br/>
 			    Also if there is anything you think you could help us with which doesn't fall in any of the above categories please  <a href="./contacts.html">contact us</a>, we would <strong>love</strong> to hear from you!
 			</p>
-
 		    </section>
+
+		    <!-- Get Started ================================================== -->
+		    <section id="whattodo">
+			<div class="page-header">
+			    <h1>How to start</h1>
+			</div>
+			<p class="lead">
+			    Ready to learn more?
+			    If you're not sure what you want to work on, you can read more about the specific problems we are working on <a href="http://docs.openworm.org/en/0.9/#navigating-openworm" target="_blank">in our documentation</a>. Or drop in on one of our <a href="https://www.google.com/calendar/embed?src=bqvlrm642m3irjehbethokkcdg%40group.calendar.google.com" target="_blank">upcoming events</a>.
+			</p>
+			<h3>If you have some time to contribute, we have something important for you to do! You can fill out <a href="https://docs.google.com/spreadsheet/viewform?usp=drive_web&formkey=dC1CUDQtTV82MEJJcjY0NjdCcHpYdmc6MQ#gid=0" target="blank">this form</a> to let us know that you're out there - we'll be in touch!</h3> 
+			    
+		    </section>
+		    
 		</div>
 	    </div>
 
