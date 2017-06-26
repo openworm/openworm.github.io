@@ -1,544 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>OpenWorm</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.">
-		<meta name="author" content="">
+<head>
+    <meta charset="utf-8">
+    <title>OpenWorm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.">
+    <meta name="author" content="">
 
-		<!-- Le styles -->
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/font-awesome.css">
-		<style>
-			body {
-				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-			}
-		</style>
-		<link href="css/bootstrap-responsive.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
-		<link href="css/docs.css" rel="stylesheet">
-		<!-- <link href="css/colorbox.css" rel="stylesheet">-->
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        body {
+            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        }
 
-		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
 
-		<!-- Fav and touch icons -->
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-	</head>
-	<body>
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		</script>
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<div class="container">
-					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="fa fa-bar"></span>
-						<span class="fa fa-bar"></span>
-						<span class="fa fa-bar"></span>
-					</button>
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/docs.css" rel="stylesheet">
+    <!-- <link href="css/colorbox.css" rel="stylesheet">-->
 
-					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<li class="active">
-								<a href="./index.html">Home</a>
-							</li>
-							<li>
-								<a href="./getting_started.html">Get Started</a>
-							</li>
-							<li>
-								<a href="./get_involved.html">Get Involved</a>
-							</li>
-							<li>
-								<a href="./downloads.html">Downloads</a>
-							</li>
-							<li>
-								<a href="./supporters.html">Supporters</a>
-							</li>
-							<li>
-								<a href="./media.html">Media</a>
-							</li>
-							<li>
-								<a href="./science.html">Science</a>
-							</li>
-							<li>
-								<a class="donatecolor" href="./donate.html">Donate</a>
-							</li>
-						</ul>
-						<ul class="nav pull-right">
-							<li><a class="fa fa-github fa-15x" href="http://docs.openworm.org/en/latest/Community/github/" target="_blank"></a>
-							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"What I cannot create, I do not understand" - R. Feynman' ></a><li>
-        					<li><a href="http://browser.openworm.org" target="wormbrowser"> Explore the Worm</a></li>
-      					</ul>
-					</div><!--/.nav-collapse -->
-				</div>
-			</div>
-		</div>
-		
-		<!--
-		<div class="marketing-byline pagination-centered">
-			<br/>
-			<i class="fa fa-heart-o fa-l donate"></i>
-			
-			<h3>
-				Contribute today to OpenWorm. <strong class="donate">Thank you!</strong>	
-			</h3>
-			<div class="btn-group" role="group" aria-label="...">
-			  <button id="d100" type="button" class="btn btn-default btn-large donation">$100</button>
-			  <button id="d150" type="button" class="btn btn-default active btn-large donation">$50</button>
-			  <button id="d25" type="button" class="btn btn-default btn-large donation">$25</button>
-			  <button id="d5" type="button" class="btn btn-default btn-large donation">$5</button>
-			  <button  type="button" class="btn btn-default btn-large donation other">$</button>
-			  <input id="otherAmount" type="text" class="form-control" placeholder="Other" aria-describedby="basic-addon1"/>
-		  
-			</div>
-			<button  type="button" onclick="donate();"class="btn btn-danger btn-large donation other">Next</button>
-	
-		</div>
-		-->
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-		<div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-				<div class="item active">
-					<div class="jumbotron masthead">
-						<div class="container">
-							<h1>OpenWorm</h1>
-							<p>
-								Building the first digital life form.  Open source.
-							</p>
-							<p>
-								<a href="./getting_started.html" class="btn btn-primary btn-large">Get Started</a>
-								<a href="http://browser.openworm.org" class="btn btn-primary btn-large btn-inverse" target="wormbrowser"></i> Explore the Worm</a>
-							</p>
-							<ul class="masthead-links">
-								<li>
-									<a href="http://blog.openworm.org" target="_blank">Blog</a>
-								</li>
-								<li>
-									<a href="http://docs.openworm.org/en/latest/projects.html" target="_blank">Projects</a>
-								</li>
-								<li>
-									<a id="geeks" href="http://www.redbubble.com/people/openworm/shop" target="_blank">For <strong>real</strong> worm-geeks</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
-				<div class="item">
-					<img src="./img/sc_sibernetic.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<div id="sibernetic_logo"></div>
-							<h1>Worm body simulator</h1>
-							<p class="lead">
-								Worms are soft and squishy.  So our model has to be too.
-								<br/>
-								We are building in the physics of muscles, soft tissues and fluids.  Because it matters.
-								<br/>
-								<br/>
-							</p>
-							<a class="btn btn-large btn-primary" href="https://www.youtube.com/watch?v=J_wG5PfDIoU" target="_blank">Watch a video</a>
-							<a class="btn btn-large btn-primary" href="https://github.com/openworm/sibernetic" target="_blank">Get the code</a>
-							<a class="btn btn-large btn-warning" href="https://drive.google.com/file/d/0B_t3mQaA-HaMWEJ4aG5fVm9QUWc/view" target="_blank">Read the paper</a>
-					</div>
-				</div>
-			</div>
-				<div class="item">
-					<img src="./img/sc_wormsim.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<div id="wormsim_logo"></div>
-							<h1>Play with your own worm!</h1>
-							<p class="lead">
-								Thanks to our kickstarter backers we have developed WormSim, a new interactive way to play with the worm in your browser and be up to date with our modeling progress!
-							</p>
-							<a class="btn btn-large btn-primary" href="http://wormsim.org" target="_blank">Learn more</a>
-							<a class="btn btn-large btn-primary" href="https://www.youtube.com/watch?v=QaCRNX0hdwU" target="_blank">Watch a video</a>
-					</div>
-				</div>
-				</div>
-				<div class="item">
-					<img src="./img/devoworm.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>DevoWorm</h1>
-							<p class="lead">
-								We're exploring the development of the worm via DevoWorm, an interdisciplinary project under the OpenWorm umbrella, focused on developmental processes in Nematodes and other forms of life through data analysis, visualization, and simulation.
-								<br/>
-								<br/>
-							</p>
-							<a class="btn btn-large btn-primary" href="https://devoworm.weebly.com" target="_blank">Learn more</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./img/sc_wormbrowser.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>OpenWorm Browser</h1>
-							<p class="lead">
-								We created a 3D Browser to let everybody take the worm apart.
-								Zoom, rotate and peel back layers of a 3D worm without getting your hands dirty.
-								<br/>
-								<br/>
-							</p>
-							<a class="btn btn-large btn-primary" target="_blank" href="http://browser.openworm.org">Launch</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./img/sc_connectome.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>NeuroML Connectome</h1>
-							<p class="lead">
-								Every neuron the worm has, and how they connect.  Everything in its right place.  Now we are bringing it to life.
-								<br/>
-								<br/>
-							</p>
-								<a href="http://goo.gl/XGQPX" target="_blank" class="btn btn-primary btn-large" onclick="">Explore the connectome</a>
-								<a href="http://opensourcebrain.org" target="_blank"><span id="osblogo"></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./img/sc_geppetto.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<div id="geppetto_logo"></div>
-							<h1>Open source visualization and simulation platform.</h1>
-							<p class="lead">
-								We are engineering Geppetto, a plug-and-play platform to power simulations of biological systems... from your web browser.
-								<br/>
-								<br/>
-							</p>
-							<a class="btn btn-large btn-warning" href="http://geppetto.org" target="_blank">Learn more</a>
-							<a class="btn btn-large btn-primary" href="https://github.com/openworm/org.geppetto/releases" target="_blank">Download</a>
-							<a class="btn btn-large btn-primary" href="http://git.geppetto.org" target="_blank">Sources</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./img/sc_optimal.png" alt="">
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>Aiming for the best.</h1>
-							<p class="lead">
-								We are using optimization techniques such as genetic algorithms to fine-tune our models to fit experimental data from real cellular recordings.
-								<br/>
-								It's evolution, baby.
-								<br/>
-								<br/>
-							</p>
-							<a class="btn btn-large btn-primary" href="http://optimal-neuron.readthedocs.org/" target="_blank">Documentation</a>
-							<a class="btn btn-large btn-primary" href="https://github.com/openworm/muscle_model" target="_blank">Source code</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			<!--div id="tip"></div>-->
-		</div><!-- /.carousel -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+                <span class="fa fa-bar"></span>
+            </button>
 
-		</div>
-		<!-- /container -->
-		<div class="bs-docs-social">
-			<div class="container">
-				<ul class="bs-docs-social-buttons">
-					<li>
-						<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=openworm&repo=openworm&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
-					</li>
-					<li>
-						<div class="fb-like" data-href="http://www.facebook.com/OpenWorm" data-send="false" data-layout="button_count" data-width="75" data-show-faces="false"></div>
-					</li>
-					<li class="follow-btn">
-						<a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @openworm</a>
-					</li>
-					<li class="tweet-btn">
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.openworm.org/" data-text="Check out @OpenWorm: building the first digital life form... open source!">Tweet</a>
-					</li>
-					<!-- Place this tag where you want the +1 button to render. -->
-					<li>
-						<div class="g-plusone" data-size="medium" data-href="https://plus.google.com/117948341754627144949"></div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./getting_started.html">Get Started</a>
+                    </li>
+                    <li>
+                        <a href="./get_involved.html">Get Involved</a>
+                    </li>
+                    <li>
+                        <a href="./downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="./supporters.html">Supporters</a>
+                    </li>
+                    <li>
+                        <a href="./media.html">Media</a>
+                    </li>
+                    <li>
+                        <a href="./science.html">Science</a>
+                    </li>
+                    <li>
+                        <a class="donatecolor" href="./donate.html">Donate</a>
+                    </li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li><a class="fa fa-github fa-15x" href="http://docs.openworm.org/en/latest/Community/github/"
+                           target="_blank"></a>
+                    <li><a class="minilogo" rel="tooltip" data-placement="right"
+                           data-original-title='"What I cannot create, I do not understand" - R. Feynman'></a>
+                    <li>
+                    <li><a href="http://browser.openworm.org" target="wormbrowser"> Explore the Worm</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
 
-			<div class="container">
+<!--
+<div class="marketing-byline pagination-centered">
+    <br/>
+    <i class="fa fa-heart-o fa-l donate"></i>
 
-				<div class="marketing">
-					<h1>Enter the worm.</h1>
-					<p class="marketing-byline">
-						OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.
-					</p>
-					<div id="openworm_logo"></div><div id="tedx" onclick=Javascript:window.open("https://www.youtube.com/watch?v=RY2-0-QsuTE")></div>
-					<div class="row-fluid">
-						<div class="span6">
-							<h2>Latest news</h2>
-							<ul id="news-feed">
+    <h3>
+        Contribute today to OpenWorm. <strong class="donate">Thank you!</strong>
+    </h3>
+    <div class="btn-group" role="group" aria-label="...">
+      <button id="d100" type="button" class="btn btn-default btn-large donation">$100</button>
+      <button id="d150" type="button" class="btn btn-default active btn-large donation">$50</button>
+      <button id="d25" type="button" class="btn btn-default btn-large donation">$25</button>
+      <button id="d5" type="button" class="btn btn-default btn-large donation">$5</button>
+      <button  type="button" class="btn btn-default btn-large donation other">$</button>
+      <input id="otherAmount" type="text" class="form-control" placeholder="Other" aria-describedby="basic-addon1"/>
 
-							</ul>
-						</div>
-						<div class="span6">
-							<h2>Social stream</h2>
-							<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>
-							<script>
-								! function(d, s, id) {
-									var js, fjs = d.getElementsByTagName(s)[0];
-									if (!d.getElementById(id)) {
-										js = d.createElement(s);
-										js.id = id;
-										js.src = "//platform.twitter.com/widgets.js";
-										fjs.parentNode.insertBefore(js, fjs);
-									}
-								}(document, "script", "twitter-wjs");
-							</script>
+    </div>
+    <button  type="button" onclick="donate();"class="btn btn-danger btn-large donation other">Next</button>
 
-						</div>
-					</div>
-					<div class = "row-fluid pagination-centered span12">
-						<div class="span3">
-							<div id="economist" onclick=Javascript:window.open("http://www.economist.com/news/science-and-technology/21602661-crowd-funded-project-aims-build-worlds-first-simulated-organism-computer")></div>
-						</div>
-						<div class="span3">
-							<div id="atlantic" onclick=Javascript:window.open("http://www.theatlantic.com/technology/archive/2013/05/is-this-virtual-worm-the-first-sign-of-the-singularity/275715/")></div>
-						</div>
-						<div class="span3">
-							<div id="bbc"  onclick=Javascript:window.open("http://www.bbc.co.uk/news/technology-22397252")></div>
-						</div>
+</div>
+-->
 
-						<div class="span3">
-							<div id="telegraph" onclick=Javascript:window.open("http://www.telegraph.co.uk/technology/news/10535160/Wriggling-worm-is-breakthrough-for-artificial-life.html")></div>
-						</div>
-					</div>
-					<div class = "row-fluid pagination-centered span12">
-						<div class="span3">
-							<div id="nbc" onclick=Javascript:window.open("http://www.nbcnews.com/technology/futureoftech/open-source-virtual-worm-worms-its-way-life-6C9770499")></div>
-						</div>
-						<div class="span3">
-							<div id="wired" onclick=Javascript:window.open("http://www.wired.co.uk/magazine/archive/2013/03/start/meet-wiki-worm")></div>
-						</div>
-						<div class="span3">
-							<div id="engadget" onclick=Javascript:window.open("http://www.engadget.com/2013/12/26/openworm-project/")></div>
-						</div>
-						<div class="span3">
-							<div id="boingboing" onclick=Javascript:window.open("http://boingboing.net/2013/05/02/openworm-an-artificial-life-s.html")></div>
-						</div>
-					</div>
-					<br/><br/>
-					<p class="marketing-byline clear">
-						See more coverage of OpenWorm in the news <a href="./media.html">here</a>.
-					</p>
-					<hr class="soften">
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="jumbotron masthead">
+                <div class="container">
+                    <h1>OpenWorm</h1>
+                    <p>
+                        Building the first digital life form. Open source.
+                    </p>
+                    <p>
+                        <a href="./getting_started.html" class="btn btn-primary btn-large">Get Started</a>
+                        <a href="http://browser.openworm.org" class="btn btn-primary btn-large btn-inverse"
+                           target="wormbrowser"></i> Explore the Worm</a>
+                    </p>
+                    <ul class="masthead-links">
+                        <li>
+                            <a href="http://blog.openworm.org" target="_blank">Blog</a>
+                        </li>
+                        <li>
+                            <a href="http://docs.openworm.org/en/latest/projects.html" target="_blank">Projects</a>
+                        </li>
+                        <li>
+                            <a id="geeks" href="http://www.redbubble.com/people/openworm/shop" target="_blank">For
+                                <strong>real</strong> worm-geeks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-					<h1>Open Science at its best.</h1>
-					<div class="row">
-						<div class="span12 pagination-centered">
-							<i class="fa fa-beaker fa-xxl"></i>
-						</div>
-					</div>
-					<p class="marketing-byline">
-						All the code, data and models produced as part of the OpenWorm project are open-source under the MIT licence.
-					</p>
-					<div class="row-fluid">
-						<div class="span4">
-							<i class="fa fa-github fa-xl"></i>
-							<h2>Source code</h2>
-							<p>
-								All the code produced as part of the OpenWorm project is on <a href="http://docs.openworm.org/en/latest/Community/github.html#github" target="_blank">GitHub</a> under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a> licence. Different <a href="http://docs.openworm.org/en/latest/projects.html" target="_blank">sub-projects</a> are hosted in different repositories.
-							</p>
-						</div>
-						<div class="span4">
-							<i class="fa fa-tasks fa-xl"></i>
-							<h2>Current progress</h2>
-							<p>
-								The tasks we are currently working on are tracked on GitHub under different <a href="https://github.com/openworm/OpenWorm/milestones" target="_blank">Milestones</a>.
-							</p>
-						</div>
-						<div class="span4">
-							<i class="fa fa-calendar fa-xl"></i>
-							<h2>Calendar</h2>
-							<p>
-								When is the next OpenWorm hangout or event? Checkout our <a href="https://www.google.com/calendar/embed?src=bqvlrm642m3irjehbethokkcdg%40group.calendar.google.com" target="_blank">public calendar</a> to find out!
-							</p>
-						</div>
-					</div>
+        <div class="item">
+            <img src="./img/sc_sibernetic.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div id="sibernetic_logo"></div>
+                    <h1>Worm body simulator</h1>
+                    <p class="lead">
+                        Worms are soft and squishy. So our model has to be too.
+                        <br/>
+                        We are building in the physics of muscles, soft tissues and fluids. Because it matters.
+                        <br/>
+                        <br/>
+                    </p>
+                    <a class="btn btn-large btn-primary" href="https://www.youtube.com/watch?v=J_wG5PfDIoU"
+                       target="_blank">Watch a video</a>
+                    <a class="btn btn-large btn-primary" href="https://github.com/openworm/sibernetic" target="_blank">Get
+                        the code</a>
+                    <a class="btn btn-large btn-warning"
+                       href="https://drive.google.com/file/d/0B_t3mQaA-HaMWEJ4aG5fVm9QUWc/view" target="_blank">Read the
+                        paper</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img/sc_wormsim.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div id="wormsim_logo"></div>
+                    <h1>Play with your own worm!</h1>
+                    <p class="lead">
+                        Thanks to our kickstarter backers we have developed WormSim, a new interactive way to play with
+                        the worm in your browser and be up to date with our modeling progress!
+                    </p>
+                    <a class="btn btn-large btn-primary" href="http://wormsim.org" target="_blank">Learn more</a>
+                    <a class="btn btn-large btn-primary" href="https://www.youtube.com/watch?v=QaCRNX0hdwU"
+                       target="_blank">Watch a video</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img/devoworm.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>DevoWorm</h1>
+                    <p class="lead">
+                        We're exploring the development of the worm via DevoWorm, an interdisciplinary project under the
+                        OpenWorm umbrella, focused on developmental processes in Nematodes and other forms of life
+                        through data analysis, visualization, and simulation.
+                        <br/>
+                        <br/>
+                    </p>
+                    <a class="btn btn-large btn-primary" href="https://devoworm.weebly.com" target="_blank">Learn
+                        more</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img/sc_wormbrowser.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>OpenWorm Browser</h1>
+                    <p class="lead">
+                        We created a 3D Browser to let everybody take the worm apart.
+                        Zoom, rotate and peel back layers of a 3D worm without getting your hands dirty.
+                        <br/>
+                        <br/>
+                    </p>
+                    <a class="btn btn-large btn-primary" target="_blank" href="http://browser.openworm.org">Launch</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img/sc_connectome.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>NeuroML Connectome</h1>
+                    <p class="lead">
+                        Every neuron the worm has, and how they connect. Everything in its right place. Now we are
+                        bringing it to life.
+                        <br/>
+                        <br/>
+                    </p>
+                    <a href="http://goo.gl/XGQPX" target="_blank" class="btn btn-primary btn-large" onclick="">Explore
+                        the connectome</a>
+                    <a href="http://opensourcebrain.org" target="_blank"><span id="osblogo"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img/sc_geppetto.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div id="geppetto_logo"></div>
+                    <h1>Open source visualization and simulation platform.</h1>
+                    <p class="lead">
+                        We are engineering Geppetto, a plug-and-play platform to power simulations of biological
+                        systems... from your web browser.
+                        <br/>
+                        <br/>
+                    </p>
+                    <a class="btn btn-large btn-warning" href="http://geppetto.org" target="_blank">Learn more</a>
+                    <a class="btn btn-large btn-primary" href="https://github.com/openworm/org.geppetto/releases"
+                       target="_blank">Download</a>
+                    <a class="btn btn-large btn-primary" href="http://git.geppetto.org" target="_blank">Sources</a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="./img/sc_optimal.png" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Aiming for the best.</h1>
+                    <p class="lead">
+                        We are using optimization techniques such as genetic algorithms to fine-tune our models to fit
+                        experimental data from real cellular recordings.
+                        <br/>
+                        It's evolution, baby.
+                        <br/>
+                        <br/>
+                    </p>
+                    <a class="btn btn-large btn-primary" href="http://optimal-neuron.readthedocs.org/" target="_blank">Documentation</a>
+                    <a class="btn btn-large btn-primary" href="https://github.com/openworm/muscle_model"
+                       target="_blank">Source code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    <!--div id="tip"></div>-->
+</div><!-- /.carousel -->
 
-					<hr class="soften">
+</div>
+<!-- /container -->
+<div class="bs-docs-social">
+    <div class="container">
+        <ul class="bs-docs-social-buttons">
+            <li>
+                <iframe class="github-btn"
+                        src="http://ghbtns.com/github-btn.html?user=openworm&repo=openworm&type=watch&count=true"
+                        allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+            </li>
+            <li>
+                <div class="fb-like" data-href="http://www.facebook.com/OpenWorm" data-send="false"
+                     data-layout="button_count" data-width="75" data-show-faces="false"></div>
+            </li>
+            <li class="follow-btn">
+                <a href="https://twitter.com/openworm" class="twitter-follow-button" data-link-color="#0069D6"
+                   data-show-count="true">Follow @openworm</a>
+            </li>
+            <li class="tweet-btn">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.openworm.org/"
+                   data-text="Check out @OpenWorm: building the first digital life form... open source!">Tweet</a>
+            </li>
+            <!-- Place this tag where you want the +1 button to render. -->
+            <li>
+                <div class="g-plusone" data-size="medium"
+                     data-href="https://plus.google.com/117948341754627144949"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div>
 
-					<h1>Meet with us.</h1>
-					<div class="row">
-						<div class="span12 pagination-centered">
-							<i class="fa fa-group fa-xxl"></i>
-						</div>
-					</div>
-					<div class="large-spacer"></div>
-					<p class="marketing-byline">
+    <div class="container">
 
-						<a href="./people.html">Our senior contributors</a> meet monthly in public Google Hangouts <a href="https://www.youtube.com/OpenWorm" target="_blank">streamed via YouTube</a>. You are welcome to <a href="https://plus.google.com/117948341754627144949/posts" target="_blank">join us</a>!
-					</p>
-				</div>
+        <div class="marketing">
+            <h1>Enter the worm.</h1>
+            <p class="marketing-byline">
+                OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.
+            </p>
+            <div id="openworm_logo"></div>
+            <div class="row-fluid">
+                <div class="span6">
+                    <h2>Latest news</h2>
+                    <ul id="news-feed">
 
-			</div>
+                    </ul>
+                </div>
+                <div class="span6">
+                    <h2>Social stream</h2>
+                    <a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets
+                        by @OpenWorm</a>
+                    <script>
+                        !function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");
+                    </script>
 
-			<!-- Footer
-						================================================== -->
-						<footer class="footer">
-							<div class="container">
-								<ul class="footer-links">
-									<li>
-										<a href="http://blog.openworm.org">Blog</a>
-									</li>
-									<li class="muted">
-										&middot;
-									</li>
-									<li>
-										<a href="./about.html">About</a>
-									</li>
-									<li class="muted">
-									&middot;
-								    </li>
-								    <li>
-									<a href="http://docs.openworm.org/en/latest/faq/" target="_blank">FAQ</a>
-								    </li>
-									<li class="muted">
-										&middot;
-									</li>
-									<li>
-										<a href="./people.html">People</a>
-									</li>
-									<li class="muted">
-										&middot;
-									</li><li>
-										<a href="./events.html">Events</a>
-									</li>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="marketing">
 
-									<li class="muted">
-										&middot;
-									</li><li>
-										<a href="./media.html">Media</a>
-									</li>
+        <h1>See OpenWorm</h1>
+        <h2>
+            at
+        </h2>
+        <br>
+        <div id="tedx"></div>
+        <div class="row-fluid">
+            <div class="span12" title="See two awesome TEDx talks by Stephen Larson featuring OpenWorm"
+                 onclick=Javascript:window.open("http://www.openworm.org/media.html") style="cursor: pointer;">
+                <h2 class="centered" style="letter-spacing: 0;">
+                    Bangalore and Vienna
+                </h2>
+            </div>
+        </div>
+        <div class="row-fluid pagination-centered span12">
+            <div class="span3">
+                <div id="economist"
+                     onclick=Javascript:window.open("http://www.economist.com/news/science-and-technology/21602661-crowd-funded-project-aims-build-worlds-first-simulated-organism-computer")></div>
+            </div>
+            <div class="span3">
+                <div id="atlantic"
+                     onclick=Javascript:window.open("http://www.theatlantic.com/technology/archive/2013/05/is-this-virtual-worm-the-first-sign-of-the-singularity/275715/")></div>
+            </div>
+            <div class="span3">
+                <div id="bbc" onclick=Javascript:window.open("http://www.bbc.co.uk/news/technology-22397252")></div>
+            </div>
 
-									<li class="muted">
-										&middot;
-									</li>
+            <div class="span3">
+                <div id="telegraph"
+                     onclick=Javascript:window.open("http://www.telegraph.co.uk/technology/news/10535160/Wriggling-worm-is-breakthrough-for-artificial-life.html")></div>
+            </div>
+        </div>
+        <div class="row-fluid pagination-centered span12">
+            <div class="span3">
+                <div id="nbc"
+                     onclick=Javascript:window.open("http://www.nbcnews.com/technology/futureoftech/open-source-virtual-worm-worms-its-way-life-6C9770499")></div>
+            </div>
+            <div class="span3">
+                <div id="wired"
+                     onclick=Javascript:window.open("http://www.wired.co.uk/magazine/archive/2013/03/start/meet-wiki-worm")></div>
+            </div>
+            <div class="span3">
+                <div id="engadget"
+                     onclick=Javascript:window.open("http://www.engadget.com/2013/12/26/openworm-project/")></div>
+            </div>
+            <div class="span3">
+                <div id="boingboing"
+                     onclick=Javascript:window.open("http://boingboing.net/2013/05/02/openworm-an-artificial-life-s.html")></div>
+            </div>
+        </div>
+        <br/><br/>
+        <p class="marketing-byline clear">
+            See more coverage of OpenWorm in the news <a href="./media.html">here</a>.
+        </p>
+        <hr class="soften">
 
-									<li>
-										<a href="http://docs.openworm.org/en/latest/projects/" target="_blank">Projects</a>
-									</li>
+        <h1>Open Science at its best.</h1>
+        <div class="row">
+            <div class="span12 pagination-centered">
+                <i class="fa fa-beaker fa-xxl"></i>
+            </div>
+        </div>
+        <p class="marketing-byline">
+            All the code, data and models produced as part of the OpenWorm project are open-source under the MIT
+            licence.
+        </p>
+        <div class="row-fluid">
+            <div class="span4">
+                <i class="fa fa-github fa-xl"></i>
+                <h2>Source code</h2>
+                <p>
+                    All the code produced as part of the OpenWorm project is on <a
+                        href="http://docs.openworm.org/en/latest/Community/github.html#github"
+                        target="_blank">GitHub</a>
+                    under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a> licence. Different <a
+                        href="http://docs.openworm.org/en/latest/projects.html" target="_blank">sub-projects</a> are
+                    hosted in different repositories.
+                </p>
+            </div>
+            <div class="span4">
+                <i class="fa fa-tasks fa-xl"></i>
+                <h2>Current progress</h2>
+                <p>
+                    The tasks we are currently working on are tracked on GitHub under different <a
+                        href="https://github.com/openworm/OpenWorm/milestones" target="_blank">Milestones</a>.
+                </p>
+            </div>
+            <div class="span4">
+                <i class="fa fa-calendar fa-xl"></i>
+                <h2>Calendar</h2>
+                <p>
+                    When is the next OpenWorm hangout or event? Checkout our <a
+                        href="https://www.google.com/calendar/embed?src=bqvlrm642m3irjehbethokkcdg%40group.calendar.google.com"
+                        target="_blank">public calendar</a> to find out!
+                </p>
+            </div>
+        </div>
 
-									<li class="muted">
-										&middot;
-									</li>
-									<li>
-										<a href="./publications.html">Publications</a>
-									</li>
-									<li class="muted">
-										&middot;
-									</li>
-									<li>
-										<a href="https://github.com/openworm/OpenWorm/milestones" target="_blank">Milestones & Issues</a>
-									</li>
-									<li class="muted">
-										&middot;
-									</li>
-									<li>
-										<a href="http://docs.openworm.org/en/latest/modeling/" target="_blank">Roadmap</a>
-									</li>
-									<li class="muted">
-										&middot;
-									</li>
-									<li>
-										<a href="./contacts.html">Contacts</a>
-									</li>
-								</ul>
-			                    <p class="pull-right">
-			                        <a href="#">Back to top</a>
-			                    </p>
-			                    <p>
-			                        © 2011-2017 OpenWorm Foundation - All rights reserved. 
-			                    </p>
-			                    <p>
-			                        OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank" href="/assets/OpenWormFoundationIncorporationCertificate.pdf">#5787527</a>, incorporated in July 2015.
-			                    </p>
-			                    <p>
-			                        Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
-			                    </p>
-			                    <p>
-			                        <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
-			                    </p>
-							</div>
-						</footer>
+        <hr class="soften">
 
-			<div style="display:none">
-				<div id="inline_content" style="padding:10px;">
-					<div style="text-align:center; margin-top:350px;">
+        <h1>Meet with us.</h1> <br>
+        <div class="row">
+            <div class="span12 pagination-centered">
+                <i class="fa fa-group fa-xl"></i>
+            </div>
+        </div>
+        <div class="large-spacer"></div>
+        <p class="marketing-byline">
 
-					</div>
-				</div>
-			</div>
-			<!-- Le javascript
-			================================================== -->
-			<!-- Placed at the end of the document so the pages load faster -->
-			<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-			<script src="js/jquery-1.8.3.min.js"></script>
-			<script src="js/bootstrap.js"></script>
-			<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
-			
-			<!-- <script src="js/jquery.colorbox-min.js"></script>-->
-			<script src="js/main.js"></script>
-			<!--
-			<script>
-			$(document).ready(function(){
-				// start countdown script
+            <a href="./people.html">Our senior contributors</a> meet monthly in public Google Hangouts <a
+                href="https://www.youtube.com/OpenWorm" target="_blank">streamed via YouTube</a>. <br> You are welcome
+            to
+            <a href="https://plus.google.com/117948341754627144949/posts" target="_blank">join us</a>!
+        </p>
+    </div>
+
+</div>
+
+<!-- Footer
+            ================================================== -->
+<footer class="footer">
+    <div class="container">
+        <ul class="footer-links">
+            <li>
+                <a href="http://blog.openworm.org">Blog</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="./about.html">About</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="http://docs.openworm.org/en/latest/faq/" target="_blank">FAQ</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="./people.html">People</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="./events.html">Events</a>
+            </li>
+
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="./media.html">Media</a>
+            </li>
+
+            <li class="muted">
+                &middot;
+            </li>
+
+            <li>
+                <a href="http://docs.openworm.org/en/latest/projects/" target="_blank">Projects</a>
+            </li>
+
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="./publications.html">Publications</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="https://github.com/openworm/OpenWorm/milestones" target="_blank">Milestones & Issues</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="http://docs.openworm.org/en/latest/modeling/" target="_blank">Roadmap</a>
+            </li>
+            <li class="muted">
+                &middot;
+            </li>
+            <li>
+                <a href="./contacts.html">Contacts</a>
+            </li>
+        </ul>
+        <p class="pull-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>
+            © 2011-2017 OpenWorm Foundation - All rights reserved.
+        </p>
+        <p>
+            OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank"
+                                                                            href="/assets/OpenWormFoundationIncorporationCertificate.pdf">#5787527</a>,
+            incorporated in July 2015.
+        </p>
+        <p>
+            Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation
+            under <a target="_blank" href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY
+            3.0</a>.
+        </p>
+        <p>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
+        </p>
+    </div>
+</footer>
+
+<div style="display:none">
+    <div id="inline_content" style="padding:10px;">
+        <div style="text-align:center; margin-top:350px;">
+
+        </div>
+    </div>
+</div>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+
+<!-- <script src="js/jquery.colorbox-min.js"></script>-->
+<script src="js/main.js"></script>
+<!--
+<script>
+$(document).ready(function(){
+    // start countdown script
 
 
-				// dialog for kickstarter
-				if (!detectmob())
-				{
-					//showRemainingDays(new Date('04/19/2014 12:00 PM'));
-					$.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
-					$("#cboxLoadedContent").height("627px");
-					$("#cboxLoadedContent").click(function() {
-						   window.open('http://bit.ly/KickstartWorm');
-				      });
+    // dialog for kickstarter
+    if (!detectmob())
+    {
+        //showRemainingDays(new Date('04/19/2014 12:00 PM'));
+        $.colorbox({href:"#inline_content", inline: true, width: "840px", height: "627px", transition: "none"});
+        $("#cboxLoadedContent").height("627px");
+        $("#cboxLoadedContent").click(function() {
+               window.open('http://bit.ly/KickstartWorm');
+          });
 
-				}
-			});
-			</script>
-			-->
-			<script type="text/javascript">
-				var _gaq = _gaq || [];
-				_gaq.push(['_setAccount', 'UA-29668455-1']);
-				_gaq.push(['_trackPageview']);
+    }
+});
+</script>
+-->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29668455-1']);
+    _gaq.push(['_trackPageview']);
 
-				(function() {
-					var ga = document.createElement('script');
-					ga.type = 'text/javascript';
-					ga.async = true;
-					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-					var s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(ga, s);
-				})();
-			</script>
-	</body>
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+</body>
 
 </html>
