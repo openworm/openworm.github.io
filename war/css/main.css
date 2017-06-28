@@ -6,7 +6,13 @@
 	width: 241px;
 	height: 80px;
 }
-
+.no-a-effect{
+    font: inherit;
+    color: inherit;
+}
+.no-a-effect:hover{
+    color: inherit;
+}
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
