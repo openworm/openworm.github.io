@@ -2,6 +2,18 @@
 
 }
 
+#senior-contributor .people-card img {
+    height: 150px;
+    width: 150px;
+}
+
+#senior-contributor .people-card h2 {
+    font-size: 21px;
+}
+
+#senior-contributor .row-fluid {
+    padding-bottom: 5%;
+}
 .people-card img {
     height: 200px;
     width: 200px;
@@ -40,4 +52,8 @@
 
 .fa-wikipedia-w:hover {
     color: #000;
+}
+
+.fa-github-square:hover {
+    color: #333;
 }
