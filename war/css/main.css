@@ -12,6 +12,7 @@
 }
 .no-a-effect:hover{
     color: inherit;
+    text-decoration: none;
 }
 @media
 (-webkit-min-device-pixel-ratio: 2),
