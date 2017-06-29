@@ -1,0 +1,59 @@
+.people-card {
+
+}
+
+.people-card img {
+    height: 150px;
+    width: 150px;
+}
+
+.people-card h2 {
+    font-size: 21px;
+}
+
+#senior-contributor .row-fluid {
+    padding-bottom: 5%;
+}
+.people-card img {
+    height: 150px;
+    width: 150px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.2s ease-out;
+
+}
+
+.people-card:hover img {
+    transform: scale(1.05, 1.05);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.fa-linkedin-square:hover {
+    color: #0077B5;
+}
+
+.social {
+    transition: 0.3s all ease-out;
+    padding: 1%;
+}
+
+.fa-twitter-square:hover {
+    color: #0084b4;
+}
+
+.fa-link:hover {
+    color: #75890c;
+}
+
+.fa-envelope:hover {
+    color: #D84B37;
+}
+
+.fa-wikipedia-w:hover {
+    color: #000;
+}
+
+.fa-github-square:hover {
+    color: #333;
+}
