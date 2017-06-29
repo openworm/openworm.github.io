@@ -2,12 +2,12 @@
 
 }
 
-#senior-contributor .people-card img {
+.people-card img {
     height: 150px;
     width: 150px;
 }
 
-#senior-contributor .people-card h2 {
+.people-card h2 {
     font-size: 21px;
 }
 
@@ -15,8 +15,8 @@
     padding-bottom: 5%;
 }
 .people-card img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     transition: all 0.2s ease-out;
