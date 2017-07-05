@@ -30,16 +30,6 @@ $(function() {
         interval: 13000
     });
 
-    $('.nav li').click(function(e) {
-        $('.nav li').removeClass('active');
-
-        var $this = $(this);
-        if (!$this.hasClass('active')) {
-            $this.addClass('active');
-        }
-
-    });
-
     $('.minilogo').tooltip();
     
     $(".donation").click(function(){
