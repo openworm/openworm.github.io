@@ -207,6 +207,9 @@
 		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		<!--div id="tip"></div>-->
 	    </div><!-- /.carousel -->
+
+
+	    <!--  ======== social links ========== -->
 	    <div class="bs-docs-social">
 		<div class="container">
 		    <ul class="bs-docs-social-buttons">
@@ -235,10 +238,12 @@
 		    </ul>
 		</div>
 	    </div>
+
+	    
+
+	    <!--  ======== main body ========== -->
 	    <div>
-
 		<div class="container">
-
 		    <div class="marketing">
 			<h1>Enter the worm.</h1>
 			<p class="marketing-byline">
@@ -256,18 +261,6 @@
 				<h2>Social stream</h2>
 				<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets
 				    by @OpenWorm</a>
-				<script>
-				 !function (d, s, id) {
-				     var js, fjs = d.getElementsByTagName(s)[0];
-				     if (!d.getElementById(id)) {
-					 js = d.createElement(s);
-					 js.id = id;
-					 js.src = "//platform.twitter.com/widgets.js";
-					 fjs.parentNode.insertBefore(js, fjs);
-				     }
-				 }(document, "script", "twitter-wjs");
-				</script>
-
 			    </div>
 			</div>
 		    </div>
@@ -413,9 +406,9 @@
 	<!-- Le javascript
 	     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script src="http://platform.twitter.com/widgets.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+	<script src="js/jquery.parss.uncompressed.js"></script>
 
 	<!-- <script src="js/jquery.colorbox-min.js"></script>-->
 	<script src="js/main.js"></script>
@@ -427,39 +420,29 @@
 	 $.get('footer-content.html', function(data) {
 	     $('#foot-nav').html(data);
 	 });
-	</script>
 
-	<script type="text/javascript">
-	 var _gaq = _gaq || [];
-	 _gaq.push(['_setAccount', 'UA-29668455-1']);
-	 _gaq.push(['_trackPageview']);
-
-	 function loadGoogle() {
-	     var ga = document.createElement('script');
-	     ga.type = 'text/javascript';
-	     ga.async = true;
-	     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
-		      '.google-analytics.com/ga.js';
-	     var s = document.getElementsByTagName('script')[0];
-	     s.parentNode.insertBefore(ga, s);
-	 }
-
-	 function loadFacebook() {
-	     var js, fjs = document.getElementsByTagName('script')[0];
-	     if (document.getElementById('facebook-jssdk')) return;
-	     js = document.createElement('script');
-	     js.id = 'facebook-jssdk';
-	     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	     fjs.parentNode.insertBefore(js, fjs);
-	 }
-	 
 	 $(document).on('pjax:complete', function() {
 	     // do stuff when pjax finished
-	     alert('pjaxed that page!');
-	     loadGoogle();
-	     loadFacebook();
+	     if (window.location.pathname === '/index.html') {
+		 reloadSocial();
+		 $("#news-feed").PaRSS("http://openworm.tumblr.com/rss", // url to the feed
+				       6, // number of items to retrieve
+				       "M jS Y, g:i a", // date format
+				       false, // include descriptions
+				       function() {
+					   // don't do anything
+				       })
+	     }
 	 })
 
+	 $(window).load(function () {
+	     // this works:
+	     // alert('inital load!');
+	     loadGooglePlus();
+	     loadGoogleAnalytics();
+	     loadFacebook();
+	     loadTwitterWidget();
+	 })
 	</script>
     </body>
 
