@@ -12,15 +12,13 @@ function refreshNews() {
 }
 
 $(function() {
-    var $window = $(window)
-
     refreshNews();
 
     // side bar
     $('.bs-docs-sidenav').affix({
         offset: {
             top: function() {
-                return $window.width() <= 980 ? 290 : 210
+                return $(window).width() <= 980 ? 290 : 210
             },
             bottom: 270
         }
@@ -224,5 +222,7 @@ function reloadSocial() {
     if (typeof (gapi) != 'undefined') {
 	delete gapi;
         $.getScript('//apis.google.com/js/plusone.js');
+    } else {
+	loadGooglePlus();
     }
 }
