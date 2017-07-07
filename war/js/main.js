@@ -1,6 +1,4 @@
-$(function() {
-    var $window = $(window)
-
+function refreshNews() {
     $("#news-feed").PaRSS("http://openworm.tumblr.com/rss", // url to the feed
 			  6, // number of items to retrieve
 			  "M jS Y, g:i a", // date format
@@ -10,7 +8,13 @@ $(function() {
 			       * optional callback function performed after list is appended to the
 			       * page
 			       */
-			  });
+			  })
+}
+
+$(function() {
+    var $window = $(window)
+
+    refreshNews();
 
     // side bar
     $('.bs-docs-sidenav').affix({
@@ -133,6 +137,8 @@ function setNavigation() {
     });
 }
 
+
+
 // connections to outside resources (social + GA)
 
 var _gaq = _gaq || [];
@@ -194,7 +200,14 @@ function reloadSocial() {
     // http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
     
     // Twitter widget
-    twttr.widgets.load();
+    if (typeof (twttr) != 'undefined') {
+	twttr.widgets.load();
+    } else {
+	loadTwitterWidget();
+    }
+
+    // news feed
+    refreshNews();
     
     // Facebook
     if (typeof (FB) != 'undefined') {
@@ -203,6 +216,8 @@ function reloadSocial() {
 	$.getScript("http://connect.facebook.net/en_US/all.js#xfbml=1", function () {
             FB.init({ status: true, cookie: true, xfbml: true });
 	})
+    } else {
+	loadFacebook();
     }
 
     // Google+; Note that google button will not show if page is opened from disk

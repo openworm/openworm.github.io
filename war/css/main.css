@@ -1,3 +1,7 @@
+#head-nav {
+    background-color: black;
+}
+
 .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -738,11 +742,8 @@ dd {
     margin-top: 20px;
     margin-bottom: 15px;
 }
+
 /*CAROUSEL*/
-
-/* CUSTOMIZE THE NAVBAR
-   -------------------------------------------------- */
-
 /* Carousel base class */
 .carousel {
     margin-bottom: 0;
