@@ -188,24 +188,24 @@
     		 $("#otherAmount").removeClass("active");
     		 $("#amountSent").attr("value",$(this).html().replace("$",""));
     		 $(this).addClass("active");
-	     });
+	     })
 
 	     $(".other").click(function(){
     		 $("#otherAmount").addClass("active");
     		 $("#amountSent").attr("value",$(this).val());
     		 $("#otherAmount").focus();
-	     });
+	     })
 
 	     $("#otherAmount").click(function(){
     		 $("#otherAmount").addClass("active");
     		 $(".donation").removeClass("active");
     		 $("#amountSent").attr("value",$(this).val());
     		 $(".other").addClass("active");
-	     });
+	     })
 
 	     $("#otherAmount").on("input",function(){
     		 $("#amountSent").attr("value",$(this).val());
-	     });
+	     })
 
 	     var amount = getUrlParameter('amount');
 	     if(amount=="" || amount==undefined){
@@ -228,11 +228,10 @@
 		 $("#otherAmount").val(amount);
 		 $("#amountSent").attr("value",amount);
 	     }
+	 })
 
-	 });
 
-
-	 var getUrlParameter = function getUrlParameter(sParam) {
+	 function getUrlParameter(sParam) {
 	     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
 		 sURLVariables = sPageURL.split('&'),
 		 sParameterName,
@@ -245,7 +244,19 @@
 		     return sParameterName[1] === undefined ? true : sParameterName[1];
 		 }
 	     }
-	 };
+	 }
+
+	 function donate(){
+	     var amount = $(".donation.active");
+	     if(amount.hasClass("other")){
+    		 amount=$("#otherAmount").val();
+	     }
+	     else{
+    		 amount=amount.html().replace("$","");
+	     }
+	     window.location="\donate.html?amount="+amount;
+	 }
+
 
 	 window.___gcfg = {
 	     lang: 'en-GB'

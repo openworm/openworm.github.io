@@ -28,7 +28,7 @@ $(window).on('load', function() {
 })
 
 $(function() {
-    // it's not clear to me what this does?
+    // unclear what this does?
     // side bar
     $('.bs-docs-sidenav').affix({
         offset: {
@@ -48,6 +48,7 @@ $(function() {
     });
 
     $('.minilogo').tooltip();
+})
 
 
 window.___gcfg = {
@@ -55,17 +56,6 @@ window.___gcfg = {
 };
 
 // function definitions (hoisted so order does not matter)
-
-function donate(){
-    var amount = $(".donation.active");
-    if(amount.hasClass("other")){
-    	amount=$("#otherAmount").val();
-    }
-    else{
-    	amount=amount.html().replace("$","");
-    }
-    window.location="\donate.html?amount="+amount;
-}
 
 function detectmob() {
     if (window.innerWidth <= 800 && window.innerHeight <= 600) {
