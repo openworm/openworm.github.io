@@ -119,11 +119,25 @@ function detectmob() {
     }
 }
 
+function setNavigation() {
+    $(".nav a").removeClass('active');
+    var path = window.location.pathname;
+
+    $(".nav a").each(function() {
+        var href = $(this).attr('href');
+	// href is returned as ./index.hml, so add . to path
+        if ('.' + path === href) {
+            $(this).closest('li').addClass('active');
+	    return;
+        }
+    });
+}
+
+// connections to outside resources (social + GA)
+
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-29668455-1']);
 _gaq.push(['_trackPageview']);
-
-
 
 
 function loadGoogleAnalytics() {
@@ -172,12 +186,10 @@ function reloadSocial() {
     // http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
     
     // Twitter widget
-    if (typeof (twttr) != 'undefined') {
-        twttr.widgets.load();
-    } else {
-        $.getScript('//platform.twitter.com/widgets.js');
-    }
-
+    twttr.widgets.load(
+	document.getElementById('social-links')
+    );
+    
     // Facebook
     if (typeof (FB) != 'undefined') {
 	delete FB;

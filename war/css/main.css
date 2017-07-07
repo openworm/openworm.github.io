@@ -366,6 +366,15 @@
     float: left;
 }
 
+.ted {
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(230, 43, 30);
+    letter-spacing: 0;
+    /*font-kerning: auto;*/
+    font-weight: 800;
+}
+
+
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
     #nbc {
 	background-image: url("../img/nbc2x.png");
@@ -799,12 +808,4 @@ dd {
 
 .clearer {
     clear: both;
-}
-
-.ted {
-    font-family: Helvetica, Arial, sans-serif;
-    color: rgb(230, 43, 30);
-    letter-spacing: 0;
-    /*font-kerning: auto;*/
-    font-weight: 800;
 }

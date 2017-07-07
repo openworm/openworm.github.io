@@ -27,8 +27,7 @@
 	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
 
-	<!-- see: https://github.com/thybag/PJAX-Standalone -->
-	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery-3.2.1.js"></script>
 	<script src="js/jquery.pjax.js"></script>
 	<script>
 	 // set all links inside pj-content to try pjax
@@ -210,7 +209,7 @@
 
 
 	    <!--  ======== social links ========== -->
-	    <div class="bs-docs-social">
+	    <div class="bs-docs-social" id="social-links">
 		<div class="container">
 		    <ul class="bs-docs-social-buttons">
 			<li>
@@ -390,54 +389,53 @@
 		    </p>
 		</div>
 	    </div>
-	    <script>
-	     // set active nav
-	     $('.nav li').removeClass('active');
-	     $('#home').addClass('active');
-	    </script>
-	</div>
-	<!-- end pjax content -->
+	</div><!-- end pjax content -->
 
-	<!-- Footer inserted with jquery
+	
+	<!-- Footer navigation
 	     ================================================== -->
 	<div id="foot-nav"></div>
-
 
 	<!-- Le javascript
 	     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="http://platform.twitter.com/widgets.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/jquery.parss.uncompressed.js"></script>
 
-	<!-- <script src="js/jquery.colorbox-min.js"></script>-->
-	<script src="js/main.js"></script>
-
-	<script type="text/javascript">
+	<!-- pull in header/footer w/ jquery -->
+	<script>
 	 $.get('header-content.html', function(data) {
 	     $('#head-nav').html(data);
-	 });
+	 })
 	 $.get('footer-content.html', function(data) {
 	     $('#foot-nav').html(data);
-	 });
+	 })
+	</script>
 
-	 $(document).on('pjax:complete', function() {
-	     // do stuff when pjax finished
+	<!-- jquery was loaded in head. load other resources: -->
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.parss.uncompressed.js"></script>
+	<script src="js/main.js"></script>
+	<script src="http://platform.twitter.com/widgets.js"></script>
+	
+	<script>
+	 $(document).on('pjax:success', function() {
+	     // things to do on page change back to index.html
 	     if (window.location.pathname === '/index.html') {
-		 reloadSocial();
+		 reloadSocial(); 
 		 $("#news-feed").PaRSS("http://openworm.tumblr.com/rss", // url to the feed
 				       6, // number of items to retrieve
 				       "M jS Y, g:i a", // date format
 				       false, // include descriptions
 				       function() {
-					   // don't do anything
+					   // optional callback not used
 				       })
 	     }
+	     setNavigation();
 	 })
 
-	 $(window).load(function () {
-	     // this works:
-	     // alert('inital load!');
+	 $(window).on('load', function() {
+	     // things to do on initial page load (defined in main.js)
+	     // alert(window.location.pathname);
+	     setNavigation();
 	     loadGooglePlus();
 	     loadGoogleAnalytics();
 	     loadFacebook();
