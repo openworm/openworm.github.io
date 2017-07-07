@@ -7,6 +7,8 @@
 	<meta name="description"
               content="OpenWorm is an open source project dedicated to creating a virtual C. elegans nematode in a computer.">
 
+	<!-- REPLICATE THIS IN ALL PAGES -->
+
 	<!-- Le styles -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/font-awesome.css">
@@ -19,18 +21,20 @@
 	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!-- Fav and touch icons - this code appears to be outdated -->
+	<!-- Fav and touch icons - this code is outdated -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 	
-	<!-- REPLICATE THIS IN ALL PAGES;
-	     pull in nav header with jquery -->
-	<div class="navbar navbar-inverse navbar-fixed-top" id="head-nav"></div>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner" id="head-nav">
+	    </div>
+	</div>
 	<script src="js/jquery-3.2.1.js"></script>
 	<script>
+	 // get head-nav and foot-nav with jquery (get is async)
 	 $.get('header-content.html', function(data) {
 	     $('#head-nav').html(data);
 	 })
@@ -41,9 +45,11 @@
     </head>
     
     <body>
-	<div id="pj-content">
+	<div id="pjax-content">
+	    <!-- END REPEAT-->
+
+	    
 	    <div id="fb-root"></div>
-	    <!-- facebook connect script at end of #pj-content -->
 
 	    <div id="myCarousel" class="carousel slide">
 		<div class="carousel-inner">
@@ -391,59 +397,27 @@
 	    </div>
 	</div><!-- end pjax content -->
 
-	<!-- FOOT: DUPLICATE ALL CONTENT THAT FOLLOWS
+	
+	<!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES
 
 	     footer
 	     ================================================== -->
 	<div id="foot-nav"></div>
+	<!-- foot-nav is filled with script in head -->
 
 	<!-- Le javascript
 	     ================================================== -->
-	<!-- end of the document so the pages load faster -->
+	<!-- at end of the document so the pages load faster -->
 
-	<!-- load jQuery / pjax -->
-	<script src="js/jquery-3.2.1.js"></script>
+	<!-- load other resources asynchronously: -->
+	<script src="js/bootstrap.js" async></script>
+	<script src="js/jquery.parss.uncompressed.js" async></script>
+	<script src="http://platform.twitter.com/widgets.js" async></script>
+
+	<!-- execute main (initialize resources above + carousel/donate controls -->
 	<script src="js/jquery.pjax.js"></script>
-	<script>
-	 // set all links inside pj-content to try pjax
-	 $(document).pjax('a', '#pj-content', {fragment: '#pj-content'});
-	 // set explicit links in nav bar to use pjax
-	 $(document).pjax('a[data-pjax]', '#pj-content', {fragment: '#pj-content'});
-	 //pull in header/footer w/ jquery -->
-	 $.get('header-content.html', function(data) {
-	     $('#head-nav').html(data);
-	 })
-	 $.get('footer-content.html', function(data) {
-	     $('#foot-nav').html(data);
-	 })
-	</script>
+	<script src="js/main.js" defer></script>
 
-	<!-- load other resources: -->
-	<script src="js/bootstrap.js"></script>
-	<script src="js/jquery.parss.uncompressed.js"></script>
-	<script src="js/main.js"></script>
-	<script src="http://platform.twitter.com/widgets.js"></script>
-
-	<script>
-	 $(document).on('pjax:complete', function() {
-	     // things to do on page change back to index.html
-	     if (window.location.pathname === '/index.html') {
-		 reloadSocial();
-	     }
-	     setNavigation();
-	 })
-
-	 $(window).on('load', function() {
-	     // things to do on initial page load (defined in main.js)
-	     setNavigation();
-	     loadGoogleAnalytics();
-	     if (window.location.pathname === '/index.html') {
-		 loadGooglePlus();
-		 loadFacebook();
-		 loadTwitterWidget();
-	     }
-	 })
-	</script>
     </body>
 
 </html>
