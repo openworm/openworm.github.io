@@ -120,7 +120,7 @@ function detectmob() {
 }
 
 function setNavigation() {
-    $(".nav a").removeClass('active');
+    $(".nav li").removeClass('active');
     var path = window.location.pathname;
 
     $(".nav a").each(function() {
@@ -162,13 +162,21 @@ function loadFacebook() {
 }
 
 function loadTwitterWidget () {
-    var js, fjs = document.getElementsByTagName("script")[0];
-    if (document.getElementById("twitter-wjs")) return;
+    var js, fjs = document.getElementsByTagName("script")[0],
+	t = window.twtter || {};
+    if (document.getElementById("twitter-wjs")) return t;
     js = document.createElement("script");
     js.async = true;
     js.id = "twitter-wjs";
     js.src = "//platform.twitter.com/widgets.js";
     fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+	t._e.push(f);
+    };
+
+    return t;
 }
 
 
@@ -186,9 +194,7 @@ function reloadSocial() {
     // http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
     
     // Twitter widget
-    twttr.widgets.load(
-	document.getElementById('social-links')
-    );
+    twttr.widgets.load();
     
     // Facebook
     if (typeof (FB) != 'undefined') {
@@ -199,8 +205,7 @@ function reloadSocial() {
 	})
     }
 
-    // Google - Note that the google button will not show if you are opening the page from disk
-    // it needs to be http(s)
+    // Google+; Note that google button will not show if page is opened from disk
     if (typeof (gapi) != 'undefined') {
 	delete gapi;
         $.getScript('//apis.google.com/js/plusone.js');
