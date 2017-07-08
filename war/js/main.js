@@ -1,5 +1,6 @@
 // set ALL links inside pjax-content to try pjax
 // this may slow down outside links with pjax request?
+$.pjax.defaults.timeout = 1500
 $(document).pjax('a', '#pjax-content', {fragment: '#pjax-content'});
 // set explicit links in nav bars to use pjax
 $(document).pjax('a[data-pjax]', '#pjax-content', {fragment: '#pjax-content'});
