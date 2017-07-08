@@ -1,55 +1,72 @@
-// set all links inside pjax-content to try pjax:
+// set ALL links inside pjax-content to try pjax
+// this may slow down outside links with pjax request?
 $(document).pjax('a', '#pjax-content', {fragment: '#pjax-content'});
-
 // set explicit links in nav bars to use pjax
 $(document).pjax('a[data-pjax]', '#pjax-content', {fragment: '#pjax-content'});
 
 $(document).on('pjax:complete', function() {
-    // things to do on page change back to index.html
-    if (window.location.pathname === '/index.html') {
+    console.log('pjax:complete');
+    // things to do on pjax link to specific page
+    var loc = window.location.pathname;
+    if (loc === '/index.html' || loc === '/' || loc === '') {
 	reloadSocial();
+    } else if (loc === '/donate.html') {
+	loadDonationControls();
     }
     setNavigation();
 })
 
+$(document).on('pjax:popstate', function() {
+    console.log('pjax:popstate');
+    // things to do on pjax BACK/FORWARD to specific page
+    var loc = window.location.pathname;
+    if (loc === '/donate.html') {
+	// hack to make donate controls reload _after_ page load on back
+	$(document).on('pjax:end', function () {
+	    console.log('loadDonationControls');
+	    loadDonationControls();
+	})
+    }	      
+    setNavigation();
+})
+
+
 $(window).on('load', function() {
+    console.log('window initial load');
     // things to do on initial page load (defined in main.js)
+    // for all pages:
     loadGoogleAnalytics();
     setNavigation();
+    
+    $(".carousel-control").click(function(e) {
+        $("#tip").hide();
+    })
+    
+    $('.carousel').carousel({
+        interval: 13000
+    })
+
+    $('.minilogo').tooltip();
+
+    window.___gcfg = {
+	lang: 'en-GB'
+    }
+
+    // for specific pages:
     var loc = window.location.pathname;
     if (loc  === '/index.html' || loc === '/' || loc === '') {
+	console.log('loc = index');
 	loadGooglePlus();
 	loadFacebook();
 	loadTwitterWidget();
 	refreshNews();
 	$('.nav li').removeClass('active');
 	$('#home').addClass('active');
-    } 
+    } else if (loc === '/donate.html') {
+	console.log('loc = donate');
+	loadDonationControls();
+    }
 })
-
-$(function() {
-    // unclear what this does?
-    // side bar
-    $('.bs-docs-sidenav').affix({
-        offset: {
-            top: function() {
-                return $(window).width() <= 980 ? 290 : 210
-            },
-            bottom: 270
-        }
-    })
-
-    $(".carousel-control").click(function(e) {
-        $("#tip").hide();
-    });
-
-    $('.carousel').carousel({
-        interval: 13000
-    });
-
-    $('.minilogo').tooltip();
-})
-
 
 window.___gcfg = {
     lang: 'en-GB'
@@ -164,6 +181,7 @@ function reloadSocial() {
     refreshNews();
     
     // Facebook
+    console.log(typeof (FB));
     if (typeof (FB) != 'undefined') {
 	delete FB;
 	$('#facebook-jssdk').remove();
@@ -180,5 +198,72 @@ function reloadSocial() {
         $.getScript('//apis.google.com/js/plusone.js');
     } else {
 	loadGooglePlus();
+    }
+}
+
+
+// donation
+
+function loadDonationControls() {
+    $(".donation").on('click', function() {
+    	$(".donation").removeClass("active");
+    	$("#otherAmount").removeClass("active");
+    	$("#amountSent").attr("value",$(this).html().replace("$",""));
+    	$(this).addClass("active");
+    })
+
+    $(".other").click(function(){
+    	$("#otherAmount").addClass("active");
+    	$("#amountSent").attr("value",$(this).val());
+    	$("#otherAmount").focus();
+    })
+
+    $("#otherAmount").click(function(){
+    	$("#otherAmount").addClass("active");
+    	$(".donation").removeClass("active");
+    	$("#amountSent").attr("value",$(this).val());
+    	$(".other").addClass("active");
+    })
+
+    $("#otherAmount").on("input",function(){
+    	$("#amountSent").attr("value",$(this).val());
+    })
+
+    var amount = getUrlParameter('amount');
+    if (amount=="" || amount==undefined) {
+    	$("#d50").click();
+    }
+    else if (amount=="5") {
+    	$("#d5").click();
+    }
+    else if (amount=="25") {
+    	$("#d25").click();
+    }
+    else if (amount=="50") {
+	$("#d50").click();
+    }
+    else if (amount=="100") {
+	$("#d100").click();
+    }
+    else {
+	$(".other").click();
+	$("#otherAmount").val(amount);
+	$("#amountSent").attr("value",amount);
+    }
+}
+
+
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+	sURLVariables = sPageURL.split('&'),
+	sParameterName,
+	i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+	sParameterName = sURLVariables[i].split('=');
+
+	if (sParameterName[0] === sParam) {
+	    return sParameterName[1] === undefined ? true : sParameterName[1];
+	}
     }
 }
