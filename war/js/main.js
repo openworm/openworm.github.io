@@ -75,6 +75,7 @@ window.___gcfg = {
 
 // function definitions (hoisted so order does not matter)
 
+// no idea what uses this function...this should not be here.
 function detectmob() {
     if (window.innerWidth <= 800 && window.innerHeight <= 600) {
         return true;

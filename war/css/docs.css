@@ -188,7 +188,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 /* Masthead (docs home)
 ------------------------- */
 .masthead {
-  padding: 70px 0 80px;
+  padding: 70px 0 140px; /* 140 WAS 80, couldn't see at < 768 px - SB */
   margin-bottom: 0;
   color: #fff;
 }
@@ -912,14 +912,6 @@ form.bs-docs-example {
   /* Remove any padding from the body */
   body {
     padding-top: 0;
-  }
-
-  /* Widen masthead and social buttons to fill body padding */
-  .jumbotron {
-    padding: 40px 20px;
-    margin-top:   -20px; /* Offset bottom margin on .navbar */
-    margin-right: -20px;
-    margin-left:  -20px;
   }
   .masthead h1 {
     font-size: 90px;

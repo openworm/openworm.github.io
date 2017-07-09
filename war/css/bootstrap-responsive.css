@@ -788,14 +788,14 @@
 
 @media (max-width: 767px) {
   body {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: -20px;
-    margin-left: -20px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .container-fluid {
     padding: 0;
@@ -945,7 +945,7 @@
     position: static;
   }
   .navbar-fixed-top {
-    margin-bottom: 20px;
+    margin-bottom: 0px;  /* this was set to 20 and sucked */
   }
   .navbar-fixed-bottom {
     margin-top: 20px;
@@ -1083,10 +1083,11 @@
     padding-left: 10px;
   }
 }
-
+/*
 @media (min-width: 980px) {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
   }
 }
+*/
