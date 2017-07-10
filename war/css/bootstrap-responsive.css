@@ -788,13 +788,13 @@
 
 @media (max-width: 767px) {
   body {
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
-    margin-right: 0px;
+    margin-right: -10px;
     margin-left: 0px;
   }
   .container-fluid {
@@ -810,7 +810,7 @@
     margin-left: 0;
   }
   .container {
-    width: auto;
+      width: auto;
   }
   .row-fluid {
     width: 100%;

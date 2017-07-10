@@ -894,7 +894,9 @@ form.bs-docs-example {
   }
   /* Widen masthead and social buttons to fill body padding */
   .jumbotron {
-    margin-top: -20px; /* Offset bottom margin on .navbar */
+      margin-top: -20px; /* Offset bottom margin on .navbar */
+      margin-left: -10;
+      margin-right: -10;
   }
   /* Adjust sidenav width */
   .bs-docs-sidenav {
@@ -952,6 +954,11 @@ form.bs-docs-example {
   }
   .footer p {
     margin-bottom: 9px;
+  }
+    .jumbotron {
+      margin-top: -20px; /* Offset bottom margin on .navbar */
+      margin-left: -20;
+      margin-right: -20;
   }
 }
 
