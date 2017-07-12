@@ -1,43 +1,65 @@
-// set ALL links inside pjax-content to try pjax
-// this may slow down outside links with pjax request?
+// set pjax timeout - after timeout, regular html request is sent. 1500ms is arbitrary
 $.pjax.defaults.timeout = 1500
+
+// fragment extracts div id='pjax content' from full HTML
+// server could alternatively be configured to send only the needed fragment
+
+// set ALL links inside pjax-content to try pjax
+// this may slow down outside links but is easier than labelling each link data-pjax
 $(document).pjax('a', '#pjax-content', {fragment: '#pjax-content'});
 // set explicit links in nav bars to use pjax
 $(document).pjax('a[data-pjax]', '#pjax-content', {fragment: '#pjax-content'});
 
+// things to do on pjax _link_ to page
 $(document).on('pjax:complete', function() {
     console.log('pjax:complete');
-    // things to do on pjax link to specific page
     var loc = window.location.pathname;
     if (loc === '/index.html' || loc === '/' || loc === '') {
 	reloadSocial();
     } else if (loc === '/donate.html') {
 	loadDonationControls();
+    } else if (loc === '/people.html') {
+	$.getScript("https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js",
+		    function() {
+			loadContributors();
+		    })
     }
     setNavigation();
 })
 
+// things to do on pjax BACK/FORWARD to specific page
 $(document).on('pjax:popstate', function() {
     console.log('pjax:popstate');
-    // things to do on pjax BACK/FORWARD to specific page
-    var loc = window.location.pathname;
-    if (loc === '/donate.html') {
-	// hack to make donate controls reload _after_ page load on back
-	$(document).on('pjax:end', function () {
-	    console.log('loadDonationControls');
+    $(document).on('pjax:end', function () {
+	var loc = window.location.pathname;
+	if (loc === '/donate.html') {
+	    // hack to make donate controls reload _after_ page load on back
 	    loadDonationControls();
+	}
+	else if (loc === '/index.html' || loc === '/' || loc === '') {
+	    // Twitter widget
+	    $('#fb-root').html('');
+	    $('#tweeter').html('<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>');
+	    //$.pjax.reload('#pjax-content', {fragment:'#pjax-content'});
+	    reloadSocial();
+	    // setNavigation();
+	}
+	console.log(loc);
+	$(function () {
+	    setNavigation();
+	    //deselect old link 
+	    document.activeElement.blur();
 	})
-    }	      
-    setNavigation();
+    })
 })
 
 
+// things to do on initial page load
 $(window).on('load', function() {
     console.log('window initial load');
-    // things to do on initial page load (defined in main.js)
     // for all pages:
-    loadGoogleAnalytics();
     setNavigation();
+    loadGoogleAnalytics();
     
     $(".carousel-control").click(function(e) {
         $("#tip").hide();
@@ -56,7 +78,7 @@ $(window).on('load', function() {
     // for specific pages:
     var loc = window.location.pathname;
     if (loc  === '/index.html' || loc === '/' || loc === '') {
-	console.log('loc = index');
+	//console.log('loc = index');
 	loadGooglePlus();
 	loadFacebook();
 	loadTwitterWidget();
@@ -64,25 +86,19 @@ $(window).on('load', function() {
 	$('.nav li').removeClass('active');
 	$('#home').addClass('active');
     } else if (loc === '/donate.html') {
-	console.log('loc = donate');
+	//console.log('loc = donate');
 	loadDonationControls();
+    } else if (loc === '/people.html') {
+	$.getScript("https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js",
+		    function() {
+			loadContributors();
+		    })
     }
 })
 
-window.___gcfg = {
-    lang: 'en-GB'
-};
 
-// function definitions (hoisted so order does not matter)
 
-// no idea what uses this function...this should not be here.
-function detectmob() {
-    if (window.innerWidth <= 800 && window.innerHeight <= 600) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// general function definitions
 
 function setNavigation() {
     $(".nav li").removeClass('active');
@@ -91,12 +107,14 @@ function setNavigation() {
     $(".nav a").each(function() {
         var href = $(this).attr('href');
 	// href is returned as ./index.hml, so add . to path
+	// this is most likely error moving from local to online site?
         if ('.' + path === href) {
             $(this).closest('li').addClass('active');
 	    return;
         }
-    });
+    })
 }
+
 
 function refreshNews() {
     $("#news-feed").PaRSS("http://openworm.tumblr.com/rss", // url to the feed
@@ -104,10 +122,7 @@ function refreshNews() {
 			  "M jS Y, g:i a", // date format
 			  false, // include descriptions
 			  function() {
-			      /*
-			       * optional callback function performed after list is appended to the
-			       * page
-			       */
+			      // optional callback function
 			  })
 }
 
@@ -117,7 +132,6 @@ function refreshNews() {
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-29668455-1']);
 _gaq.push(['_trackPageview']);
-
 
 function loadGoogleAnalytics() {
     var ga = document.createElement('script');
@@ -145,7 +159,6 @@ function loadTwitterWidget () {
 	t = window.twtter || {};
     if (document.getElementById("twitter-wjs")) return t;
     js = document.createElement("script");
-    js.async = true;
     js.id = "twitter-wjs";
     js.src = "//platform.twitter.com/widgets.js";
     fjs.parentNode.insertBefore(js, fjs);
@@ -158,6 +171,10 @@ function loadTwitterWidget () {
     return t;
 }
 
+// sets language for google+ widget
+window.___gcfg = {
+    lang: 'en-GB'
+};
 
 function loadGooglePlus() {
     var po = document.createElement('script');
@@ -170,7 +187,7 @@ function loadGooglePlus() {
 
 
 function reloadSocial() {
-    // http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
+    // partially stolen from: http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
     
     // Twitter widget
     if (typeof (twttr) != 'undefined') {
@@ -183,7 +200,6 @@ function reloadSocial() {
     refreshNews();
     
     // Facebook
-    console.log(typeof (FB));
     if (typeof (FB) != 'undefined') {
 	delete FB;
 	$('#facebook-jssdk').remove();
@@ -204,7 +220,7 @@ function reloadSocial() {
 }
 
 
-// donation
+// donation controls
 
 function loadDonationControls() {
     $(".donation").on('click', function() {
@@ -253,7 +269,6 @@ function loadDonationControls() {
 	$("#amountSent").attr("value",amount);
     }
 }
-
 
 function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),

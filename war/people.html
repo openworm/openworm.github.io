@@ -47,17 +47,8 @@
     <body>
 	<div id="pjax-content">
 	    <!-- END REPEAT-->
-	    <script>
-	     $(document).on('pjax:end', function() {
-		 loadContributors();
-	     })
-	     $(function() {
-		 loadContributors();
-	     })
-	    </script>
 
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js"></script>
-	    <script type="text/javascript">
+	    <script>
              function rowify(data, rowLength) {
 		 var data3 = {};
 		 var rows = [];
@@ -75,11 +66,12 @@
 		 data3 ["rows"] = rows;
 		 return data3;
              }
+	     
              function loadContributors() {
 		 //Grab the inline template
 		 var template = document.getElementById('template').innerHTML;
 
-		 //Parse it (optional, only necessary if template is to be used again)
+		 // Parse it (optional, only necessary if template is to be used again)
 		 Mustache.parse(template);
 
 		 var contributors = [{
