@@ -117,7 +117,7 @@ function setNavigation() {
 
 
 function refreshNews() {
-    $("#news-feed").PaRSS("http://openworm.tumblr.com/rss", // url to the feed
+    $("#news-feed").PaRSS("https://openworm.tumblr.com/rss", // url to the feed
 			  6, // number of items to retrieve
 			  "M jS Y, g:i a", // date format
 			  false, // include descriptions
@@ -203,7 +203,7 @@ function reloadSocial() {
     if (typeof (FB) != 'undefined') {
 	delete FB;
 	$('#facebook-jssdk').remove();
-	$.getScript("http://connect.facebook.net/en_US/all.js#xfbml=1", function () {
+	$.getScript("https://connect.facebook.net/en_US/all.js#xfbml=1", function () {
             FB.init({ status: true, cookie: true, xfbml: true });
 	})
     } else {
