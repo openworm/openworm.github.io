@@ -17,15 +17,6 @@
     height: 100%;
 }
 
-#openworm_logo {
-    background-image: url("../img/OpenWormLogo.png");
-    background-size:70px 70px;
-    width: 70px;
-    height: 70px;
-    margin: 20px;
-    margin-top: 50px;
-}
-
 #wormsim_logo {
     position: absolute;
     left: 10px;
@@ -114,6 +105,14 @@
 	background-repeat:repeat;
 	cursor:pointer;
     }
+}
+
+#openworm_logo {
+    margin: 0 auto;
+    background-image: url("../img/OpenWormLogo.png");
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
 }
 
 #orionlogo{
