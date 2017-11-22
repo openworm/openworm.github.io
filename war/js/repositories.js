@@ -1,6 +1,4 @@
 // list of repo metadata
-//   - **CWL** buggy ones are commented away.
-//   - **CWL** **TODO** How do we elegantly ignore the buggy ones?
 var urls = [
     "https://cdn.rawgit.com/openworm/OpenWorm/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/hodgkin_huxley_tutorial/master/.openworm.yml",
@@ -26,18 +24,18 @@ var urls = [
     "https://cdn.rawgit.com/openworm/CyberElegans/master/.openworm.yml"
 ];
 
-// *CWL* Hardcoded github root url
+// Hardcoded github root url
 var repo_url = "https://github.com/";
 
-// *CWL* Construction of javascript array for jsGrid data
+// Construction of javascript array for jsGrid data
 var metadata_info = [];
 
-// *CWL* Global names for DOM ids used
+// Global names for DOM ids used
 var domElement = "domElement";
 var domGroup = "domGroup";
 var tabGroup = "tabGroup";
 
-// *CWL* establishes relationship between repo keys and indices.
+// Establishes relationship between repo keys and indices.
 // Indices are used as part of DOM ids.
 var groupLookup = {};
 var elementLookup = {};
@@ -51,23 +49,14 @@ var fetch = function(container, urls, index) {
             var nativeObject = YAML.parse(responseData);
 
             var hasParent = false;
-            // *CWL* Prior to this, I had a *profound* lack of understanding for how hierarchy was handled.
-            // Also there is no longer any need to worry about
-            // navigation issues with basic tabs. The question now is how we can
-            // use buttons to work as if a tab had been clicked.
             var inner;
             inner = $('<div id="' + domElement + index + '" ></div>');
 
 	    var jsGridRow = {};
 
-            // **CWL** Kind of a hack for now. Establish a string->meta lookuptable.
+            // Establish a string->meta lookuptable.
             elementLookup[nativeObject.repo] = index;
 
-            // **CWL** and this is the solution for hiding everything at first.
-            // Initially I had tried to hide the container before going
-            // into this loop but that didn't work out very well.
-            // On discovering how native Bootstrap tab navigation works,
-            // all the shaneniggans with manually messing with hidden properties go away!
             container.append(inner);
 
             inner.append('<p><b>Repo:</b> ' + nativeObject.repo + '</p>');
@@ -134,7 +123,7 @@ var fetch = function(container, urls, index) {
                 // are populated.
                 cwlpager_init(container);
 
-		constructJsGrid();
+		            constructJsGrid();
                 
                 // hide spinner
                 $('#spinner-container').hide();
@@ -188,4 +177,3 @@ $(function() {
      
     fetch(container, urls, 0);
 });
-

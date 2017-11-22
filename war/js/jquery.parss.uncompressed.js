@@ -21,7 +21,7 @@
      * load the actual feed
      */
     function initializeFeed() {
-      var feed = new google.feeds.Feed(feed_url);
+      var feed = new google.feeds.Feed(feed_url,{api_key: "48vs0nz6zbuajmtn184fytqilpes0t4cj0r3n2ev"});
       if(data.item_count) {
         feed.setNumEntries(data.item_count);
       }
@@ -292,7 +292,7 @@
      * Load the Google Feed API
      * and load the feed
      */
-    jQuery.getScript("https://www.google.com/jsapi", function() {
+    jQuery.getScript("https://rss2json.com/gfapi.js", function() {
       google.load("feeds", "1", {"callback": initializeFeed});      
     });    
   }
