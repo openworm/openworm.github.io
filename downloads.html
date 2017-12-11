@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>OpenWorm Downloads</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Download OpenWorm resources and data.">
+
+	<!-- REPLICATE THIS IN ALL PAGES -->
+
+	<!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons - this code is outdated -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner" id="head-nav">
+	    </div>
+	</div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+	 // get head-nav and foot-nav with jquery (get is async)
+	 $.get('header-content.html', function(data) {
+	     $('#head-nav').html(data);
+	 })
+	 $.get('footer-content.html', function(data) {
+	     $('#foot-nav').html(data);
+	 })
+	</script>
+    </head>
+
+    <body>
+	<div id="pjax-content">
+	    <!-- END REPEAT-->
+
+	    <header class="jumbotron subhead" id="overview">
+		<div class="container">
+		    <!--<div class="openworm_logo_header"></div>-->
+		    <h1>Downloads</h1>
+		    <p class="lead">
+			This is the place to grab some of the outputs of the OpenWorm project, plus resources and demos.
+		    </p>
+		</div>
+	    </header>
+
+	    <div class="container">
+
+		<div class="row">
+		    <div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">
+			    <li>
+				<a href="#coder"><i class="fa fa-chevron-right"></i>For coders</a>
+			    </li>
+			    <li>
+				<a href="#scientist"><i class="fa fa-chevron-right"></i>For scientists</a>
+			    </li>
+			</ul>
+		    </div>
+		    <div class="span9">
+			<br/><br/>
+			<div class="alert">
+			    <button type="button" class="close" data-dismiss="alert">&times;</button>
+			    <strong>Warning:</strong> You can't download the whole virtual worm, we're not quite there yet! :)
+			</div>
+			<!-- Coder ================================================== -->
+			<section id="coder">
+			    <div class="page-header">
+				<h1>For coders</h1>
+			    </div>
+			    <div class="pagination-centered">
+				<i class="fa fa-github-alt fa-xl"></i>
+				<br/><br/><br/>
+			    </div>
+			    <div class="row-fluid pagination-centered">
+
+				<p class="lead span6">
+				    We packaged <strong>Eclipse distributions</strong> for the different operating systems, ready with all the plugins necessary to start working on Geppetto, our simulation engine.
+				    <br/><br/><a class="btn btn-primary btn-large" href="http://blog.openworm.org/post/31859097261/openworm-eclipse-distributions-released" target="_blank">Eclipse Distributions</a>
+				</p>
+				<p class="lead span6">
+				    Geppetto's <strong>alpha release</strong> is now available, see release notes <a href="https://github.com/openworm/org.geppetto/releases" target="_blank">here</a>.  Here's <a href="https://github.com/openworm/OpenWorm/wiki/Geppetto---Install-instructions" target="_blank">instructions</a>.
+				    <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/org.geppetto/releases" target="_blank">Geppetto alpha release</a>
+				</p>
+			    </div>
+			</section>
+			<!-- Scientist ================================================== -->
+			<section id="scientist">
+			    <div class="page-header">
+				<h1>For scientists</h1>
+			    </div>
+			    <div class="pagination-centered">
+				<i class="fa fa-beaker fa-xl"></i>
+			    </div>
+
+			    <div class="row-fluid pagination-centered">
+				<p class="lead span6" href="">
+				    We have captured the full 3D morphology of the C. elegans <b>connectome</b> in NeuroML format, and we are currently working to integrate electro-physiology.
+				    <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/CElegansNeuroML/archive/SNAPSHOT_030213.zip" target="_blank">NeuroML Connectome</a>
+				</p>
+				<p class="lead span6">
+				    We have imported the NeuroML connectome model for C. elegans into a <a href="http://www.neuroconstruct.org">neuroConstruct</a> project. Here's a <a href="https://github.com/openworm/OpenWorm/wiki/Running-the-C.-elegans-model-in-neuroConstruct">guide to getting started</a> with it.
+				    <br/><br/><a class="btn btn-primary btn-large" href="https://www.dropbox.com/s/xdu1bh5sq2x1nx6/CElegansNeuroConstructBundle-snapshot-20140107.zip" target="_blank">neuroConstruct project</a>
+				</p>
+			    </div>
+			    <div class="row-fluid pagination-centered">
+				<p class="lead span6">
+				    We have optimized electro-physiology for a specific C. elegans muscle cell (we plan on doing this on the rest of the cells too) in NeuroML format.
+				    <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/muscle_model/archive/SNAPSHOT_030213.zip" target="_blank">NeuroML Muscle cell</a>
+				</p>
+				<p class="lead span6">
+				    We are maintaining an online folder with data spreadsheets and information, including lists of all C. elegans neurons. Anything to add? Give us a <a href="contacts.html">shout</a>!
+				    <br/><br/><a class="btn btn-primary btn-large" href="https://docs.google.com/folder/d/0B_t3mQaA-HaMejlrMmpnR2VjN0U/edit?usp=sharing" target="_blank">Data folder</a>
+				</p>
+			    </div>
+			</section>
+		    </div>
+		</div>
+	    </div>
+
+	<!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->
+	</div><!-- end pjax content -->
+
+
+
+	<!-- footer
+	     ================================================== -->
+	<div id="foot-nav"></div>
+	<!-- foot-nav is filled with script in head -->
+
+	<!-- Le javascript
+	     ================================================== -->
+	<!-- at end of the document so the pages load faster -->
+
+	<!-- load other resources asynchronously: -->
+	<script src="js/bootstrap.js" async></script>
+	<script src="js/jquery.parss.uncompressed.js" async></script>
+	<script src="http://platform.twitter.com/widgets.js" async></script>
+
+	<!-- execute main (initialize resources above + carousel/donate controls -->
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/main.js" defer></script>
+
+    </body>
+
+</html>

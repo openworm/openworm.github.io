@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>OpenWorm Science</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Scientific resources for OpenWorm">
+
+	<!-- REPLICATE THIS IN ALL PAGES -->
+
+	<!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons - this code is outdated -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner" id="head-nav">
+	    </div>
+	</div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+	 // get head-nav and foot-nav with jquery (get is async)
+	 $.get('header-content.html', function(data) {
+	     $('#head-nav').html(data);
+	 })
+	 $.get('footer-content.html', function(data) {
+	     $('#foot-nav').html(data);
+	 })
+	</script>
+    </head>
+
+    <body>
+	<div id="pjax-content">
+	    <!-- END REPEAT-->
+
+	    <header class="science jumbotron subhead " id="overview">
+		<div class="container">
+		    <!--<div class="openworm_logo_header"></div>-->
+		    <h1>OpenWorm Science</h1>
+		    <p class="lead">
+			Resources OpenWorm has developed for the C. elegans research community.
+		    </p>
+		</div>
+	    </header>
+
+	    <div class="container">
+
+		<div class="row">
+		    <div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">
+			    <li>
+				<a href="#intro"><i class="fa fa-chevron-right"></i>OpenWorm for Scientists</a>
+			    </li>
+			    <li>
+				<a href="#resources"><i class="fa fa-chevron-right"></i>OpenWorm Resources</a>
+			    </li>
+			    <li>
+				<a href="#other"><i class="fa fa-chevron-right"></i>Other Resources</a>
+			    </li>
+			    <li>
+				<a href="#literature"><i class="fa fa-chevron-right"></i>All Literature</a>
+			    </li>
+				<li>
+				<a href="./publications.html"><i class="fa fa-chevron-right"></i>Publications</a>
+				</li>
+			    <li>
+				<a href="#events"><i class="fa fa-chevron-right"></i>Events</a>
+			    </li>
+			    <li>
+				<a href="#social"><i class="fa fa-chevron-right"></i>Social Media</a>
+			    </li>
+			    <li>
+				<a href="#curation"><i class="fa fa-chevron-right"></i>Curation of this Page</a>
+			    </li>
+			</ul>
+		    </div>
+		    <div class="span9">
+			<!-- OpenWorm for Scientists ================================================== -->
+
+			<section id="intro">
+			    <div class="page-header">
+				<h1>OpenWorm for Scientists</h1>
+			    </div>
+			    <p class="lead">
+				OpenWorm is an open source project dedicated to creating the world’s first virtual organism in a computer, a C.elegans nematode.
+				Throughout the years we have built a network of relationships with with many biologists and neuroscientists interested in C. elegans.
+				This page presents the scientific data and resources produced by the OpenWorm community for the benefit of experimental and
+				computational scientists working in this area.
+                            </p>
+			    <h3>Existing Scientific Collaborations</h3>
+			    <p class="lead">
+				The entire C. elegans experimental community that assembles at the yearly
+				<a href="http://www.genetics-gsa.org/conferences/Celegans_meeting.shtml" target="_blank">GSA C. elegans meeting</a>
+				is incredibly welcoming and supportive. We've received data and help from C. elegans biologists including
+				<a href="http://www.salk.edu/faculty/chalasani.html" target="_blank">Dr. Sreekanth Chalasani</a> at the Salk Institute,
+				<a href="https://www.linkedin.com/in/michael-francis-666220122" target="_blank">Dr. Michael Francis</a> at UMass Medical School,
+				<a href="http://www2.mrc-lmb.cam.ac.uk/groups/wschafer" target="_blank">Dr. William Schafer</a> at University of Cambridge
+				and <a href="http://leiferlab.princeton.edu/" target="_blank">Dr. Andrew Leifer</a> at Princeton University.  We've been
+				inspired and received help on worm simulations from the lab of <a href="http://www.comp.leeds.ac.uk/netta/" target="_blank">Dr. Netta Cohen</a> at Leeds
+				University and her students. The original source for many of the 3D images of the worm's body
+				is the <a href="http://caltech.wormbase.org/virtualworm/" target="_blank">Virtual Worm project</a> at <a href="http://www.wormbase.org/" target="_blank">WormBase</a>,
+				specifically <a href="http://www.linkedin.com/pub/christian-grove/a/396/562" target="_blank">Dr. Christian Grove</a> at CalTech.
+			    </p>
+			</section>
+			<!-- OpenWorm Resources ================================================== -->
+			<section id="resources">
+			    <div class="page-header">
+				<h1>OpenWorm Resources</h1>
+			    </div>
+			    <p class="lead">
+				The OpenWorm project has produced various resources to make it easier to explore the anatomy of the C.elegans, and has released
+				early versions of applications which will enable the biophysical simulation of the worm and its interactions with its environment.
+			    </p>
+			    <h3>OpenWorm Documentation</h3>
+                            <br/>
+                            <img src="./img/sci_docs.png" alt="" width="500">
+                            <br/><br/>
+			    <p class="lead">
+				All of the documentation for the project in a <a href="http://docs.openworm.org/en/0.9/" target="_blank">single site</a>.
+			    </p>
+			    <h3>OpenWorm Browser</h3>
+                            <br/>
+                            <img src="./img/sci_browser.png" alt="">
+                            <br/><br/>
+			    <p class="lead">
+				The OpenWorm browser exposes through a web interface the anatomical model of C.elegans
+				developed as part of the <a href="http://caltech.wormbase.org/virtualworm/" target="_blank">Virtual Worm project at Caltech</a>. The application allows
+				pealing different layers of the worm revealing distinct groups for the nervous system,
+				the muscle cells, the organs and the cuticle. All the cells of the worm are searchable
+				through the user interface.
+				<br/><br/>
+				<a href="http://browser.openworm.org/" target="_blank">OpenWorm Browser</a> (Free web application)
+				<br/>
+				<a href="https://itunes.apple.com/us/app/openworm-browser/id595581306?mt=8" target="_blank">OpenWorm Browser iOS</a>
+			    </p>
+			    <h3>NeuroML C.elegans Connectome</h3>
+                            <br/>
+                            <img src="./img/sci_neuroml.png" alt="" width="500">
+                            <br/><br/>
+			    <p class="lead">
+				The team has produced a model of the connectome of the C.elegans in <a href="http://neuroml.org/" target="_blank">NeuroML</a>,
+				a standard for describing computational models of neurons and networks.
+				The model has been generated by post-processing the morphology of the nervous
+				system available in the Blender file produced by the Virtual Worm project with
+				an ad-hoc Python script written for this purpose and <a href="https://github.com/openworm/Blender2NeuroML" target="_blank">released in the open-source</a>.
+				This model is a work in progress and although it represents the first full
+				multi-compartmental model of the network of an entire organism it still lacks
+				characterization of the biophysical properties of the neurons. Current efforts
+				are directed towards integrating the synapses in the model, more informations
+				about this can be found <a href="https://github.com/openworm/OpenWorm/issues/136#issuecomment-31369608" target="_blank">here</a>. The NeuroML model can be found and explored in
+				3D through Open Source Brain; OSB Explorer allows scientists to expose the property
+				of the neurons and navigate their connections by simply clicking on them.
+				<br/><br/>
+				<a href="http://opensourcebrain.org/projects/celegans?explorer=https%3A%2F%2Fraw.github.com%2Fopenworm%2FCElegansNeuroML%2Fmaster%2FCElegans%2FgeneratedNeuroML2%2FMuscleCellConnections.net.nml" target="_blank">C.elegans connectome on Open Source Brain</a>
+			    </p>
+			    <h3>Sibernetic</h3>
+                            <br/>
+                            <img src="./img/sci_bernetic.png" alt="" width="500">
+                            <br/><br/>
+			    <p class="lead">
+				Openworm has been developing <a href="http://openworm.github.io/sibernetic/" target="_blank">Sibernetic</a>, a C++ implementation of the Predictive-corrective
+				Incompressible Smooth Particle Hydrodynamics (PCI-SPH) algorithm based on the work of <a href="https://sph-sjtu-f06.googlecode.com/files/a40-solenthaler.pdf" target="_blank">Solenthaler</a>.
+				The algorithm has been extended to model contractile matter and membranes for simulating
+				the muscle tissue of the C. elegans. The implementation uses OpenCL to distribute the computation
+				of the particle system on both CPUs and GPUs in a parallelized way.
+				<br/><br/>
+				<a href="https://github.com/openworm/Smoothed-Particle-Hydrodynamics" target="_blank">Sibernetic sources</a><br/>
+				<a href="https://www.youtube.com/watch?v=r2OBznK6HkI#t=12" target="_blank">Sibernetic video</a>
+			    </p>
+			    <h3>Geppetto</h3>
+                            <br/>
+                            <img src="./img/sci_geppetto.png" alt="" width="500">
+                            <br/><br/>
+			    <p class="lead">
+				OpenWorm has been developing <a href="http://www.geppetto.org/" target="_blank">Geppetto</a>, a web-based multi-algorithm, multi-scale simulation
+				platform engineered to support the simulation of complex biological systems and their
+				surrounding environment. The platform aims at integrating multiscale models whose simulation
+				depends on a variety of algorithms which need to interoperate. Great focus has been put on
+				the engineering of the platform, aiming at having a robust and generic solution that can be
+				applied to different class of models. OpenWorm aims to make progresses of the OpenWorm
+				simulation available to scientist and general public through Geppetto. Geppetto at present
+				supports a simulator for <a href="http://lems.github.io/LEMS/" target="_blank">LEMS</a>, a domain agnostic language specification aimed at describing
+				dynamic models, and Sibernetic, the fluid dynamics simulator also developed  as part of the
+				project. The visualisation engine of Geppetto has been reused in Open Source Brain Explorer
+				and allows a variety of neuronal models to be seamlessly visualised in 3D through the web
+				browser.
+				<br/><br/>
+				<a href="http://docs.geppetto.org/" target="_blank">Geppetto documentation</a><br/>
+				<a href="http://docs.geppetto.org/en/latest/devdocs.html" target="_blank">Geppetto sources</a><br/>
+				<a href="http://www.geppetto.org/" target="_blank">Geppetto website</a>
+				<br/><br/>
+                            </p>
+			    <h3>Other activities</h3>
+			    <p class="lead">
+				OpenWorm is contributing the development of computational neuronal models to <a href="http://opensourcebrain.org" target="_blank">Open Source Brain</a>.
+				The group page with all the projects can be found <a href="http://opensourcebrain.org/groups/28" target="_blank">here</a>.
+			    </p>
+			</section>
+			<!-- Other Resources ================================================== -->
+			<section id="other">
+			    <div class="page-header">
+				<h1>External Resources</h1>
+			    </div>
+			    <p class="lead">
+                                This is a list of online resources related to C. elegans which we have found useful in the OpenWorm project.
+                                If you know of other resources we should include here, please <a href="contacts.html">get in contact</a>!
+			    </p>
+			    <table class="table">
+				<thead>
+				    <tr>
+					<th class="lead">Resource</th>
+					<th class="lead">Description</th>
+				    </tr>
+				</thead>
+				<tbody>
+				    <tr>
+					<td class="lead"><a href="https://docs.google.com/a/metacell.us/spreadsheet/ccc?key=0ArNOKkIblIRadE5lVkN4WGMzNUZLdVROUEZVTUlUVGc&usp=drive_web#gid=0" target="_blank">C. Elegans Ion Channels</a></td>
+					<td class="lead">Spreadsheet of ion channels</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.wormatlas.org/" target="_blank">WormAtlas</a></td>
+					<td class="lead">Website with an atlas containing images of worm anatomy</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.wormbase.org/" target="_blank">WormBase</a></td>
+					<td class="lead">A comprehensive web-based database of genes, gene expression, proteins, and much more specifically for c. elegans and related species</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://caltech.wormbase.org/virtualworm/" target="_blank">Virtual Worm project at WormBase</a></td>
+					<td class="lead">3D Blender files for the anatomy of the C. elegans</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ncbi.nlm.nih.gov/books/NBK19997/" target="_blank">C. elegans II</a></td>
+					<td class="lead">Web-based textbook for all things C. elegans. Second edition</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.wormbook.org/" target="_blank">WormBook</a></td>
+					<td class="lead">Comprehensive, open-access collection of original, peer-reviewed chapters covering topics related to the biology of Caenorhabditis elegans and other nematodes</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://wormclassroom.org/" target="_blank">WormClassroom</a></td>
+					<td class="lead">WormClassroom is intended to serve as an education portal for the research model organism Caenorhabditis elegans</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.wormimage.org/" target="_blank">WormImage</a></td>
+					<td class="lead">Here you can view and download thousands of unpublished electron micrographs and associated data</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.rnai.org/" target="_blank">RNAiDB</a></td>
+					<td class="lead">Provides access to results from RNAi interference studies in C. elegans, including images, movies, phenotypes, and graphical maps</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.worm.mpi-cbg.de/phenobank/cgi-bin/MenuPage.py" target="_blank">PhenoBank</a></td>
+					<td class="lead">Our aim was to test all C. elegans genes for their role in the first two rounds of mitotic cell division. To this end, we combined genome-wide RNAi screening with time-lapse video microscopy of the early embryo</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://interactome.dfci.harvard.edu/C_elegans/" target="_blank">Worm Interactome DB</a></td>
+					<td class="lead">Worm Interactome version 8 assembles high-quality yeast two-hybrid protein protein interactions in C. elegans</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ebi.ac.uk/intact/main.xhtml" target="_blank">IntAct</a></td>
+					<td class="lead">IntAct provides a freely available, open source database system and analysis tools for molecular interaction data.</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://thebiogrid.org/" target="_blank">BioGrid</a></td>
+					<td class="lead">The Biological General Repository for Interaction Datasets (BioGRID) is an online interaction repository with data compiled through comprehensive curation efforts</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://nematode.lab.nig.ac.jp/index.html" target="_blank">INTACT</a></td>
+					<td class="lead">The Kohara lab has been constructing an expression pattern map of the 100Mb genome of the nematode Caenorhabditis elegans through EST analysis and systematic whole mount in situ hybridization. NEXTDB is the database to integrate all information from our expression pattern project</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://bgypc059.leeds.ac.uk/~web/databaseintro.htm" target="_blank">Hope Laboratory Expression Pattern Database</a></td>
+					<td class="lead">Each page in this database is a record of the results of one experiment. For each experiment, a C. elegans genomic DNA fragment has been joined to a reporter gene, either lacZ or gfp and this fusion gene has been used to generate transgenic C. elegans lines</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://gfpweb.aecom.yu.edu/index" target="_blank">BC C. elegans Gene Expression Consortium</a></td>
+					<td class="lead">Expression patterns for C. elegans promoter:GFP fusions</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://smd.princeton.edu/" target="_blank">Stanford Microarray Database</a></td>
+					<td class="lead">A database of microarray experiments</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ncbi.nlm.nih.gov/geo/" target="_blank">NCBI Gene Expression Omnibus</a></td>
+					<td class="lead">GEO is a public functional genomics data repository supporting MIAME-compliant data submissions. Array- and sequence-based data are accepted. Tools are provided to help users query and download experiments and curated gene expression profiles</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ebi.ac.uk/arrayexpress/" target="_blank">EBI ArrayExpress</a></td>
+					<td class="lead">ArrayExpress is a database of functional genomics experiments that can be queried and the data downloaded. It includes gene expression data from microarray and high throughput sequencing studies</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.pdb.org/pdb/home/home.do" target="_blank">Protein Data Bank</a></td>
+					<td class="lead">The PDB archive contains information about experimentally-determined structures of proteins, nucleic acids, and complex assemblies</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ncbi.nlm.nih.gov/pubmed" target="_blank">NCBI PubMed</a></td>
+					<td class="lead">PubMed comprises more than 23 million citations for biomedical literature from MEDLINE, life science journals, and online books. Citations may include links to full-text content from PubMed Central and publisher web sites</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.textpresso.org/celegans/" target="_blank">Textpresso</a></td>
+					<td class="lead"></td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://neuinfo.org/" target="_blank">Neuroscience Information Framework</a></td>
+					<td class="lead">The Neuroscience Information Framework is a dynamic inventory of Web-based neuroscience resources: data, materials, and tools accessible via any computer connected to the Internet</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://wiki.wormbase.org/index.php/Main_Page" target="_blank">WormBase Wiki</a></td>
+					<td class="lead">This is the official wiki site for WormBase, the database of the model organism Caenorhabditis elegans and related nematodes</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://forums.wormbase.org/" target="_blank">Worm Community Forums</a></td>
+					<td class="lead">Forums for discussing scientific topics with c. elegans scientists</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ncbi.nlm.nih.gov/gene" target="_blank">Entrez Gene</a></td>
+					<td class="lead">Gene integrates information from a wide range of species. A record may include nomenclature, Reference Sequences (RefSeqs), maps, pathways, variations, phenotypes, and links to genome-, phenotype-, and locus-specific resources worldwide</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ncbi.nlm.nih.gov/mapview/map_search.cgi?taxid=6239" target="_blank">MapViewer</a></td>
+					<td class="lead">The 100 Mb genome is organized in six chromosomes and annotation represents more than 20,000 genes. The gene, transcript, and protein annotation is provided by WormBase and NCBI provides ab initio model predictions and calculates alignments to provide the C. elegans UniGene (Cel_UniG) and transcript (Cel_EST) maps</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ensembl.org/Caenorhabditis_elegans/Info/Index" target="_blank">Ensembl</a></td>
+					<td class="lead">The goal of Ensembl is to automatically annotate the genome, integrate this annotation with other available biological data and make all this publicly available via the web</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://genome-euro.ucsc.edu/cgi-bin/hgGateway?hgsid=85966288&clade=worm&org=0&db=0&redirect=auto&source=genome.ucsc.edu" target="_blank">UCSC Genome Browser</a></td>
+					<td class="lead">Browse the C. elegans Genome</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.uniprot.org/" target="_blank">UniProt</a></td>
+					<td class="lead">The mission of UniProt is to provide the scientific community with a comprehensive, high-quality and freely accessible resource of protein sequence and functional information</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://inparanoid.sbc.su.se/cgi-bin/index.cgi" target="_blank">InParanoid</a></td>
+					<td class="lead">Ortholog groups with inparalogs</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.treefam.org/" target="_blank">TreeFam</a></td>
+					<td class="lead">TreeFam is a database composed of phylogenetic trees inferred from animal genomes. It provides orthology/parology predictions as well the evolutionary history of genes</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.reactome.org/" target="_blank">Reactome</a></td>
+					<td class="lead">Reactome is a free, open-source, curated and peer reviewed pathway database. Our goal is to provide intuitive bioinformatics tools for the visualization, interpretation and analysis of pathway knowledge to support basic research, genome analysis, modeling, systems biology and education</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://metacyc.org/" target="_blank">MetaCyc</a></td>
+					<td class="lead">MetaCyc is a database of nonredundant, experimentally elucidated metabolic pathways. MetaCyc contains more than 2097 pathways from more than 2460 different organisms, and is curated from the scientific experimental literature</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.genome.jp/kegg/pathway.html" target="_blank">KEGG Pathway database</a></td>
+					<td class="lead">Wiring diagrams of molecular interactions, reactions, and relations</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.geneontology.org/index.shtml" target="_blank">Gene Ontology</a></td>
+					<td class="lead">The Gene Ontology project is a major bioinformatics initiative with the aim of standardizing the representation of gene and gene product attributes across species and databases. The project provides a controlled vocabulary of terms for describing gene product characteristics and gene product annotation data from GO Consortium members, as well as tools to access and process this data</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.mirbase.org/" target="_blank">miRBase</a></td>
+					<td class="lead">The miRBase database is a searchable database of published miRNA sequences and annotation</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.ebi.ac.uk/services" target="_blank">Toolbox at the EBI</a></td>
+					<td class="lead">We maintain the world’s most comprehensive range of freely available and up-to-date molecular databases. Developed in collaboration with our colleagues worldwide, our services let you share data, perform complex queries and analyse the results in different ways</td>
+				    </tr>
+				    <tr>
+					<td class="lead"><a href="http://www.expasy.org/tools" target="_blank">ExPASy Proteomics Tools</a></td>
+					<td class="lead">Bioinformatics Resource Portal</td>
+				    </tr>
+				</tbody>
+			    </table>
+			</section>
+			<!-- All Literature ================================================== -->
+			<section id="literature">
+			    <div class="page-header">
+				<h1>All Literature</h1>
+			    </div>
+			    <p class="lead">
+				We have created <a href="https://docs.google.com/a/metacell.us/document/d/1kcGk4Yl8uOtsjoWEmDOOPhD1qccZZ1JoMQCvr3vbzqQ/edit" target="_blank">a
+                                collection of references</a> that have significantly influenced our work.<br/><br/>
+
+				A list of publications by members of the OpenWorm community related to the initiative can be found <a href="publications.html">here</a>.
+			    </p>
+			</section>
+			<!-- Events ================================================== -->
+			<section id="events">
+			    <div class="page-header">
+				<h1>Events</h1>
+			    </div>
+			    <p class="lead">
+				Members of the OpenWorm community are active participants in and presenters at scientific workshops and conferences.
+				You can find a list of past and future events we have contributed to <a href="events.html">here</a> .
+			    </p>
+			</section>
+			<!-- Social media ================================================== -->
+			<section id="social">
+			    <div class="page-header">
+				<h1>Social Media / Contacts</h1>
+			    </div>
+			    <p class="lead">
+				<a href="http://blog.openworm.org/" target="_blank">Tumblr blog</a><br/>
+				<a href="https://twitter.com/OpenWorm" target="_blank">Twitter</a><br/>
+				<a href="https://plus.google.com/u/0/b/117948341754627144949/+OpenwormOrg/posts" target="_blank">Google+</a><br/>
+				<a href="http://www.youtube.com/OpenWorm" target="_blank">Youtube</a><br/>
+				<a href="https://www.facebook.com/OpenWorm" target="_blank">Facebook</a><br/>
+				<a href="https://groups.google.com/forum/#!forum/openworm-discuss" target="_blank">High-volume discussion mailing list</a><br/>
+				<a href="https://groups.google.com/forum/#!forum/openworm" target="_blank">Announcements mailing list</a><br/>
+				<a href="mailto:info@openworm.org" target="_blank">Mail</a>
+			    </p>
+			</section>
+			<!-- Curation ================================================== -->
+			<section id="curation">
+			    <div class="page-header">
+				<h1>Curation of this Page</h1>
+			    </div>
+			    <p class="lead">
+				Want to help curate this page, propose an edit or add a resource? <a href="mailto:info@openworm.org" target="_blank">Drop us a line</a>!
+			    </p>
+			</section>
+		    </div>
+		</div>
+
+	    </div>
+
+	    <!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->
+	</div><!-- end pjax content -->
+
+
+	<!-- footer
+	     ================================================== -->
+	<div id="foot-nav"></div>
+	<!-- foot-nav is filled with script in head -->
+
+	<!-- Le javascript
+	     ================================================== -->
+	<!-- at end of the document so the pages load faster -->
+
+	<!-- load other resources asynchronously: -->
+	<script src="js/bootstrap.js" async></script>
+	<script src="js/jquery.parss.uncompressed.js" async></script>
+	<script src="http://platform.twitter.com/widgets.js" async></script>
+
+	<!-- execute main (initialize resources above + carousel/donate controls -->
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/main.js" defer></script>
+
+    </body>
+
+</html>

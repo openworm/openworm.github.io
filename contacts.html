@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Contact OpenWorm</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="How to contact OpenWorm">
+
+		<!-- REPLICATE THIS IN ALL PAGES -->
+
+		<!-- Le styles -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/docs.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons - this code is outdated -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+		
+		<div class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="navbar-inner" id="head-nav">
+		    </div>
+		</div>
+		<script src="js/jquery-3.2.1.js"></script>
+		<script>
+		 // get head-nav and foot-nav with jquery (get is async)
+		 $.get('header-content.html', function(data) {
+		     $('#head-nav').html(data);
+		 })
+		 $.get('footer-content.html', function(data) {
+		     $('#foot-nav').html(data);
+		 })
+		</script>
+	</head>
+	
+	<body>
+	    <div id="pjax-content">
+		<!-- END REPEAT-->
+
+		<header class="jumbotron subhead" id="overview">
+		    <div class="container">
+			<h1>Contact us</h1>
+			<p class="lead">
+			    Have some feedback? Need some information? Want to join?<br/>
+			    We'd love to hear from you.
+			</p>
+		    </div>
+		</header>
+
+		<div class="container">
+		    <div class="page-header">
+		  	<h1 style="float: left;">Join the discussion!</h1><i class="fa fa-edit fa-l" style="float: right;"></i>
+		  	<div class="clearer"></div>
+		    </div>
+		    <p class="lead">
+		  	The easiest way to follow our day-to-day activities is to join our <a href="https://groups.google.com/forum/#!forum/openworm-discuss" target="_blank">high volume mailing list</a> that we use as a way to keep our communications in the open.
+			We also have a <a href="https://groups.google.com/forum/#!forum/openworm" target="_blank">lower volume mailing list</a> we use for announcements and general discussion and inquiries.
+		    </p>
+		    <div class="large-spacer"></div>
+		    <div class="page-header">
+		  	<h1 style="float: left;">Interact with us on social media!</h1><i class="fa fa-twitter fa-l" style="float: right;"></i>
+		  	<div class="clearer"></div>
+		    </div>
+		    <p class="lead">
+		  	For ongoing information about OpenWorm, please follow our <a href="http://blog.openworm.org/" target="_blank">blog</a> on tumblr.
+			You can also follow us and interact on <a href="https://twitter.com/OpenWorm" target="_blank">twitter</a>, <a href="https://plus.google.com/117948341754627144949/posts" target="_blank">Google+</a> and <a href="https://www.facebook.com/OpenWorm" target="_blank">Facebook</a> for more frequent updates.
+		    </p>
+		    <div class="large-spacer"></div>
+		    <div class="page-header">
+			<h1 style="float: left;">Drop us a line!</h1><i class="fa fa-envelope fa-l" style="float: right;"></i>
+			<div class="clearer"></div>
+		    </div>
+		    <p class="lead">We'd love to hear from you! You should feel free to contact us with feedback, questions, partnership proposals, or other inquiries at <a href="mailto:info@openworm.org">info<b>at</b>openworm.org</a>.
+		    </p>
+
+		</div>
+		<!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->	
+	    </div><!-- end pjax content -->
+
+
+
+	    <!-- footer
+		 ================================================== -->
+	    <div id="foot-nav"></div>
+	    <!-- foot-nav is filled with script in head -->
+
+	    <!-- Le javascript
+		 ================================================== -->
+	    <!-- at end of the document so the pages load faster -->
+
+	    <!-- load other resources asynchronously: -->
+	    <script src="js/bootstrap.js" async></script>
+	    <script src="js/jquery.parss.uncompressed.js" async></script>
+	    <script src="http://platform.twitter.com/widgets.js" async></script>
+
+	    <!-- execute main (initialize resources above + carousel/donate controls -->
+	    <script src="js/jquery.pjax.js"></script>
+	    <script src="js/main.js" defer></script>
+
+	</body>
+
+</html>

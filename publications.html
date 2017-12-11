@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>Publications</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Scientific publications that have come out of OpenWorm research.">
+
+	<!-- REPLICATE THIS IN ALL PAGES -->
+
+	<!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons - this code is outdated -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner" id="head-nav">
+	    </div>
+	</div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+	 // get head-nav and foot-nav with jquery (get is async)
+	 $.get('header-content.html', function(data) {
+	     $('#head-nav').html(data);
+	 })
+	 $.get('footer-content.html', function(data) {
+	     $('#foot-nav').html(data);
+	 })
+	</script>
+    </head>
+
+    <body>
+	<div id="pjax-content">
+	    <!-- END REPEAT-->
+
+
+	    <header class="jumbotron subhead" id="overview">
+		<div class="container">
+		    <h1>Publications</h1>
+
+		    <p class="lead">
+			A list of OpenWorm scientific publications.
+		    </p>
+		</div>
+	    </header>
+
+	    <div class="container">
+		<div class="marketing">
+		    <br/>
+		    <i class="fa fa-book fa-xl"></i>
+		    <div class="large-spacer"></div><div class="large-spacer"></div>
+		    <div>
+			<h2>Application of smoothed particle hydrodynamics to modeling mechanisms of biological tissue</h2>
+			<div class="clearer"></div>
+			<p>
+			    March 08 2016, Adv. Eng. Software, DOI: 10.1016/j.advengsoft.2016.03.002
+			</p>
+			<p class="authors">
+			    Andrey Palyanov, Sergey Khayrulin, and Stephen Larson
+			</p>
+			<p>
+			    A prerequisite for simulating the biophysics of complex biological tissues and whole organisms are
+
+			    computational descriptions of biological matter that are flexible and can interface with materials of
+
+			    different viscosities, such as liquid. The landscape of software that is easily available to do such work is
+
+			    limited and lacks essential features necessary for combining elastic matter with simulations of liquids.
+
+			    Here we present an open source software package called Sibernetic, designed for the physical simulation
+
+			    of biomechanical matter (membranes, elastic matter, contractile matter) and environments (liquids,
+
+			    solids and elastic matter with variable physical properties). At its core, Sibernetic is built as an extension
+
+			    to Predictive–Corrective Incompressible Smoothed Particle Hydrodynamics (PCISPH). Sibernetic is built
+
+			    on top of OpenCL, making it possible to run simulations on CPUs or GPUs, and has 3D visualization
+
+			    support built on top of OpenGL. Several test examples of the software running and reproducing physical
+
+			    experiments, as well as performance benchmarks, are presented and future directions are discussed.
+			    <br/>
+			    <a href="https://drive.google.com/file/d/0B_t3mQaA-HaMWEJ4aG5fVm9QUWc/view" target="_blank">Read more</a>.
+			</p>
+		    </div>
+		    <i class="fa fa-book fa-xl"></i>
+		    <div class="large-spacer"></div><div class="large-spacer"></div>
+		    <div>
+			<h2>OpenWorm: an open-science approach to modeling Caenorhabditis elegans</h2>
+			<div class="clearer"></div>
+			<p>
+			    November 03 2014, Front. Comput. Neurosci., DOI: 10.3389/fncom.2014.00137
+			</p>
+			<p class="authors">
+			    Balázs Szigeti, Padraig Gleeson, Michael Vella, Sergey Khayrulin, Andrey Palyanov, Jim Hokanson, Michael Currie, Matteo Cantarelli, Giovanni Idili and Stephen Larson
+			</p>
+			<p>
+			    OpenWorm is an international collaboration with the aim of understanding how the behavior of Caenorhabditis elegans (C. elegans)
+			    emerges from its underlying physiological processes. The project has developed a modular simulation engine to create computational
+			    models of the worm. The modularity of the engine makes it possible to easily modify the model, incorporate new experimental data and
+			    test hypotheses. The modeling framework incorporates both biophysical neuronal simulations and a novel fluid-dynamics-based soft-tissue
+			    simulation for physical environment-body interactions. The project's open-science approach is aimed at overcoming the difficulties of
+			    integrative modeling within a traditional academic environment. In this article the rationale is presented for creating the OpenWorm
+			    collaboration, the tools and resources developed thus far are outlined and the unique challenges associated with the project are discussed.
+			    <br/>
+			    <a href="http://journal.frontiersin.org/article/10.3389/fncom.2014.00137/full" target="_blank">Read more</a>.
+			</p>
+		    </div>
+		    <hr class="soften">
+		    <div>
+			<h2>Beyond the connectome hairball: Rational visualizations and analysis of the C. elegans connectome as a network graph using hive plots</h2>
+			<div class="clearer"></div>
+			<p>
+			    July 11 2013, Front. Neuroinform. Conference Abstract: Neuroinformatics 2013. DOI: 10.3389/conf.fninf.2013.09.00032
+			</p>
+			<p class="authors">
+			    Pedro Tabacof, Tim Busbice, Stephen D. Larson
+			    (OpenWorm.org)
+			</p>
+			<p>
+			    The C. elegans connectome (White et al., 1986) is currently the most detailed connectome data set at the neuronal circuit level that is publicly available. Represented as a network graph, it consists of edges that distinguish between gap junctions and chemical synapses, weighted by synapse count, with nodes that represent neurons whose identities are unambiguous and well known.
+			    We have found exploration of the C. elegans connectome using hive plots to lead to the discovery of interesting qualitative structure that was previously not obvious, enabling this structure to be further pursued quantitatively using complex network mathematics.
+			    <br/>
+			    <a href="http://www.frontiersin.org/10.3389/conf.fninf.2013.09.00032/event_abstract" target="_blank">Read more</a>.
+			</p>
+		    </div>
+		    <hr class="soften">
+		    <div>
+			<h2>Integration of predictive-corrective incompressible SPH and Hodgkin-Huxley based models in the OpenWorm in silico model of C. elegans</h2>
+			<div class="clearer"></div>
+			<p>
+			    July 8 2013, BMC Neuroscience 2013, 14(Suppl 1):P209 DOI:10.1186/1471-2202-14-S1-P209
+			</p>
+			<p class="authors">
+			    Michael Vella (Department of Physiology, Development and Neuroscience, University of Cambridge), Andrey Palyanov, Sergey Khayrulin
+			    (A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation, Acad. Lavrentjev pr., Russia)
+			</p>
+			<p>
+			    OpenWorm is an international collaboration with the aim of producing an integrative computational model of Caenorhabditis elegans to further the understanding of how macroscopic behaviour of the organism emerges from aggregated biophysical processes. A core component of the project involves the integration of electrophysiological modelling and predictive-corrective incompressible smoothed particle hydrodynamics (PCISPH) to model how neuronal and muscle dynamics effect the nematode's behaviour.
+			    <br/>
+			    <a href="http://www.biomedcentral.com/1471-2202/14/S1/P209" target="_blank">Read more</a>.
+			</p>
+		    </div>
+		    <hr class="soften">
+		    <div>
+			<h2>Towards a virtual C. elegans: A framework for simulation and visualization of the neuromuscular system in a 3D physical environment</h2>
+			<div class="clearer"></div>
+			<p>
+			    Aug 2012, In Silico Biology, 11(3):137-147 DOI:10.3233/ISB-2012-0445
+			</p>
+			<p class="authors">
+			    Andrey Palyanov, Sergey Khayrulin, Stephen D Larson, Alexander Dibert
+			    A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation, Acad. Lavrentjev pr., Russia.
+			</p>
+			<p>
+			    The nematode C. elegans is the only animal with a known neuronal wiring diagram, or "connectome". During the last three decades, extensive studies of the C. elegans have provided wide-ranging data about it, but few systematic ways of integrating these data into a dynamic model have been put forward. Here we present a detailed demonstration of a virtual C. elegans aimed at integrating these data in the form of a 3D dynamic model operating in a simulated physical environment. Our current demonstration includes a realistic flexible worm body model, muscular system and a partially implemented ventral neural cord. Our virtual C. elegans demonstrates successful forward and backward locomotion when sending sinusoidal patterns of neuronal activity to groups of motor neurons. To account for the relatively slow propagation velocity and the attenuation of neuronal signals, we introduced "pseudo neurons" into our model to simulate simplified neuronal dynamics. The pseudo neurons also provide a good way of visualizing the nervous system's structure and activity dynamics.
+			    <br/>
+			    <a href="https://dl.dropbox.com/u/6318167/fulltext.pdf" target="_blank">Read more</a>.
+			</p>
+		    </div>
+		    <hr class="soften">
+		    <div>
+			<h2>The NeuroML C. elegans Connectome</h2>
+			<div class="clearer"></div>
+			<p>
+			    September 11 2012 - Neuroinformatics 2012 Abstract Book
+			</p>
+			<p class="authors">
+			    Tim Busbice (Interintelligence Research), Padraig Gleeson (University College London), Sergey Khayrulin (A.P. Ershov Institute of Informatics Systems), Matteo Cantarelli (OpenWorm.org), Alexander Dibert (A.P. Ershov Institute of Informatics Systems), Giovanni Idili (OpenWorm.org), Andrey Palyanov (A.P. Ershov Institute of Informatics Systems), Stephen Larson (OpenWorm.org)
+			</p>
+			<p>
+			    We have merged and extended the C. elegans connectome (Varshney et al., 2006) and a three-dimensional cellular anatomy model (Grove & Sternberg, 2011) in the context of the OpenWorm project, an open source project to build a data integration and simulation framework for the C. elegans.
+			    <br/>
+			    <a href="http://www.neuroinformatics2012.org/abstracts/the-neuroml-c.-elegans-connectome" target="_blank">Read more</a>.
+			</p>
+		    </div>
+		    <hr class="soften">
+		    <div>
+			<h2>Managing Complexity in Multi-Algorithm, Multi-Scale Biological Simulations: An Integrated Software Engineering and Neuroinformatics Approach</h2>
+			<div class="clearer"></div>
+			<p>
+			    September 4 2011 - Neuroinformatics 2012 Abstract Book
+			</p>
+			<p class="authors">
+			    Giovanni Idili (OpenWorm.org), Matteo Cantarelli (OpenWorm.org), Marius Buibas (Department of Bioengineering, University of California, San Diego, La Jolla, CA), Tim Busbice (InterIntelligence Research, Los Angeles, CA), Jay Coggan (Salk Institute, La Jolla, CA), Christian Grove (WormBase, California Institute of Technology, Pasadena CA), Sergey Khayrulin (A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation, Novosibirsk, Russia), Andrey Palyanov (A.P. Ershov Institute of Informatics Systems SB RAS, Lab. of Complex Systems Simulation, Novosibirsk, Russia), Stephen Larson (Whole Brain Project, University of California, San Diego, La Jolla, CA)
+			</p>
+			<p>
+			    Computational biology is asserting itself as an important approach to understanding complex biological systems.
+			    In order to be able to effectively manage the complexity that comes with integrating and maintaining coarse-grained architectures, tools, digital information artifacts and code-bases, it is important for computational biology to fully embrace software engineering methodologies and best practices and follow the lead of the simulation based research in the physical sciences.
+			    Taking cues from pioneering projects in computational neuroscience that are addressing this problem (MOOSE, http://j.mp/gSZZNF, Clones; http://j.mp/gzC5CP), we describe our approach to the integration of close-to-the-metal massively parallel simulations with high-level abstractions through the use of design patterns, including emerging paradigms for GPU-based parallel programming.
+			    <br/>
+			    <a href="http://www.neuroinformatics2011.org/abstracts/managing-complexity-in-multi-algorithm-multi-scale-biological-simulations-an-integrated-software-engineering-and-neuroinformatics-approach" target="_blank">Read more</a>.
+			</p>
+		    </div>
+
+		</div>
+	    </div>
+
+	    <!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->	
+	</div><!-- end pjax content -->
+
+	
+	<!-- footer
+	     ================================================== -->
+	<div id="foot-nav"></div>
+	<!-- foot-nav is filled with script in head -->
+
+	<!-- Le javascript
+	     ================================================== -->
+	<!-- at end of the document so the pages load faster -->
+
+	<!-- load other resources asynchronously: -->
+	<script src="js/bootstrap.js" async></script>
+	<script src="js/jquery.parss.uncompressed.js" async></script>
+	<script src="http://platform.twitter.com/widgets.js" async></script>
+
+	<!-- execute main (initialize resources above + carousel/donate controls -->
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/main.js" defer></script>
+
+    </body>
+
+</html>
