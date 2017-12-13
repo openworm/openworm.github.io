@@ -15,7 +15,8 @@ $(document).on('pjax:complete', function() {
     console.log('pjax:complete');
     var loc = window.location.pathname;
     if (loc === '/index.html' || loc === '/' || loc === '') {
-	reloadSocial();
+        loadDonationControls();
+	    reloadSocial();
     } else if (loc === '/donate.html') {
 	loadDonationControls();
     } else if (loc === '/people.html') {
@@ -97,6 +98,16 @@ $(window).on('load', function() {
 })
 
 
+function donate(){
+    var amount = $(".donation.active");
+    if(amount.hasClass("other")){
+    	amount=$("#otherAmount").val();
+    }
+    else{
+    	amount=amount.html().replace("$","");
+    }
+    window.location="\donate.html?amount="+amount;
+}
 
 // general function definitions
 
@@ -258,15 +269,15 @@ function loadDonationControls() {
     	$("#d25").click();
     }
     else if (amount=="50") {
-	$("#d50").click();
+	    $("#d50").click();
     }
     else if (amount=="100") {
-	$("#d100").click();
+	    $("#d100").click();
     }
     else {
-	$(".other").click();
-	$("#otherAmount").val(amount);
-	$("#amountSent").attr("value",amount);
+        $(".other").click();
+        $("#otherAmount").val(amount);
+        $("#amountSent").attr("value",amount);
     }
 }
 
