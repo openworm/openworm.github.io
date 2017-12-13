@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>Getting Started</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="What the OpenWorm project is about.">
+
+	<!-- REPLICATE THIS IN ALL PAGES -->
+
+	<!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons - this code is outdated -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner" id="head-nav">
+	    </div>
+	</div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+	 // get head-nav and foot-nav with jquery (get is async)
+	 $.get('header-content.html', function(data) {
+	     $('#head-nav').html(data);
+	 })
+	 $.get('footer-content.html', function(data) {
+	     $('#foot-nav').html(data);
+	 })
+	</script>
+    </head>
+    
+    <body>
+	<div id="pjax-content">
+	    <!-- END REPEAT-->
+
+	    <header class="jumbotron subhead" id="overview">
+		<div class="container">
+		    <!--<div class="openworm_logo_header"></div>-->
+		    <h1>Getting started</h1>
+		    <p class="lead">
+			Overview of the project, its contents, and how to get started.
+		    </p>
+		</div>
+	    </header>
+
+	    <div class="container">
+
+		<div class="row">
+		    <div class="span3 bs-docs-sidebar">
+			<ul class="nav nav-list bs-docs-sidenav">
+			    <li>
+				<a href="#goal"><i class="fa fa-chevron-right"></i>Our goal</a>
+			    </li>
+			    <li>
+				<a href="#codeanddoc"><i class="fa fa-chevron-right"></i>Code and documentation</a>
+			    </li>
+			    <li>
+				<a href="#meetingarchive"><i class="fa fa-chevron-right"></i>Meeting archive</a>
+			    </li>
+			    <li>
+				<a href="#askaquestion"><i class="fa fa-chevron-right"></i>Ask a question</a>
+			    </li>
+			    <li>
+				<a href="#stayconnected"><i class="fa fa-chevron-right"></i>Stay connected</a>
+			    </li>
+			    <li>
+				<a href="#contribute"><i class="fa fa-chevron-right"></i>Contribute</a>
+			    </li>
+			</ul>
+		    </div>
+		    <div class="span9">
+
+			<!-- Goal
+			     ================================================== -->
+			<section id="goal">
+			    <div class="page-header">
+				<h1>Our goal</h1>
+			    </div>
+			    <p class="lead">
+				OpenWorm aims to build the first comprehensive computational model of the <em>Caenorhabditis elegans</em> (<em>C. elegans</em>), a microscopic roundworm.
+				With only a <strong>thousand cells</strong>, it solves basic problems such as feeding, mate-finding and predator avoidance.
+				Despite being extremely well studied in biology, this organism still eludes a deep, principled understanding of its biology.
+				<br/>
+			    </p>
+			    <div class="row-fluid padding-top-large">
+				<div class="span12 pagination-centered">
+
+				    <div class="well">
+					<div class="centered">
+					    <iframe width="420" height="315" src="https://www.youtube.com/embed/zjqLwPgLnV0" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="padding-top">
+					    <h4>A brief introduction to <em>C. elegans</em></h4>
+					</div>
+				    </div>
+				</div>
+			    </div>
+			    <p class="lead">
+				We are using a <strong>bottom-up</strong> approach, aimed at observing the worm behaviour <strong>emerge</strong> from a simulation of data derived from scientific experiments carried out over the past decade.
+				To do so we are incorporating the data available in the scientific community into software models.
+				We are engineering <strong>Geppetto</strong> and <strong>Sibernetic</strong>, open-source simulation platforms,
+				to be able to run these different models in concert.
+				We are also forging new collaborations with universities and research institutes to collect data that fill in the gaps.
+			    </p>
+			    <br/>
+			    <div class="row-fluid padding-top-large">
+				<div class="span12 pagination-centered">
+
+				    <div class="well">
+					<div class="centered">
+					    <iframe width="420" height="315" src="https://www.youtube.com/embed/r2OBznK6HkI" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class="padding-top">
+					    <h4>This video shows recent progress from the project to build the simulated body of the worm.</h4>
+					</div>
+				    </div>
+				</div>
+			    </div>
+			</section>
+			<!-- Code and docs ================================================== -->
+			<section id="codeanddoc">
+			    <div class="page-header">
+				<h1>Code and documentation</h1>
+			    </div>
+			    <p class="lead">
+
+				All the code we produce in the OpenWorm project is Open Source and available
+				on <a href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank">GitHub</a>.
+				This makes it easy for everyone to look at and play with.
+
+			    </p>
+			    <div class="span9 pagination-centered">
+				<i class="fa fa-github fa-xxl"></i>
+			    </div>
+			    <p class="lead">
+				Detailed documentation for each sub-project is available from the <a href="http://docs.openworm.org/en/0.9/projects/" target="_blank">Projects</a> page.
+			    </p>
+			</section>
+			<!-- Meeting archive ================================================== -->
+			<section id="meetingarchive">
+			    <div class="page-header">
+				<h1>Meetings Archive</h1>
+			    </div>
+			    <div class="span9 pagination-centered">
+				<i class="fa fa-facetime-video fa-xxl"></i>
+			    </div>
+			    <p class="lead">
+				The OpenWorm senior contributors meets every two weeks on public Google hangouts. The best way to get started is to sit down and have a look!
+				<br/>
+			    </p>
+			    <div class="span9 pagination-centered">
+				<a class="btn btn-primary btn-large" href="https://www.youtube.com/playlist?list=PL8ACJC0fGE7C7zlCBqkx1LMN1DHGKVp22" target="_blank">Video Archive</a>
+				<br/><br/>
+			    </div>
+			    <p class="lead">
+				While most meetings go into specifics of the project they do a good job at expressing the true spirit of OpenWorm: openness, transparency and of course, science!
+				<br/>
+			    </p>
+
+			</section>
+			<!-- Ask a question ================================================== -->
+			<section id="askaquestion">
+			    <div class="page-header">
+				<h1>Ask a question</h1>
+			    </div>
+			    <div class="span9 pagination-centered">
+				<i class="fa fa-question-sign fa-xxl"></i>
+			    </div>
+
+			    <p class="lead">
+				Nothing beats the chance to <a href="./contacts.html">ask a question for yourself</a>. No matter what your background is, or how naive you think your question is, feel free to <a href="./contacts.html">reach out</a>!
+				<br/>
+			    </p>
+
+			</section>
+			<!-- Stay connected ================================================== -->
+			<section id="stayconnected">
+			    <div class="page-header">
+				<h1>Stay connected</h1>
+			    </div>
+			    <div class="span9 pagination-centered">
+				<i class="fa fa-group fa-xxl"></i>
+			    </div>
+			    <div class="clearer large-spacer"></div>
+			    <p class="lead">
+				OK, you like the project and you are interested in it. How about connecting with us to receive updates as we make progress?
+				There are different ways you can stay connected, and whether you prefer to receive casual updates or you want "drink from the firehose", we can help connect you.
+				<br/><br/>
+				For more information about staying in sync, visit the <a href="./contacts.html">Contacts</a> page.
+				<br/>
+			    </p>
+
+			</section>
+			<!-- Contribute ================================================== -->
+			<section id="contribute">
+			    <div class="page-header">
+				<h1>Contribute</h1>
+			    </div>
+			    <div class="span9 pagination-centered">
+				<i class="fa fa-tint fa-xxl"></i>
+			    </div>
+
+			    <p class="lead">
+				It might be just a drop in the ocean but it's still going to help!
+				We are constantly looking for collaborators and people that share our vision.
+				<br/><br/>
+				If you want to contribute to the project in any way you should visit the <a href="./get_involved.html">Get Involved</a> page.
+				We have put together some common profiles but if yours doesn't fit in any of them please <a href="./contacts.html">drop us a line</a> anyway, we'd love to hear from you!
+			    </p>
+
+			</section>
+		    </div>
+
+		</div>
+	    </div>
+	</div><!-- end pjax content -->
+
+	<!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES
+
+	     footer
+	     ================================================== -->
+	<div id="foot-nav"></div>
+	<!-- foot-nav is filled with script in head -->
+
+	<!-- Le javascript
+	     ================================================== -->
+	<!-- at end of the document so the pages load faster -->
+
+	<!-- load other resources asynchronously: -->
+	<script src="js/bootstrap.js" async></script>
+	<script src="js/jquery.parss.uncompressed.js" async></script>
+	<script src="https://platform.twitter.com/widgets.js" async></script>
+
+	<!-- execute main (initialize resources above + carousel/donate controls -->
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/main.js" defer></script>
+
+    </body>
+
+</html>

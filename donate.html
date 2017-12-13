@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<meta charset="utf-8">
+	<title>Donate to OpenWorm</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Donate to the OpenWorm Foundation">
+
+	<!-- REPLICATE THIS IN ALL PAGES -->
+
+	<!-- Le styles -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/docs.css" rel="stylesheet">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons - this code is outdated -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="navbar-inner" id="head-nav">
+	    </div>
+	</div>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script>
+	 // get head-nav and foot-nav with jquery (get is async)
+	 $.get('header-content.html', function(data) {
+	     $('#head-nav').html(data);
+	 })
+	 $.get('footer-content.html', function(data) {
+	     $('#foot-nav').html(data);
+	 })
+	</script>
+    </head>
+    
+    <body>
+	<div id="pjax-content">
+	    <!-- END REPEAT-->
+
+	    <header class="jumbotron subhead" id="overview">
+		<div class="container">
+		    <!--<div class="openworm_logo_header"></div>-->
+		    <h1>Support us</h1>
+		    <p class="lead">
+			Donate to OpenWorm to support our volunteer work and accelerate development of the first artificial organism.
+		    </p>
+		</div>
+	    </header>
+
+	    <div class="container">
+
+		<div class="marketing">
+
+
+		    <p class="marketing-byline pagination-centered">
+			<h3>
+			    Contribute today to OpenWorm
+			</h3>
+			<div class="btn-group" role="group">
+			    <button id="d100" type="button" class="btn btn-default btn-large donation">$100</button>
+			    <button id="d50" type="button" class="btn btn-default active btn-large donation">$50</button>
+			    <button id="d25" type="button" class="btn btn-default btn-large donation">$25</button>
+			    <button id="d5" type="button" class="btn btn-default btn-large donation">$5</button>
+			    <button  type="button" class="btn btn-default btn-large donation other">$</button>
+			    <input id="otherAmount" type="text" class="form-control" placeholder="Other" aria-describedby="basic-addon1"/>
+			</div>
+
+			<br/><br/>
+
+
+			<form method="POST" action="https://www.paypal.com/cgi-bin/webscr">
+
+			    <input type="hidden" name="cpp_header_image" value="http://www.openworm.org/img/OpenWormLogoS.png">
+			    <input type="hidden" name="cmd" value="_donations">
+			    <input id="amountSent" type="hidden" name="amount" value="50">
+			    <input type="submit" class="btn btn-danger btn-xlarge" name="submit" value="Donate now">
+			    <input type="hidden" name="business" value="neurolinxorg@gmail.com">
+			    <input type="hidden" name="item_name" value="OpenWorm donation">
+			    <input type="hidden" name="currency_code" value="USD">
+			    <input type="hidden" name="tax" value="0">
+			</form>
+
+
+			<!--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AG2392TAHLFHQ" target="_blank" class="btn btn-success btn-xlarge">Donate now</a>-->
+			<br/><br/>
+			<p class="lead">
+			    All our donations go through PayPal to the Non-Profit <strong><a href="http://neurolinx.org" target="_blank">Neurolinx Research Institute</a></strong>.
+			    <br/>
+			    Your contribution is tax-deductible to the extent allowed by law.
+			    <br/>
+			    No goods or services were provided in exchange for your financial contribution.
+			    <br/>
+			    Donations will be used to continue making OpenWorm possible, <strong>thank you!</strong>
+			</p>
+		    </p>
+
+		    <h1 class="donate">It matters.</h1>
+		    <div class="pagination-centered">
+			<i class="fa fa-heart-o fa-xxl donate"></i>
+		    </div>
+
+
+
+		    <p class="marketing-byline">
+			Rigorous predictive models are the cornerstone of science and engineering. Predictive models took us to the <strong>moon</strong>.
+
+			Unfortunately, today, there are no comprehensive predictive models of living cells and tissues. Consequently, the entire field of biology and medicine is in a kind of <strong>pre-mathematical</strong> era.
+
+			A <strong>revolution</strong> in the biosciences driven by simulation-based research, using predictive models running on high performance computing architectures with flexible user interfaces, is now possible.
+
+			What we are building with OpenWorm will enable <strong>unprecedented</strong> in silico experiments to power the next generation of advanced computational drug discovery and dynamic disease modeling.
+		    </p>
+
+		    <hr class="soften">
+
+		    <h1>How will the money be spent?</h1>
+		    <div class="pagination-centered">
+			<i class="fa fa-money fa-xxl"></i>
+		    </div>
+		    <p class="marketing-byline">
+			All the scientists and engineers that contribute to OpenWorm are volunteering their time and have daily jobs that pay their bills. We do it because we believe in what we are doing.
+
+			However every <strong>donation</strong> small or large, would help us to reach these targets:
+		    </p>
+		    <div class="row-fluid">
+			<div class="span4">
+			    <i class="fa fa-plane fa-xl"></i>
+			    <h2>$15,000</h2>
+			    <p>
+				Organize an OpenWorm conference. As of yet, we have never all been in the same room at the same time.  This would give our distributed team the possibility to meet in person, boosting productivity and coordination.
+			    </p>
+			</div>
+			<div class="span4">
+			    <i class="fa fa-group fa-xl"></i>
+			    <h2>$40,000</h2>
+			    <p>
+				Pay a PhD student or a Junior developer to work full-time on our team for one year. This would help us to coordinate our activities and contribute to the development of our many projects.
+			    </p>
+			</div>
+			<div class="span4">
+			    <i class="fa fa-flask fa-xl"></i>
+			    <h2>$100,000</h2>
+			    <p>
+				Fund a research project in collaboration with a university to fill in gaps of biological data that are essential to reach our goal.
+			    </p>
+			</div>
+		    </div>
+
+		</div>
+	    </div>
+	</div>
+	<!-- end pjax-content -->
+
+	<!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES
+
+	     footer
+	     ================================================== -->
+	<div id="foot-nav"></div>
+	<!-- foot-nav is filled with script in head -->
+
+	<!-- Le javascript
+	     ================================================== -->
+	<!-- at end of the document so the pages load faster -->
+
+	<!-- load other resources asynchronously: -->
+	<script src="js/bootstrap.js" async></script>
+	<script src="js/jquery.parss.uncompressed.js" async></script>
+	<script src="http://platform.twitter.com/widgets.js" async></script>
+
+	<!-- execute main (initialize resources above + carousel/donate controls -->
+	<script src="js/jquery.pjax.js"></script>
+	<script src="js/main.js" defer></script>
+
+    </body>
+
+</html>

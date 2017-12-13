@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Repositories</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="List of OpenWorm repositories and useful information">
+		<meta name="author" content="giovanni@openrowm.org">
+
+		<!-- Le styles -->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<style>
+			body {
+				padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+			}
+		</style>
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/docs.css" rel="stylesheet">
+
+		<!-- CDN jsGrid styles -->
+		<link type="text/css" rel="stylesheet" href="http://js-grid.com/css/jsgrid.min.css" />
+		<link type="text/css" rel="stylesheet" href="http://js-grid.com/css/jsgrid-theme.min.css" />
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	</head>
+
+	<body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
+						<span class="fa fa-bar"></span>
+					</button>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li>
+								<a href="./index.html">Home</a>
+							</li>
+							<li>
+								<a href="./getting_started.html">Get Started</a>
+							</li>
+							<li>
+								<a href="./get_involved.html">Get Involved</a>
+							</li>
+							<li>
+								<a href="./downloads.html">Downloads</a>
+							</li>
+							<li>
+								<a href="./supporters.html">Supporters</a>
+							</li>
+							<li>
+								<a href="./media.html">Media</a>
+							</li>
+							<li>
+								<a href="./science.html">Science</a>
+							</li>
+							<li>
+								<a class="donatecolor" href="./donate.html">Donate</a>
+							</li>
+						</ul>
+						<ul class="nav pull-right">
+							<li><a class="fa fa-github fa-15x" href="http://docs.openworm.org/en/0.9/Community/github/" target="_blank"></a>
+							<li><a  class="minilogo" rel="tooltip" data-placement="right" data-original-title='"You have made your way from worm to man, and much in you is still worm" - F.Nietzsche' ></a><li>
+        					<li><a href="http://browser.openworm.org" target="wormbrowser"> Explore the Worm</a></li>
+      					</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+
+		<header class="jumbotron subhead" id="overview">
+			<div class="container">
+				<h1>Repositories</h1>
+				<p class="lead">
+					Here's a list of top level view of OpenWorm repositories outlining useful metadata for each and I/O relationships among them.
+				</p>
+			</div>
+		</header>
+
+		<!-- Automatic Bootstrap Tabbing 
+		     (Doesn't work - clicking on tab pills doesn't change the tab pane)  
+		<div class="container">
+		  <ul class="nav nav-pills" id="view-choice">
+		    <li class="active"><a data-toggle="pill" href="#view1">View 1</a></li>
+		    <li><a data-toggle="pill" href="#view2">View 2</a></li>
+		  </ul>
+		  <div class="tab-content">
+		    <div class="tab-pane fade in active" id="view1">
+		      <p>Grid Test 1</p>
+		    </div>
+		    <div class="tab-pane fade" id="view2">
+		      <p>Grid Test 2</p>
+		    </div>
+		  </div>
+		</div>
+		  -->
+
+		<!-- Manual Tabbing -->
+		<div class="container">
+		  <ul class="nav nav-pills" id="view-choice">
+		    <li class="active"><a onclick="activateGrid()" href="#">Grid View</a></li>
+		    <li><a onclick="activateTab()" href="#">Tabbed View</a></li>
+		  </ul>
+
+		  <div id="grid-view-master">
+		    <div id="jsGrid"></div>
+		  </div>
+
+		  <div id="tab-view-master">
+		    <div class="row-fluid">
+		      <div class="span12">
+			<ul id="tabber" class="nav nav-tabs">
+			</ul>
+			<div id="content" class="tab-content" style="margin-top: 25px;">
+			</div>
+			<div id='spinner-container' style="text-align: center; margin: 100px 0px 100px 0px;">
+			  <i id='spinner' class="fa fa-gear fa-spin" style="font-size: 60px"></i>
+			</div>
+		      </div>
+		    </div>
+		  </div>
+
+		</div>
+	
+		<!-- Footer ================================================== -->
+		<footer class="footer" style="margin-top: 25px;">
+			<div class="container">
+				<ul class="footer-links">
+					<li>
+						<a href="http://blog.openworm.org">Blog</a>
+					</li>
+					<li class="muted">
+						&middot;
+					</li>
+					<li>
+						<a href="./about.html">About</a>
+					</li>
+					<li class="muted">
+					&middot;
+				    </li>
+				    <li>
+					<a href="http://docs.openworm.org/en/0.9/faq/" target="_blank">FAQ</a>
+				    </li>
+					<li class="muted">
+						&middot;
+					</li>
+					<li>
+						<a href="./people.html">People</a>
+					</li>
+					<li class="muted">
+						&middot;
+					</li><li>
+						<a href="./events.html">Events</a>
+					</li>
+
+					<li class="muted">
+						&middot;
+					</li><li>
+						<a href="./media.html">Media</a>
+					</li>
+
+					<li class="muted">
+						&middot;
+					</li>
+
+					<li>
+						<a href="http://docs.openworm.org/en/0.9/projects/" target="_blank">Projects</a>
+					</li>
+
+					<li class="muted">
+						&middot;
+					</li>
+					<li>
+						<a href="./publications.html">Publications</a>
+					</li>
+					<li class="muted">
+						&middot;
+					</li>
+					<li>
+						<a href="https://github.com/openworm/OpenWorm/milestones" target="_blank">Milestones & Issues</a>
+					</li>
+					<li class="muted">
+						&middot;
+					</li>
+					<li>
+						<a href="http://docs.openworm.org/en/0.9/modeling/" target="_blank">Roadmap</a>
+					</li>
+					<li class="muted">
+						&middot;
+					</li>
+					<li>
+						<a href="./contacts.html">Contacts</a>
+					</li>
+				</ul>
+        <p class="pull-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>
+            © 2011-2017 OpenWorm - All rights reserved.
+        </p>
+        <p>
+            OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank" href="/assets/OpenWormFoundationIncorporationCertificate.pdf">#5787527</a>, incorporated in July 2015.
+        </p>
+        <p>
+          Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+        </p>
+        <p>
+            <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome by Dave Gandy</a>
+        </p>
+			</div>
+		</footer>
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/yaml.js"></script>
+		<script type="text/javascript" src="js/repositories.js"></script>
+		<script type="text/javascript" src="js/cwl-hierarchy.js"></script>
+		<script type="text/javascript" src="js/cwlpager.js"></script>
+
+		<!-- CDN jsGrid scripts --> 
+		<script type="text/javascript" src="http://js-grid.com/js/jsgrid.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery.parss.uncompressed.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29668455-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>

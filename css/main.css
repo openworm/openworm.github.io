@@ -1,0 +1,877 @@
+#head-nav {
+    background-color: black;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#wormsim_logo {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    background-image: url("../img/wormsim-logo.png");
+    width: 241px;
+    height: 80px;
+}
+.no-a-effect{
+    font: inherit;
+    color: inherit;
+}
+.no-a-effect:hover{
+    color: inherit;
+    text-decoration: none;
+}
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    #wormsim_logo {
+	background-image: url("../img/wormsim-logo@2x.png");
+	background-size: 241px 80px;
+    }
+}
+
+#sibernetic_logo {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    background-image: url("../img/sibernetic.png");
+    width: 320px;
+    height: 50px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    #sibernetic_logo {
+	background-image: url("../img/sibernetic@2x.png");
+	background-size: 320px 50px;
+    }
+}
+
+#geppetto_logo {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    background-image: url("../img/glogo.png");
+    width: 300px;
+    height: 76px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    #geppetto_logo {
+	background-image: url("../img/glogo@2x.png");
+	background-size: 300px 76px;
+    }
+}
+#hero .lead {
+    color: white;
+    font-size: 2.5em;
+    line-height: 1.3em;
+}
+
+#cboxLoadedContent{
+    background-image: url("../img/kickstarter.png");
+    width: 800px;
+    height: 586px;
+    cursor:pointer;
+}
+.role{
+    font-size:20px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    #cboxLoadedContent {
+	background-image: url("../img/kickstarter@2x.png");
+	background-size: 800px 586px;
+	background-repeat:repeat;
+	cursor:pointer;
+    }
+}
+
+#openworm_logo {
+    margin: 0 auto;
+    background-image: url("../img/OpenWormLogo.png");
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+#orionlogo{
+    background-image: url("../img/OrionLogo.png");
+    width: 200px;
+    height: 51px;
+    margin: 0 auto;
+    cursor:pointer;
+    margin-top:25px;
+}
+
+#sflclogo{
+    background-image: url("../img/sflc.png");
+    width: 260px;
+    height: 46px;
+    margin: 0 auto;
+    cursor:pointer;
+    margin-top:25px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    #orionlogo {
+	background-image: url("../img/OrionLogo@2x.png");
+	background-size: 200px 51px;
+
+    }
+}
+
+
+#metacelllogo{
+    background-image: url("../img/MetaCellLogo.png");
+    width: 156px;
+    height: 100px;
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    #metacelllogo {
+	background-image: url("../img/MetaCellLogo@2x.png");
+	background-size: 156px 100px;
+    }
+}
+
+#neurolinxlogo{
+    background-image: url("../img/NeuroLinxLogo.png");
+    width: 212px;
+    height: 65px;
+    margin: 0 auto;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    #neurolinxlogo {
+	background-image: url("../img/NeuroLinxLogo@2x.png");
+	background-size: 212px 65px;
+    }
+}
+
+#awslogo{
+    background-image: url("../img/awslogo.jpg");
+    width: 200px;
+    height: 81px;
+    margin: 0 auto;
+    cursor:pointer;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    #awslogo {
+	background-image: url("../img/awslogo@2x.jpg");
+	background-size: 200px 81px;
+    }
+}
+
+#osblogo {
+    background-image: url("../img/osblogo.png");
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: bottom;
+}
+
+#incflogo {
+    background-image: url("../img/incf.svg");
+    display: inline-block;
+    width: 113px;
+    height: 52px;
+    vertical-align: bottom;
+    horizontal-align: right;
+}
+
+#gsoclogo {
+    background-image: url("../img/GSoC-logo.png");
+    display: inline-block;
+    width: 540px;
+    height: 57px;
+    vertical-align: bottom;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #osblogo {
+	background-image: url("../img/osblogo2x.png");
+	display: inline-block;
+	background-size: 50px 50px;
+	vertical-align: bottom;
+    }
+}
+
+#biorad {
+    background-image: url("../img/bio-rad.png");
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #biorad {
+	background-image: url("../img/bio-rad2x.png");
+	background-size: 150px 40px;
+	margin: 0 auto;
+	cursor: pointer;
+    }
+}
+
+#meetup {
+    background-image: url("../img/meetup.png");
+    width: 560px;
+    height: 184px;
+    margin: 0 auto;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #meetup {
+	background-image: url("../img/meetup2x.png");
+	background-size: 560px 184px;
+	margin: 0 auto;
+	margin-top: 50px;
+	cursor: pointer;
+    }
+}
+
+
+#bbc {
+    background-image: url("../img/bbc.png");
+    width: 221px;
+    height: 163px;
+    margin: 0 auto;
+    margin-right: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #bbc {
+	background-image: url("../img/bbc2x.png");
+	background-size: 221px 163px;
+	margin: 0 auto;
+	margin-right: 20px;
+	cursor: pointer;
+	float: left;
+    }
+}
+
+#tedx {
+    background-image: url("../img/tedx.jpg");
+    width: 213px;
+    height: 70px;
+    margin: 0 auto;
+    /*filter: grayscale(100%);*/
+}
+#tedx:hover {
+    /*filter: grayscale(0%);*/
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #tedx {
+	background-image: url("../img/tedx@2x.jpg");
+	background-size: 213px 70px;
+	margin: 0 auto;
+	/*filter: grayscale(100%);*/
+    }
+    #tedx:hover {
+	/*filter: grayscale(0%);*/
+    }
+}
+
+#economist {
+    background-image: url("../img/economist.png");
+    width: 157px;
+    height: 80px;
+    margin-top: 60px;
+    margin-left: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #economist {
+	background-image: url("../img/economist@2x.png");
+	background-size: 157px 80px;
+	margin-top: 60px;
+	margin-left: 20px;
+	cursor: pointer;
+	float: left;
+    }
+}
+
+#atlantic {
+    background-image: url("../img/theatlantic.png");
+    width: 236px;
+    height: 163px;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+
+
+#nbc {
+    background-image: url("../img/nbc.png");
+    width: 170px;
+    height: 163px;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+#tedxb {
+    background-image: url("../img/tedxb.png");
+    width: 170px;
+    height: 163px;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+#tedxv {
+    background-image: url("../img/tedxv.png");
+    width: 170px;
+    height: 163px;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+.ted {
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(230, 43, 30);
+    letter-spacing: 0;
+    /*font-kerning: auto;*/
+    font-weight: 800;
+}
+
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #nbc {
+	background-image: url("../img/nbc2x.png");
+	background-size: 170px 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+    }
+}
+
+#telegraph {
+    background-image: url("../img/telegraph.png");
+    width: 163px;
+    height: 163px;
+    margin: 0 auto;
+    margin-left: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #telegraph {
+	background-image: url("../img/telegraph2x.png");
+	background-size: 163px 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-left: 22px;
+	margin-right: 20px;
+	float: left;
+    }
+}
+
+#engadget {
+    background-image: url("../img/engadget.png");
+    width: 269px;
+    height: 163px;
+    margin: 0 auto;
+    margin-left: 22px;
+    margin-right: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #engadget {
+	background-image: url("../img/engadget2x.png");
+	background-size: 269px 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-left: 22px;
+	margin-right: 20px;
+	float: left;
+    }
+}
+
+#wired {
+    background-image: url("../img/wired.png");
+    width: 289px;
+    height: 163px;
+    margin: 0 auto;
+    margin-left: -22px;
+    margin-right: 20px;
+    cursor: pointer;
+    float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #wired {
+	background-image: url("../img/wired2x.png");
+	background-size: 289px 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	margin-left: -22px;
+	margin-right: 20px;
+	float: left;
+    }
+}
+.clear {
+    clear: both;
+}
+#boingboing {
+    background-image: url("../img/boingboing.png");
+    width: 190px;
+    height: 163px;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #boingboing {
+	background-image: url("../img/boingboing2x.png");
+	background-size: 190px 163px;
+	margin: 0 auto;
+	cursor: pointer;
+	float: left;
+    }
+}
+
+#geeks {
+    color: white;
+}
+#geeks strong {
+    font-size: 22px;
+}
+
+
+
+#tip {
+    background-image: url("../img/tip.png");
+    position: absolute;
+    right: 50px;
+    left: auto;
+    top: 115px;
+    width: 61px;
+    height: 195px;
+    z-index: 0;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    #tip {
+	background-image: url("../img/tip2x.png");
+	display: inline-block;
+	background-size: 61px 195px;
+	position: absolute;
+	right: 50px;
+	left: auto;
+	top: 115px;
+	z-index: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #tip {
+	display: none;
+    }
+    #meetup {
+	display: none;
+    }
+    #geeks{
+	display: none;
+    }
+
+}
+
+.carousel-control:hover {
+    z-index: 10;
+}
+
+#octocat {
+    margin: 0 auto;
+    background-image: url("../img/octocat.png");
+    width: 256px;
+    height: 256px;
+}
+.openworm_logo_header {
+    float: left;
+    background-image: url("../img/OpenWormLogoM.png");
+    width: 120px;
+    height: 120px;
+    margin-right: 50px;
+}
+
+.fb-like {
+    margin-right: 20px;
+}
+
+.fa-15x {
+    font-size: 1.5em;
+}
+.fa-m {
+    font-size: 30pt;
+}
+.fa-l {
+    font-size: 40pt;
+}
+.fa-xl {
+    font-size: 100pt;
+}
+.fa-xxl {
+    font-size: 150pt;
+}
+.centered {
+    text-align: center;
+}
+
+.donate {
+    color: #DD1144;
+}
+
+.donatecolor {
+    color: #DD1144 !important;
+}
+.donatecolor:hover {
+    color: white !important;
+}
+
+#iphone {
+    font-size: 18px;
+}
+
+#mainphone {
+    line-height: 14px !important;
+}
+.minilogo {
+    background-image: url("../img/miniworm.png");
+    width: 80px;
+    height: 27px;
+    display: block;
+    padding: 0px !important;
+    margin-top: 5px !important;
+}
+.minilogo:hover {
+    background-image: url("../img/miniworm_hover.png");
+}
+.tooltip-inner {
+    max-width: 400px;
+    margin-top: 100px;
+    margin-left: -100px;
+}
+
+.btn.btn-success{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#556015+0,75890c+100 */
+    background: #556015; /* Old browsers */
+    background: -moz-linear-gradient(top,  #556015 0%, #75890c 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #556015 0%,#75890c 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #556015 0%,#75890c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#556015', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
+}
+
+.btn.btn-success:hover{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7b891e+0,a0ba10+100 */
+    background: #7b891e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #7b891e 0%, #a0ba10 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #7b891e 0%,#a0ba10 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #7b891e 0%,#a0ba10 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7b891e', endColorstr='#a0ba10',GradientType=0 ); /* IE6-9 */
+
+}
+
+#otherAmount{
+    border-radius: 0px;
+    height: 34px;
+    margin-top: 10px;
+}
+
+
+
+#otherAmount.active{
+    background-color:#bd362f;
+    color:white;
+    text-shadow:none;
+}
+
+.btn.active{
+    background-color:#bd362f;
+    color:white;
+    text-shadow:none;
+}
+.btn-xlarge {
+    padding: 21px 39px;
+    font-size: 30.5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+dt {
+    margin: 20px 0 10px;
+    font-size: 26px;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #5a5a5a;
+}
+dd {
+    margin-left: 0px;
+    margin: 0px 0 10px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #5a5a5a;
+}
+
+.hero {
+    margin-left: 10px;
+}
+
+.authors {
+    font-size: 10px !important;
+}
+
+.science
+{
+    background: #258dc8!important; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #258dc8 0%, #258dc8 100%)!important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#258dc8), color-stop(100%,#258dc8))!important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #258dc8 0%,#258dc8 100%)!important; /* IE10+ */
+    background: linear-gradient(135deg,  #258dc8 0%,#258dc8 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=1 )!important; /* IE6-9 fallback on horizontal gradient */
+}
+
+/* people page specific
+  --------------------------------------------------- */
+.people-card {
+
+}
+
+.people-card img {
+    height: 150px;
+    width: 150px;
+}
+
+.people-card h2 {
+    font-size: 21px;
+}
+
+#senior-contributor .row-fluid {
+    padding-bottom: 5%;
+}
+
+.people-card img {
+    height: 150px;
+    width: 150px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.2s ease-out;
+}
+
+.people-card:hover img {
+    transform: scale(1.05, 1.05);
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.fa-linkedin-square:hover {
+    color: #0077B5;
+}
+
+.social {
+    transition: 0.3s all ease-out;
+    padding: 1%;
+}
+
+.fa-twitter-square:hover {
+    color: #0084b4;
+}
+
+.fa-link:hover {
+    color: #75890c;
+}
+
+.fa-envelope:hover {
+    color: #D84B37;
+}
+
+.fa-wikipedia-w:hover {
+    color: #000;
+}
+
+.fa-github-square:hover {
+    color: #333;
+}
+
+
+
+/* Footer
+   -------------------------------------------------- */
+
+.footer {
+    padding: 70px 0;
+    margin-top: 70px;
+    border-top: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+.footer p {
+    margin-bottom: 0;
+    color: #777;
+}
+.footer-links {
+    margin: 10px 0;
+}
+.footer-links li {
+    display: inline;
+    padding: 0 2px;
+}
+.footer-links li:first-child {
+    padding-left: 0;
+}
+
+/* style news feed items */
+.parss-title a {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.parss-title a:hover {
+    text-decoration: none;
+}
+
+.parss-date {
+
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.parss-title, .parss-date, .parss-description {
+    display: block;
+    clear: both;
+    text-align: left;
+}
+
+.parss-image {
+    display: none;
+}
+#news-feed {
+    list-style-type: none;
+}
+#news-feed li {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/*CAROUSEL*/
+/* Carousel base class */
+.carousel {
+    margin-bottom: 0;
+}
+
+.carousel .container {
+    position: relative;
+    z-index: 9;
+}
+
+.carousel-control {
+    height: 80px;
+    margin-top: 0;
+    font-size: 120px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    background-color: transparent;
+    border: 0;
+}
+
+.carousel .item {
+    height: 480px;
+}
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 480px;
+}
+
+.carousel-caption {
+    background-color: transparent;
+    position: static;
+    max-width: 550px;
+    padding: 0 20px;
+    margin-top: 200px;
+}
+.carousel-caption h1, .carousel-caption .lead {
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/* spacers and clearer divs
+   -------------------------------------------------- */
+
+.short-spacer {
+    height: 3px;
+}
+
+.mid-spacer {
+    height: 5px;
+}
+
+.large-spacer {
+    height: 20px;
+}
+
+.clearer {
+    clear: both;
+}
