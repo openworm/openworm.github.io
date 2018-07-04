@@ -19,7 +19,7 @@ var urls = [
     "https://cdn.rawgit.com/openworm/sibernetic_config_gen/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/sibernetic_NEURON/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/skeletonExtraction/master/.openworm.yml",
-    "https://cdn.rawgit.com/openworm/WormWorx/master/.openworm.yml",
+    //"https://cdn.rawgit.com/openworm/WormWorx/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/Blender2NeuroML/master/.openworm.yml",
     "https://cdn.rawgit.com/openworm/CyberElegans/master/.openworm.yml"
 ];
