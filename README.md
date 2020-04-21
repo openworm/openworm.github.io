@@ -9,12 +9,10 @@ Runs as a google app engine application, but can serve up simple content via a P
 
 For Python 2.x use: 
 
-    cd war
     python -m SimpleHTTPServer
 
 For Python 3.x use:
 
-    cd war
     python -m http.server
 
 Point your browser at: http://127.0.0.1:8000/
