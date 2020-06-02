@@ -1,15 +1,12 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
-@import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
-body {
-    padding: 60px 0px;
-    background-color: rgb(220, 220, 220);
-}
 
 .event-list {
     list-style: none;
     font-family: 'Lato', sans-serif;
     margin: 0px;
     padding: 0px;
+    width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
 .event-list > li {
     background-color: rgb(255, 255, 255);
@@ -23,7 +20,7 @@ body {
     width: 100%;
     color: rgb(255, 255, 255);
     background-color: rgb(197, 44, 102);
-    padding: 5px;
+    padding: 2px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -32,24 +29,31 @@ body {
 }
 .event-list > li > time > span {
     display: none;
+    padding-top: 5px;
 }
 .event-list > li > time > .day {
     display: block;
-    font-size: 56pt;
+    font-size: 24pt;
     font-weight: 100;
     line-height: 1;
 }
 .event-list > li time > .month {
     display: block;
+    font-size: 28pt;
+    font-weight: 700;
+    line-height: 1;
+}
+.event-list > li > time > .year {
+    display: block;
     font-size: 24pt;
-    font-weight: 900;
+    font-weight: 100;
     line-height: 1;
 }
 .event-list > li > img {
     width: 100%;
 }
 .event-list > li > .info {
-    padding-top: 5px;
+    padding-top: 0px;
     text-align: center;
 }
 .event-list > li > .info > .title {
@@ -168,24 +172,5 @@ body {
         position: absolute;
         left: 0px;
         bottom: 0px;
-    }
-    .event-list > li > .social {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        display: block;
-        width: 40px;
-    }
-    .event-list > li > .social > ul {
-        border-left: 1px solid rgb(230, 230, 230);
-    }
-    .event-list > li > .social > ul > li {			
-        display: block;
-        padding: 0px;
-    }
-    .event-list > li > .social > ul > li > a {
-        display: block;
-        width: 40px;
-        padding: 10px 0px 9px;
     }
 }
