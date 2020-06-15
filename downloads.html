@@ -47,88 +47,142 @@
 	<div id="pjax-content">
 	    <!-- END REPEAT-->
 
-	    <header class="jumbotron subhead" id="overview">
-		<div class="container">
-		    <!--<div class="openworm_logo_header"></div>-->
-		    <h1>Downloads</h1>
-		    <p class="lead">
-			This is the place to grab some of the outputs of the OpenWorm project, plus resources and demos.
-		    </p>
-		</div>
-	    </header>
+        <header class="jumbotron subhead" id="overview">
+            <div class="container">
+                <!--<div class="openworm_logo_header"></div>-->
+                <h1>Downloads</h1>
+                <p class="lead">
+                    This is the place to grab some of the outputs of the OpenWorm project, plus resources and demos.
+                </p>
+            </div>
+        </header>
 
-	    <div class="container">
+        <div class="container">
 
-		<div class="row">
-		    <div class="span3 bs-docs-sidebar">
-			<ul class="nav nav-list bs-docs-sidenav">
-			    <li>
-				<a href="#coder"><i class="fa fa-chevron-right"></i>For coders</a>
-			    </li>
-			    <li>
-				<a href="#scientist"><i class="fa fa-chevron-right"></i>For scientists</a>
-			    </li>
-			</ul>
-		    </div>
-		    <div class="span9">
-			<br/><br/>
-			<div class="alert">
-			    <button type="button" class="close" data-dismiss="alert">&times;</button>
-			    <strong>Warning:</strong> You can't download the whole virtual worm, we're not quite there yet! :)
-			</div>
-			<!-- Coder ================================================== -->
-			<section id="coder">
-			    <div class="page-header">
-				<h1>For coders</h1>
-			    </div>
-			    <div class="pagination-centered">
-				<i class="fa fa-github-alt fa-xl"></i>
-				<br/><br/><br/>
-			    </div>
-			    <div class="row-fluid pagination-centered">
+            <div class="row">
+                <div class="span3 bs-docs-sidebar">
+                    <ul class="nav nav-list bs-docs-sidenav">
+                        <li>
+                            <a href="#docker"><i class="fa fa-chevron-right"></i>Docker</a>
+                        </li>
+                        <li>
+                            <a href="#coder"><i class="fa fa-chevron-right"></i>For coders</a>
+                        </li>
+                        <li>
+                            <a href="#scientist"><i class="fa fa-chevron-right"></i>For scientists</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="span9">
+                    <br/><br/>
+                    <div class="alert">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Warning:</strong> You can't download the whole virtual worm, we're not quite there yet! :)
+                    </div>
 
-				<p class="lead span6">
-				    We packaged <strong>Eclipse distributions</strong> for the different operating systems, ready with all the plugins necessary to start working on Geppetto, our simulation engine.
-				    <br/><br/><a class="btn btn-primary btn-large" href="http://blog.openworm.org/post/31859097261/openworm-eclipse-distributions-released" target="_blank">Eclipse Distributions</a>
-				</p>
-				<p class="lead span6">
-				    Geppetto's <strong>alpha release</strong> is now available, see release notes <a href="https://github.com/openworm/org.geppetto/releases" target="_blank">here</a>.  Here's <a href="https://github.com/openworm/OpenWorm/wiki/Geppetto---Install-instructions" target="_blank">instructions</a>.
-				    <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/org.geppetto/releases" target="_blank">Geppetto alpha release</a>
-				</p>
-			    </div>
-			</section>
-			<!-- Scientist ================================================== -->
-			<section id="scientist">
-			    <div class="page-header">
-				<h1>For scientists</h1>
-			    </div>
-			    <div class="pagination-centered">
-				<i class="fa fa-beaker fa-xl"></i>
-			    </div>
+                    <!-- Docker ================================================== -->
+                    <section id="docker">
+                        <div class="page-header">
+                            <h1>Docker simulation stack</h1>
+                        </div>
 
-			    <div class="row-fluid pagination-centered">
-				<p class="lead span6" href="">
-				    We have captured the full 3D morphology of the C. elegans <b>connectome</b> in NeuroML format, and we are currently working to integrate electro-physiology.
-				    <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/CElegansNeuroML/archive/SNAPSHOT_030213.zip" target="_blank">NeuroML Connectome</a>
-				</p>
-				<p class="lead span6">
-				    We have imported the NeuroML connectome model for C. elegans into a <a href="http://www.neuroconstruct.org">neuroConstruct</a> project. Here's a <a href="https://github.com/openworm/OpenWorm/wiki/Running-the-C.-elegans-model-in-neuroConstruct">guide to getting started</a> with it.
-				    <br/><br/><a class="btn btn-primary btn-large" href="https://www.dropbox.com/s/xdu1bh5sq2x1nx6/CElegansNeuroConstructBundle-snapshot-20140107.zip" target="_blank">neuroConstruct project</a>
-				</p>
-			    </div>
-			    <div class="row-fluid pagination-centered">
-				<p class="lead span6">
-				    We have optimized electro-physiology for a specific C. elegans muscle cell (we plan on doing this on the rest of the cells too) in NeuroML format.
-				    <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/muscle_model/archive/SNAPSHOT_030213.zip" target="_blank">NeuroML Muscle cell</a>
-				</p>
-				<p class="lead span6">
-				    We are maintaining an online folder with data spreadsheets and information, including lists of all C. elegans neurons. Anything to add? Give us a <a href="contacts.html">shout</a>!
-				    <br/><br/><a class="btn btn-primary btn-large" href="https://docs.google.com/folder/d/0B_t3mQaA-HaMejlrMmpnR2VjN0U/edit?usp=sharing" target="_blank">Data folder</a>
-				</p>
-			    </div>
-			</section>
-		    </div>
-		</div>
+
+                        <div class="pagination-centered">
+
+                            <p class="lead">
+                                We have created a <strong>Docker container</strong> which contains all of the major components of the <a href="http://docs.openworm.org/en/latest/projects/" target="_blank">simulation stack</a> we have built so far. It can be used to run a <strong>preliminary model</strong> of the worm in 3D on your computer.
+                                <br/>
+                            </p>
+                            <br/>
+                            <img src="https://raw.githubusercontent.com/openworm/OpenWorm/master/img/worm-crawling.gif"></img> 
+                            <br/>
+                            <br/>
+                            <a class="btn btn-primary btn-large" href="https://github.com/openworm/OpenWorm/blob/master/README.md#quickstart" target="_blank">OpenWorm Docker</a>
+
+                        </div>
+
+                        <div class="row-fluid pagination-centered">&nbsp;
+                        </div>
+                    </section>
+
+                    <!-- Coder ================================================== -->
+                    <section id="coder">
+                        <div class="page-header">
+                            <h1>For coders</h1>
+                        </div>
+
+                        <div class="pagination-centered">
+                            <i class="fa fa-github-alt fa-xl"></i>
+                            <br/><br/><br/>
+                        </div>
+                        <div class="row-fluid pagination-centered">
+
+
+                            <p class="lead span6">
+                                <strong>Geppetto</strong> is a web-based platform for visualizing and simulating data and models. It started in the OpenWorm project and is being used for a number of other projects across neuroscience.
+                                <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/org.geppetto/releases" target="_blank">Geppetto releases</a>
+                            </p>
+
+                            <p class="lead span6">
+                                The 3D worm body model in OpenWorm is being developed in <strong>Sibernetic</strong>. you can download this application and run the particle hydrodynamics simulations on your own machine. 
+                                <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/sibernetic" target="_blank">Get Sibernetic</a>
+                            </p>
+
+
+                        </div>
+                        <br/>
+                        <div class="row-fluid pagination-centered">
+
+                            <p class="lead span6">
+                                We have developed a Python library, <strong>owmeta</strong>, which gives easy programmatic access to a wide range of anatomical and physiological data about <i>C. elegans</i>.
+                                <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/owmeta" target="_blank">Download owmeta</a>
+                            </p>
+
+                            <p class="lead span6">
+                                The <strong>c302</strong> framework allows network models of the <i>C. elegans</i> nervous system to be generated at various levels of detail to simulate the activity of the brain of the worm.
+                                <br/><br/><a class="btn btn-primary btn-large" href="https://github.com/openworm/c302" target="_blank">Install c302</a>
+                            </p>
+
+
+                        </div>
+
+                        <div class="pagination-centered">
+
+                            <br/>
+                            <p class="lead">
+                                Find out how these and other software packages fit together on our <a href="http://docs.openworm.org/en/latest/projects/" target="_blank">OpenWorm projects page</a>.
+                                <br/>
+                            </p>
+
+                        </div>
+
+
+                    </section>
+
+                    <!-- Scientist ================================================== -->
+                    <section id="scientist">
+                        <div class="page-header">
+                            <h1>For scientists</h1>
+                        </div>
+
+
+
+                        <div class="pagination-centered">
+
+                            <p class="lead">
+                                We have created a number of <strong>scientific resources</strong> aimed at the <i>C. elegans</i> community to assist research into this fascinating organism.
+                                <br/>
+                            </p>
+                            <br/>
+                            <a class="btn btn-primary btn-large" href="science.html" target="_blank">Scientific resources</a>
+
+                        </div>
+
+
+
+                    </section>
+                </div>
+            </div>
 	    </div>
 
 	<!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->
