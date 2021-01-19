@@ -60,8 +60,9 @@
 	<p class="pull-right">
 	    <a href="#">Back to top</a>
 	</p>
+	<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
 	<p>
-	    © 2011-<script>document.getElementById("year").innerHTML = new Date().getFullYear();</script> OpenWorm Foundation - All rights reserved.
+	    © 2011-<span id="year"></span> OpenWorm Foundation - All rights reserved.
 	</p>
 	<p>
 	    OpenWorm Foundation is a Delaware not-for-profit Corporation <a target="_blank"
