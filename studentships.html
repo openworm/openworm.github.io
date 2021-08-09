@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>OpenWorm Studentships</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OpenWorm Studentships">
+
+  <!-- REPLICATE THIS IN ALL PAGES -->
+
+  <!-- Le styles -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/docs.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+  <!-- Fav and touch icons - this code is outdated -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner" id="head-nav">
+    </div>
+  </div>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script>
+    // get head-nav and foot-nav with jquery (get is async)
+    $.get('header-content.html', function(data) {
+      $('#head-nav').html(data);
+    })
+    $.get('footer-content.html', function(data) {
+      $('#foot-nav').html(data);
+    })
+  </script>
+</head>
+
+<body>
+  <div id="pjax-content">
+    <!-- END REPEAT-->
+
+    <header class="jumbotron subhead" id="overview">
+      <div class="container">
+        <!--<div class="openworm_logo_header"></div>-->
+        <h1>OpenWorm Studentships</h1>
+        <p class="lead">
+          Support for <i>C. elegans</i> Ph.D. students and postdocs to get involved with the project
+        </p>
+      </div>
+    </header>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav">
+            <li>
+              <a href="#Background"><i class="fa fa-chevron-right"></i> Background</a>
+            </li>
+            <li>
+              <a href="#Who"><i class="fa fa-chevron-right"></i> Who is this aimed at?</a>
+            </li>
+            <li>
+              <a href="#What"><i class="fa fa-chevron-right"></i> What is required?</a>
+            </li>
+            <li>
+              <a href="#Offer"><i class="fa fa-chevron-right"></i> What are we offering?</a>
+            </li>
+            <li>
+              <a href="#How"><i class="fa fa-chevron-right"></i> How does the application work?</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="span9">
+
+          <section id="Background">
+            <div class="page-header">
+              <h1>Background</h1>
+            </div>
+
+            <p class="lead">We know that there is a huge amount of research which happens which is
+              relevant to the goals of the OpenWorm project, but is not in an immediately usable/compatible format.
+              Many researchers/labs may wish to contribute to the project, but the day to day work of
+              experiments/analysis/publishing take priority.</p>
+
+            <p class="lead"><strong>OpenWorm Studentships</strong> are a new way to incentivize contribution
+              to the project, offering small stipends and recognition to junior researchers who want to spend time bringing their research into the
+              OpenWorm project and making it more accessible for the wider community.</p>
+
+          </section>
+
+          <section id="Who">
+            <div class="page-header">
+              <h1>Who is this aimed at?</h1>
+            </div>
+
+            <p class="lead">Anyone involved in <i>C. elegans</i> research who has (or whose lab has) produced data,
+              models or software, which has been publicly released and which would be useful for the OpenWorm project.</p>
+
+            <p class="lead">While it's not absolutely necessary that the recipient was personally involved in generating the data, there should be
+              some connection to those who produced the data, to ensure that any questions about the data and any clarifying queries are
+              quickly answered during the period of the project. For this reason a PhD student/postdoc in the lab which published the data
+              would be an ideal candidate for this project.</p>
+
+          </section>
+
+          <section id="What">
+            <div class="page-header">
+              <h1>What is required?</h1>
+            </div>
+
+            <p class="lead">The proposed work should focus on translating <b>existing research outputs</b> to a open formats,
+              and integrating them with OpenWorm’s resources/repositories/documentation. It is assumed that the model/application/dataset will already be published
+              (even in preprint form), and the time will be spent in making this as accessible/reusable as possible.</p>
+
+            <p class="lead">The Studentship recipient should outline their plans in the application (see below) and if selected, spend 2-3 months
+              working to incorporate the resources into OpenWorm. They will be assigned a mentor from the project to help ensure the resources are
+              well integrated with our existing online content.
+            </p>
+
+            <p class="lead">Examples of potential activities include:</p>
+
+            <ul>
+              <li class="lead">Converting datasets from original formats (Excel spreadsheets, MAT files) into more open, standardised forms (e.g. NWB), ideally with rich metadata embedded</li>
+              <li class="lead">Creating Jupyter notebooks outlining how to explore/analyse data or models</li>
+              <li class="lead">Adding models/simulation code to GitHub, adding installation/usage documentation, adding continuous integration/testing</li>
+              <li class="lead">Converting models to standardised NeuroML format</li>
+            </ul>
+
+            <p class="lead">While in exceptional cases an applicant could propose to use data that is not yet released, we fully acknowledge the importance of
+              getting peer reviewed publications as part of a PhD/postdoc, and these activities should take priority when deciding how/when data
+              should be released. Given the short timeline for the studentship projects, there is a need to avoid a situation where public release of data
+              by a lab is held up due to publication delays. Therefore it is best if the data is already in the public domain at the time of application.</p>
+
+          </section>
+
+          <section id="Offer">
+            <div class="page-header">
+              <h1>What are we offering?</h1>
+            </div>
+
+            <ul>
+              <li class="lead">A stipend of $500 on successful completion of the project.</li>
+
+              <li class="lead">An opportunity to present your work to the OpenWorm community with an online talk hosted by the project.</li>
+
+              <li class="lead">Listed as a recipient of an OpenWorm Studentship on the OpenWorm website.</li>
+            </ul>
+
+          </section>
+
+          <section id="How">
+            <div class="page-header">
+              <h1>How does the application work?</h1>
+            </div>
+
+            <p class="lead"><b>The applications will be judged based on:</b></p>
+
+            <ol class="lead">
+              <li class="lead">The scientific significance of the original work</li>
+              <li class="lead">How much the proposed work contributes to the overall aims of the OpenWorm project</li>
+              <li class="lead">The student’s plans for making the work more open/accessible</li>
+              <li class="lead">How useful the resource would be for the wider <i>C. elegans</i> research community</li>
+            </ol>
+
+            <p class="lead">Applications for the <strong>2021 Studentship Call</strong> will open soon. There will be 2 studentships on offer in this round. </p>
+            <p class="lead">Apply here: <strong><i>coming soon...</i></strong></p>
+            <p class="lead">Deadline: <strong><i>coming soon...</i></strong></p>
+          </section>
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- end pjax-content -->
+
+    <!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES
+
+	     footer
+	     ================================================== -->
+    <div id="foot-nav"></div>
+    <!-- foot-nav is filled with script in head -->
+
+    <!-- Le javascript
+	     ================================================== -->
+    <!-- at end of the document so the pages load faster -->
+
+    <!-- load other resources asynchronously: -->
+    <script src="js/bootstrap.js" async></script>
+    <script src="js/jquery.parss.uncompressed.js" async></script>
+    <script src="http://platform.twitter.com/widgets.js" async></script>
+
+    <!-- execute main (initialize resources above + carousel/donate controls -->
+    <script src="js/jquery.pjax.js"></script>
+    <script src="js/main.js" defer></script>
+
+</body>
+
+</html>
