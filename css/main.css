@@ -33,6 +33,17 @@
     color: inherit;
     text-decoration: none;
 }
+/****/
+.carousel-inner > .item > img{
+    object-fit: cover;
+}
+.donate_btn{
+    padding: 11px 19px;
+    font-size: 17.5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
@@ -874,4 +885,40 @@ dd {
 
 .clearer {
     clear: both;
+}
+@media (max-width: 979px){
+button.btn.btn-navbar {
+    display: flex;
+    flex-flow: column;
+}
+span.fa.fa-bar {
+    background: white !important;
+    height: 2px;
+    width: 18px;
+    margin-bottom: 1px;
+    margin-top: 2px;
+}
+.jumbotron{
+    margin-top: 0px !important;
+}
+.carousel-control {
+    z-index: 9999;
+}
+}
+@media (max-width: 767px){
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-right: 0px;
+    }  
+    .subhead {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    /* #myCarousel .carousel-caption {
+        margin: 0 auto;
+        text-align: center;
+    } */
+    /* #myCarousel .item{
+        display: flex;
+        align-items: center;
+    } */
 }
