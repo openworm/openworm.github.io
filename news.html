@@ -64,13 +64,93 @@
         <div class="span3 bs-docs-sidebar">
           <ul class="nav nav-list bs-docs-sidenav">
             <li>
+              <a href="#May2024"><i class="fa fa-chevron-right"></i> May 2024</a>
+              <a href="#June2023"><i class="fa fa-chevron-right"></i> June 2023</a>
               <a href="#September2022"><i class="fa fa-chevron-right"></i> September 2022</a>
             </li>
 
 
           </ul>
         </div>
+
         <div class="span9">
+
+          <section id="May2024">
+            <div class="page-header">
+              <h1>May 2024</h1>
+
+              <h3>1) OpenWorm is hiring!</h3>
+
+              <p class="lead">A position for a Research Fellow or Senior Research Fellow at University College London is now open for applications. The successful applicant will contribute to multiple areas of the OpenWorm project, working closely with Padraig Gleeson. See <a href="https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=23333">here</a> for more details.</p>
+
+              <h3>2) OpenWorm interviewed on Data Skeptic Podcast </h3>
+
+              <p class="lead">Stephen Larson, Executive Director of the OpenWorm project, discusses the current state of the project as well as where our quest to develop a biologically realistic digital life form fits into the current landscape of AI. Listen to it <a href="https://open.spotify.com/episode/4ResE1neiUfWOAIlO8FDgF?si=skTgNiBNQTG1htRS6yRl0Q&nd=1&dlsi=fafc66d8b5be4f82">here on Spotify</a>.</p>
+
+              <h3>3) OpenWorm Docker simulation stack updated </h3>
+
+              <p class="lead">A major update to the <a href="https://github.com/openworm/OpenWorm/blob/master/README.md#quickstart">simulation stack</a> of the OpenWorm project was released. This involved updating all core elements (<a href="https://github.com/openworm/c302">c302</a>, <a href="https://github.com/openworm/sibernetic">Sibernetic</a>) in the Dockerfile and enabling <a href="https://github.com/openworm/OpenWorm/actions">automated tests</a> for building the Docker container using Intel and AMD libraries. A big thanks to <a href="https://github.com/austinklein">Austin Klein</a> who completed this work as part of an <a href="studentships.html">OpenWorm Studentship</a>.</p>
+              
+
+              <h3>4) New cell and ion channel models in NeuroML </h3>
+
+              <p class="lead">A key part of the OpenWorm project's work is to incorporate models of neurons which behave like their biological counterparts. The 2019 paper of Nicoletti and colleagues (<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218738">Biophysical modeling of <i>C. elegans</i> neurons: Single ion currents and whole-cell dynamics of AWCon and RMD</a> presents new models of 2 <i>C. elegans</i> neurons with the ionic currents which underlie their electrical activity. These have been converted to <a href="http://www.neuroml.org">NeuroML</a> format for use in OpenWorm. See <a href="https://github.com/openworm/NicolettiEtAl2019_NeuronModels">here</a> for full details.</p>
+
+              <h3>5) DevoWorm updates</h3>
+
+            <p align="center"><img src="https://raw.githubusercontent.com/OREL-group/GSoC/main/Media/DW.png" height="150"/></p>
+
+	    <p class="lead">DevoWorm celebrated its 10th anniversary in April. Bradly Alicea has prepared a <a href="https://www.youtube.com/watch?v=_iQNxCvLAWY&pp=ygUIZGV2b3dvcm0%3D">90-minute video</a> on our progress over the past 10 years: from progress in OpenWorm to progress in computational developmental biology. If you would like to know more, please check out our <a href="https://www.youtube.com/playlist?list=PLJ8ZcBZeKeci2ACwfllCDFn_eZAXlbGQN">weekly meetings on YouTube</a>. </p> 
+
+            <p class="lead">DevoWorm has sponsored two students through the Google Summer of Code program for 2024. Congrats to <a href="https://github.com/Pakhi07">Pakhi Banchalia</a> and <a href="https://github.com/mehular0ra">Mehul Arora</a> for being accepted to work on the Developmental Graph Neural Networks (D-GNNs) project. Pakhi will be working on incorporating Neural Developmental Programs (NDPs) into GNN models. Mehul will be working on hypergraph techniques for developmental lineage trees and embryogenesis. <a href="https://github.com/himanshu-02">Himanshu Chougule</a>, Google Summer of Code scholar for 2023, is a co-mentor for this project. Follow or fork the <a href="https://github.com/devolearn/devograph">DevoGraph repository</a> to contribute or keep up with our progress.</p> 
+
+              
+
+        </div>
+
+          <section id="June2023">
+            <div class="page-header">
+              <h1>June 2023</h1>
+
+              <h3>1) OpenWorm @ <i>C. elegans</i> 2023</h3>
+
+              <p class="lead">The OpenWorm team were present at <a href="https://genetics-gsa.org/celegans2023/">the main <i>C. elegans</i> scientific conference</a> in Glasgow in June 2023.</p>
+
+              <p class="lead">We presented an update on the recent activities in the project (click on the poster below) and connected with a number of groups who are acquiring leading edge experimental data which can be used to help build and constrain our worm models.</p>
+
+              <p align="center"><kbd><a href="/assets/OpenWormPoster_Celegans_Glasgow_2023.pdf">
+                <img src="/assets/OpenWormPoster_C_elegans_Glasgow_2023.png" alt="OpenWormPoster2022" width="250"></a></kbd></p>
+
+              <h3>2) Hodgkin Huxley interactive tutorial</h3>
+
+              <p class="lead">As part of a recent Google Summer of Code project by Rahul Sonkar, an interactive tutorial for the Hodgkin Huxley model of neuronal activity was developed.
+            This <a href="https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/notebooks/Python_HH_version/README.md">Jupyter notebook based tutorial</a> can be used to investigate how ion channel dynamical properties underlie the generation of the action potential in neurons.</p>
+
+            <p align="center"><kbd><a href="https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/notebooks/Python_HH_version/README.md">
+              <img src="/assets/HH_Jupyter.png" alt="HH" width="400"></a></kbd></p>
+              
+              <h3>3) Updated 2D worm body model visualisations</h3>
+              
+              <p class="lead">We have been investigating multiple options for incorporating 2D worm body models into our simulation pipeline to complement the full 3D Sibernetic-based worm body model.</p>
+
+              <p class="lead">Options investigated so far include the model of <a href="https://github.com/openworm/CE_locomotion">Olivares, Izquierdo & Beer</a>, as well as 
+                the <a href="https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation">Boyle, Berri and Cohen</a> model, for which we have added a new Python based visualisation tool:
+
+            <p align="center"><kbd><a href="https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/tree/master/WormSim">
+              <img src="/assets/Replay.gif" alt="Replay"></a></kbd></p>
+
+
+            <h3>4) DevoWorm updates</h3>
+
+            <p align="center"><img src="https://raw.githubusercontent.com/OREL-group/GSoC/main/Media/DW.png" height="150"/></p>
+
+            <p class="lead">DevoWorm has sponsored two projects through the Google Summer of Code program for 2023: maintenance of the DevoLearn software package, and development of work on GNN (Graph neural Networks) and TDA (Topological Data Analysis) applications to biological development. These projects involve the work of GSoC scholars <A HREF="https://github.com/sushmanthreddy">Sushmanth Reddy</A> and <A HREF="https://github.com/himanshu-02">Himanshu Chougule</A>, respectively.</p> 
+              
+            <p class="lead">Members of the DevoWorm group have two recent publications: <A HREF="https://dx.doi.org/10.1098/rsfs.2022.0067">Embodied Cognitive Morphogenesis as a Route to Intelligent Systems</A>, published at <i>Royal Society Interface Focus</i>, and  <A HREF="https://onlinelibrary.wiley.com/doi/10.1002/9781119751939.ch9">The Psychophysical World of the Motile Diatom Bacillaria Paradoxa</A>, published in <i>Mathematical Biology of Diatoms</i>.</p> 
+
+            <p class="lead">In our weekly meetings, we have discussed topics such as early life and the <A HREF="http://syntheticdaisies.blogspot.com/2023/03/ancient-embryogenesis-and-evolutionary.html">origins of embryos</A>, the biophysical and topological underpinnings of phenotypes, current <A HREF="https://www.nature.com/articles/s43586-022-00186-8">organoid</A>, embryoid, and <A HREF="https://www.nature.com/articles/s41592-020-01026-x">assembloid research</A>, and the intersection of microscopy and artificial life. There are collective discussions, as well as presentations on various topics by Bradly Alicea. Our archive of weekly meetings is available on the <A HREF="https://www.youtube.com/watch?v=6vHxIQdBf7I&list=PLJ8ZcBZeKeci2ACwfllCDFn_eZAXlbGQN">DevoWorm YouTube channel.</A></p>
+
+</div>
 
           <section id="September2022">
             <div class="page-header">
@@ -159,7 +239,6 @@ links to NWB Explorer to browse them.</i></p>
 <p class="lead">Our <a href="https://www.youtube.com/playlist?list=PLJ8ZcBZeKeci2ACwfllCDFn_eZAXlbGQN">weekly meetings</a> are a continuing success.
   We cover a number of technical topics and a wide variety of topical reviews spanning biophysics, developmental biology, computational
   analysis, and more. Join us on Mondays at 2pm UTC (1pm UTC in winter) to get involved.</p>
-
 <h3>6) OpenWorm simulation stack updates</h3>
 
 <p align="center"><img src="https://raw.githubusercontent.com/openworm/OpenWorm/master/img/worm-crawling.gif" alt="Worm Crawling" width="550"></p>
@@ -176,21 +255,14 @@ links to NWB Explorer to browse them.</i></p>
 
 <h3>7) Other announcements</h3>
 
-<p align="center"><kbd><a href="https://github.com/openworm/Newsletter/raw/main/docs/OpenWormPoster_C_elegans_meeting_June_2021.pdf">
-  <img src="https://raw.githubusercontent.com/openworm/Newsletter/main/img/OpenWormPoster2022.png" alt="OpenWormPoster2022" width="450"></a></kbd></p>
+<p align="center"><kbd><a href="/assets/OpenWormPoster_C_elegans_meeting_June_2021.pdf">
+  <img src="/assets/OpenWormPoster2022.png" alt="OpenWormPoster2022" width="450"></a></kbd></p>
 
 <p class="lead">A poster presenting the latest status of the OpenWorm project was presented at the
   <a href="https://genetics-gsa.org/celegans-2021/">main global
   conference in the <i>C. elegans</i> field</a> in June 2021. Click on the image above to download the poster.</p>
 
-
-
-
-
-
             </div>
-
-
         </div>
       </div>
     </div>
