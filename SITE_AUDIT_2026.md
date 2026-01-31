@@ -15,6 +15,17 @@ The following issues have been resolved and deployed to production:
 | ✅ Fixed news.html section ID typo | `news.html` (June2024 → June2025) | Merged to master |
 | ✅ Updated HTTP URLs to HTTPS | Multiple files (Twitter, YouTube, CDN, OpenWorm domains) | Merged to master |
 | ✅ Removed WormClassroom link (compromised site) | `science.html` | Merged to master |
+| ✅ Removed 7 dead external resource links | `science.html` | Merged to master |
+| ✅ Updated 20+ HTTP links to HTTPS in science.html | `science.html` | Merged to master |
+
+**Dead links removed from science.html:**
+- RNAiDB (connection failed)
+- PhenoBank (DNS failure)
+- Worm Interactome DB (SSL certificate error)
+- Stanford Microarray Database (officially retired)
+- BC C. elegans GFP Consortium (connection failed)
+- Hope Laboratory Expression Pattern Database (dead)
+- Neuroscience Information Framework (403 forbidden)
 
 **Files modified:**
 - contacts.html, donate.html, downloads.html, educators.html, events.html
@@ -361,7 +372,7 @@ The `/kickstarter/` directory contains archived campaign pages with links to:
 ### Short-term (This Month)
 
 1. **Migrate news source from Tumblr to news.html** - Or revive Tumblr
-2. **Audit and fix broken external links** - Science page especially (WormClassroom removed ✅)
+2. ~~**Audit and fix broken external links**~~ ✅ DONE (Jan 31, 2026) - 7 dead links removed, 20+ updated to HTTPS
 3. **Update Events page** - Add 2022-2026 events or archive
 4. **Update Publications page** - Add recent research
 5. ~~**Remove Google+ code from all files**~~ ✅ DONE (Jan 31, 2026)
