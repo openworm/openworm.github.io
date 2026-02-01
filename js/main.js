@@ -133,6 +133,7 @@ function refreshNews() {
         url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
         method: 'GET',
         dataType: 'json',
+        timeout: 30000,
         success: function(data) {
             var parser = new DOMParser();
             var xml = parser.parseFromString(data.contents, 'text/xml');
@@ -163,6 +164,80 @@ function refreshNews() {
         error: function(err) {
             console.error('Error loading news feed:', err);
             $("#news-feed").html('<li class="muted">Unable to load news feed.</li>');
+        }
+    });
+}
+
+function loadFullNewsFeed() {
+    // Load full news feed with descriptions for news.html page
+    console.log('Loading full news feed...');
+
+    $.ajax({
+        url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
+        method: 'GET',
+        dataType: 'json',
+        timeout: 30000,
+        success: function(data) {
+            console.log('Feed loaded, parsing...');
+
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(data.contents, 'text/xml');
+            var items = xml.querySelectorAll('item');
+
+            console.log('Found ' + items.length + ' items');
+
+            var html = '';
+            var count = 0;
+
+            for (var i = 0; i < items.length && count < 25; i++) {
+                var item = items[i];
+
+                var title = item.querySelector('title').textContent;
+                var link = item.querySelector('link').textContent;
+                var pubDate = new Date(item.querySelector('pubDate').textContent);
+                var dateStr = pubDate.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                var descNode = item.querySelector('description');
+                var description = descNode ? descNode.textContent : '';
+
+                var borderStyle = (count < 24) ? 'border-bottom: 1px solid #eee;' : '';
+
+                html += '<li style="margin-bottom: 30px; padding-bottom: 20px; ' + borderStyle + '">';
+                html += '<h3 style="margin-top: 0;"><a href="' + link + '" target="_blank">' + title + '</a></h3>';
+                html += '<p class="muted" style="font-size: 14px; margin-bottom: 10px;">' + dateStr + '</p>';
+                html += '<div style="line-height: 1.6;">' + description + '</div>';
+                html += '</li>';
+                count++;
+            }
+
+            $("#news-feed-full").html(html);
+            console.log('Rendered ' + count + ' items');
+
+            // Make images responsive
+            $("#news-feed-full img").css({
+                "max-width": "100%",
+                "height": "auto",
+                "margin": "15px 0",
+                "display": "block"
+            });
+        },
+        error: function(xhr, status, err) {
+            console.error('Error loading full feed - Status:', status, 'Error:', err);
+
+            var errorMsg = 'Unable to load news feed. ';
+            if (status === 'timeout') {
+                errorMsg += 'Request timed out.';
+            } else if (xhr.status === 0) {
+                errorMsg += 'Network or CORS error.';
+            } else {
+                errorMsg += 'Error: ' + status;
+            }
+
+            $("#news-feed-full").html('<li class="muted" style="text-align: center; padding: 40px;">' + errorMsg + ' <a href="https://openworm.tumblr.com" target="_blank">View blog directly &raquo;</a></li>');
         }
     });
 }
