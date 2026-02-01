@@ -128,13 +128,43 @@ function setNavigation() {
 
 
 function refreshNews() {
-    $("#news-feed").PaRSS("https://openworm.tumblr.com/rss", // url to the feed
-			  6, // number of items to retrieve
-			  "M jS Y, g:i a", // date format
-			  false, // include descriptions
-			  function() {
-			      // optional callback function
-			  })
+    // Use allOrigins CORS proxy to fetch Tumblr RSS
+    $.ajax({
+        url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
+        method: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(data.contents, 'text/xml');
+            var items = xml.querySelectorAll('item');
+
+            var html = '';
+            var count = 0;
+            items.forEach(function(item) {
+                if (count >= 6) return;
+
+                var title = item.querySelector('title').textContent;
+                var link = item.querySelector('link').textContent;
+                var pubDate = new Date(item.querySelector('pubDate').textContent);
+                var dateStr = pubDate.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                html += '<li>';
+                html += '<a href="' + link + '" target="_blank">' + title + '</a>';
+                html += ' <span class="muted">(' + dateStr + ')</span>';
+                html += '</li>';
+                count++;
+            });
+            $("#news-feed").html(html);
+        },
+        error: function(err) {
+            console.error('Error loading news feed:', err);
+            $("#news-feed").html('<li class="muted">Unable to load news feed.</li>');
+        }
+    });
 }
 
 
