@@ -38,9 +38,9 @@ $(document).on('pjax:popstate', function() {
 	    loadDonationControls();
 	}
 	else if (loc === '/index.html' || loc === '/' || loc === '') {
-	    // Twitter widget
+	    // Twitter/X feed widget
 	    $('#fb-root').html('');
-	    $('#tweeter').html('<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-height="600" data-theme="light" data-chrome="noheader nofooter noborders">Tweets by @OpenWorm</a>');
+	    $('#tweeter').html('<div style="text-align: center; padding: 40px;"><i class="fa fa-spinner fa-spin fa-2x"></i><p class="muted">Loading tweets...</p></div>');
 	    //$.pjax.reload('#pjax-content', {fragment:'#pjax-content'});
 	    reloadSocial();
 	    // setNavigation();
@@ -82,7 +82,7 @@ $(window).on('load', function() {
 	//console.log('loc = index');
 	loadGooglePlus();
 	loadFacebook();
-	loadTwitterWidget();
+	loadTwitterFeed();
 	refreshNews();
 	$('.nav li').removeClass('active');
 	$('#home').addClass('active');
@@ -305,12 +305,8 @@ function loadGooglePlus() {
 function reloadSocial() {
     // partially stolen from: http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
     
-    // Twitter widget
-    if (typeof (twttr) != 'undefined') {
-	twttr.widgets.load();
-    } else {
-	loadTwitterWidget();
-    }
+    // Twitter/X feed (custom widget using Nitter RSS)
+    loadTwitterFeed();
 
     // news feed
     refreshNews();

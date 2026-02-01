@@ -408,13 +408,10 @@
 		</div>
 				<div class="span6">
 				<div id="tweeter">
-					<a class="twitter-timeline"
-				   href="https://twitter.com/OpenWorm"
-				   data-height="600"
-				   data-theme="light"
-				   data-chrome="noheader nofooter noborders">
-				   Tweets by @OpenWorm
-				</a>
+					<div style="text-align: center; padding: 40px;">
+						<i class="fa fa-spinner fa-spin fa-2x"></i>
+						<p class="muted">Loading tweets...</p>
+					</div>
 				</div>
 				</div>
 			</div>
@@ -437,7 +434,7 @@
 	<!-- load other resources asynchronously: -->
 	<script src="js/bootstrap.js" async></script>
 	<script src="js/jquery.parss.uncompressed.js" async></script>
-	<script src="https://platform.twitter.com/widgets.js" async></script>
+	<script src="js/twitter-feed.js" async></script>
 
 	<!-- execute main (initialize resources above + carousel/donate controls -->
 	<script src="js/jquery.pjax.js"></script>
