@@ -40,7 +40,7 @@ $(document).on('pjax:popstate', function() {
 	else if (loc === '/index.html' || loc === '/' || loc === '') {
 	    // Twitter widget
 	    $('#fb-root').html('');
-	    $('#tweeter').html('<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>');
+	    $('#tweeter').html('<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-height="600" data-theme="light" data-chrome="noheader nofooter noborders">Tweets by @OpenWorm</a>');
 	    //$.pjax.reload('#pjax-content', {fragment:'#pjax-content'});
 	    reloadSocial();
 	    // setNavigation();
