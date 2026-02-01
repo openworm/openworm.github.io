@@ -1,0 +1,2165 @@
+[
+  {
+    "id": 807349526803398656,
+    "id_string": "807349526803398656",
+    "summary": "The multiple faces of calcineurin signaling in Caen... [J Biosci. 2013]",
+    "content": [
+      {
+        "type": "link",
+        "url": "http://www.ncbi.nlm.nih.gov/pubmed/23660677",
+        "display_url": "http://www.ncbi.nlm.nih.gov/pubmed/23660677",
+        "title": "The multiple faces of calcineurin signaling in Caen... [J Biosci. 2013]"
+      },
+      {
+        "type": "text",
+        "text": "\"Calcineurin, a well-conserved protein phosphatase 2B (PP2B), is a Ca2+-calmodulin-dependent serine/threonine protein phosphatase that is known to be involved in a myriad of cellular processes and signal transduction pathways. The biological role of calcineurin has been extensively studied in diverse groups of organisms. Homologues of mammalian and Drosophila calcineurin subunits exist in the nematode, Caenorhabditis elegans. The C. elegans counterpart of the catalytic subunit, calcineurin A, cna-1/tax-6, and the regulatory subunit, calcineurin B, cnb-1, are known to express ubiquitously in multiple tissues including neurons. The characterization of C. elegans calcineurin mutants facilitates identification of its physiological functions and signaling pathways. Genetic interactions between cna-1/tax-6 and cnb-1 mutants with a number of mutants involved in several signaling pathways have exemplified the pivotal role of calcineurin in regulating nematode development, behaviour and lifespan (aging). The present review has been aimed to provide a succinct summary of the multiple functions of calcineurin in C. elegans relating to its development, fertility, proliferation, behaviour and lifespan. Analyses of cna-1/tax-6 and cnb-1 interacting proteins and regulators of the phosphatase in this fascinating worm model have an immense scope to identify potential drug targets in various parasitic nematodes, which cause many diseases inflicting huge economic loss; and also for many human diseases, particularly neurodegenerative and myocardial diseases.\"",
+        "subtype": "indented"
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948508,
+    "date": "2026-02-01 13:21:48"
+  },
+  {
+    "id": 807349526204743680,
+    "id_string": "807349526204743680",
+    "summary": "June 2025: OpenWorm.ai - a C. elegans specific LLM",
+    "content": [
+      {
+        "type": "text",
+        "text": "June 2025: OpenWorm.ai - a C. elegans specific LLM",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "We are investigating the use of customized LLMs to constrain and validate computational models of C. elegans. A prototype of this platform has been made available at openworm.ai. The core code for this can be found here.",
+        "formatting": [
+          {
+            "type": "italic",
+            "start": 98,
+            "end": 108
+          },
+          {
+            "type": "link",
+            "start": 166,
+            "end": 177,
+            "url": "https://openworm.ai"
+          },
+          {
+            "type": "link",
+            "start": 215,
+            "end": 219,
+            "url": "https://github.com/openworm/openworm.ai"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 1360,
+            "height": 1074,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s2048x3072/e1efe916fc2eea0aad6af1c00996c50bd05c5950.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 1280,
+            "height": 1011,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s1280x1920/32dc56a6bd8779aaf973a4fbac6728259bba01a5.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 640,
+            "height": 505,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s640x960/6b880ed24eabda09442af202c90f83c7d4aa6bb0.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 540,
+            "height": 426,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s540x810/f97f98299f2e7cb01abdd226cf83a638262de217.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 500,
+            "height": 395,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s500x750/a3f264a75540c36abe150ec6150e6353c298a9a3.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 400,
+            "height": 316,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s400x600/00e69b9e400b06ca872047fd3d3517d1f7257de5.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 250,
+            "height": 197,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s250x400/2be5aeb2718ec9837303e675bc944d2bfe373a64.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 100,
+            "height": 79,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s100x200/4fd7ee51cdec28915dba161109674e6c9731e338.png"
+          },
+          {
+            "media_key": "f27316681d8c19c15a0d51c433c7fc0c:b7612655f1674cab-60",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/f27316681d8c19c15a0d51c433c7fc0c/b7612655f1674cab-60/s75x75_c1/490cae6adf30925db0e667ed725f76d45881d0ce.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "dbebcd",
+          "c1": "96a397",
+          "c2": "aec3a4",
+          "c3": "cfe0c2",
+          "c4": "687823"
+        },
+        "alt_text": "owai"
+      },
+      {
+        "type": "text",
+        "text": "View: https://openworm.ai",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 25,
+            "url": "https://openworm.ai"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948507,
+    "date": "2026-02-01 13:21:47"
+  },
+  {
+    "id": 807349525527363584,
+    "id_string": "807349525527363584",
+    "summary": "June 2025: Updated C. elegans Connectome Toolbox",
+    "content": [
+      {
+        "type": "text",
+        "text": "June 2025: Updated C. elegans Connectome Toolbox",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "There have been significant updates to the C. elegans Connectome Toolbox (cect), with new connectomic datasets, and interactive views. It has also been more deeply integrated with the c302 package to allow that package to use any connectome from cect as a basis of computational models in NeuroML.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 43,
+            "end": 79,
+            "url": "https://openworm.org/ConnectomeToolbox"
+          },
+          {
+            "type": "link",
+            "start": 184,
+            "end": 196,
+            "url": "https://github.com/openworm/c302"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 1466,
+            "height": 1224,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s2048x3072/19365d3b4e357dcaf064a7bdd11d76a7e8b15f9f.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 1280,
+            "height": 1069,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s1280x1920/5e7d9c4feb60f453d3fb9ccc99944df697b52c1b.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 640,
+            "height": 534,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s640x960/24e37271e1c3a689a27cc453292a62e79b308bba.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 540,
+            "height": 451,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s540x810/011de076fb75406f9a66c56902f407fe48a32294.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 500,
+            "height": 417,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s500x750/d129e5feda059b7bc1a70904c3a0053112d5d991.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 400,
+            "height": 334,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s400x600/25ca5b667a13df2bcf01f1acc575506a7d55f997.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 250,
+            "height": 209,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s250x400/4d4b043249e12595ce66852fb83cde84001dbbe3.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 100,
+            "height": 83,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s100x200/c73e527687da491d703d14e10c1535e95e347a93.png"
+          },
+          {
+            "media_key": "02d6541011a84c0e83d87a81c1503537:7f9be2c35b4dd0fd-61",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/02d6541011a84c0e83d87a81c1503537/7f9be2c35b4dd0fd-61/s75x75_c1/c8aa2521bfb2760b1793cec8629466ea9973b741.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "fcf4f5",
+          "c1": "f6eaec",
+          "c2": "be81c6",
+          "c3": "d72987",
+          "c4": "896229"
+        },
+        "alt_text": "Cect2"
+      },
+      {
+        "type": "text",
+        "text": "View: https://openworm.org/ConnectomeToolbox/",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 45,
+            "url": "https://openworm.org/ConnectomeToolbox/"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948506,
+    "date": "2026-02-01 13:21:46"
+  },
+  {
+    "id": 807349524945338368,
+    "id_string": "807349524945338368",
+    "summary": "December 2024: C. elegans Connectome Toolbox",
+    "content": [
+      {
+        "type": "text",
+        "text": "December 2024: C. elegans Connectome Toolbox",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "A new package has been developed to help manage the multiple datasets related to C. elegans connectomics (e.g. chemical synapses, electrical connections, extrasynaptic, functional connectome, etc.). Check out the C. elegans Connectome Toolbox at: https://openworm.org/ConnectomeToolbox.",
+        "formatting": [
+          {
+            "type": "italic",
+            "start": 81,
+            "end": 91
+          },
+          {
+            "type": "italic",
+            "start": 213,
+            "end": 223
+          },
+          {
+            "type": "link",
+            "start": 247,
+            "end": 285,
+            "url": "https://openworm.org/ConnectomeToolbox"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 1432,
+            "height": 1310,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s2048x3072/dbb7b3b7fd4b7d3584607fcdcaa33fab89bff2fa.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 1280,
+            "height": 1171,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s1280x1920/6b25e196cb2df1ae01c829a8a3eecaaee2cba002.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 640,
+            "height": 585,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s640x960/59ac8eb0fa365fc66f89b3b5ba5c041d507cce1f.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 540,
+            "height": 494,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s540x810/64b616c622c9ca36a197bf1ea8a4c6d3def005f3.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 500,
+            "height": 457,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s500x750/02495910e80ecdf6a4f626bd2df697ededf0ceae.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 400,
+            "height": 366,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s400x600/1e7692311dd7f4677c407a02b6cae6ac7f29e29c.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 250,
+            "height": 229,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s250x400/3b670f122ca71cd52bc87b6b5e6a289dd651b3e5.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 100,
+            "height": 91,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s100x200/6536af290d659f8e6d3315363a20f314722384fe.png"
+          },
+          {
+            "media_key": "e32cb01f68e4ecd58dd2f92c08e170f5:18013dbd6f35a9c7-51",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/e32cb01f68e4ecd58dd2f92c08e170f5/18013dbd6f35a9c7-51/s75x75_c1/c1efd8e21a45dc9b15123f5b287122434f75bbf6.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "bfbfbf",
+          "c2": "3b43f0",
+          "c3": "ba515f",
+          "c4": "2e6c0d"
+        },
+        "alt_text": "Cect"
+      },
+      {
+        "type": "text",
+        "text": "View: https://openworm.org/ConnectomeToolbox/",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 45,
+            "url": "https://openworm.org/ConnectomeToolbox/"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948506,
+    "date": "2026-02-01 13:21:46"
+  },
+  {
+    "id": 807349524385366016,
+    "id_string": "807349524385366016",
+    "summary": "May 2024: OpenWorm is hiring!",
+    "content": [
+      {
+        "type": "text",
+        "text": "May 2024: OpenWorm is hiring!",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "A position for a Research Fellow or Senior Research Fellow at University College London is now open for applications. The successful applicant will contribute to multiple areas of the OpenWorm project, working closely with Padraig Gleeson. See here for more details.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 244,
+            "end": 248,
+            "url": "https://www.ucl.ac.uk/work-at-ucl/search-ucl-jobs/details?jobId=23333"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948505,
+    "date": "2026-02-01 13:21:45"
+  },
+  {
+    "id": 807349523716374528,
+    "id_string": "807349523716374528",
+    "summary": "May 2024: OpenWorm interviewed on Data Skeptic Podcast",
+    "content": [
+      {
+        "type": "text",
+        "text": "May 2024: OpenWorm interviewed on Data Skeptic Podcast",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "Stephen Larson, Executive Director of the OpenWorm project, discusses the current state of the project as well as where our quest to develop a biologically realistic digital life form fits into the current landscape of AI. Listen to it here on Spotify.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 236,
+            "end": 251,
+            "url": "https://open.spotify.com/episode/4ResE1neiUfWOAIlO8FDgF?si=skTgNiBNQTG1htRS6yRl0Q&nd=1&dlsi=fafc66d8b5be4f82"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948505,
+    "date": "2026-02-01 13:21:45"
+  },
+  {
+    "id": 807349523084165120,
+    "id_string": "807349523084165120",
+    "summary": "May 2024: OpenWorm Docker simulation stack updated",
+    "content": [
+      {
+        "type": "text",
+        "text": "May 2024: OpenWorm Docker simulation stack updated",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "A major update to the simulation stack of the OpenWorm project was released. This involved updating all core elements (c302, Sibernetic) in the Dockerfile and enabling automated tests for building the Docker container using Intel and AMD libraries. A big thanks to Austin Klein who completed this work as part of an OpenWorm Studentship.\n",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 22,
+            "end": 38,
+            "url": "https://github.com/openworm/OpenWorm/blob/master/README.md#quickstart"
+          },
+          {
+            "type": "link",
+            "start": 119,
+            "end": 123,
+            "url": "https://github.com/openworm/c302"
+          },
+          {
+            "type": "link",
+            "start": 125,
+            "end": 135,
+            "url": "https://github.com/openworm/sibernetic"
+          },
+          {
+            "type": "link",
+            "start": 168,
+            "end": 183,
+            "url": "https://github.com/openworm/OpenWorm/actions"
+          },
+          {
+            "type": "link",
+            "start": 265,
+            "end": 277,
+            "url": "https://github.com/austinklein"
+          },
+          {
+            "type": "link",
+            "start": 316,
+            "end": 336,
+            "url": "http://studentships.html/"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948504,
+    "date": "2026-02-01 13:21:44"
+  },
+  {
+    "id": 807349522441371648,
+    "id_string": "807349522441371648",
+    "summary": "May 2024: New cell and ion channel models in NeuroML",
+    "content": [
+      {
+        "type": "text",
+        "text": "May 2024: New cell and ion channel models in NeuroML",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "A key part of the OpenWorm project's work is to incorporate models of neurons which behave like their biological counterparts. The 2019 paper of Nicoletti and colleagues (Biophysical modeling of C. elegans neurons: Single ion currents and whole-cell dynamics of AWCon and RMD presents new models of 2 C. elegans neurons with the ionic currents which underlie their electrical activity. These have been converted to NeuroML format for use in OpenWorm. See here for full details.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 171,
+            "end": 275,
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0218738"
+          },
+          {
+            "type": "italic",
+            "start": 301,
+            "end": 311
+          },
+          {
+            "type": "link",
+            "start": 415,
+            "end": 422,
+            "url": "http://www.neuroml.org"
+          },
+          {
+            "type": "link",
+            "start": 455,
+            "end": 459,
+            "url": "https://github.com/openworm/NicolettiEtAl2019_NeuronModels"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948503,
+    "date": "2026-02-01 13:21:43"
+  },
+  {
+    "id": 807349521820549120,
+    "id_string": "807349521820549120",
+    "summary": "May 2024: DevoWorm updates",
+    "content": [
+      {
+        "type": "text",
+        "text": "May 2024: DevoWorm updates",
+        "subtype": "heading1"
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:877861282b130970-dc",
+            "type": "image/png",
+            "width": 400,
+            "height": 227,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/877861282b130970-dc/s400x600/a75b4cdff02acc64a49a4a86e94bd91940f28ea2.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:877861282b130970-dc",
+            "type": "image/png",
+            "width": 250,
+            "height": 142,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/877861282b130970-dc/s250x400/3fdd1a8bdda902b08aa6db543c5679d336149793.png"
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:877861282b130970-dc",
+            "type": "image/png",
+            "width": 100,
+            "height": 57,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/877861282b130970-dc/s100x200/f9ca44604d31b8f237b31755f53a503c202ae804.png"
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:877861282b130970-dc",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/877861282b130970-dc/s75x75_c1/5d4ecd1ff97e773e269af04501f381dda2ee905f.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "a8c297",
+          "c1": "ffffff",
+          "c2": "c18260",
+          "c3": "b49280",
+          "c4": "292e34"
+        }
+      },
+      {
+        "type": "text",
+        "text": "DevoWorm celebrated its 10th anniversary in April. Bradly Alicea has prepared a 90-minute video on our progress over the past 10 years: from progress in OpenWorm to progress in computational developmental biology. If you would like to know more, please check out our weekly meetings on YouTube.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 80,
+            "end": 95,
+            "url": "https://www.youtube.com/watch?v=_iQNxCvLAWY&pp=ygUIZGV2b3dvcm0%3D"
+          },
+          {
+            "type": "link",
+            "start": 267,
+            "end": 293,
+            "url": "https://www.youtube.com/playlist?list=PLJ8ZcBZeKeci2ACwfllCDFn_eZAXlbGQN"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "DevoWorm has sponsored two students through the Google Summer of Code program for 2024. Congrats to Pakhi Banchalia and Mehul Arora for being accepted to work on the Developmental Graph Neural Networks (D-GNNs) project. Pakhi will be working on incorporating Neural Developmental Programs (NDPs) into GNN models. Mehul will be working on hypergraph techniques for developmental lineage trees and embryogenesis. Himanshu Chougule, Google Summer of Code scholar for 2023, is a co-mentor for this project. Follow or fork the DevoGraph repository to contribute or keep up with our progress.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 100,
+            "end": 115,
+            "url": "https://github.com/Pakhi07"
+          },
+          {
+            "type": "link",
+            "start": 120,
+            "end": 131,
+            "url": "https://github.com/mehular0ra"
+          },
+          {
+            "type": "link",
+            "start": 411,
+            "end": 428,
+            "url": "https://github.com/himanshu-02"
+          },
+          {
+            "type": "link",
+            "start": 522,
+            "end": 542,
+            "url": "https://github.com/devolearn/devograph"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948503,
+    "date": "2026-02-01 13:21:43"
+  },
+  {
+    "id": 807349521243848704,
+    "id_string": "807349521243848704",
+    "summary": "June 2023: OpenWorm @ C. elegans 2023",
+    "content": [
+      {
+        "type": "text",
+        "text": "June 2023: OpenWorm @ C. elegans 2023",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "The OpenWorm team were present at the main C. elegans scientific conference in Glasgow in June 2023.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 34,
+            "end": 75,
+            "url": "https://genetics-gsa.org/celegans2023/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "We presented an update on the recent activities in the project (click on the poster below) and connected with a number of groups who are acquiring leading edge experimental data which can be used to help build and constrain our worm models."
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 1768,
+            "height": 2500,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s2048x3072/92b56e1a6b0aa755310ab4701432761565dd49b2.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 1280,
+            "height": 1810,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s1280x1920/51403c289d0e54591fa2aa66b4a7dd8c71fb41d2.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 640,
+            "height": 905,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s640x960/fd08ea75df9fcde653cf0b31aca89b3207b53ce8.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 540,
+            "height": 764,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s540x810/1ac5e6f523dd7ad8854470cd47fc5d2c91452a99.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 500,
+            "height": 707,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s500x750/9f7df5d6911c13a5b8d88a5388b25be415baed19.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 400,
+            "height": 566,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s400x600/997479ae4006707981cc3540a7e03c4b735f89ef.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 250,
+            "height": 354,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s250x400/427ffb9ab37ac53fe90ba4f0a13495a20e09b1ca.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 100,
+            "height": 141,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s100x200/4b20f4996d233aad42cfa3e2219b2ec6e90a969f.png"
+          },
+          {
+            "media_key": "15db1326a0bb70aced5761d3f67f7ea2:37d5d83eb5ecb3df-57",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/15db1326a0bb70aced5761d3f67f7ea2/37d5d83eb5ecb3df-57/s75x75_c1/554ddec1859ca6e9ab5529c3e92936ce76e75289.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "adadad",
+          "c2": "898573",
+          "c3": "263bab",
+          "c4": "142b07"
+        },
+        "alt_text": "OpenWormPoster2022"
+      },
+      {
+        "type": "text",
+        "text": "View: https://openworm.org/assets/OpenWormPoster_Celegans_Glasgow_2023.pdf",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 74,
+            "url": "https://openworm.org/assets/OpenWormPoster_Celegans_Glasgow_2023.pdf"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948502,
+    "date": "2026-02-01 13:21:42"
+  },
+  {
+    "id": 807349520653582336,
+    "id_string": "807349520653582336",
+    "summary": "June 2023: Hodgkin Huxley interactive tutorial",
+    "content": [
+      {
+        "type": "text",
+        "text": "June 2023: Hodgkin Huxley interactive tutorial",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "As part of a recent Google Summer of Code project by Rahul Sonkar, an interactive tutorial for the Hodgkin Huxley model of neuronal activity was developed. This Jupyter notebook based tutorial can be used to investigate how ion channel dynamical properties underlie the generation of the action potential in neurons.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 161,
+            "end": 192,
+            "url": "https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/notebooks/Python_HH_version/README.md"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 2022,
+            "height": 1772,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s2048x3072/11a80b417c070f0617d4ed644b8655f00370ee27.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 1280,
+            "height": 1122,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s1280x1920/be0f6b59be59b3254f31f546214f371d28140eae.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 640,
+            "height": 561,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s640x960/a5acec2928a8865963abc7ffea845892ad6bd8de.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 540,
+            "height": 473,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s540x810/a8407273ca6a3ba6610dbf65ce83c5668c2db62f.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 500,
+            "height": 438,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s500x750/e1855583d6ba35cec046c710cb55476c4fd7668b.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 400,
+            "height": 351,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s400x600/5e2f8b71b079b01c381969b39064e2b3002cd201.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 250,
+            "height": 219,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s250x400/ea51313a8e95a6117c5cec75b2710267c17769a2.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 100,
+            "height": 88,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s100x200/f82a279316741f4246c2a075ce3ea471abdf0719.png"
+          },
+          {
+            "media_key": "dc52752e1880155d5f075a8e4ba919fa:185f93fb1dad90fb-d5",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/dc52752e1880155d5f075a8e4ba919fa/185f93fb1dad90fb-d5/s75x75_c1/2cb89ee3c6b03190e9931af372928c5e05a6baca.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "e2e2e2",
+          "c2": "dad9da",
+          "c3": "c2c2c2",
+          "c4": "878787"
+        },
+        "alt_text": "HH"
+      },
+      {
+        "type": "text",
+        "text": "View: https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/notebooks/Python_HH_version/README.md",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 107,
+            "url": "https://github.com/openworm/hodgkin_huxley_tutorial/blob/master/notebooks/Python_HH_version/README.md"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948502,
+    "date": "2026-02-01 13:21:42"
+  },
+  {
+    "id": 807349520084221952,
+    "id_string": "807349520084221952",
+    "summary": "June 2023: Updated 2D worm body model visualisations",
+    "content": [
+      {
+        "type": "text",
+        "text": "June 2023: Updated 2D worm body model visualisations",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "We have been investigating multiple options for incorporating 2D worm body models into our simulation pipeline to complement the full 3D Sibernetic-based worm body model."
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 574,
+            "height": 460,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 574,
+              "height": 460,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s640x960_f1/9ad96a95a32e6acb23d34a5a80a4a92979d29287.gif"
+            },
+            "video": [
+              {
+                "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+                "type": "video/mp4",
+                "width": 574,
+                "height": 460,
+                "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s640x960/f22298dd48a866f5bc883b82329bc25160d6b99a.mp4"
+              }
+            ],
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s640x960/f22298dd48a866f5bc883b82329bc25160d6b99a.gif",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 540,
+            "height": 433,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 540,
+              "height": 433,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s540x810_f1/89aadfcd62f3f16926f119eeff92f86c9fbd4356.gif"
+            },
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s540x810/2a48b333f610255e845d4cc47b0bbee2279136d0.gif"
+          },
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 500,
+            "height": 401,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 500,
+              "height": 401,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s500x750_f1/de26e100b6cbbe871b36a23985aee62ab553f8cb.gif"
+            },
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s500x750/3f09cb40dd5b9c664737d8e7fc9cf35a41bf83ce.gif"
+          },
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 400,
+            "height": 321,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 400,
+              "height": 321,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s400x600_f1/8492d4102b869e40f83230a1895eb06bb0330827.gif"
+            },
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s400x600/fd67ee26bb57b113a388109ea59575bfed667d92.gif"
+          },
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 250,
+            "height": 200,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 250,
+              "height": 200,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s250x400_f1/12b870b5df89d1cedf0bc39f7a421402c19626ac.gif"
+            },
+            "video": [
+              {
+                "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+                "type": "video/mp4",
+                "width": 250,
+                "height": 200,
+                "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s250x400/b868c8d0a2985d40a2095dd7de5f0e4b929fc08c.mp4"
+              }
+            ],
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s250x400/b868c8d0a2985d40a2095dd7de5f0e4b929fc08c.gif"
+          },
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 100,
+            "height": 80,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 100,
+              "height": 80,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s100x200_f1/df78dc0b5266d41f79ec8e199dba49d07bcb32f6.gif"
+            },
+            "video": [
+              {
+                "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+                "type": "video/mp4",
+                "width": 100,
+                "height": 80,
+                "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s100x200/a0b303f1598875c536bd17df3a468b75eb195791.mp4"
+              }
+            ],
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s100x200/a0b303f1598875c536bd17df3a468b75eb195791.gif"
+          },
+          {
+            "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+            "type": "image/gif",
+            "width": 75,
+            "height": 75,
+            "poster": {
+              "media_key": "28fa93f244b02d5a8d02fbf5527ca034:cd75869e39c96c04-77",
+              "type": "image/gif",
+              "width": 75,
+              "height": 75,
+              "url": "https://44.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s75x75_c1_f1/6a17fcc5a48dfefe887652eac40d55cbdd598d28.gif"
+            },
+            "url": "https://64.media.tumblr.com/28fa93f244b02d5a8d02fbf5527ca034/cd75869e39c96c04-77/s75x75_c1/95010e794963bec89297e794d2c60db1eae182a2.gif",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "fffff8",
+          "c1": "dddddd",
+          "c2": "aaabaf",
+          "c3": "0006f8",
+          "c4": "848485"
+        },
+        "alt_text": "Replay"
+      },
+      {
+        "type": "text",
+        "text": "View: https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/tree/master/WormSim",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 98,
+            "url": "https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/tree/master/WormSim"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "View: https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/tree/master/WormSim",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 98,
+            "url": "https://github.com/OpenSourceBrain/CelegansNeuromechanicalGaitModulation/tree/master/WormSim"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948501,
+    "date": "2026-02-01 13:21:41"
+  },
+  {
+    "id": 807349519492775936,
+    "id_string": "807349519492775936",
+    "summary": "June 2023: DevoWorm updates",
+    "content": [
+      {
+        "type": "text",
+        "text": "June 2023: DevoWorm updates",
+        "subtype": "heading1"
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:6d59fa2011f7638a-be",
+            "type": "image/png",
+            "width": 400,
+            "height": 227,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/6d59fa2011f7638a-be/s400x600/529a8094add0763b1e77ae377adc4d537afc8899.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:6d59fa2011f7638a-be",
+            "type": "image/png",
+            "width": 250,
+            "height": 142,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/6d59fa2011f7638a-be/s250x400/283197d3858d0ede8a848a9d1d086d8e184eafc7.png"
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:6d59fa2011f7638a-be",
+            "type": "image/png",
+            "width": 100,
+            "height": 57,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/6d59fa2011f7638a-be/s100x200/a5c67d20a2ad0d92cd04a31ee94d661608b14f50.png"
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:6d59fa2011f7638a-be",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/6d59fa2011f7638a-be/s75x75_c1/b9468c92df86ebcd6eb696084985b9d7035ca481.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "a8c297",
+          "c1": "ffffff",
+          "c2": "c18260",
+          "c3": "b49280",
+          "c4": "292e34"
+        }
+      },
+      {
+        "type": "text",
+        "text": "DevoWorm has sponsored two projects through the Google Summer of Code program for 2023: maintenance of the DevoLearn software package, and development of work on GNN (Graph neural Networks) and TDA (Topological Data Analysis) applications to biological development. These projects involve the work of GSoC scholars Sushmanth Reddy and Himanshu Chougule, respectively.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 315,
+            "end": 330,
+            "url": "https://github.com/sushmanthreddy"
+          },
+          {
+            "type": "link",
+            "start": 335,
+            "end": 352,
+            "url": "https://github.com/himanshu-02"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Members of the DevoWorm group have two recent publications: Embodied Cognitive Morphogenesis as a Route to Intelligent Systems, published at Royal Society Interface Focus, and The Psychophysical World of the Motile Diatom Bacillaria Paradoxa, published in Mathematical Biology of Diatoms.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 60,
+            "end": 126,
+            "url": "https://dx.doi.org/10.1098/rsfs.2022.0067"
+          },
+          {
+            "type": "italic",
+            "start": 141,
+            "end": 170
+          },
+          {
+            "type": "link",
+            "start": 176,
+            "end": 241,
+            "url": "https://onlinelibrary.wiley.com/doi/10.1002/9781119751939.ch9"
+          },
+          {
+            "type": "italic",
+            "start": 256,
+            "end": 287
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "In our weekly meetings, we have discussed topics such as early life and the origins of embryos, the biophysical and topological underpinnings of phenotypes, current organoid, embryoid, and assembloid research, and the intersection of microscopy and artificial life. There are collective discussions, as well as presentations on various topics by Bradly Alicea. Our archive of weekly meetings is available on the DevoWorm YouTube channel.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 76,
+            "end": 94,
+            "url": "http://syntheticdaisies.blogspot.com/2023/03/ancient-embryogenesis-and-evolutionary.html"
+          },
+          {
+            "type": "link",
+            "start": 165,
+            "end": 173,
+            "url": "https://www.nature.com/articles/s43586-022-00186-8"
+          },
+          {
+            "type": "link",
+            "start": 189,
+            "end": 208,
+            "url": "https://www.nature.com/articles/s41592-020-01026-x"
+          },
+          {
+            "type": "link",
+            "start": 412,
+            "end": 437,
+            "url": "https://www.youtube.com/watch?v=6vHxIQdBf7I&list=PLJ8ZcBZeKeci2ACwfllCDFn_eZAXlbGQN"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948501,
+    "date": "2026-02-01 13:21:41"
+  },
+  {
+    "id": 807349518855225344,
+    "id_string": "807349518855225344",
+    "summary": "September 2022: OpenCollective as a new funding stream",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: OpenCollective as a new funding stream",
+        "subtype": "heading1"
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 586,
+            "height": 168,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s640x960/2613ad39b4f936ea508e20acb60f592802835dd7.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 540,
+            "height": 155,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s540x810/922dcdf046e483fbbc37b2ad79b292a89975c3bc.png"
+          },
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 500,
+            "height": 143,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s500x750/c742caa231f32ecfd6bb33df48777eda7a7bf2bb.png"
+          },
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 400,
+            "height": 115,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s400x600/2c14200210edc1641dd64de7afe562b54007cbfe.png"
+          },
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 250,
+            "height": 72,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s250x400/642ff0f06e83ec8478829b5132103c63eb4319ee.png"
+          },
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 100,
+            "height": 29,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s100x200/cbc45d7871c7aefe705a695e2e2b9b3a30d4cdcc.png"
+          },
+          {
+            "media_key": "0a72acd315c58828983195d6e52b87c3:51967b22e056cd13-71",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/0a72acd315c58828983195d6e52b87c3/51967b22e056cd13-71/s75x75_c1/69c1af22f4aba221056f7f5c2e93f02f97276188.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "576584",
+          "c2": "909cb2",
+          "c3": "263557",
+          "c4": "3b4a6c"
+        },
+        "alt_text": "OpenWorm"
+      },
+      {
+        "type": "text",
+        "text": "We have added OpenCollective as a new and easy way to donate to OpenWorm. Regular contributions to the project (monthly/yearly) are possible through this funding stream. See here for more details.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 14,
+            "end": 28,
+            "url": "https://opencollective.com/openworm"
+          },
+          {
+            "type": "link",
+            "start": 174,
+            "end": 178,
+            "url": "https://openworm.org/donate"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "One of the first uses of these funds will be to support OpenWorm Studentships (see below).",
+        "formatting": [
+          {
+            "type": "bold",
+            "start": 56,
+            "end": 77
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948500,
+    "date": "2026-02-01 13:21:40"
+  },
+  {
+    "id": 807349518256504832,
+    "id_string": "807349518256504832",
+    "summary": "September 2022: OpenWorm Studentships - first successful project completed",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: OpenWorm Studentships - first successful project completed",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "OpenWorm Studentships are a new way to incentivize contribution to the OpenWorm project, offering small stipends and recognition to junior researchers who want to spend time bringing their research into OpenWorm and making it more accessible for the wider community. See here for more information.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 271,
+            "end": 275,
+            "url": "https://openworm.org/studentships.html"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "The first person to complete an OpenWorm Studentship project has been Tyson Wheelwright. He has made significant updates to the Blender 2 NeuroML subproject.",
+        "formatting": [
+          {
+            "type": "bold",
+            "start": 70,
+            "end": 87
+          },
+          {
+            "type": "link",
+            "start": 128,
+            "end": 145,
+            "url": "https://github.com/openworm/Blender2NeuroML/"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 1204,
+            "height": 620,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s1280x1920/ff6bd802edd1cc8f3b458b1deb147f21747d224d.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 640,
+            "height": 330,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s640x960/6f7b572e36ce71461d0363649fbc8f4ea3d8b69c.png"
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 540,
+            "height": 278,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s540x810/4071cd6b14c978120edc728f3663749e5fad88f3.png"
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 500,
+            "height": 257,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s500x750/509093f55518348558879002127f06c63c507a42.png"
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 400,
+            "height": 206,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s400x600/0cab754e548310e0d18f87ac9c95be13cafaaf3a.png"
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 250,
+            "height": 129,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s250x400/c3bf95c2a4f1432647dcc7592088f6a507d8ba30.png"
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 100,
+            "height": 51,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s100x200/966390f7cafd18c714ec0ea95655d76c800e71e6.png"
+          },
+          {
+            "media_key": "914e81db2382a2933aebb1d14e245d63:b2088e2b7b4a623a-90",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/914e81db2382a2933aebb1d14e245d63/b2088e2b7b4a623a-90/s75x75_c1/8a2e4e5d2a64aea412c5dea365c1cdc8fc0408ff.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "202020",
+          "c1": "030303",
+          "c2": "0a0908",
+          "c3": "241f20",
+          "c4": "2f2f2f"
+        }
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 689,
+            "height": 525,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s1280x1920/153ad47a0bec690f3fb4d998bdf49da0be78924f.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 640,
+            "height": 488,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s640x960/d407a49acca5eec34bae9960c1156444b5afe243.png"
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 540,
+            "height": 411,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s540x810/63ba8facde34789c2ba65915bd695d020e050214.png"
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 500,
+            "height": 381,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s500x750/c2edb44f14a832424fb14a0859e2e3ab934928b8.png"
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 400,
+            "height": 305,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s400x600/50fe2ad757fe2d7a227a9f2bb227020810408ff4.png"
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 250,
+            "height": 190,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s250x400/b33bef3dbe35fc4bad3ba64b61ccb6b2e1d357b5.png"
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 100,
+            "height": 76,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s100x200/0c3537b216e230676181ad5a40dcf1dd3b5df494.png"
+          },
+          {
+            "media_key": "f592a33c0d2420444c6d291d15d7ee45:b2088e2b7b4a623a-f7",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/f592a33c0d2420444c6d291d15d7ee45/b2088e2b7b4a623a-f7/s75x75_c1/95080d7f5dfd106d3fe22758b17fa9ec4cf21e5f.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "f0f3f6",
+          "c2": "dbdbdb",
+          "c3": "b9b9b9",
+          "c4": "d2c1d3"
+        }
+      },
+      {
+        "type": "text",
+        "text": "Figure showing a single cell (ADAL) highlighted in orange in the original 3D Blender file (from the Virtual Worm Project) on the left, and corresponding images of the cell on its own in Blender (middle 2 panels) and in NeuroML 2 format (right 2 panels). The NeuroML version is being used in our biophysical model of the worm nervous system. See here for more examples.",
+        "formatting": [
+          {
+            "type": "italic",
+            "start": 0,
+            "end": 368
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "More Studentships will be offered to the community in late 2022."
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948499,
+    "date": "2026-02-01 13:21:39"
+  },
+  {
+    "id": 807349517659799552,
+    "id_string": "807349517659799552",
+    "summary": "September 2022: NeuroPAL",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: NeuroPAL",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "The recent paper NeuroPAL: A Multicolor Atlas for Whole-Brain Neuronal Identification in C. elegans described a groundbreaking new technique to create a genetic strain of the worm where each neuron is labelled with a fluorescent marker of a specific color, allowing easy identification of neurons across experiments and animals.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 17,
+            "end": 99,
+            "url": "https://www.sciencedirect.com/science/article/pii/S0092867420316822"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "We have converted one of these datasets containing positions of cell bodies and the expressed NeuroPAL colors to NeuroML, to allow it to be used in OpenWorm models and associated applications. Full details can be found here.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 219,
+            "end": 223,
+            "url": "https://github.com/openworm/NeuroPAL"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 2048,
+            "height": 1286,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s2048x3072/e0d7763e391d0ca99e2affd25f24d1adcbc68ea0.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 1280,
+            "height": 803,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s1280x1920/d2dfa49264646748febc8d8c57aeafde58821ac5.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 640,
+            "height": 402,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s640x960/daac832d523ea558aaf3348ff2590baa7a738097.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 540,
+            "height": 339,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s540x810/873964e1b49c0361f85c439235b5858d067ee843.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 500,
+            "height": 314,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s500x750/496059dd7a57af0f7883663c7b2e446fce5f8535.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 400,
+            "height": 251,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s400x600/cd1125b422f43d0eee6f57c115e33bd32a5a2c81.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 250,
+            "height": 157,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s250x400/12e7a151519575a056b4517bbd057208ec446223.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 100,
+            "height": 63,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s100x200/ac7c9200b75574f676b57a83edf72dd51bc49ae8.png"
+          },
+          {
+            "media_key": "d0740f0d5c609e70cc48bcbf0a4d4091:b167029d0028bbbb-46",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/d0740f0d5c609e70cc48bcbf0a4d4091/b167029d0028bbbb-46/s75x75_c1/435c3538f6dde5eea673077183bb8f380efa8b60.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "eeeae0",
+          "c2": "030303",
+          "c3": "e19f88",
+          "c4": "bf3315"
+        },
+        "alt_text": "NeuroPAL"
+      },
+      {
+        "type": "text",
+        "text": "The above image shows the canonical positions and colors of a NeuroPAL dataset which has been converted into NeuroML, allowing it to be visualised on Open Source Brain.",
+        "formatting": [
+          {
+            "type": "italic",
+            "start": 0,
+            "end": 168
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948499,
+    "date": "2026-02-01 13:21:39"
+  },
+  {
+    "id": 807349516932120576,
+    "id_string": "807349516932120576",
+    "summary": "September 2022: Electrophysiological data from worm neurons",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: Electrophysiological data from worm neurons",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "Electrical recordings from individual neurons in C. elegans are crucial experimental data required for creating biologically realistic computational models of the worm.",
+        "formatting": [
+          {
+            "type": "italic",
+            "start": 49,
+            "end": 59
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Electrophysiological recordings of the activity of the ASH neuron made by the Wormsense Lab of Miriam Goodman were converted to open, standardized Neurodata Without Borders format as part of a Google Summer of Code project in 2021 by Steph Prince. Further details, as well as all of the converted datasets, can be found here.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 55,
+            "end": 65,
+            "url": "https://www.wormatlas.org/neurons/Individual%20Neurons/ASHframeset.html"
+          },
+          {
+            "type": "link",
+            "start": 78,
+            "end": 91,
+            "url": "https://med.stanford.edu/goodmanlab.html"
+          },
+          {
+            "type": "link",
+            "start": 147,
+            "end": 172,
+            "url": "http://nwb.org"
+          },
+          {
+            "type": "link",
+            "start": 193,
+            "end": 214,
+            "url": "https://summerofcode.withgoogle.com/"
+          },
+          {
+            "type": "link",
+            "start": 320,
+            "end": 324,
+            "url": "https://github.com/openworm/WormsenseLab_ASH"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 1913,
+            "height": 943,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s2048x3072/2c5a3688f4532a799c6c41ed8c581c66e71ce113.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 1280,
+            "height": 631,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s1280x1920/128dd50af81a5d6e115c29e0f79b4de90f59eac6.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 640,
+            "height": 315,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s640x960/455e12542dc226b0675183cdc94b7f814140fcc7.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 540,
+            "height": 266,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s540x810/783a2f5eda9053575991080ee298e7e31ab25389.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 500,
+            "height": 246,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s500x750/0a8b9454c1420c7f4177d6df7f2f81daa6b6e618.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 400,
+            "height": 197,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s400x600/8c10c783d0e55fc06dc375e0dd2d3db3d8b3a1d4.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 250,
+            "height": 123,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s250x400/6b961aecd1ea94b214330191f61e30a682fa5b93.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 100,
+            "height": 49,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s100x200/17b2b5b4c042fd00833f1636b85496542decba2f.png"
+          },
+          {
+            "media_key": "00419a69cbba37b6ccfea22d543fcec9:c923ebfc816dd846-e2",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/00419a69cbba37b6ccfea22d543fcec9/c923ebfc816dd846-e2/s75x75_c1/34708eafb33f2f00d28890181551ec659c7af7f8.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "090909",
+          "c1": "0f0f0f",
+          "c2": "191919",
+          "c3": "080808",
+          "c4": "232323"
+        }
+      },
+      {
+        "type": "text",
+        "text": "A view of the NWB Explorer interface showing one of the converted electrophysiological datasets. Click here to explore other datasets and get direct links to NWB Explorer to browse them.",
+        "formatting": [
+          {
+            "type": "italic",
+            "start": 0,
+            "end": 186
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948498,
+    "date": "2026-02-01 13:21:38"
+  },
+  {
+    "id": 807349516338659328,
+    "id_string": "807349516338659328",
+    "summary": "September 2022: DevoWorm updates",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: DevoWorm updates",
+        "subtype": "heading1"
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:21b1ceb5eed7faf8-48",
+            "type": "image/png",
+            "width": 400,
+            "height": 227,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/21b1ceb5eed7faf8-48/s400x600/69c0f6b33b00d8027209259be2176a0b09735955.png",
+            "has_original_dimensions": true
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:21b1ceb5eed7faf8-48",
+            "type": "image/png",
+            "width": 250,
+            "height": 142,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/21b1ceb5eed7faf8-48/s250x400/cff68373a5297dd6339f979018054acceb402a4f.png"
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:21b1ceb5eed7faf8-48",
+            "type": "image/png",
+            "width": 100,
+            "height": 57,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/21b1ceb5eed7faf8-48/s100x200/4b8e78af4fccbf350dbc148896e8f9349d4b72bc.png"
+          },
+          {
+            "media_key": "e0156aeec873d365fa34f400c0f160dd:21b1ceb5eed7faf8-48",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/e0156aeec873d365fa34f400c0f160dd/21b1ceb5eed7faf8-48/s75x75_c1/61effbdbb9e1a550cc8059f3c953dcff19d4ebc2.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "a8c297",
+          "c1": "ffffff",
+          "c2": "c18260",
+          "c3": "b49280",
+          "c4": "292e34"
+        }
+      },
+      {
+        "type": "text",
+        "text": "Over the past year, DevoWorm has been involved in a number of initiatives. DevoWorm hosted four Google Summer of Code students in 2022: Karan Lohaan and Harikrishna Pillai worked on the Digital Microspheres project (a spherical platform for embryo data), while Jiahang Li and Wataru Kawakami worked on developing a Graph Neural Network pipeline for the DevoLearn platform.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 20,
+            "end": 28,
+            "url": "https://devoworm.weebly.com/"
+          },
+          {
+            "type": "link",
+            "start": 96,
+            "end": 117,
+            "url": "https://summerofcode.withgoogle.com/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "DevoWorm also had a presence at NetSci 2022 (virtual conference hosted in Shanghai). Bradly Alicea presented on the group's Embodied Hypernetworks work in the main conference, as well as serving to represent the group at the Network Neuroscience satellite session as a presenter and participant.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 32,
+            "end": 43,
+            "url": "https://netsci2022.net/"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "Our weekly meetings are a continuing success. We cover a number of technical topics and a wide variety of topical reviews spanning biophysics, developmental biology, computational analysis, and more. Join us on Mondays at 2pm UTC (1pm UTC in winter) to get involved.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 4,
+            "end": 19,
+            "url": "https://www.youtube.com/playlist?list=PLJ8ZcBZeKeci2ACwfllCDFn_eZAXlbGQN"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948498,
+    "date": "2026-02-01 13:21:38"
+  },
+  {
+    "id": 807349515756634113,
+    "id_string": "807349515756634113",
+    "summary": "September 2022: Other announcements",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: Other announcements",
+        "subtype": "heading1"
+      },
+      {
+        "type": "image",
+        "media": [
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 2048,
+            "height": 1533,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s2048x3072/409f9532228b4453455ce7ff239622dc4b610176.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 1280,
+            "height": 958,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s1280x1920/cf6c936a60e8cae3581217b33b39c134bd5ababc.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 640,
+            "height": 479,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s640x960/d0bf51aa1884500ae2d59a1fa7ec2450a1832d39.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 540,
+            "height": 404,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s540x810/84b0e68650c20f3138f3e55dfee9a54131e87cc8.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 500,
+            "height": 374,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s500x750/6412022f512ad8f50e44cd2a70ad5794c6edf9ad.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 400,
+            "height": 299,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s400x600/12f589f4509abc9ea90a72dcd32bdca57b54be27.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 250,
+            "height": 187,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s250x400/764414f58993cd8aa70ee19faaa5c9d453d2b651.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 100,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s100x200/45e4067da68679234608f11a3956863bc13d40fe.png"
+          },
+          {
+            "media_key": "be8be48e750746a54e4c032a1bd9897d:362cab399d376d31-0b",
+            "type": "image/png",
+            "width": 75,
+            "height": 75,
+            "url": "https://64.media.tumblr.com/be8be48e750746a54e4c032a1bd9897d/362cab399d376d31-0b/s75x75_c1/7cd70f89d3d1e2bff3e00ff1cb4dcdab2d0d4602.png",
+            "cropped": true
+          }
+        ],
+        "colors": {
+          "c0": "ffffff",
+          "c1": "f9f9f9",
+          "c2": "a6a6a6",
+          "c3": "9d9d9d",
+          "c4": "2239a2"
+        },
+        "alt_text": "OpenWormPoster2022"
+      },
+      {
+        "type": "text",
+        "text": "View: https://openworm.org/assets/OpenWormPoster_C_elegans_meeting_June_2021.pdf",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 6,
+            "end": 80,
+            "url": "https://openworm.org/assets/OpenWormPoster_C_elegans_meeting_June_2021.pdf"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "A poster presenting the latest status of the OpenWorm project was presented at the main global conference in the C. elegans field in June 2021. Click on the image above to download the poster.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 83,
+            "end": 129,
+            "url": "https://genetics-gsa.org/celegans-2021/"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948497,
+    "date": "2026-02-01 13:21:37"
+  },
+  {
+    "id": 807349515133894656,
+    "id_string": "807349515133894656",
+    "summary": "September 2022: OpenWorm simulation stack updates",
+    "content": [
+      {
+        "type": "text",
+        "text": "September 2022: OpenWorm simulation stack updates",
+        "subtype": "heading1"
+      },
+      {
+        "type": "text",
+        "text": "We have made a new release of the Docker container that pulls together the major components of our simulation stack and allows it to be run on your machine. It includes Sibernetic, c302 and owmeta. See details here.",
+        "formatting": [
+          {
+            "type": "link",
+            "start": 34,
+            "end": 50,
+            "url": "https://hub.docker.com/r/openworm/openworm"
+          },
+          {
+            "type": "link",
+            "start": 164,
+            "end": 174,
+            "url": "https://github.com/openworm/sibernetic"
+          },
+          {
+            "type": "link",
+            "start": 176,
+            "end": 180,
+            "url": "https://github.com/openworm/c302"
+          },
+          {
+            "type": "link",
+            "start": 185,
+            "end": 191,
+            "url": "https://github.com/openworm/owmeta"
+          },
+          {
+            "type": "link",
+            "start": 205,
+            "end": 209,
+            "url": "https://github.com/openworm/OpenWorm/blob/master/README.md#quickstart"
+          }
+        ]
+      }
+    ],
+    "tags": [
+      "openworm",
+      "c. elegans",
+      "computational biology",
+      "open science"
+    ],
+    "timestamp": 1769948496,
+    "date": "2026-02-01 13:21:36"
+  }
+]
