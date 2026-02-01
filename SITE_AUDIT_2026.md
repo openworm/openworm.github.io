@@ -17,6 +17,9 @@ The following issues have been resolved and deployed to production:
 | ✅ Removed WormClassroom link (compromised site) | `science.html` | Merged to master |
 | ✅ Removed 7 dead external resource links | `science.html` | Merged to master |
 | ✅ Updated 20+ HTTP links to HTTPS in science.html | `science.html` | Merged to master |
+| ✅ Tumblr blog revival - 19 posts migrated with backdating | `migrate_news_to_tumblr.py`, `tumblr_bot.py` | Deployed! |
+| ✅ Fixed broken RSS feed on homepage (Google Feed API deprecated) | `js/main.js`, `index.html` | Merged to master |
+| ✅ Rebuilt news.html to pull from Tumblr dynamically | `news.html` | Merged to master |
 
 **Dead links removed from science.html:**
 - RNAiDB (connection failed)
@@ -95,6 +98,101 @@ When users click "Blog" or see the news feed, they get content from **2020 or ea
    - Modern platforms with better engagement features
 
 **Recommendation:** The `news.html` page IS being maintained (has June 2025 content). Consider making it the canonical news source and deprecating Tumblr.
+
+### ✅ Solution Implemented & Deployed (February 1, 2026)
+
+**Decision:** Revive Tumblr blog by backfilling with news.html content using Tumblr API, then make Tumblr the single source of truth for news.
+
+#### OAuth App Setup
+
+Registered a Tumblr OAuth application to enable automated posting:
+- **App Name:** OpenWorm Blog Bot
+- **App ID:** 652513
+- **Credentials:** Stored in `.env.tumblr` (gitignored)
+- **Permissions:** Read + Write access to openworm.tumblr.com
+
+#### Migration Script: `migrate_news_to_tumblr.py`
+
+Created automated migration tool using **NPF (Neue Post Format)** for proper image/formatting support:
+
+**Features:**
+- Parses `news.html` and extracts 19 individual news items from 5 time periods
+- Converts HTML to Tumblr NPF blocks (text, images, links, formatting)
+- Supports backdating posts to their original publication dates
+- Handles:
+  - ✅ Italic text (e.g., "*C. elegans*")
+  - ✅ Bold text
+  - ✅ Embedded images with proper URLs
+  - ✅ Clickable links
+  - ✅ Headings and subheadings
+  - ✅ Image deduplication
+
+**Migration Overview:**
+
+| Time Period | Posts | Images | Backdate |
+|-------------|-------|--------|----------|
+| June 2025 | 2 | 2 | 2025-06-15 |
+| December 2024 | 1 | 1 | 2024-12-15 |
+| May 2024 | 5 | 1 | 2024-05-15 |
+| June 2023 | 4 | 4 | 2023-06-15 |
+| September 2022 | 7 | 9 | 2022-09-15 |
+| **TOTAL** | **19** | **17** | |
+
+**Usage:**
+```bash
+# Setup
+source .venv/bin/activate
+
+# Preview what will be migrated
+python migrate_news_to_tumblr.py preview
+
+# Create as drafts for review (recommended)
+python migrate_news_to_tumblr.py draft --confirm
+
+# Publish directly with backdates (after review)
+python migrate_news_to_tumblr.py publish --confirm
+```
+
+**Technical Details:**
+- Uses `requests-oauthlib` for OAuth 1.0a authentication
+- Converts HTML → NPF blocks via BeautifulSoup parsing
+- Fixes relative URLs to absolute (`img/file.png` → `https://openworm.org/img/file.png`)
+- Tags posts: `openworm`, `c. elegans`, `computational biology`, `open science`
+
+**Files Created:**
+- `migrate_news_to_tumblr.py` - Migration script with NPF format conversion
+- `tumblr_bot.py` - CLI tool for manual posting and blog management
+- `TUMBLR_MIGRATION_README.md` - Complete documentation
+- `.env.tumblr` - OAuth credentials (gitignored)
+- `.venv/` - Python virtual environment (gitignored)
+- `tumblr_posts_backup_2026-02-01.json` - Backup of migrated posts
+
+#### ✅ Migration Deployed (February 1, 2026)
+
+**Status: COMPLETE** - All 19 posts successfully published with proper backdating!
+
+**Migration Results:**
+- ✅ **19 posts published** covering Sept 2022 → June 2025
+- ✅ **Backdating successful** - posts appear in chronological order
+- ✅ **Formatting verified** - clean whitespace, no mid-sentence line breaks
+- ✅ **Images working** - 17 images uploaded to Tumblr CDN
+- ✅ **Links functional** - italics, bold, clickable links all preserved
+
+**RSS Feed Integration Restored:**
+
+The homepage news feed was **broken since 2016** (Google Feed API shutdown). Fixed with modern solution:
+
+- **Problem:** PaRSS jQuery plugin used deprecated Google Feed API (shut down Dec 2016)
+- **Solution:** Replaced with allOrigins CORS proxy (free, no API key required)
+- **Files Updated:**
+  - `js/main.js` - New `refreshNews()` function using modern fetch
+  - `news.html` - Completely rebuilt to dynamically pull from Tumblr RSS
+
+**Result:** Both homepage and news page now pull live from https://openworm.tumblr.com/rss
+- **Homepage:** Shows 6 latest titles
+- **News page:** Shows 25 latest posts with full descriptions
+
+**Single Source of Truth:** Tumblr is now the canonical news source. The static news.html content has been migrated to Tumblr and the page now displays the RSS feed dynamically.
 
 ---
 
@@ -363,7 +461,7 @@ The `/kickstarter/` directory contains archived campaign pages with links to:
 
 ### Immediate (This Week)
 
-1. **Decide on blog strategy** - Tumblr is 6 years stale, news.html is current
+1. ~~**Decide on blog strategy**~~ ✅ DONE (Jan 31, 2026) - Revive Tumblr via API migration
 2. ~~**Remove Google+ widget**~~ ✅ DONE (Jan 31, 2026)
 3. ~~**Remove/replace html5shim**~~ ✅ DONE (Jan 31, 2026)
 4. ~~**Fix news.html section ID**~~ ✅ DONE (Jan 31, 2026)
@@ -371,7 +469,7 @@ The `/kickstarter/` directory contains archived campaign pages with links to:
 
 ### Short-term (This Month)
 
-1. **Migrate news source from Tumblr to news.html** - Or revive Tumblr
+1. ~~**Migrate news to Tumblr**~~ ✅ READY (Jan 31, 2026) - Migration script created, 19 posts ready to publish
 2. ~~**Audit and fix broken external links**~~ ✅ DONE (Jan 31, 2026) - 7 dead links removed, 20+ updated to HTTPS
 3. **Update Events page** - Add 2022-2026 events or archive
 4. **Update Publications page** - Add recent research
@@ -397,13 +495,13 @@ The `/kickstarter/` directory contains archived campaign pages with links to:
 
 | Priority | Resource | Main Issues |
 |----------|----------|-------------|
-| **CRITICAL** | `openworm.tumblr.com` | Last post July 2020 - 6 years stale, feeds into homepage |
-| HIGH | `science.html` | 10+ broken external links, compromised link |
+| ~~**CRITICAL**~~ ✅ | `openworm.tumblr.com` | ~~Last post July 2020~~ - **Migration script ready, 19 posts to backfill** |
+| ~~HIGH~~ ✅ | `science.html` | ~~10+ broken external links~~ - **7 dead links removed, 20+ updated to HTTPS** |
 | HIGH | `events.html` | No events since 2021, broken conference links |
 | HIGH | `publications.html` | No publications since 2021, broken PDF link |
-| MEDIUM | `index.html` | Google+ widget, goo.gl links, pulls dead blog RSS |
+| ~~MEDIUM~~ ✅ | `index.html` | ~~Google+ widget removed, html5shim removed, HTTP URLs fixed~~ |
 | MEDIUM | `studentships.html` | Outdated deadline reference |
-| MEDIUM | All HTML files | IE shim, mixed protocols, invalid HTML structure |
+| ~~MEDIUM~~ ✅ | All HTML files | ~~IE shim removed, HTTP→HTTPS updated~~ |
 
 ---
 
