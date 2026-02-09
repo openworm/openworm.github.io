@@ -15,11 +15,6 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/docs.css" rel="stylesheet">
 
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
 	<!-- Fav and touch icons - this code is outdated -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
@@ -220,11 +215,6 @@
 			    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.openworm.org/"
 			       data-text="Check out @OpenWorm: building the first digital life form... open source!">Tweet</a>
 			</li>
-			<!-- Place this tag where you want the +1 button to render. -->
-			<li>
-			    <div class="g-plusone" data-size="medium"
-				 data-href="https://plus.google.com/117948341754627144949"></div>
-			</li>
 		    </ul>
 		</div>
 	    </div>
@@ -418,7 +408,10 @@
 		</div>
 				<div class="span6">
 				<div id="tweeter">
-					<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>
+					<div style="text-align: center; padding: 40px;">
+						<i class="fa fa-spinner fa-spin fa-2x"></i>
+						<p class="muted">Loading tweets...</p>
+					</div>
 				</div>
 				</div>
 			</div>
@@ -441,7 +434,7 @@
 	<!-- load other resources asynchronously: -->
 	<script src="js/bootstrap.js" async></script>
 	<script src="js/jquery.parss.uncompressed.js" async></script>
-	<script src="https://platform.twitter.com/widgets.js" async></script>
+	<script src="js/twitter-feed.js" async></script>
 
 	<!-- execute main (initialize resources above + carousel/donate controls -->
 	<script src="js/jquery.pjax.js"></script>

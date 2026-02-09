@@ -38,9 +38,9 @@ $(document).on('pjax:popstate', function() {
 	    loadDonationControls();
 	}
 	else if (loc === '/index.html' || loc === '/' || loc === '') {
-	    // Twitter widget
+	    // Twitter/X feed widget
 	    $('#fb-root').html('');
-	    $('#tweeter').html('<a class="twitter-timeline" href="https://twitter.com/OpenWorm" data-widget-id="293717776768569344">Tweets by @OpenWorm</a>');
+	    $('#tweeter').html('<div style="text-align: center; padding: 40px;"><i class="fa fa-spinner fa-spin fa-2x"></i><p class="muted">Loading tweets...</p></div>');
 	    //$.pjax.reload('#pjax-content', {fragment:'#pjax-content'});
 	    reloadSocial();
 	    // setNavigation();
@@ -82,7 +82,7 @@ $(window).on('load', function() {
 	//console.log('loc = index');
 	loadGooglePlus();
 	loadFacebook();
-	loadTwitterWidget();
+	loadTwitterFeed();
 	refreshNews();
 	$('.nav li').removeClass('active');
 	$('#home').addClass('active');
@@ -128,13 +128,118 @@ function setNavigation() {
 
 
 function refreshNews() {
-    $("#news-feed").PaRSS("https://openworm.tumblr.com/rss", // url to the feed
-			  6, // number of items to retrieve
-			  "M jS Y, g:i a", // date format
-			  false, // include descriptions
-			  function() {
-			      // optional callback function
-			  })
+    // Use allOrigins CORS proxy to fetch Tumblr RSS
+    $.ajax({
+        url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
+        method: 'GET',
+        dataType: 'json',
+        timeout: 30000,
+        success: function(data) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(data.contents, 'text/xml');
+            var items = xml.querySelectorAll('item');
+
+            var html = '';
+            var count = 0;
+            items.forEach(function(item) {
+                if (count >= 6) return;
+
+                var title = item.querySelector('title').textContent;
+                var link = item.querySelector('link').textContent;
+                var pubDate = new Date(item.querySelector('pubDate').textContent);
+                var dateStr = pubDate.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                html += '<li>';
+                html += '<a href="' + link + '" target="_blank">' + title + '</a>';
+                html += ' <span class="muted">(' + dateStr + ')</span>';
+                html += '</li>';
+                count++;
+            });
+            $("#news-feed").html(html);
+        },
+        error: function(err) {
+            console.error('Error loading news feed:', err);
+            $("#news-feed").html('<li class="muted">Unable to load news feed.</li>');
+        }
+    });
+}
+
+function loadFullNewsFeed() {
+    // Load full news feed with descriptions for news.html page
+    console.log('Loading full news feed...');
+
+    $.ajax({
+        url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
+        method: 'GET',
+        dataType: 'json',
+        timeout: 30000,
+        success: function(data) {
+            console.log('Feed loaded, parsing...');
+
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(data.contents, 'text/xml');
+            var items = xml.querySelectorAll('item');
+
+            console.log('Found ' + items.length + ' items');
+
+            var html = '';
+            var count = 0;
+
+            for (var i = 0; i < items.length && count < 25; i++) {
+                var item = items[i];
+
+                var title = item.querySelector('title').textContent;
+                var link = item.querySelector('link').textContent;
+                var pubDate = new Date(item.querySelector('pubDate').textContent);
+                var dateStr = pubDate.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                var descNode = item.querySelector('description');
+                var description = descNode ? descNode.textContent : '';
+
+                var borderStyle = (count < 24) ? 'border-bottom: 1px solid #eee;' : '';
+
+                html += '<li style="margin-bottom: 30px; padding-bottom: 20px; ' + borderStyle + '">';
+                html += '<h3 style="margin-top: 0;"><a href="' + link + '" target="_blank">' + title + '</a></h3>';
+                html += '<p class="muted" style="font-size: 14px; margin-bottom: 10px;">' + dateStr + '</p>';
+                html += '<div style="line-height: 1.6;">' + description + '</div>';
+                html += '</li>';
+                count++;
+            }
+
+            $("#news-feed-full").html(html);
+            console.log('Rendered ' + count + ' items');
+
+            // Make images responsive
+            $("#news-feed-full img").css({
+                "max-width": "100%",
+                "height": "auto",
+                "margin": "15px 0",
+                "display": "block"
+            });
+        },
+        error: function(xhr, status, err) {
+            console.error('Error loading full feed - Status:', status, 'Error:', err);
+
+            var errorMsg = 'Unable to load news feed. ';
+            if (status === 'timeout') {
+                errorMsg += 'Request timed out.';
+            } else if (xhr.status === 0) {
+                errorMsg += 'Network or CORS error.';
+            } else {
+                errorMsg += 'Error: ' + status;
+            }
+
+            $("#news-feed-full").html('<li class="muted" style="text-align: center; padding: 40px;">' + errorMsg + ' <a href="https://openworm.tumblr.com" target="_blank">View blog directly &raquo;</a></li>');
+        }
+    });
 }
 
 
@@ -200,12 +305,8 @@ function loadGooglePlus() {
 function reloadSocial() {
     // partially stolen from: http://www.blackfishweb.com/blog/asynchronously-loading-twitter-google-facebook-and-linkedin-buttons-and-widgets-ajax-bonus
     
-    // Twitter widget
-    if (typeof (twttr) != 'undefined') {
-	twttr.widgets.load();
-    } else {
-	loadTwitterWidget();
-    }
+    // Twitter/X feed (custom widget using Nitter RSS)
+    loadTwitterFeed();
 
     // news feed
     refreshNews();

@@ -2,3 +2,9 @@ war/.DS_Store
 war/img/.DS_Store
 /.DS_Store
 /img/.DS_Store
+
+# Tumblr API Tools
+.env.tumblr
+.venv/
+*.pyc
+__pycache__/
