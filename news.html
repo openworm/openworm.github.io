@@ -89,14 +89,14 @@
   <!-- Le javascript
        ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.pjax.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Load full news feed when page is ready
-    $(window).on('load', function() {
-      console.log('news.html loaded, calling loadFullNewsFeed()');
-      loadFullNewsFeed();
-    });
+    // Load full news feed immediately
+    // Script is at bottom of body, so DOM is already ready
+    console.log('news.html: calling loadFullNewsFeed()');
+    loadFullNewsFeed();
   </script>
 
 </body>
