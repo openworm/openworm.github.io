@@ -169,8 +169,8 @@ function refreshNews() {
 }
 
 function loadFullNewsFeed() {
-    // Load full news feed with descriptions for news.html page
-    console.log('Loading full news feed...');
+    // Load full news feed with sidebar navigation for news.html page
+    console.log('Loading full news feed with sidebar...');
 
     $.ajax({
         url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
@@ -186,7 +186,8 @@ function loadFullNewsFeed() {
 
             console.log('Found ' + items.length + ' items');
 
-            var html = '';
+            var mainHtml = '';
+            var navHtml = '<li class="nav-header">News Archive</li>';
             var count = 0;
 
             for (var i = 0; i < items.length && count < 25; i++) {
@@ -196,7 +197,7 @@ function loadFullNewsFeed() {
                 var link = item.querySelector('link').textContent;
                 var pubDate = new Date(item.querySelector('pubDate').textContent);
                 var dateStr = pubDate.toLocaleDateString('en-US', {
-                    month: 'long',
+                    month: 'short',
                     day: 'numeric',
                     year: 'numeric'
                 });
@@ -204,17 +205,29 @@ function loadFullNewsFeed() {
                 var descNode = item.querySelector('description');
                 var description = descNode ? descNode.textContent : '';
 
-                var borderStyle = (count < 24) ? 'border-bottom: 1px solid #eee;' : '';
+                // Create anchor ID from index
+                var anchorId = 'news-' + count;
 
-                html += '<li style="margin-bottom: 30px; padding-bottom: 20px; ' + borderStyle + '">';
-                html += '<h3 style="margin-top: 0;"><a href="' + link + '" target="_blank">' + title + '</a></h3>';
-                html += '<p class="muted" style="font-size: 14px; margin-bottom: 10px;">' + dateStr + '</p>';
-                html += '<div style="line-height: 1.6;">' + description + '</div>';
-                html += '</li>';
+                // Add to sidebar nav (if nav element exists)
+                navHtml += '<li><a href="#' + anchorId + '"><i class="fa fa-chevron-right"></i>' + dateStr + '</a></li>';
+
+                // Add to main content
+                var borderStyle = (count < 24) ? 'border-bottom: 1px solid #eee;' : '';
+                mainHtml += '<li id="' + anchorId + '" style="margin-bottom: 30px; padding-bottom: 20px; ' + borderStyle + '">';
+                mainHtml += '<h3 style="margin-top: 0;"><a href="' + link + '" target="_blank">' + title + '</a></h3>';
+                mainHtml += '<p class="muted" style="font-size: 14px; margin-bottom: 10px;">' + dateStr + '</p>';
+                mainHtml += '<div style="line-height: 1.6;">' + description + '</div>';
+                mainHtml += '</li>';
                 count++;
             }
 
-            $("#news-feed-full").html(html);
+            $("#news-feed-full").html(mainHtml);
+            
+            // Update sidebar nav if it exists
+            if ($("#news-nav").length) {
+                $("#news-nav").html(navHtml);
+            }
+            
             console.log('Rendered ' + count + ' items');
 
             // Make images responsive
@@ -238,6 +251,11 @@ function loadFullNewsFeed() {
             }
 
             $("#news-feed-full").html('<li class="muted" style="text-align: center; padding: 40px;">' + errorMsg + ' <a href="https://openworm.tumblr.com" target="_blank">View blog directly &raquo;</a></li>');
+            
+            // Update sidebar nav with fallback if it exists
+            if ($("#news-nav").length) {
+                $("#news-nav").html('<li class="nav-header">News Archive</li><li><a href="https://openworm.tumblr.com" target="_blank"><i class="fa fa-external-link"></i> View on Tumblr</a></li>');
+            }
         }
     });
 }
