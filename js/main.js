@@ -19,6 +19,8 @@ $(document).on('pjax:complete', function() {
 	    reloadSocial();
     } else if (loc === '/donate.html') {
 	loadDonationControls();
+    } else if (loc === '/news.html') {
+	loadFullNewsFeed();
     } else if (loc === '/people.html') {
 	$.getScript("https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js",
 		    function() {
@@ -89,6 +91,8 @@ $(window).on('load', function() {
     } else if (loc === '/donate.html') {
 	//console.log('loc = donate');
 	loadDonationControls();
+    } else if (loc === '/news.html') {
+	loadFullNewsFeed();
     } else if (loc === '/people.html') {
 	$.getScript("https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.0/mustache.min.js",
 		    function() {
@@ -127,26 +131,39 @@ function setNavigation() {
 }
 
 
+function getTumblrPostTitle(post) {
+    if (post['regular-title']) return post['regular-title'];
+    if (post['link-text']) return post['link-text'];
+    if (post['quote-text']) return post['quote-text'].substring(0, 100);
+    if (post['photo-caption']) {
+        var tmp = document.createElement('div');
+        tmp.innerHTML = post['photo-caption'];
+        return (tmp.textContent || tmp.innerText || '').substring(0, 100);
+    }
+    if (post['regular-body']) {
+        var tmp = document.createElement('div');
+        tmp.innerHTML = post['regular-body'];
+        return (tmp.textContent || tmp.innerText || '').substring(0, 100);
+    }
+    return 'Untitled post';
+}
+
 function refreshNews() {
-    // Use allOrigins CORS proxy to fetch Tumblr RSS
+    // Use Tumblr v1 JSONP API (no CORS needed)
     $.ajax({
-        url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
-        method: 'GET',
-        dataType: 'json',
+        url: 'https://openworm.tumblr.com/api/read/json',
+        data: { num: 6 },
+        dataType: 'jsonp',
         timeout: 30000,
         success: function(data) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(data.contents, 'text/xml');
-            var items = xml.querySelectorAll('item');
-
+            var posts = data.posts || [];
             var html = '';
-            var count = 0;
-            items.forEach(function(item) {
-                if (count >= 6) return;
 
-                var title = item.querySelector('title').textContent;
-                var link = item.querySelector('link').textContent;
-                var pubDate = new Date(item.querySelector('pubDate').textContent);
+            for (var i = 0; i < posts.length; i++) {
+                var post = posts[i];
+                var title = getTumblrPostTitle(post);
+                var link = post['url-with-slug'] || post['url'];
+                var pubDate = new Date(post['unix-timestamp'] * 1000);
                 var dateStr = pubDate.toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
@@ -157,8 +174,7 @@ function refreshNews() {
                 html += '<a href="' + link + '" target="_blank">' + title + '</a>';
                 html += ' <span class="muted">(' + dateStr + ')</span>';
                 html += '</li>';
-                count++;
-            });
+            }
             $("#news-feed").html(html);
         },
         error: function(err) {
@@ -168,54 +184,68 @@ function refreshNews() {
     });
 }
 
+function getTumblrPostBody(post) {
+    if (post['regular-body']) return post['regular-body'];
+    if (post['photo-caption']) return post['photo-caption'];
+    if (post['link-description']) return post['link-description'];
+    if (post['quote-text']) return '<blockquote>' + post['quote-text'] + '</blockquote>' + (post['quote-source'] || '');
+    return '';
+}
+
 function loadFullNewsFeed() {
-    // Load full news feed with descriptions for news.html page
-    console.log('Loading full news feed...');
+    // Load full news feed with sidebar navigation for news.html page
+    console.log('Loading full news feed with sidebar...');
 
     $.ajax({
-        url: 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://openworm.tumblr.com/rss'),
-        method: 'GET',
-        dataType: 'json',
+        url: 'https://openworm.tumblr.com/api/read/json',
+        data: { num: 25 },
+        dataType: 'jsonp',
         timeout: 30000,
         success: function(data) {
-            console.log('Feed loaded, parsing...');
+            console.log('Feed loaded via JSONP');
 
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(data.contents, 'text/xml');
-            var items = xml.querySelectorAll('item');
+            var posts = data.posts || [];
+            console.log('Found ' + posts.length + ' posts');
 
-            console.log('Found ' + items.length + ' items');
+            var mainHtml = '';
+            var navHtml = '<li class="nav-header">News Archive</li>';
 
-            var html = '';
-            var count = 0;
-
-            for (var i = 0; i < items.length && count < 25; i++) {
-                var item = items[i];
-
-                var title = item.querySelector('title').textContent;
-                var link = item.querySelector('link').textContent;
-                var pubDate = new Date(item.querySelector('pubDate').textContent);
+            for (var i = 0; i < posts.length; i++) {
+                var post = posts[i];
+                var title = getTumblrPostTitle(post);
+                var link = post['url-with-slug'] || post['url'];
+                var pubDate = new Date(post['unix-timestamp'] * 1000);
                 var dateStr = pubDate.toLocaleDateString('en-US', {
-                    month: 'long',
+                    month: 'short',
                     day: 'numeric',
                     year: 'numeric'
                 });
 
-                var descNode = item.querySelector('description');
-                var description = descNode ? descNode.textContent : '';
+                var description = getTumblrPostBody(post);
 
-                var borderStyle = (count < 24) ? 'border-bottom: 1px solid #eee;' : '';
+                // Create anchor ID from index
+                var anchorId = 'news-' + i;
 
-                html += '<li style="margin-bottom: 30px; padding-bottom: 20px; ' + borderStyle + '">';
-                html += '<h3 style="margin-top: 0;"><a href="' + link + '" target="_blank">' + title + '</a></h3>';
-                html += '<p class="muted" style="font-size: 14px; margin-bottom: 10px;">' + dateStr + '</p>';
-                html += '<div style="line-height: 1.6;">' + description + '</div>';
-                html += '</li>';
-                count++;
+                // Add to sidebar nav (if nav element exists)
+                navHtml += '<li><a href="#' + anchorId + '"><i class="fa fa-chevron-right"></i>' + dateStr + '</a></li>';
+
+                // Add to main content
+                var borderStyle = (i < posts.length - 1) ? 'border-bottom: 1px solid #eee;' : '';
+                mainHtml += '<li id="' + anchorId + '" style="margin-bottom: 30px; padding-bottom: 20px; ' + borderStyle + '">';
+                mainHtml += '<h3 style="margin-top: 0;"><a href="' + link + '" target="_blank">' + title + '</a></h3>';
+                mainHtml += '<p class="muted" style="font-size: 14px; margin-bottom: 10px;">' + dateStr + '</p>';
+                mainHtml += '<div style="line-height: 1.6;">' + description + '</div>';
+                mainHtml += '</li>';
             }
 
-            $("#news-feed-full").html(html);
-            console.log('Rendered ' + count + ' items');
+            $("#news-feed-full").html(mainHtml);
+            
+            // Update sidebar nav if it exists
+            if ($("#news-nav").length) {
+                $("#news-nav").html(navHtml);
+            }
+            
+            console.log('Rendered ' + posts.length + ' items');
 
             // Make images responsive
             $("#news-feed-full img").css({
@@ -231,13 +261,16 @@ function loadFullNewsFeed() {
             var errorMsg = 'Unable to load news feed. ';
             if (status === 'timeout') {
                 errorMsg += 'Request timed out.';
-            } else if (xhr.status === 0) {
-                errorMsg += 'Network or CORS error.';
             } else {
                 errorMsg += 'Error: ' + status;
             }
 
             $("#news-feed-full").html('<li class="muted" style="text-align: center; padding: 40px;">' + errorMsg + ' <a href="https://openworm.tumblr.com" target="_blank">View blog directly &raquo;</a></li>');
+            
+            // Update sidebar nav with fallback if it exists
+            if ($("#news-nav").length) {
+                $("#news-nav").html('<li class="nav-header">News Archive</li><li><a href="https://openworm.tumblr.com" target="_blank"><i class="fa fa-external-link"></i> View on Tumblr</a></li>');
+            }
         }
     });
 }

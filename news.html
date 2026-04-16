@@ -59,8 +59,18 @@
     <div class="container">
 
       <div class="row">
-        <div class="span12">
+        <!-- Left sidebar with news index -->
+        <div class="span3 bs-docs-sidebar">
+          <ul id="news-nav" class="nav nav-list bs-docs-sidenav">
+            <li class="nav-header">News Archive</li>
+            <li style="text-align: center; padding: 20px;">
+              <i class="fa fa-spinner fa-spin"></i>
+            </li>
+          </ul>
+        </div>
 
+        <!-- Main content area -->
+        <div class="span9">
           <div class="page-header">
             <h2>Latest News</h2>
             <p class="muted">News items are pulled from our <a href="https://openworm.tumblr.com" target="_blank">Tumblr blog</a>.</p>
@@ -73,7 +83,6 @@
               <p class="muted">Loading news from Tumblr...</p>
             </li>
           </ul>
-
         </div>
       </div>
 
@@ -89,6 +98,7 @@
   <!-- Le javascript
        ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.pjax.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/main.js"></script>
   <script>
