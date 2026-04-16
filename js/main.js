@@ -143,7 +143,8 @@ function getTumblrPostTitle(post) {
     if (post['regular-body']) {
         var tmp = document.createElement('div');
         tmp.innerHTML = post['regular-body'];
-        return (tmp.textContent || tmp.innerText || '').substring(0, 100);
+        var text = tmp.textContent || tmp.innerText || '';
+        return text.indexOf(':') !== -1 ? text.substring(0, text.indexOf(':')) : text;
     }
     return 'Untitled post';
 }
