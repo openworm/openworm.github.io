@@ -1,408 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-	<meta charset="utf-8">
-	<title>OpenWorm Events</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Past and future events and meetings related to OpenWorm">
 
-	<!-- REPLICATE THIS IN ALL PAGES -->
+<head>
+  <meta charset="utf-8">
+  <title>OpenWorm Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Past and future events and meetings related to OpenWorm">
 
-	<!-- Le styles -->
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.css">
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/docs.css" rel="stylesheet">
-	<link href="./css/events_css.css" rel ="stylesheet">
+  <!-- REPLICATE THIS IN ALL PAGES -->
 
+  <!-- Le styles -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/docs.css" rel="stylesheet">
 
-	<!-- Fav and touch icons - this code is outdated -->
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  <!-- Fav and touch icons - this code is outdated -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
-	    <div class="navbar-inner" id="head-nav">
-	    </div>
-	</div>
-	<script src="js/jquery-3.6.0.js"></script>
-	<script>
-	 // get head-nav and foot-nav with jquery (get is async)
-	 $.get('header-content.html', function(data) {
-	     $('#head-nav').html(data);
-	 })
-	 $.get('footer-content.html', function(data) {
-	     $('#foot-nav').html(data);
-	 })
-	</script>
-    </head>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner" id="head-nav">
+    </div>
+  </div>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script>
+    // get head-nav and foot-nav with jquery (get is async)
+    $.get('header-content.html', function(data) {
+      $('#head-nav').html(data);
+    })
+    $.get('footer-content.html', function(data) {
+      $('#foot-nav').html(data);
+    })
+  </script>
+</head>
 
-    <body>
-	<div id="pjax-content">
-	    <!-- END REPEAT-->
+<body>
+  <div id="pjax-content">
+    <!-- END REPEAT-->
 
-	    <header class="jumbotron subhead" id="overview">
-		<div class="container">
-		    <h1>Events</h1>
+    <header class="jumbotron subhead" id="overview">
+      <div class="container">
+        <h1>OpenWorm Events</h1>
+        <p class="lead">
+          Where we have been and where to meet us next
+        </p>
+        <p>
+          <a href="https://openworm.tumblr.com/tagged/event" target="_blank">See events on Tumblr &raquo;</a>
+        </p>
+      </div>
+    </header>
 
-		    <p class="lead">
-			Where we have been and where to meet us next!
-		    </p>
-		</div>
-	    </header>
+    <div class="container">
 
-	    <div class="container">
-		<div class="marketing">
-		    <br/>
-		    <br/>
-		    <i class="fa fa-plane fa-xl"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-group fa-xl"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-beaker fa-xl"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-beer fa-xl"></i>
-		    <div class="large-spacer"></div><div class="large-spacer"></div>
+      <div class="row">
+        <!-- Left sidebar with event index -->
+        <div class="span3 bs-docs-sidebar">
+          <ul id="events-nav" class="nav nav-list bs-docs-sidenav">
+            <li class="nav-header">Events</li>
+            <li id="events-nav-loading" style="text-align: center; padding: 20px;">
+              <i class="fa fa-spinner fa-spin"></i>
+            </li>
+          </ul>
+        </div>
 
-			<div class="container">
-				<div class="row">
-					<div >
-						<ul class="event-list">
+        <!-- Main content area -->
+        <div class="span9">
+          <div class="page-header">
+            <h2>Events</h2>
+            <p class="muted">Upcoming and recent events are pulled from our <a href="https://openworm.tumblr.com" target="_blank">Tumblr blog</a>.</p>
+          </div>
 
+          <!-- Events drawn live from blog posts tagged "event" or "events".
+               Populated by loadEventsFeed() in js/main.js; tag a post
+               date:YYYY-MM-DD to set the event's own date. -->
+          <ul id="events-feed" style="list-style-type: none; margin-left: 0;">
+            <li style="text-align: center; padding: 40px;">
+              <i class="fa fa-spinner fa-spin fa-3x"></i>
+              <p class="muted">Loading events from the blog...</p>
+            </li>
+          </ul>
 
-              <li>
-                <time>
-                  <span class="day">2</span>
-                  <span class="month">July</span>
-                  <span class="year">2025</span>
-                </time>
-                <div class="info">
-                  <h2 class="title">OpenWorm @ 2025 International Worm Meeting</h2>
-                  <p class="desc">The OpenWorm team were present at the <a href="https://genetics-gsa.org/worm-2025/" target="_blank">International Worm Meeting</a> at UC Davis in July 2025.</p>
-                  <ul>
-                    <li style="width:50%;"><a href="https://submissions.mirasmart.com/WORM2025/Itinerary/PresentationDetail.aspx?evdid=42"><span class="fa fa-globe"></span> More info</a></li>
-                  </ul>
-                </div>
-              </li>
+          <!-- UNLINKED ARCHIVE - retained deliberately, do not delete.
+               Every event below is now a blog post tagged "event" with a
+               "date:" tag, so the live feed above renders all of them and
+               showing this list as well would duplicate each one. The markup
+               is kept here verbatim as a fallback: if the blog is ever lost
+               or the tags are removed, uncomment this block and the full
+               2011-2025 history is back with no research required.
 
-              <li>
-                <time>
-                  <span class="day">24-28</span>
-                  <span class="month">June</span>
-                  <span class="year">2023</span>
-                </time>
-                <div class="info">
-                  <h2 class="title">OpenWorm @ <i>C. elegans</i> 2023 meeting</h2>
-                  <p class="desc">The OpenWorm team were present at the main <i>C. elegans</i> global scientific conference in Glasgow in June 2023.</p>
-                  <ul>
-                    <li style="width:50%;"><a href="https://openworm.tumblr.com/post/807349826627026944/june-2023-openworm-c-elegans-2023"><span class="fa fa-globe"></span> More info</a></li>
-                  </ul>
-                </div>
-              </li>
+           Events from before the blog became the source of truth. Kept
+               here so none of this history is lost; hand-maintained. 
+          <div class="page-header">
+            <h2>Earlier events</h2>
+          </div>
+          <ul id="events-archive" style="list-style-type: none; margin-left: 0;">
+            <li id="event-archive-0" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">OpenWorm @ 2025 International Worm Meeting</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jul 2, 2025</p>
+              <div style="line-height: 1.6;">The OpenWorm team were present at the <a href="https://genetics-gsa.org/worm-2025/" target="_blank">International Worm Meeting</a> at UC Davis in July 2025.</div><p style="margin-top: 8px;"><a href="https://submissions.mirasmart.com/WORM2025/Itinerary/PresentationDetail.aspx?evdid=42" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> More info</a></p>
+            </li>
+            <li id="event-archive-1" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">OpenWorm @ <i>C. elegans</i> 2023 meeting</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jun 24&ndash;28, 2023</p>
+              <div style="line-height: 1.6;">The OpenWorm team were present at the main <i>C. elegans</i> global scientific conference in Glasgow in June 2023.</div><p style="margin-top: 8px;"><a href="https://openworm.tumblr.com/post/807349826627026944/june-2023-openworm-c-elegans-2023" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> More info</a></p>
+            </li>
+            <li id="event-archive-2" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">OpenWorm poster at <i>C. elegans</i> meeting</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jun 22, 2021</p>
+              <div style="line-height: 1.6;">Online presentation of: The OpenWorm Project: progress update, available resources and future plans</div><p style="margin-top: 8px;"><a href="https://app.genetics-gsa.org/celegans/abstracts21_report/Assignment?lastNameLetter=G" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-3" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Open House @ Sainsbury Wellcome Centre</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jan 31, 2018</p>
+              <div style="line-height: 1.6;">London, UK</div><p style="margin-top: 8px;"><a href="https://www.sainsburywellcome.org/web/blog/openworm-building-virtual-nervous-system" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-4" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Connectome to behaviour: modelling <i>C. elegans</i> at cellular resolution</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jan 29&ndash;30, 2018</p>
+              <div style="line-height: 1.6;">Royal Society Discussion meeting, London, UK</div><p style="margin-top: 8px;"><a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2017.0366" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Meeting report</a></p>
+            </li>
+            <li id="event-archive-5" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">TEDxBangalore</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Apr 16, 2016</p>
+              <div style="line-height: 1.6;">Speaker: Stephen Larson, Bangalore, India</div><p style="margin-top: 8px;"><a href="https://www.youtube.com/watch?v=RY2-0-QsuTE" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-6" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Open Collaboration in Computational Neuroscience workshop</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Aug 25, 2014</p>
+              <div style="line-height: 1.6;">Neuroinformatics 2014, Leiden, The Netherlands</div><p style="margin-top: 8px;"><a href="http://www.neuroinformatics2014.org/program/workshops/workshop-4.html" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-7" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Open Source Brain Workshop 2014</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">May 14, 2014</p>
+              <div style="line-height: 1.6;">Alghero, Sardinia, Italy</div><p style="margin-top: 8px;"><a href="http://opensourcebrain.org/projects/osb/wiki/OSB2014" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-8" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Neuroinformatics 2013</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Aug 27, 2013</p>
+              <div style="line-height: 1.6;">Karolinska Institutet, Stockholm, Sweden</div><p style="margin-top: 8px;"><a href="http://www.neuroinformatics2013.org/" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-9" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Computational Neuroscience Meeting 2013</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jul 13, 2013</p>
+              <div style="line-height: 1.6;">Université Paris Descartes, Paris, France</div><p style="margin-top: 8px;"><a href="http://www.cnsorg.org/cns-2013-paris" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-10" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">OpenWorm Paris Meet-up</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Jul 12, 2013</p>
+              <div style="line-height: 1.6;">Falstaff, Paris, France</div>
+            </li>
+            <li id="event-archive-11" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Guest Lecture: Introduction to OpenWorm</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">May 16, 2013</p>
+              <div style="line-height: 1.6;">Speaker: Matteo Cantarelli. Host: Daniele Giusto - Faculty of Electrical Engineering, University Of Cagliari, Italy</div>
+            </li>
+            <li id="event-archive-12" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Open Source Brain Kick-Off meeting</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">May 13, 2013</p>
+              <div style="line-height: 1.6;">Alghero, Sardinia, Italy</div><p style="margin-top: 8px;"><a href="http://www.opensourcebrain.org/projects/osb/wiki/Meetings" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-13" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">OpenWorm Cambridge Meet-up</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Feb 22, 2013</p>
+              <div style="line-height: 1.6;">The Eagle, Cambridge, UK</div>
+            </li>
+            <li id="event-archive-14" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">OpenWorm London Meet-up</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Feb 21, 2013</p>
+              <div style="line-height: 1.6;">Queens Head & Artichoke, London, UK</div>
+            </li>
+            <li id="event-archive-15" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Modeling <i>C. elegans</i>: The OpenWorm Project</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Nov 13, 2012</p>
+              <div style="line-height: 1.6;">Speaker: Mike Vella, Cambridge, UK</div><p style="margin-top: 8px;"><a href="http://talks.cam.ac.uk/talk/index/40703" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-16" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">NeuroInformatics 2012</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Sep 10, 2011</p>
+              <div style="line-height: 1.6;">Boston, USA</div><p style="margin-top: 8px;"><a href="http://www.neuroinformatics2012.org/abstracts/the-neuroml-c.-elegans-connectome" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-17" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">Convergence in Computational Neuroscience 2012</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Mar 12, 2012</p>
+              <div style="line-height: 1.6;">Informatics Forum, Edinburgh, UK</div><p style="margin-top: 8px;"><a href="http://www.neuroml.org/workshop2012" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-18" style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+              <h3 style="margin-top: 0;">NeuroInformatics 2011</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Sep 4, 2011</p>
+              <div style="line-height: 1.6;">Informatics Forum, Edinburgh, UK</div><p style="margin-top: 8px;"><a href="http://www.neuroinformatics2011.org/abstracts/managing-complexity-in-multi-algorithm-multi-scale-biological-simulations-an-integrated-software-engineering-and-neuroinformatics-approach" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+            <li id="event-archive-19" style="margin-bottom: 30px; padding-bottom: 20px; ">
+              <h3 style="margin-top: 0;">NeuroML Development Workshop</h3>
+              <p class="muted" style="font-size: 14px; margin-bottom: 10px;">Mar 31, 2011</p>
+              <div style="line-height: 1.6;">Goodenough College, London, UK</div><p style="margin-top: 8px;"><a href="http://www.neuroinformatics2011.org/abstracts/managing-complexity-in-multi-algorithm-multi-scale-biological-simulations-an-integrated-software-engineering-and-neuroinformatics-approach" target="_blank" style="margin-right: 14px;"><i class="fa fa-globe"></i> Website</a></p>
+            </li>
+          </ul>
+          -->
+          </ul>
+        </div>
+      </div>
 
-              <li>
-                <time>
-                  <span class="day">22</span>
-                  <span class="month">June</span>
-                  <span class="year">2021</span>
-                </time>
-                <div class="info">
-                  <h2 class="title">OpenWorm poster at <i>C. elegans</i> meeting</h2>
-                  <p class="desc">Online presentation of: The OpenWorm Project: progress update, available resources and future plans</p>
-                  <ul>
-                    <li style="width:50%;"><a href="https://app.genetics-gsa.org/celegans/abstracts21_report/Assignment?lastNameLetter=G"><span class="fa fa-globe"></span> Website</a></li>
-                  </ul>
-                </div>
-              </li>
+    </div>
 
-							<li>
-								<time>
-									<span class="day">31</span>
-									<span class="month">Jan</span>
-									<span class="year">2018</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Open House @ Sainsbury Wellcome Centre</h2>
-									<p class="desc">London, UK</p>
-									<ul>
-										<li style="width:50%;"><a href="https://www.sainsburywellcome.org/web/blog/openworm-building-virtual-nervous-system"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
+    <!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->
+  </div><!-- end pjax content -->
 
+  <!-- footer
+       ================================================== -->
+  <div id="foot-nav"></div>
 
-							<li>
-								<time>
-									<span class="day">29-30</span>
-									<span class="month">Jan</span>
-									<span class="year">2018</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Connectome to behaviour: modelling <i>C. elegans</i> at cellular resolution </h2>
-									<p class="desc">Royal Society Discussion meeting, London, UK</p>
-									<ul>
-										<li style="width:50%;"><a href="https://royalsocietypublishing.org/doi/10.1098/rstb.2017.0366"><span class="fa fa-globe"></span>Meeting report</a></li>
-									</ul>
-								</div>
-							</li>
+  <!-- Le javascript
+       ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.pjax.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
 
-							<li>
-								<time>
-									<span class="day">16</span>
-									<span class="month">Apr</span>
-									<span class="year">2016</span>
-								</time>
-								<div class="info">
-									<h2 class="title">TEDxBangalore</h2>
-									<p class="desc">Speaker: Stephen Larson, Bangalore, India</p>
-									<ul>
-										<li style="width:50%;"><a href="https://www.youtube.com/watch?v=RY2-0-QsuTE"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">25</span>
-									<span class="month">Aug</span>
-									<span class="year">2014</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Open Collaboration in Computational Neuroscience workshop</h2>
-									<p class="desc">Neuroinformatics 2014, Leiden, The Netherlands</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.neuroinformatics2014.org/program/workshops/workshop-4.html"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">14</span>
-									<span class="month">May</span>
-									<span class="year">2014</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Open Source Brain Workshop 2014</h2>
-									<p class="desc">Alghero, Sardinia, Italy</p>
-									<ul>
-										<li style="width:50%;"><a href="http://opensourcebrain.org/projects/osb/wiki/OSB2014"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">27</span>
-									<span class="month">Aug</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Neuroinformatics 2013</h2>
-									<p class="desc">Karolinska Institutet, Stockholm, Sweden</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.neuroinformatics2013.org/"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">13</span>
-									<span class="month">July</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Computational Neuroscience Meeting 2013</h2>
-									<p class="desc">Université Paris Descartes, Paris, France</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.cnsorg.org/cns-2013-paris"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">12</span>
-									<span class="month">July</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">OpenWorm Paris Meet-up</h2>
-									<p class="desc">Falstaff, Paris, France</p>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">16</span>
-									<span class="month">May</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Guest Lecture: Introduction to OpenWorm</h2>
-									<p class="desc">Speaker: Matteo Cantarelli. Host: Daniele Giusto - Faculty of Electrical Engineering, University Of Cagliari, Italy</p>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">13</span>
-									<span class="month">May</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Open Source Brain Kick-Off meeting</h2>
-									<p class="desc">Alghero, Sardinia, Italy</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.opensourcebrain.org/projects/osb/wiki/Meetings"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">22</span>
-									<span class="month">Feb</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">OpenWorm Cambridge Meet-up</h2>
-									<p class="desc">The Eagle, Cambridge, UK</p>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">21</span>
-									<span class="month">Feb</span>
-									<span class="year">2013</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">OpenWorm London Meet-up</h2>
-									<p class="desc">Queens Head & Artichoke, London, UK</p>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">13</span>
-									<span class="month">Nov</span>
-									<span class="year">2012</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Modeling <i>C. elegans</i>: The OpenWorm Project</h2>
-									<p class="desc"> Speaker: Mike Vella, Cambridge, UK</p>
-									<ul>
-										<li style="width:50%;"><a href="http://talks.cam.ac.uk/talk/index/40703"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">10</span>
-									<span class="month">Sep</span>
-									<span class="year">2011</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">NeuroInformatics 2012</h2>
-									<p class="desc">Boston, USA</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.neuroinformatics2012.org/abstracts/the-neuroml-c.-elegans-connectome"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">12</span>
-									<span class="month">Mar</span>
-									<span class="year">2012</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">Convergence in Computational Neuroscience 2012</h2>
-									<p class="desc">Informatics Forum, Edinburgh, UK</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.neuroml.org/workshop2012"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">4</span>
-									<span class="month">Sep</span>
-									<span class="year">2011</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">NeuroInformatics 2011</h2>
-									<p class="desc">Informatics Forum, Edinburgh, UK</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.neuroinformatics2011.org/abstracts/managing-complexity-in-multi-algorithm-multi-scale-biological-simulations-an-integrated-software-engineering-and-neuroinformatics-approach"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-							<li>
-								<time>
-									<span class="day">31</span>
-									<span class="month">Mar</span>
-									<span class="year">2011</span>
-									<span class="time">12:00 AM</span>
-								</time>
-								<div class="info">
-									<h2 class="title">NeuroML Development Workshop</h2>
-									<p class="desc">Goodenough College, London, UK</p>
-									<ul>
-										<li style="width:50%;"><a href="http://www.neuroinformatics2011.org/abstracts/managing-complexity-in-multi-algorithm-multi-scale-biological-simulations-an-integrated-software-engineering-and-neuroinformatics-approach"><span class="fa fa-globe"></span> Website</a></li>
-									</ul>
-								</div>
-							</li>
-
-
-
-						</ul>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	    </div>
-
-	    <!-- FOOT: DUPLICATE THE FOLLOWING IN ALL PAGES -->
-	</div><!-- end pjax content -->
-
-
-
-	<!-- footer
-	     ================================================== -->
-	<div id="foot-nav"></div>
-	<!-- foot-nav is filled with script in head -->
-
-	<!-- Le javascript
-	     ================================================== -->
-	<!-- at end of the document so the pages load faster -->
-
-	<!-- load other resources asynchronously: -->
-	<script src="js/bootstrap.js" async></script>
-	<script src="js/jquery.parss.uncompressed.js" async></script>
-	<script src="https://platform.twitter.com/widgets.js" async></script>
-
-	<!-- execute main (initialize resources above + carousel/donate controls -->
-	<script src="js/jquery.pjax.js"></script>
-	<script src="js/main.js" defer></script>
-
-    </body>
+</body>
 
 </html>
