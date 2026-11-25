@@ -288,3 +288,46 @@ The migration script creates 19 posts = 19 API calls, well within limits.
 
 **Last Updated:** January 31, 2026
 **Maintainer:** OpenWorm Team
+
+---
+
+## Posting an Event
+
+The website's [Events page](https://openworm.org/events.html) is drawn live from this
+blog. There is nothing to edit on the website — post to Tumblr and the page updates.
+
+### Tags
+
+| Tag | Effect |
+|-----|--------|
+| `event` **or** `events` | Required. Puts the post on the Events page. Both spellings work; older posts use both. |
+| `date:2026-09-15` | Optional. The date the event **happens**. |
+| `date:2026-01-29..2026-01-30` | Optional. A multi-day event, rendered as "29-30 Jan". |
+
+A bare `2026-09-15` (no `date:` prefix) works too.
+
+### Why the date tag matters
+
+Without it the page falls back to the post's publication date — which is when the event
+was *announced*, not when it happens. For anything upcoming those point in opposite
+directions, and the event lands in the wrong section.
+
+A real example already on the blog: *"Join us in London! / November 5-6"* was posted on
+**31 October 2014**, so it renders under 31 Oct. Tagging it `date:2014-11-05..2014-11-06`
+would fix it.
+
+Malformed dates (`2026-13-99`, `2026-02-30`) are ignored and the post date is used
+instead, so a typo degrades quietly rather than inventing a date.
+
+### Sections
+
+Events dated today or later appear under **Coming up**, soonest first. Everything else
+appears under **Recently**, most recent first. Events predating the blog are kept as a
+static **Earlier events** list in `events.html` — that list is hand-maintained and is
+not affected by anything here.
+
+### Title and description
+
+The post title becomes the event title; the opening of the post body becomes the
+description, trimmed to fit the card. Lead with the essentials — a post that opens with
+"UPDATE 3 (2/11/17):" will show exactly that.

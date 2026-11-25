@@ -101,13 +101,9 @@
   <script src="js/jquery.pjax.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    // Load full news feed when page is ready
-    $(window).on('load', function() {
-      console.log('news.html loaded, calling loadFullNewsFeed()');
-      loadFullNewsFeed();
-    });
-  </script>
+  <!-- The feed is kicked off by main.js (on window load and on pjax
+       navigation). Calling it again from here made every page view fire two
+       overlapping requests that raced to write the same list. -->
 
 </body>
 
